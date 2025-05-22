@@ -1,0 +1,131 @@
+/* Sample Routing Styles */
+
+.sample-routing-container {
+  padding: 1rem;
+}
+
+/* Tab Styles */
+.nav-tabs {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: var(--dark-gray);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: var(--transition);
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: var(--border-color) var(--border-color) transparent;
+  color: var(--primary);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary);
+  background-color: var(--white);
+  border-color: var(--border-color) var(--border-color) var(--white);
+  border-top: 3px solid var(--primary);
+  padding-top: calc(0.75rem - 2px);
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 50rem;
+}
+
+/* Card Styles */
+.border-left-warning {
+  border-left: 0.25rem solid var(--warning) !important;
+}
+
+.border-left-info {
+  border-left: 0.25rem solid var(--info) !important;
+}
+
+.border-left-success {
+  border-left: 0.25rem solid var(--success) !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid var(--danger) !important;
+}
+
+.card .text-xs {
+  font-size: 0.7rem;
+}
+
+.card .text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.card .fa-2x {
+  font-size: 2rem;
+}
+
+.card .text-gray-300 {
+  color: #dddfeb !important;
+}
+
+.card .text-gray-800 {
+  color: #5a5c69 !important;
+}
+
+/* Alert Styles */
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert .btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.alert .btn-info:hover {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .sample-routing-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .d-sm-flex {
+    display: block !important;
+  }
+  
+  .d-sm-flex .btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .table th, 
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}

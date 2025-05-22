@@ -1,0 +1,79 @@
+/* Quality Control Styles */
+
+.quality-control-container {
+  padding: 1.5rem;
+}
+
+/* QC Log Details Styles */
+.qc-log-details {
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-item span:first-child {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Chart Styles */
+.chart-container {
+  position: relative;
+  margin: auto;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 10px;
+  margin-right: 0.5rem;
+  border-radius: 2px;
+}
+
+/* Tab Styles */
+.nav-tabs .nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .quality-control-container {
+    padding: 1rem;
+  }
+  
+  .detail-item {
+    padding: 0.5rem 0;
+  }
+  
+  .chart-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}

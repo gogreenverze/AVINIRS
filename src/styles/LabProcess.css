@@ -1,0 +1,104 @@
+/* Lab Process Styles */
+
+.lab-process-container {
+  padding: 1.5rem;
+}
+
+/* Sample Selection Styles */
+.selected-sample {
+  background-color: rgba(var(--primary-rgb), 0.05);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+/* Test Results Styles */
+.test-results {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.test-result-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #f8f9fa;
+}
+
+.test-result-item:last-child {
+  margin-bottom: 0;
+}
+
+.test-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.test-result-header h6 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+/* Processing Summary Styles */
+.processing-summary {
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+/* Form Section Styles */
+.form-section {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.form-section-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .lab-process-container {
+    padding: 1rem;
+  }
+  
+  .selected-sample {
+    padding: 0.75rem;
+  }
+  
+  .test-result-item {
+    padding: 0.75rem;
+  }
+  
+  .summary-item {
+    padding: 0.5rem 0;
+  }
+  
+  .form-section {
+    padding: 0.75rem;
+  }
+}

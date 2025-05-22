@@ -1,0 +1,112 @@
+/* Sample View Styles */
+
+.sample-view-container {
+  padding: 1rem;
+}
+
+.sample-detail-item {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sample-detail-item .fa-fw,
+.sample-detail-item svg {
+  width: 20px;
+  margin-right: 0.5rem;
+  color: var(--primary);
+}
+
+.sample-detail-item strong {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  min-width: 120px;
+}
+
+.sample-detail-item span {
+  flex: 1;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.rejection-info {
+  background-color: rgba(var(--danger-rgb), 0.05);
+  border-left: 3px solid var(--danger);
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.rejection-info .sample-detail-item {
+  margin-bottom: 0.5rem;
+}
+
+.rejection-info .sample-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.rejection-info .text-danger {
+  color: var(--danger) !important;
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 50rem;
+}
+
+/* Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background-color: var(--secondary);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .sample-view-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .d-flex {
+    flex-direction: column;
+  }
+  
+  .d-flex .btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    margin-right: 0 !important;
+  }
+  
+  .sample-detail-item {
+    flex-direction: column;
+  }
+  
+  .sample-detail-item strong {
+    margin-bottom: 0.25rem;
+    min-width: auto;
+  }
+  
+  .table-responsive {
+    margin-bottom: 0;
+  }
+  
+  .table th, 
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}

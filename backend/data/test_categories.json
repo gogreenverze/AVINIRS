@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Hematology",
+    "code": "HEMA",
+    "description": "Blood cell analysis and related tests",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 2,
+    "name": "Clinical Chemistry",
+    "code": "CHEM",
+    "description": "Biochemical analysis of blood and body fluids",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 3,
+    "name": "Microbiology",
+    "code": "MICRO",
+    "description": "Bacterial, viral, and fungal infections",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 4,
+    "name": "Immunology",
+    "code": "IMMUNO",
+    "description": "Immune system and antibody tests",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 5,
+    "name": "Endocrinology",
+    "code": "ENDO",
+    "description": "Hormone and endocrine function tests",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 6,
+    "name": "Urine Analysis",
+    "code": "URINE",
+    "description": "Urine examination and analysis",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 7,
+    "name": "Cardiology",
+    "code": "CARDIO",
+    "description": "Heart and cardiovascular markers",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  },
+  {
+    "id": 8,
+    "name": "Tumor Markers",
+    "code": "TUMOR",
+    "description": "Cancer screening and monitoring",
+    "is_active": true,
+    "created_at": "2020-01-15T10:00:00"
+  }
+]

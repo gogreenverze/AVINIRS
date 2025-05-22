@@ -1,0 +1,107 @@
+/* Billing Collect Styles */
+
+.billing-collect-container {
+  padding: 1.5rem;
+}
+
+/* Invoice Summary Styles */
+.invoice-summary {
+  background-color: rgba(var(--primary-rgb), 0.05);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-summary {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(var(--primary-rgb), 0.2);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-row.balance {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(var(--primary-rgb), 0.2);
+}
+
+/* Payment Amount Toggle Styles */
+.payment-amount-toggle {
+  margin-bottom: 1.5rem;
+}
+
+/* Payment Confirmation Styles */
+.payment-confirmation {
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.confirmation-item:last-child {
+  border-bottom: none;
+}
+
+.confirmation-item.total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--border-color);
+  border-bottom: none;
+}
+
+/* Form Section Styles */
+.form-section {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.form-section-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .billing-collect-container {
+    padding: 1rem;
+  }
+  
+  .invoice-summary {
+    padding: 0.75rem;
+  }
+  
+  .summary-row.balance {
+    font-size: 1rem;
+  }
+  
+  .confirmation-item {
+    padding: 0.5rem 0;
+  }
+  
+  .confirmation-item.total {
+    font-size: 1.1rem;
+  }
+  
+  .form-section {
+    padding: 0.75rem;
+  }
+}

@@ -1,0 +1,87 @@
+/* Inventory Transactions Styles */
+
+.inventory-transactions-container {
+  padding: 1.5rem;
+}
+
+/* Item Detail Styles */
+.item-detail {
+  margin-bottom: 1rem;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  color: var(--gray);
+}
+
+/* Transaction Summary Styles */
+.transaction-summary {
+  font-size: 0.9rem;
+}
+
+.transaction-summary span {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Table Styles */
+.table th {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-link {
+  color: var(--primary);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .inventory-transactions-container {
+    padding: 1rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .d-flex.justify-content-between div {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between div .btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .transaction-summary {
+    margin-top: 0.5rem;
+  }
+}

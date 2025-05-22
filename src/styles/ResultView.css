@@ -1,0 +1,58 @@
+/* Result View Styles */
+
+.result-view-container {
+  padding: 1.5rem;
+}
+
+.result-detail-item {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.result-detail-item strong {
+  min-width: 150px;
+  margin-right: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.result-detail-item span {
+  flex: 1;
+}
+
+.result-value-container {
+  background-color: rgba(var(--light-rgb), 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.rejection-info {
+  background-color: rgba(var(--danger-rgb), 0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--danger);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .result-view-container {
+    padding: 1rem;
+  }
+  
+  .result-detail-item {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .result-detail-item strong {
+    min-width: auto;
+    margin-bottom: 0.25rem;
+  }
+}

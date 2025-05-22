@@ -1,0 +1,151 @@
+/* Billing List Styles */
+
+.billing-list-container {
+  padding: 1rem;
+}
+
+/* Mobile Card Styles */
+.mobile-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.mobile-card:active {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.mobile-card .card-header {
+  background-color: var(--secondary);
+  color: white;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+}
+
+.mobile-card .card-body {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Billing Info Styles */
+.billing-info {
+  margin-bottom: 1rem;
+}
+
+.billing-info .d-flex {
+  margin-bottom: 0.5rem;
+}
+
+.billing-info strong {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  min-width: 80px;
+}
+
+/* Mobile Button Group */
+.mobile-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.mobile-btn-group .btn {
+  flex: 1;
+  min-width: 80px;
+  margin-bottom: 0;
+}
+
+.mobile-btn-group form {
+  flex: 1;
+}
+
+/* Record Count */
+.record-count {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.record-count .badge {
+  font-size: 0.8rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Badge Styles */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 50rem;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-bottom: 2rem;
+}
+
+.pagination .page-item .page-link {
+  color: var(--primary);
+  border-color: var(--border-color);
+  transition: var(--transition);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+}
+
+.pagination .page-item.disabled .page-link {
+  color: var(--light-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .billing-list-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .d-sm-flex {
+    display: block !important;
+  }
+  
+  .d-sm-flex .btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination .page-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-link {
+    padding: 0.5rem 0.75rem;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

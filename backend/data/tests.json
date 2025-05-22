@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "test_name": "Complete Blood Count (CBC)",
+    "sample_type_id": 1,
+    "turnaround_time": "1 day",
+    "price": 350
+  },
+  {
+    "id": 2,
+    "test_name": "Blood Glucose Fasting",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 150
+  },
+  {
+    "id": 3,
+    "test_name": "HbA1c",
+    "sample_type_id": 1,
+    "turnaround_time": "1 day",
+    "price": 450
+  },
+  {
+    "id": 4,
+    "test_name": "Lipid Profile",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 600
+  },
+  {
+    "id": 5,
+    "test_name": "Liver Function Test",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 800
+  },
+  {
+    "id": 6,
+    "test_name": "Kidney Function Test",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 700
+  },
+  {
+    "id": 7,
+    "test_name": "Thyroid Profile",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 850
+  },
+  {
+    "id": 8,
+    "test_name": "Urine Routine",
+    "sample_type_id": 4,
+    "turnaround_time": "1 day",
+    "price": 200
+  },
+  {
+    "id": 9,
+    "test_name": "Stool Routine",
+    "sample_type_id": 5,
+    "turnaround_time": "1 day",
+    "price": 250
+  },
+  {
+    "id": 10,
+    "test_name": "Dengue NS1 Antigen",
+    "sample_type_id": 2,
+    "turnaround_time": "1 day",
+    "price": 700
+  }
+]

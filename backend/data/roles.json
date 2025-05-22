@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "System Administrator",
+    "code": "ADMIN",
+    "description": "Full system access with all permissions",
+    "permission_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Hub Administrator",
+    "code": "HUB_ADMIN",
+    "description": "Hub-level administrative access with franchise management",
+    "permission_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Franchise Administrator",
+    "code": "FRANCHISE_ADMIN",
+    "description": "Franchise-level administrative access",
+    "permission_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Lab Technician",
+    "code": "LAB_TECH",
+    "description": "Laboratory operations and sample processing",
+    "permission_ids": [3, 4, 5, 6],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "Receptionist",
+    "code": "RECEPTIONIST",
+    "description": "Patient registration and sample collection",
+    "permission_ids": [1, 2, 3],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 6,
+    "name": "Doctor",
+    "code": "DOCTOR",
+    "description": "Medical professional with result viewing access",
+    "permission_ids": [1, 5, 6],
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  }
+]

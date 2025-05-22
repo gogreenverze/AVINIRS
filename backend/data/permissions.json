@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "View Patients",
+    "code": "PATIENTS_VIEW",
+    "description": "View patient information and records",
+    "module": "patients",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Manage Patients",
+    "code": "PATIENTS_MANAGE",
+    "description": "Create, edit, and delete patient records",
+    "module": "patients",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "View Samples",
+    "code": "SAMPLES_VIEW",
+    "description": "View sample information and status",
+    "module": "samples",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Manage Samples",
+    "code": "SAMPLES_MANAGE",
+    "description": "Create, edit, and process samples",
+    "module": "samples",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "View Results",
+    "code": "RESULTS_VIEW",
+    "description": "View test results and reports",
+    "module": "results",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 6,
+    "name": "Manage Results",
+    "code": "RESULTS_MANAGE",
+    "description": "Create, edit, and verify test results",
+    "module": "results",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 7,
+    "name": "View Billing",
+    "code": "BILLING_VIEW",
+    "description": "View billing information and invoices",
+    "module": "billing",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 8,
+    "name": "Manage Billing",
+    "code": "BILLING_MANAGE",
+    "description": "Create, edit, and process billing",
+    "module": "billing",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 9,
+    "name": "View Inventory",
+    "code": "INVENTORY_VIEW",
+    "description": "View inventory items and stock levels",
+    "module": "inventory",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 10,
+    "name": "Manage Inventory",
+    "code": "INVENTORY_MANAGE",
+    "description": "Create, edit, and manage inventory items",
+    "module": "inventory",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 11,
+    "name": "View Reports",
+    "code": "REPORTS_VIEW",
+    "description": "View system reports and analytics",
+    "module": "reports",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 12,
+    "name": "Generate Reports",
+    "code": "REPORTS_GENERATE",
+    "description": "Generate and export system reports",
+    "module": "reports",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 13,
+    "name": "System Administration",
+    "code": "ADMIN_SYSTEM",
+    "description": "Full system administration access",
+    "module": "admin",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 14,
+    "name": "User Management",
+    "code": "ADMIN_USERS",
+    "description": "Manage system users and roles",
+    "module": "admin",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 15,
+    "name": "Master Data Management",
+    "code": "ADMIN_MASTER_DATA",
+    "description": "Manage master data like tests, categories, etc.",
+    "module": "admin",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  }
+]

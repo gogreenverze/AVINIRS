@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "sample_id": 1,
+    "patient_id": 1,
+    "test_id": 1,
+    "value": "85",
+    "unit": "mg/dL",
+    "reference_range": "70-100",
+    "status": "Verified",
+    "notes": "Normal glucose levels",
+    "verified_by": 2,
+    "verified_at": "2024-01-15T15:30:00",
+    "created_at": "2024-01-15T14:30:00",
+    "updated_at": "2024-01-15T15:30:00",
+    "tenant_id": 1,
+    "patient": {
+      "id": 1,
+      "first_name": "Rajesh",
+      "last_name": "Kumar",
+      "phone": "9876543210"
+    },
+    "test": {
+      "id": 1,
+      "test_name": "Blood Glucose",
+      "test_code": "GLU"
+    }
+  },
+  {
+    "id": 2,
+    "sample_id": 2,
+    "patient_id": 2,
+    "test_id": 4,
+    "value": "Normal",
+    "unit": "",
+    "reference_range": "See individual parameters",
+    "status": "Verified",
+    "notes": "All lipid parameters within normal range",
+    "verified_by": 15,
+    "verified_at": "2024-01-16T17:30:00",
+    "created_at": "2024-01-16T16:30:00",
+    "updated_at": "2024-01-16T17:30:00",
+    "tenant_id": 2,
+    "patient": {
+      "id": 2,
+      "first_name": "Priya",
+      "last_name": "Sharma",
+      "phone": "9876543211"
+    },
+    "test": {
+      "id": 4,
+      "test_name": "Lipid Profile",
+      "test_code": "LIPID"
+    }
+  },
+  {
+    "id": 3,
+    "sample_id": 5,
+    "patient_id": 5,
+    "test_id": 7,
+    "value": "Normal",
+    "unit": "",
+    "reference_range": "See individual parameters",
+    "status": "Processing",
+    "notes": "Thyroid screening in progress",
+    "verified_by": null,
+    "verified_at": null,
+    "created_at": "2024-01-19T18:00:00",
+    "updated_at": "2024-01-19T18:00:00",
+    "tenant_id": 2,
+    "patient": {
+      "id": 5,
+      "first_name": "Karthik",
+      "last_name": "Raman",
+      "phone": "9876543214"
+    },
+    "test": {
+      "id": 7,
+      "test_name": "Thyroid Profile",
+      "test_code": "THYROID"
+    }
+  },
+  {
+    "id": 4,
+    "sample_id": 4,
+    "patient_id": 8,
+    "test_id": 7,
+    "value": "Normal",
+    "unit": "",
+    "reference_range": "See individual parameters",
+    "status": "Pending",
+    "notes": "Under review",
+    "verified_by": null,
+    "verified_at": null,
+    "created_at": "2024-01-22T14:15:00",
+    "updated_at": "2024-01-22T14:15:00",
+    "tenant_id": 3,
+    "patient": {
+      "id": 8,
+      "first_name": "Divya",
+      "last_name": "Krishnan",
+      "phone": "9876543217"
+    },
+    "test": {
+      "id": 7,
+      "test_name": "Thyroid Profile",
+      "test_code": "THYROID"
+    }
+  },
+  {
+    "id": 5,
+    "sample_id": 4,
+    "patient_id": 4,
+    "test_id": 1,
+    "value": "Normal",
+    "unit": "",
+    "reference_range": "See individual parameters",
+    "status": "Verified",
+    "notes": "Complete blood count within normal limits",
+    "verified_by": 19,
+    "verified_at": "2024-01-18T18:00:00",
+    "created_at": "2024-01-18T17:00:00",
+    "updated_at": "2024-01-18T18:00:00",
+    "tenant_id": 4,
+    "patient": {
+      "id": 4,
+      "first_name": "Lakshmi",
+      "last_name": "Devi",
+      "phone": "9876543213"
+    },
+    "test": {
+      "id": 1,
+      "test_name": "Complete Blood Count (CBC)",
+      "test_code": "CBC"
+    }
+  },
+  {
+    "id": 6,
+    "sample_id": 1,
+    "patient_id": 1,
+    "test_id": 2,
+    "value": "95",
+    "unit": "mg/dL",
+    "reference_range": "70-100",
+    "status": "Verified",
+    "notes": "Fasting glucose within normal range",
+    "verified_by": 13,
+    "verified_at": "2024-01-15T16:30:00",
+    "created_at": "2024-01-15T15:30:00",
+    "updated_at": "2024-01-15T16:30:00",
+    "tenant_id": 1,
+    "patient": {
+      "id": 1,
+      "first_name": "Rajesh",
+      "last_name": "Kumar",
+      "phone": "9876543210"
+    },
+    "test": {
+      "id": 2,
+      "test_name": "Blood Glucose Fasting",
+      "test_code": "FBS"
+    }
+  }
+]

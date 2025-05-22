@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "AVINI Labs Mayiladuthurai",
+    "site_code": "MYL",
+    "address": "Main Hub, Mayiladuthurai, Tamil Nadu 609001",
+    "contact_phone": "6384440505",
+    "email": "hub@avinilabs.com",
+    "is_hub": true,
+    "is_active": true,
+    "established_date": "2020-01-15",
+    "license_number": "TN-LAB-2020-001"
+  },
+  {
+    "id": 2,
+    "name": "AVINI Labs Chidambaram",
+    "site_code": "CHD",
+    "address": "Franchise Location, Chidambaram, Tamil Nadu",
+    "contact_phone": "6384440502",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "AVINI Labs Kumbakonam",
+    "site_code": "KMB",
+    "address": "Franchise Location, Kumbakonam, Tamil Nadu",
+    "contact_phone": "6384440503",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "AVINI Labs Thanjavur",
+    "site_code": "TNJ",
+    "address": "Franchise Location, Thanjavur, Tamil Nadu",
+    "contact_phone": "6384440520",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "AVINI Labs Needamangalam",
+    "site_code": "NDM",
+    "address": "Franchise Location, Needamangalam, Tamil Nadu",
+    "contact_phone": "6384440509",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "name": "AVINI Labs Kuthalam",
+    "site_code": "KTH",
+    "address": "Franchise Location, Kuthalam, Tamil Nadu",
+    "contact_phone": "9488776966",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "name": "AVINI Labs Aduthurai",
+    "site_code": "ADT",
+    "address": "Franchise Location, Aduthurai, Tamil Nadu",
+    "contact_phone": "6384440510",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "name": "AVINI Labs Thiruppanandal",
+    "site_code": "TPN",
+    "address": "Franchise Location, Thiruppanandal, Tamil Nadu",
+    "contact_phone": "6384440521",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 9,
+    "name": "AVINI Labs Sankarapanthal",
+    "site_code": "SKP",
+    "address": "Franchise Location, Sankarapanthal, Tamil Nadu",
+    "contact_phone": "6384440507",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "AVINI Labs Eravancherry",
+    "site_code": "ERC",
+    "address": "Franchise Location, Eravancherry, Tamil Nadu",
+    "contact_phone": "6384440508",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 11,
+    "name": "AVINI Labs Nachiyarkovil",
+    "site_code": "NCK",
+    "address": "Franchise Location, Nachiyarkovil, Tamil Nadu",
+    "contact_phone": "6384440506",
+    "is_hub": false,
+    "is_active": true
+  }
+]

@@ -1,0 +1,64 @@
+/* Inventory Create Styles */
+
+.inventory-create-container {
+  padding: 1.5rem;
+}
+
+/* Summary Styles */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item span:first-child {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Form Section Styles */
+.form-section {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.form-section-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .inventory-create-container {
+    padding: 1rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .d-flex.justify-content-between div {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between div .btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .summary-item {
+    padding: 0.5rem 0;
+  }
+}

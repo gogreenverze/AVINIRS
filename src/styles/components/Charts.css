@@ -1,0 +1,139 @@
+/* Charts Component Styles */
+
+.chart-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.chart-title {
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Chart Card Styles */
+.chart-card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  border: none;
+  border-radius: 0.35rem;
+}
+
+.chart-card-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.75rem 1.25rem;
+}
+
+.chart-card-header h6 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.chart-card-body {
+  padding: 1.25rem;
+}
+
+/* Stat Card Styles */
+.stat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--white);
+  background-clip: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 0.35rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.border-left-primary {
+  border-left: 0.25rem solid var(--primary) !important;
+}
+
+.border-left-success {
+  border-left: 0.25rem solid var(--success) !important;
+}
+
+.border-left-info {
+  border-left: 0.25rem solid var(--info) !important;
+}
+
+.border-left-warning {
+  border-left: 0.25rem solid var(--warning) !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid var(--danger) !important;
+}
+
+.border-left-secondary {
+  border-left: 0.25rem solid var(--secondary) !important;
+}
+
+.text-xs {
+  font-size: 0.7rem;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-info {
+  color: var(--info) !important;
+}
+
+.text-warning {
+  color: var(--warning) !important;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.text-gray-800 {
+  color: #5a5c69 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .chart-container {
+    height: 250px !important;
+  }
+  
+  .chart-title {
+    font-size: 1rem;
+  }
+  
+  .chart-card-header h6 {
+    font-size: 0.9rem;
+  }
+  
+  .text-xs {
+    font-size: 0.65rem;
+  }
+  
+  .h5 {
+    font-size: 1.1rem;
+  }
+}

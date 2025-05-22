@@ -1,0 +1,92 @@
+/* Billing Edit Styles */
+
+.billing-edit-container {
+  padding: 1.5rem;
+}
+
+/* Patient Selection Styles */
+.selected-patient {
+  background-color: rgba(var(--primary-rgb), 0.05);
+  border: 1px solid rgba(var(--primary-rgb), 0.2);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+/* Invoice Items Styles */
+.invoice-items {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Invoice Summary Styles */
+.invoice-summary {
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item.total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--border-color);
+  border-bottom: none;
+}
+
+/* Status Info Styles */
+.status-info {
+  line-height: 1.8;
+}
+
+.status-info p {
+  margin-bottom: 0.5rem;
+}
+
+.status-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Form Section Styles */
+.form-section {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.form-section-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .billing-edit-container {
+    padding: 1rem;
+  }
+  
+  .summary-item {
+    padding: 0.5rem 0;
+  }
+  
+  .summary-item.total {
+    font-size: 1.1rem;
+  }
+  
+  .form-section {
+    padding: 0.75rem;
+  }
+}

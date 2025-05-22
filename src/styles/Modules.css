@@ -1,0 +1,109 @@
+/* Modules Page Styles */
+
+.modules-container {
+  padding: 1rem;
+}
+
+.module-card {
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.3);
+}
+
+.module-card.preanalytical {
+  border-top: 4px solid var(--pre-analytical);
+}
+
+.module-card.analytical {
+  border-top: 4px solid var(--analytical);
+}
+
+.module-card.postanalytical {
+  border-top: 4px solid var(--post-analytical);
+}
+
+.module-card.crossfunctional {
+  border-top: 4px solid var(--cross-functional);
+}
+
+.module-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.module-card:hover .module-icon {
+  transform: scale(1.2);
+}
+
+.module-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.module-description {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+.module-lifecycle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50rem;
+}
+
+.preanalytical .module-lifecycle {
+  background-color: rgba(78, 115, 223, 0.1);
+  color: var(--pre-analytical);
+}
+
+.analytical .module-lifecycle {
+  background-color: rgba(28, 200, 138, 0.1);
+  color: var(--analytical);
+}
+
+.postanalytical .module-lifecycle {
+  background-color: rgba(246, 194, 62, 0.1);
+  color: var(--post-analytical);
+}
+
+.crossfunctional .module-lifecycle {
+  background-color: rgba(54, 185, 204, 0.1);
+  color: var(--cross-functional);
+}
+
+.module-card .card-footer {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1.25rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .module-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .module-title {
+    font-size: 1.1rem;
+  }
+  
+  .module-description {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+}

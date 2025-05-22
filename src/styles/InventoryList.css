@@ -1,0 +1,70 @@
+/* Inventory List Styles */
+
+.inventory-list-container {
+  padding: 1.5rem;
+}
+
+/* Card Styles */
+.border-left-success {
+  border-left: 0.25rem solid var(--success) !important;
+}
+
+.border-left-warning {
+  border-left: 0.25rem solid var(--warning) !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid var(--danger) !important;
+}
+
+/* Table Styles */
+.table th {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Sort Icons */
+.sort-icon {
+  margin-left: 0.5rem;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-link {
+  color: var(--primary);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .inventory-list-container {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .card-header .d-flex {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .card-header .form-select,
+  .card-header .input-group {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+}

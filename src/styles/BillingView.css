@@ -1,0 +1,119 @@
+/* Billing View Styles */
+
+.billing-view-container {
+  padding: 1.5rem;
+}
+
+.billing-detail-item {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.billing-detail-item strong {
+  margin-right: 0.5rem;
+  min-width: 120px;
+  display: inline-block;
+}
+
+.billing-detail-item span {
+  color: var(--dark-gray);
+}
+
+.billing-detail-item .text-primary {
+  color: var(--primary) !important;
+}
+
+/* Payment History Styles */
+.payment-history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.payment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.payment-item:last-child {
+  border-bottom: none;
+}
+
+.payment-date {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.payment-details {
+  text-align: right;
+}
+
+.payment-amount {
+  font-weight: 600;
+  color: var(--success);
+}
+
+.payment-method {
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+}
+
+/* Print Styles */
+@media print {
+  .billing-view-container {
+    padding: 0;
+  }
+  
+  .btn, 
+  .card-header, 
+  .no-print {
+    display: none !important;
+  }
+  
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .card-body {
+    padding: 0 !important;
+  }
+  
+  .table {
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f8f9fa !important;
+    color: #000 !important;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .billing-view-container {
+    padding: 1rem;
+  }
+  
+  .billing-detail-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .billing-detail-item strong {
+    min-width: 100px;
+  }
+  
+  .table th, 
+  .table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "email": "admin@example.com",
+    "first_name": "System",
+    "last_name": "Administrator",
+    "role": "admin",
+    "tenant_id": null,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "username": "hubadmin",
+    "password": "hubadmin123",
+    "email": "hubadmin@avinilabs.com",
+    "first_name": "Hub",
+    "last_name": "Administrator",
+    "role": "hub_admin",
+    "tenant_id": 1,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "username": "franchise_cbe",
+    "password": "franchise123",
+    "email": "admin@coimbatore.avinilabs.com",
+    "first_name": "Franchise",
+    "last_name": "Admin CBE",
+    "role": "franchise_admin",
+    "tenant_id": 2,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "username": "franchise_mdu",
+    "password": "franchise123",
+    "email": "admin@madurai.avinilabs.com",
+    "first_name": "Franchise",
+    "last_name": "Admin MDU",
+    "role": "franchise_admin",
+    "tenant_id": 3,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "username": "labtech_chn",
+    "password": "labtech123",
+    "email": "labtech@chennai.avinilabs.com",
+    "first_name": "Lab",
+    "last_name": "Technician CHN",
+    "role": "lab_tech",
+    "tenant_id": 1,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "username": "labtech_cbe",
+    "password": "labtech123",
+    "email": "labtech@coimbatore.avinilabs.com",
+    "first_name": "Lab",
+    "last_name": "Technician CBE",
+    "role": "lab_tech",
+    "tenant_id": 2,
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "username": "reception_chn",
+    "password": "reception123",
+    "email": "reception@chennai.avinilabs.com",
+    "first_name": "Front",
+    "last_name": "Desk CHN",
+    "role": "receptionist",
+    "tenant_id": 1,
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "username": "reception_cbe",
+    "password": "reception123",
+    "email": "reception@coimbatore.avinilabs.com",
+    "first_name": "Front",
+    "last_name": "Desk CBE",
+    "role": "receptionist",
+    "tenant_id": 2,
+    "is_active": true
+  }
+]

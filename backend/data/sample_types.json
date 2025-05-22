@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "type_name": "Blood",
+    "type_code": "BLD",
+    "description": "Whole blood sample"
+  },
+  {
+    "id": 2,
+    "type_name": "Serum",
+    "type_code": "SER",
+    "description": "Blood serum sample"
+  },
+  {
+    "id": 3,
+    "type_name": "Plasma",
+    "type_code": "PLS",
+    "description": "Blood plasma sample"
+  },
+  {
+    "id": 4,
+    "type_name": "Urine",
+    "type_code": "URN",
+    "description": "Urine sample"
+  },
+  {
+    "id": 5,
+    "type_name": "Stool",
+    "type_code": "STL",
+    "description": "Stool sample"
+  },
+  {
+    "id": 6,
+    "type_name": "CSF",
+    "type_code": "CSF",
+    "description": "Cerebrospinal fluid"
+  },
+  {
+    "id": 7,
+    "type_name": "Sputum",
+    "type_code": "SPT",
+    "description": "Sputum sample"
+  },
+  {
+    "id": 8,
+    "type_name": "Swab",
+    "type_code": "SWB",
+    "description": "Swab sample"
+  },
+  {
+    "id": 9,
+    "type_name": "Tissue",
+    "type_code": "TSU",
+    "description": "Tissue sample"
+  },
+  {
+    "id": 10,
+    "type_name": "Bone Marrow",
+    "type_code": "BMA",
+    "description": "Bone marrow aspirate"
+  }
+]

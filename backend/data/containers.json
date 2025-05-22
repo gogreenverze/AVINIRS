@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "container_name": "Red Top Tube",
+    "color_code": "Red",
+    "sample_type_id": 2,
+    "volume_required": "5ml",
+    "additive": "None"
+  },
+  {
+    "id": 2,
+    "container_name": "Purple Top Tube",
+    "color_code": "Purple",
+    "sample_type_id": 1,
+    "volume_required": "3ml",
+    "additive": "EDTA"
+  },
+  {
+    "id": 3,
+    "container_name": "Blue Top Tube",
+    "color_code": "Blue",
+    "sample_type_id": 3,
+    "volume_required": "2.7ml",
+    "additive": "Sodium Citrate"
+  },
+  {
+    "id": 4,
+    "container_name": "Green Top Tube",
+    "color_code": "Green",
+    "sample_type_id": 3,
+    "volume_required": "4ml",
+    "additive": "Heparin"
+  },
+  {
+    "id": 5,
+    "container_name": "Gray Top Tube",
+    "color_code": "Gray",
+    "sample_type_id": 3,
+    "volume_required": "4ml",
+    "additive": "Sodium Fluoride"
+  },
+  {
+    "id": 6,
+    "container_name": "Urine Container",
+    "color_code": "Yellow",
+    "sample_type_id": 4,
+    "volume_required": "30ml",
+    "additive": "None"
+  },
+  {
+    "id": 7,
+    "container_name": "Stool Container",
+    "color_code": "Brown",
+    "sample_type_id": 5,
+    "volume_required": "10g",
+    "additive": "None"
+  },
+  {
+    "id": 8,
+    "container_name": "CSF Tube",
+    "color_code": "Clear",
+    "sample_type_id": 6,
+    "volume_required": "1ml",
+    "additive": "None"
+  },
+  {
+    "id": 9,
+    "container_name": "Sputum Container",
+    "color_code": "Clear",
+    "sample_type_id": 7,
+    "volume_required": "5ml",
+    "additive": "None"
+  },
+  {
+    "id": 10,
+    "container_name": "Swab Tube",
+    "color_code": "Pink",
+    "sample_type_id": 8,
+    "volume_required": "N/A",
+    "additive": "Transport Medium"
+  }
+]

@@ -1,0 +1,83 @@
+/* Not Found Page Styles */
+
+.not-found-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-icon {
+  font-size: 5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: var(--medium-gray);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .error-icon {
+    font-size: 3rem;
+  }
+  
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .error-title {
+    font-size: 1.5rem;
+  }
+  
+  .error-message {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .me-3 {
+    margin-right: 0 !important;
+  }
+}

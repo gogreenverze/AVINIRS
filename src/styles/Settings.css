@@ -1,0 +1,78 @@
+/* Settings Styles */
+
+.settings-container {
+  padding: 1.5rem;
+}
+
+/* Tab Styles */
+.nav-tabs .nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Settings Section Styles */
+.settings-section {
+  padding: 1rem 0;
+}
+
+/* Form Styles */
+.form-label {
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.form-text {
+  color: var(--gray);
+}
+
+/* Switch Styles */
+.form-switch .form-check-input {
+  width: 3em;
+  height: 1.5em;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Card Footer Styles */
+.card-footer {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .settings-container {
+    padding: 1rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .d-flex.justify-content-between button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .card-footer {
+    text-align: center;
+  }
+  
+  .card-footer button {
+    width: 100%;
+  }
+}

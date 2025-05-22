@@ -1,0 +1,66 @@
+/* Lab Dashboard Styles */
+
+.lab-dashboard-container {
+  padding: 1.5rem;
+}
+
+.chart-container {
+  position: relative;
+  margin: auto;
+}
+
+.stat-card {
+  border-left-width: 0.25rem;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.stat-card .card-body {
+  padding: 1.25rem;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.stat-card .stat-icon {
+  font-size: 2rem;
+  opacity: 0.3;
+}
+
+.stat-card.card-primary {
+  border-left-color: var(--primary);
+}
+
+.stat-card.card-success {
+  border-left-color: var(--success);
+}
+
+.stat-card.card-info {
+  border-left-color: var(--info);
+}
+
+.stat-card.card-warning {
+  border-left-color: var(--warning);
+}
+
+.stat-card.card-danger {
+  border-left-color: var(--danger);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .lab-dashboard-container {
+    padding: 1rem;
+  }
+  
+  .stat-card .stat-value {
+    font-size: 1.25rem;
+  }
+  
+  .stat-card .stat-icon {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,153 @@
+/* Modals Component Styles */
+
+.modal-content {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+
+.modal-header .modal-title {
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.modal-header .btn-close {
+  padding: 0.5rem;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+
+.modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-success {
+  color: var(--success) !important;
+}
+
+.text-info {
+  color: var(--info) !important;
+}
+
+.text-warning {
+  color: var(--warning) !important;
+}
+
+.text-danger {
+  color: var(--danger) !important;
+}
+
+/* Confirmation Modal */
+.confirmation-modal .modal-body {
+  padding: 2rem 1.5rem;
+}
+
+/* Form Modal */
+.form-modal .modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* Fullscreen Modal */
+.fullscreen-modal .modal-dialog {
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+}
+
+.fullscreen-modal .modal-content {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.fullscreen-modal .modal-body {
+  overflow-y: auto;
+}
+
+/* Side Modal */
+.side-modal {
+  width: 400px !important;
+  max-width: 100%;
+}
+
+.side-modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+
+.side-modal-body {
+  padding: 1.5rem;
+}
+
+.side-modal-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Wizard Modal */
+.wizard-modal .modal-body {
+  padding: 1.5rem;
+}
+
+.wizard-progress {
+  margin-bottom: 1.5rem;
+}
+
+.wizard-steps-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.wizard-step-content {
+  min-height: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .modal-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

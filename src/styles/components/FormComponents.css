@@ -1,0 +1,58 @@
+/* Form Components Styles */
+
+.form-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(var(--danger-rgb), 0.25);
+}
+
+.form-control.is-valid:focus,
+.form-select.is-valid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(var(--success-rgb), 0.25);
+}
+
+.input-group-text {
+  background-color: var(--light-gray);
+  border-color: var(--border-color);
+  color: var(--dark-gray);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .form-label {
+    font-size: 0.9rem;
+  }
+  
+  .form-control,
+  .form-select,
+  .input-group-text {
+    font-size: 0.9rem;
+  }
+  
+  .form-section-title {
+    font-size: 1rem;
+  }
+}

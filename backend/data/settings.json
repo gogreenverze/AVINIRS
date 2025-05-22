@@ -1,0 +1,42 @@
+{
+  "whatsapp": {
+    "enabled": true,
+    "api_version": "v17.0",
+    "default_templates": {
+      "report": "Your test results from AVINI LABS are ready. Patient: {patient_name}. Please contact us for details.",
+      "invoice": "Your invoice from AVINI LABS is ready. Invoice #{invoice_number}. Total amount: ₹{amount}. Thank you for choosing AVINI LABS."
+    }
+  },
+  "organization": {
+    "name": "AVINI Labs",
+    "address": "Main Hub, Mayiladuthurai, Tamil Nadu",
+    "phone": "6384440505",
+    "email": "info@avinilabs.com",
+    "website": "https://avinilabs.com"
+  },
+  "security": {
+    "password_min_length": 8,
+    "password_expiry_days": 90,
+    "max_login_attempts": 5,
+    "lockout_time_minutes": 30,
+    "session_timeout_minutes": 60,
+    "enable_2fa": false
+  },
+  "lab": {
+    "enable_sample_tracking": true,
+    "enable_qc": true,
+    "default_sample_validity_days": 7,
+    "enable_auto_numbering": true,
+    "sample_id_prefix": "SAM",
+    "result_id_prefix": "RES"
+  },
+  "billing": {
+    "enable_gst": true,
+    "gst_number": "",
+    "default_gst_rate": 18,
+    "enable_discount": true,
+    "max_discount_percent": 20,
+    "invoice_prefix": "INV",
+    "payment_terms_days": 30
+  }
+}

@@ -1,0 +1,112 @@
+/* User Management Styles */
+
+.user-management-container {
+  padding: 1.5rem;
+}
+
+/* Table Styles */
+.table th {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Sort Icons */
+.sort-icon {
+  margin-left: 0.5rem;
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-link {
+  color: var(--primary);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Role Summary Styles */
+.role-summary-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: #f8f9fa;
+  height: 100%;
+}
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  margin-right: 1rem;
+}
+
+.role-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-name {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.role-count {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .user-management-container {
+    padding: 1rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .card-header .d-flex {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .card-header .form-select,
+  .card-header .input-group {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .role-summary-item {
+    padding: 0.75rem;
+  }
+  
+  .role-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .role-name {
+    font-size: 0.9rem;
+  }
+  
+  .role-count {
+    font-size: 1.2rem;
+  }
+}

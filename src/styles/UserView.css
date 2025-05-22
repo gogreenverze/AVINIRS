@@ -1,0 +1,166 @@
+/* User View Styles */
+
+.user-view-container {
+  padding: 1.5rem;
+}
+
+/* User Profile Styles */
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  margin-right: 1.5rem;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.user-info h4 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.user-meta {
+  display: flex;
+  align-items: center;
+}
+
+/* User Details Styles */
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(var(--primary-rgb), 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+/* Status Styles */
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status-item:last-child {
+  border-bottom: none;
+}
+
+.status-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Permissions Styles */
+.permissions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.permission-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+}
+
+.permission-item:last-child {
+  border-bottom: none;
+}
+
+/* Table Styles */
+.table th {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .user-view-container {
+    padding: 1rem;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .d-flex.justify-content-between div {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .d-flex.justify-content-between div .btn {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .user-meta {
+    justify-content: center;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .detail-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,87 @@
+/* DataTable Component Styles */
+
+.data-table-container {
+  width: 100%;
+}
+
+.data-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.data-table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-top: 1px solid var(--border-color);
+}
+
+.data-table tbody tr:hover {
+  background-color: rgba(var(--primary-rgb), 0.05);
+}
+
+.data-table .clickable {
+  cursor: pointer;
+}
+
+.data-table .sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.data-table .sortable:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.data-table .actions-column {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.data-table .actions-cell {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .data-table th, 
+  .data-table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .data-table .btn-sm {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination .page-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-link {
+    padding: 0.5rem 0.75rem;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

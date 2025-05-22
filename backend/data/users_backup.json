@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "email": "admin@example.com",
+    "first_name": "Admin",
+    "last_name": "User",
+    "role": "admin",
+    "tenant_id": 1,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "username": "labtech",
+    "password": "labtech123",
+    "email": "labtech@example.com",
+    "first_name": "Lab",
+    "last_name": "Technician",
+    "role": "lab_tech",
+    "tenant_id": 1,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "username": "reception",
+    "password": "reception123",
+    "email": "reception@example.com",
+    "first_name": "Front",
+    "last_name": "Desk",
+    "role": "receptionist",
+    "tenant_id": 1,
+    "is_active": true
+  }
+]
