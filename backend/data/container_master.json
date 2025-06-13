@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "code": "1",
+    "description": "Air Tight Container",
+    "short_name": "AC",
+    "color": "#FFFFFF",
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "code": "2",
+    "description": "Vacantainer",
+    "short_name": "VC",
+    "color": "#FF0000",
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "code": "3",
+    "description": "EDTA Tube",
+    "short_name": "ET",
+    "color": "#800080",
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "code": "4",
+    "description": "Serum Separator Tube",
+    "short_name": "SST",
+    "color": "#FFD700",
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "code": "5",
+    "description": "Heparin Tube",
+    "short_name": "HT",
+    "color": "#00FF00",
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

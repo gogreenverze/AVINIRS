@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Enzymatic Colorimetric Method",
+    "description": "Glucose measurement using glucose oxidase enzyme",
+    "principle": "Glucose is oxidized by glucose oxidase to produce hydrogen peroxide, which reacts with a chromogen to produce a colored compound",
+    "procedure": "1. Add sample to reagent\n2. Incubate at 37°C for 5 minutes\n3. Measure absorbance at 505nm\n4. Calculate concentration using calibration curve",
+    "is_active": true,
+    "created_at": "2024-01-15T10:00:00",
+    "updated_at": "2024-01-15T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Immunoturbidimetric Method",
+    "description": "Protein measurement using antibody-antigen reaction",
+    "principle": "Specific antibodies react with target protein to form immune complexes that increase turbidity",
+    "procedure": "1. Mix sample with antibody reagent\n2. Incubate at room temperature\n3. Measure turbidity change\n4. Calculate concentration",
+    "is_active": true,
+    "created_at": "2024-01-15T10:05:00",
+    "updated_at": "2024-01-15T10:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Ion Selective Electrode",
+    "description": "Electrolyte measurement using specific electrodes",
+    "principle": "Ion-selective electrodes generate potential proportional to ion concentration",
+    "procedure": "1. Calibrate electrodes with standards\n2. Introduce sample\n3. Measure potential difference\n4. Calculate concentration",
+    "is_active": true,
+    "created_at": "2024-01-15T10:10:00",
+    "updated_at": "2024-01-15T10:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Flow Cytometry",
+    "description": "Cell counting and characterization using laser technology",
+    "principle": "Cells pass through laser beam and scatter light based on size and internal complexity",
+    "procedure": "1. Prepare cell suspension\n2. Add fluorescent markers if needed\n3. Run through flow cytometer\n4. Analyze data",
+    "is_active": true,
+    "created_at": "2024-01-15T10:15:00",
+    "updated_at": "2024-01-15T10:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "ELISA",
+    "description": "Enzyme-Linked Immunosorbent Assay for specific analytes",
+    "principle": "Antibody-antigen binding followed by enzyme-substrate reaction for detection",
+    "procedure": "1. Coat wells with capture antibody\n2. Add sample and detection antibody\n3. Add enzyme substrate\n4. Measure optical density",
+    "is_active": true,
+    "created_at": "2024-01-15T10:20:00",
+    "updated_at": "2024-01-15T10:20:00",
+    "created_by": 1
+  }
+]

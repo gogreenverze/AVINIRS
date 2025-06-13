@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "code": "1",
+    "method": "(1:20) by IF",
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "code": "2",
+    "method": "Enzymatic Colorimetric",
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "code": "3",
+    "method": "Immunoturbidimetric",
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "code": "4",
+    "method": "ELISA",
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "code": "5",
+    "method": "Chemiluminescence",
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

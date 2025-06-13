@@ -139,7 +139,7 @@ const ResultReportPrint = () => {
       <div className="print-content">
         {/* Lab Header */}
         <div className="text-center mb-4">
-          <h2 className="mb-1">RSAVINI Lab Management System</h2>
+          <h2 className="mb-1">AVINI Labs Management System</h2>
           <p className="text-muted mb-0">Laboratory Test Report</p>
           <hr />
         </div>
@@ -267,7 +267,7 @@ const ResultReportPrint = () => {
         {/* Footer */}
         <div className="text-center mt-5 pt-4 border-top">
           <p className="small text-muted mb-1">
-            <strong>RSAVINI Lab Management System</strong>
+            <strong>AVINI Labs Management System</strong>
           </p>
           <p className="small text-muted mb-1">
             This is a computer-generated report. For any queries, please contact the laboratory.

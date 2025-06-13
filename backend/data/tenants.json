@@ -1,103 +1,208 @@
 [
   {
     "id": 1,
-    "name": "AVINI Labs Mayiladuthurai",
-    "site_code": "MYL",
-    "address": "Main Hub, Mayiladuthurai, Tamil Nadu 609001",
-    "contact_phone": "6384440505",
-    "email": "hub@avinilabs.com",
+    "name": "AVINI Labs Chennai",
+    "site_code": "CHN",
+    "address": "123 Anna Salai, Chennai, Tamil Nadu",
+    "contact_phone": "9876543210",
     "is_hub": true,
-    "is_active": true,
-    "established_date": "2020-01-15",
-    "license_number": "TN-LAB-2020-001"
+    "is_active": true
   },
   {
     "id": 2,
-    "name": "AVINI Labs Chidambaram",
-    "site_code": "CHD",
-    "address": "Franchise Location, Chidambaram, Tamil Nadu",
-    "contact_phone": "6384440502",
+    "name": "AVINI Labs Coimbatore",
+    "site_code": "CBE",
+    "address": "45 DB Road, RS Puram, Coimbatore, Tamil Nadu",
+    "contact_phone": "9876543211",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 3,
-    "name": "AVINI Labs Kumbakonam",
-    "site_code": "KMB",
-    "address": "Franchise Location, Kumbakonam, Tamil Nadu",
-    "contact_phone": "6384440503",
+    "name": "AVINI Labs Madurai",
+    "site_code": "MDU",
+    "address": "78 North Veli Street, Madurai, Tamil Nadu",
+    "contact_phone": "9876543212",
     "is_hub": false,
     "is_active": true
   },
-  {
+   {
     "id": 4,
-    "name": "AVINI Labs Thanjavur",
-    "site_code": "TNJ",
-    "address": "Franchise Location, Thanjavur, Tamil Nadu",
-    "contact_phone": "6384440520",
+    "name": "AVINI Labs Mayiladuthurai",
+    "site_code": "MYL",
+    "address": "1 Temple Road, Mayiladuthurai, Tamil Nadu",
+    "contact_phone": "9876543213",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 5,
-    "name": "AVINI Labs Needamangalam",
-    "site_code": "NDM",
-    "address": "Franchise Location, Needamangalam, Tamil Nadu",
-    "contact_phone": "6384440509",
+    "name": "AVINI Labs Sankaranpanthal",
+    "site_code": "SKP",
+    "address": "2 Market Street, Sankaranpanthal, Tamil Nadu",
+    "contact_phone": "9876543214",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 6,
-    "name": "AVINI Labs Kuthalam",
-    "site_code": "KTH",
-    "address": "Franchise Location, Kuthalam, Tamil Nadu",
-    "contact_phone": "9488776966",
+    "name": "AVINI Labs Pandanallur",
+    "site_code": "PDL",
+    "address": "3 School Road, Pandanallur, Tamil Nadu",
+    "contact_phone": "9876543215",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 7,
-    "name": "AVINI Labs Aduthurai",
-    "site_code": "ADT",
-    "address": "Franchise Location, Aduthurai, Tamil Nadu",
-    "contact_phone": "6384440510",
+    "name": "AVINI Labs Eravachery",
+    "site_code": "ERV",
+    "address": "4 Lake View, Eravachery, Tamil Nadu",
+    "contact_phone": "9876543216",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 8,
-    "name": "AVINI Labs Thiruppanandal",
-    "site_code": "TPN",
-    "address": "Franchise Location, Thiruppanandal, Tamil Nadu",
-    "contact_phone": "6384440521",
+    "name": "AVINI Labs Thanjavur",
+    "site_code": "TNJ",
+    "address": "5 Palace Road, Thanjavur, Tamil Nadu",
+    "contact_phone": "9876543217",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 9,
-    "name": "AVINI Labs Sankarapanthal",
-    "site_code": "SKP",
-    "address": "Franchise Location, Sankarapanthal, Tamil Nadu",
-    "contact_phone": "6384440507",
+    "name": "AVINI Labs Swamimalai",
+    "site_code": "SWM",
+    "address": "6 Temple Road, Swamimalai, Tamil Nadu",
+    "contact_phone": "9876543218",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 10,
-    "name": "AVINI Labs Eravancherry",
-    "site_code": "ERC",
-    "address": "Franchise Location, Eravancherry, Tamil Nadu",
-    "contact_phone": "6384440508",
+    "name": "AVINI Labs Arumbakkam",
+    "site_code": "ARB",
+    "address": "7 Park Street, Arumbakkam, Tamil Nadu",
+    "contact_phone": "9876543219",
     "is_hub": false,
     "is_active": true
   },
   {
     "id": 11,
+    "name": "AVINI Labs Chidambaram",
+    "site_code": "CHD",
+    "address": "8 Nataraja Road, Chidambaram, Tamil Nadu",
+    "contact_phone": "9876543220",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 12,
+    "name": "AVINI Labs Sembarankovil",
+    "site_code": "SBK",
+    "address": "9 Bazaar Street, Sembarankovil, Tamil Nadu",
+    "contact_phone": "9876543221",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 13,
+    "name": "AVINI Labs Thirupandandal",
+    "site_code": "TPD",
+    "address": "10 College Road, Thirupandandal, Tamil Nadu",
+    "contact_phone": "9876543222",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 14,
     "name": "AVINI Labs Nachiyarkovil",
-    "site_code": "NCK",
-    "address": "Franchise Location, Nachiyarkovil, Tamil Nadu",
-    "contact_phone": "6384440506",
+    "site_code": "NKV",
+    "address": "11 Temple Road, Nachiyarkovil, Tamil Nadu",
+    "contact_phone": "9876543223",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 15,
+    "name": "AVINI Labs Needamangalam",
+    "site_code": "NDM",
+    "address": "12 Bus Stand Road, Needamangalam, Tamil Nadu",
+    "contact_phone": "9876543224",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 16,
+    "name": "AVINI Labs Thirukattupalli",
+    "site_code": "TKP",
+    "address": "13 Main Street, Thirukattupalli, Tamil Nadu",
+    "contact_phone": "9876543225",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 17,
+    "name": "AVINI Labs Avadi",
+    "site_code": "AVD",
+    "address": "14 Military Road, Avadi, Tamil Nadu",
+    "contact_phone": "9876543226",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 18,
+    "name": "AVINI Labs Sirkazhi",
+    "site_code": "SKZ",
+    "address": "15 Market Street, Sirkazhi, Tamil Nadu",
+    "contact_phone": "9876543227",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 19,
+    "name": "AVINI Labs Kuthalam",
+    "site_code": "KTL",
+    "address": "16 College Road, Kuthalam, Tamil Nadu",
+    "contact_phone": "9876543228",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 20,
+    "name": "AVINI Labs Aduthurai",
+    "site_code": "ADT",
+    "address": "17 Main Road, Aduthurai, Tamil Nadu",
+    "contact_phone": "9876543229",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 21,
+    "name": "AVINI Labs Kumbakonam",
+    "site_code": "KBM",
+    "address": "18 Temple Street, Kumbakonam, Tamil Nadu",
+    "contact_phone": "9876543230",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 22,
+    "name": "AVINI Labs Mannargudi",
+    "site_code": "MRG",
+    "address": "19 Gandhi Street, Mannargudi, Tamil Nadu",
+    "contact_phone": "9876543231",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 23,
+    "name": "AVINI Labs Thuvakudi Malai",
+    "site_code": "TVM",
+    "address": "20 Industrial Area, Thuvakudi Malai, Tamil Nadu",
+    "contact_phone": "9876543232",
     "is_hub": false,
     "is_active": true
   }

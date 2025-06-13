@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "code": "1",
+    "specimen": "Blood",
+    "container": "EDTA Tube",
+    "disposable": "Yes",
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "code": "2",
+    "specimen": "24 Hr Urine",
+    "container": "Urine Container",
+    "disposable": "Yes",
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "code": "3",
+    "specimen": "Serum",
+    "container": "Serum Separator Tube",
+    "disposable": "Yes",
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "code": "4",
+    "specimen": "Plasma",
+    "container": "Heparin Tube",
+    "disposable": "Yes",
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "code": "5",
+    "specimen": "Stool",
+    "container": "Stool Container",
+    "disposable": "Yes",
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

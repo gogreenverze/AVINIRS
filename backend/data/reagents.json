@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Glucose Reagent",
+    "lot_number": "GLU2024001",
+    "expiry_date": "2024-12-31",
+    "manufacturer": "Roche Diagnostics",
+    "storage_temperature": "2-8°C",
+    "is_active": true,
+    "created_at": "2024-01-15T09:00:00",
+    "updated_at": "2024-01-15T09:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Cholesterol Reagent",
+    "lot_number": "CHO2024001",
+    "expiry_date": "2024-11-30",
+    "manufacturer": "Abbott Diagnostics",
+    "storage_temperature": "2-8°C",
+    "is_active": true,
+    "created_at": "2024-01-15T09:05:00",
+    "updated_at": "2024-01-15T09:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Hemoglobin Reagent",
+    "lot_number": "HGB2024001",
+    "expiry_date": "2024-10-31",
+    "manufacturer": "Sysmex",
+    "storage_temperature": "Room Temperature",
+    "is_active": true,
+    "created_at": "2024-01-15T09:10:00",
+    "updated_at": "2024-01-15T09:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Creatinine Reagent",
+    "lot_number": "CRE2024001",
+    "expiry_date": "2024-09-30",
+    "manufacturer": "Beckman Coulter",
+    "storage_temperature": "2-8°C",
+    "is_active": true,
+    "created_at": "2024-01-15T09:15:00",
+    "updated_at": "2024-01-15T09:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "Urea Reagent",
+    "lot_number": "URE2024001",
+    "expiry_date": "2024-08-31",
+    "manufacturer": "Siemens Healthineers",
+    "storage_temperature": "2-8°C",
+    "is_active": true,
+    "created_at": "2024-01-15T09:20:00",
+    "updated_at": "2024-01-15T09:20:00",
+    "created_by": 1
+  }
+]

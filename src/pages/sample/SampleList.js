@@ -165,7 +165,7 @@ const SampleList = () => {
       case 'Transferred':
         return 'secondary';
       default:
-        return 'light';
+        return 'dark';
     }
   };
 

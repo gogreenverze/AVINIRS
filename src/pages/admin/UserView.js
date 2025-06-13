@@ -44,8 +44,8 @@ const UserView = () => {
         setUser(userResponse.data);
         
         // Fetch login history
-        const historyResponse = await adminAPI.getUserLoginHistory(id);
-        setLoginHistory(historyResponse.data);
+        // const historyResponse = await adminAPI.getUserLoginHistory(id);
+        // setLoginHistory(historyResponse.data);
       } catch (err) {
         console.error('Error fetching user:', err);
         setError('Failed to load user data. Please try again later.');
@@ -282,10 +282,10 @@ const UserView = () => {
           <Card className="shadow mb-4">
             <Card.Header className="py-3 d-flex justify-content-between align-items-center">
               <h6 className="m-0 font-weight-bold text-primary">Login History</h6>
-              <Badge bg="info">{loginHistory.length} Entries</Badge>
+              <Badge bg="info">{loginHistory?.length} Entries</Badge>
             </Card.Header>
             <Card.Body>
-              {loginHistory.length > 0 ? (
+              {loginHistory?.length > 0 ? (
                 <div className="table-responsive">
                   <Table className="table-hover" width="100%" cellSpacing="0">
                     <thead>
@@ -297,7 +297,7 @@ const UserView = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {loginHistory.map((entry, index) => (
+                      {loginHistory?.map((entry, index) => (
                         <tr key={index}>
                           <td>{formatDate(entry.timestamp)}</td>
                           <td>{entry.ip_address}</td>

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "code": "CBC001",
+    "procedure_code": "85025",
+    "test_profile": "Complete Blood Count",
+    "test_price": 250.00,
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00",
+    "updated_at": "2024-01-01T00:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "code": "LFT001",
+    "procedure_code": "80076",
+    "test_profile": "Liver Function Test",
+    "test_price": 450.00,
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00",
+    "updated_at": "2024-01-01T00:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "code": "KFT001",
+    "procedure_code": "80069",
+    "test_profile": "Kidney Function Test",
+    "test_price": 350.00,
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00",
+    "updated_at": "2024-01-01T00:00:00",
+    "created_by": 1
+  }
+]

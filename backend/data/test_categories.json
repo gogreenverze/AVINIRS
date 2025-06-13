@@ -3,9 +3,10 @@
     "id": 1,
     "name": "Hematology",
     "code": "HEMA",
-    "description": "Blood cell analysis and related tests",
+    "description": "Blood cell analysis and related test",
     "is_active": true,
-    "created_at": "2020-01-15T10:00:00"
+    "created_at": "2020-01-15T10:00:00",
+    "updated_at": "2025-06-12T16:10:42.041947"
   },
   {
     "id": 2,

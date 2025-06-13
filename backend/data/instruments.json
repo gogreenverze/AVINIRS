@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Automated Chemistry Analyzer",
+    "model": "AU5800",
+    "manufacturer": "Beckman Coulter",
+    "serial_number": "AC2024001",
+    "installation_date": "2024-01-15",
+    "calibration_due": "2024-07-15",
+    "is_active": true,
+    "created_at": "2024-01-15T09:00:00",
+    "updated_at": "2024-01-15T09:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Hematology Analyzer",
+    "model": "XN-1000",
+    "manufacturer": "Sysmex",
+    "serial_number": "HM2024001",
+    "installation_date": "2024-01-20",
+    "calibration_due": "2024-08-20",
+    "is_active": true,
+    "created_at": "2024-01-20T10:00:00",
+    "updated_at": "2024-01-20T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Immunoassay Analyzer",
+    "model": "ARCHITECT i2000SR",
+    "manufacturer": "Abbott",
+    "serial_number": "IA2024001",
+    "installation_date": "2024-02-01",
+    "calibration_due": "2024-09-01",
+    "is_active": true,
+    "created_at": "2024-02-01T11:00:00",
+    "updated_at": "2024-02-01T11:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Microscope",
+    "model": "BX53",
+    "manufacturer": "Olympus",
+    "serial_number": "MC2024001",
+    "installation_date": "2024-01-10",
+    "calibration_due": "2025-01-10",
+    "is_active": true,
+    "created_at": "2024-01-10T08:00:00",
+    "updated_at": "2024-01-10T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "Centrifuge",
+    "model": "5810R",
+    "manufacturer": "Eppendorf",
+    "serial_number": "CF2024001",
+    "installation_date": "2024-01-05",
+    "calibration_due": "2024-07-05",
+    "is_active": true,
+    "created_at": "2024-01-05T07:00:00",
+    "updated_at": "2024-01-05T07:00:00",
+    "created_by": 1
+  }
+]

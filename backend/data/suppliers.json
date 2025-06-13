@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Roche Diagnostics India",
+    "contact_person": "Rajesh Kumar",
+    "email": "rajesh.kumar@roche.com",
+    "phone": "+91-80-4567-8901",
+    "address": "Roche Products (India) Pvt. Ltd., Bangalore, Karnataka, India",
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Abbott India Limited",
+    "contact_person": "Priya Sharma",
+    "email": "priya.sharma@abbott.com",
+    "phone": "+91-22-6789-0123",
+    "address": "Abbott Healthcare Pvt. Ltd., Mumbai, Maharashtra, India",
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Siemens Healthineers",
+    "contact_person": "Amit Patel",
+    "email": "amit.patel@siemens-healthineers.com",
+    "phone": "+91-11-2345-6789",
+    "address": "Siemens Healthcare Pvt. Ltd., Gurgaon, Haryana, India",
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Beckman Coulter India",
+    "contact_person": "Sunita Reddy",
+    "email": "sunita.reddy@beckman.com",
+    "phone": "+91-40-3456-7890",
+    "address": "Beckman Coulter India Pvt. Ltd., Hyderabad, Telangana, India",
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "Sysmex India",
+    "contact_person": "Vikram Singh",
+    "email": "vikram.singh@sysmex.co.in",
+    "phone": "+91-124-456-7890",
+    "address": "Sysmex India Pvt. Ltd., Gurgaon, Haryana, India",
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "antibiotic_code": "1",
+    "antibiotic_group": "Avini",
+    "antibiotic_description": "Amikacin (30 mcg)",
+    "antibiotic_content": "",
+    "order": 51,
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "antibiotic_code": "2",
+    "antibiotic_group": "Avini",
+    "antibiotic_description": "Amoxyclav (30 mcg)",
+    "antibiotic_content": "",
+    "order": 52,
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "antibiotic_code": "3",
+    "antibiotic_group": "Avini",
+    "antibiotic_description": "Ampicillin (10 mcg)",
+    "antibiotic_content": "",
+    "order": 53,
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "antibiotic_code": "4",
+    "antibiotic_group": "Avini",
+    "antibiotic_description": "Cefotaxime (30 mcg)",
+    "antibiotic_content": "",
+    "order": 54,
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "antibiotic_code": "5",
+    "antibiotic_group": "Avini",
+    "antibiotic_description": "Ciprofloxacin (5 mcg)",
+    "antibiotic_content": "",
+    "order": 55,
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

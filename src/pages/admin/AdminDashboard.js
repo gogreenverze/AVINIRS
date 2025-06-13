@@ -283,7 +283,7 @@ const AdminDashboard = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {users.map(user => (
+                    {users?.map(user => (
                       <tr key={user.id}>
                         <td>{user.first_name} {user.last_name}</td>
                         <td>{user.username}</td>
@@ -397,7 +397,7 @@ const AdminDashboard = () => {
           </Tab>
         )}
 
-        <Tab eventKey="master-data" title="Master Data">
+        {/* <Tab eventKey="master-data" title="Master Data">
           <Row>
             <Col md={6}>
               <Card className="shadow mb-4">
@@ -496,7 +496,7 @@ const AdminDashboard = () => {
             </Col>
           </Row>
 
-          {/* Sample Distribution Chart */}
+         
           {sampleDistributionData && (
             <Card className="shadow mb-4">
               <Card.Header className="py-3">
@@ -509,7 +509,7 @@ const AdminDashboard = () => {
               </Card.Body>
             </Card>
           )}
-        </Tab>
+        </Tab> */}
 
         {(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') && (
           <Tab eventKey="whatsapp" title={<><FontAwesomeIcon icon={faWhatsapp} className="me-2" />WhatsApp</>}>

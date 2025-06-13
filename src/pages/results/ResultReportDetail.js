@@ -7,6 +7,8 @@ import {
   faFileAlt, faUser, faVial, faCalendar
 } from '@fortawesome/free-solid-svg-icons';
 import { resultAPI, whatsappAPI } from '../../services/api';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
 
 const ResultReportDetail = () => {
   const { id } = useParams();
@@ -47,7 +49,7 @@ const ResultReportDetail = () => {
   const handleDownload = () => {
     // Create a simple PDF-like content for download
     const content = `
-      RSAVINI Lab Management System
+      AVINI Labs Management System
       Test Report
       
       Report ID: ${report.id}
@@ -371,7 +373,7 @@ const ResultReportDetail = () => {
       {/* Report Footer */}
       <Card className="shadow mb-4">
         <Card.Body className="text-center">
-          <p className="mb-1"><strong>RSAVINI Lab Management System</strong></p>
+          <p className="mb-1"><strong>AVINI Labs Management System</strong></p>
           <p className="text-muted small mb-0">
             This is a computer-generated report. For any queries, please contact the laboratory.
           </p>

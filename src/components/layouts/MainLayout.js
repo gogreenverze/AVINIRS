@@ -10,6 +10,7 @@ import {
   faSignOutAlt, faThLarge, faDatabase
 } from '@fortawesome/free-solid-svg-icons';
 import '../../styles/MainLayout.css';
+import logo from "./logo.png"
 
 const MainLayout = () => {
   const { currentUser, logout } = useAuth();
@@ -24,6 +25,8 @@ const MainLayout = () => {
   const closeSidebar = () => {
     setSidebarOpen(false);
   };
+
+  
 
   // Check if user has access to admin features
   const hasAdminAccess = () => {
@@ -74,7 +77,7 @@ const MainLayout = () => {
       <div className={`sidebar ${sidebarOpen ? 'mobile-visible' : ''}`}>
         <Link to="/dashboard" className="sidebar-brand d-flex align-items-center justify-content-center" onClick={closeSidebar}>
           <div className="sidebar-brand-icon me-2">
-            <img src="/img/avini-logo.svg" alt="AVINI LABS" height="40" />
+            <img src={logo} alt="AVINI LABS" height="40" />
           </div>
           <div className="sidebar-brand-text">
             <span className="fw-bold text-white">AVINI</span>
@@ -271,6 +274,18 @@ const MainLayout = () => {
               >
                 <FontAwesomeIcon icon={faDatabase} className="fa-fw" />
                 <span>Master Data</span>
+              </Link>
+            </li>
+          )}
+          {hasFullSystemAccess() && (
+            <li className="nav-item">
+              <Link
+                to="/admin/technical-master-data"
+                className={`nav-link ${location.pathname === '/admin/technical-master-data' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faChartBar} className="fa-fw" />
+                <span>Technical Master Data</span>
               </Link>
             </li>
           )}

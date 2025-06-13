@@ -58,6 +58,7 @@ const UserManagement = () => {
 
         const response = await adminAPI.getUsers();
         setUsers(response.data);
+        console.log("element",response.data)
       } catch (err) {
         console.error('Error fetching users:', err);
         setError('Failed to load users. Please try again later.');
@@ -191,6 +192,7 @@ const UserManagement = () => {
     }
   };
 
+
   // Table columns
   const columns = [
     {
@@ -314,7 +316,7 @@ const UserManagement = () => {
           ) : (
             <div className="table-responsive">
               <DataTable
-                columns={columns}
+                columns={columns}   
                 data={currentUsers}
                 currentPage={currentPage}
                 totalPages={totalPages}

@@ -6,9 +6,13 @@
 
 /* Tab Styles */
 .nav-tabs .nav-link {
-  color: var(--dark-gray);
+  color: var(--primary);
   font-weight: 500;
   padding: 0.75rem 1rem;
+}
+
+.custom-tab .nav-link {
+  color:var(--primary) !important;
 }
 
 .nav-tabs .nav-link.active {

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Table, Form, InputGroup, Button, Pagination } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faSort, faSortUp, faSortDown, faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import '../../styles/components/DataTable.css';
+import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 /**
  * Reusable DataTable component with sorting, filtering, and pagination
@@ -39,6 +41,15 @@ const DataTable = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [sortField, setSortField] = useState(null);
   const [sortDirection, setSortDirection] = useState('asc');
+
+
+  const { currentUser } = useAuth();
+
+
+  const userLocation = useLocation();
+
+  // console.log("element",userLocation)
+
 
   // Handle search
   const handleSearch = (e) => {
@@ -155,6 +166,14 @@ const DataTable = ({
       : <FontAwesomeIcon icon={faSortDown} className="ms-1 text-primary" />;
   };
 
+
+
+
+
+      
+
+       
+      
   return (
     <div className="data-table-container">
       {/* Search */}
@@ -210,6 +229,58 @@ const DataTable = ({
                   {emptyMessage}
                 </td>
               </tr>
+            ) : userLocation.pathname == "/admin/users" ?
+            (
+              sortedData.map((row, rowIndex) => (
+                <tr 
+                  key={row.id || rowIndex} 
+                  onClick={() => onRowClick && onRowClick(row)}
+                  className={onRowClick ? 'clickable' : ''}
+                >
+                  { (
+                    <>
+                   <td className="actions-cell">{row.first_name}</td>
+      <td className="actions-cell">{row.username}</td>
+      <td className="actions-cell">{row.email}</td>
+      <td className="actions-cell">{row.role}</td>
+      <td className="actions-cell">{row?.tenant?.name}</td>
+     <td>
+                              <Link to={`/admin/users/${row.id}`} className="btn btn-info btn-sm me-1">
+                                <FontAwesomeIcon icon={faEye} />
+                              </Link>
+                              <Link to={`/admin/users/${row.id}/edit`} className="btn btn-primary btn-sm me-1">
+                                <FontAwesomeIcon icon={faEdit} />
+                              </Link>
+                              {currentUser?.id !== row.id && (
+                                <Button variant="danger" size="sm">
+                                  <FontAwesomeIcon icon={faTrash} />
+                                </Button>
+                              )}
+                            </td>
+      </>
+                  )}
+                  {/* {actions.length > 0 && (
+                    <td className="actions-cell">
+                      {actions.map((action, actionIndex) => (
+                        <Button
+                          key={actionIndex}
+                          variant={action.variant || 'primary'}
+                          size="sm"
+                          className="me-1"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            action.onClick(row);
+                          }}
+                          disabled={action.isDisabled ? action.isDisabled(row) : false}
+                        >
+                          {action.icon && <FontAwesomeIcon icon={action.icon} className={action.label ? 'me-1' : ''} />}
+                          {action.label}
+                        </Button>
+                      ))}
+                    </td>
+                  )} */}
+                </tr>
+              ))
             ) : (
               sortedData.map((row, rowIndex) => (
                 <tr 
@@ -220,6 +291,7 @@ const DataTable = ({
                   {columns.map((column) => (
                     <td key={`${rowIndex}-${column.field}`}>
                       {column.render ? column.render(row) : row[column.field]}
+                   
                     </td>
                   ))}
                   {actions.length > 0 && (

@@ -53,12 +53,12 @@ Your lab test report is ready! 📋
 
 ${reportData.result_value ? `• Result: ${reportData.result_value} ${reportData.unit || ''}` : ''}
 
-Thank you for choosing RSAVINI Lab Management System. 🏥
+Thank you for choosing AVINI Labs Management System. 🏥
 
 If you have any questions, please feel free to contact us.
 
 Best regards,
-RSAVINI Lab Team`
+AVINI Labs Team`
         }));
 
       } catch (err) {

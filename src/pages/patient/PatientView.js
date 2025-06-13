@@ -107,12 +107,15 @@ const PatientView = () => {
                     <strong>Phone:</strong>
                     <span>{patient.phone || 'Not provided'}</span>
                   </div>
+                
+                </Col>
+                 <Row>
                   <div className="patient-detail-item">
                     <FontAwesomeIcon icon={faEnvelope} className="me-2 text-primary" />
                     <strong>Email:</strong>
                     <span>{patient.email || 'Not provided'}</span>
                   </div>
-                </Col>
+              </Row>
                 <Col md={6}>
                   <div className="patient-detail-item">
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2 text-primary" />
@@ -155,6 +158,7 @@ const PatientView = () => {
                   </div>
                 </Col>
               </Row>
+             
             </Card.Body>
           </Card>
         </Col>

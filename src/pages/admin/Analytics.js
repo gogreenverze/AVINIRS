@@ -306,7 +306,7 @@ const Analytics = () => {
         onSelect={(k) => setActiveTab(k)}
         className="mb-4"
       >
-        <Tab eventKey="overview" title="Overview">
+        <Tab eventKey="overview" title="Overview" className="custom-tab">
           <Row>
             <Col lg={8}>
               <Card className="shadow mb-4">

@@ -27,7 +27,8 @@ const SampleRouting = () => {
         setError(null);
 
         const response = await sampleAPI.getSampleTransfers();
-        setRoutings(response.data.data || []);
+        setRoutings(response.data.items || []);
+         console.log("checkroutingsss",response.data)
         setUnreadMessages(0); // For now, set to 0 as we don't have message system
       } catch (err) {
         console.error('Error fetching sample transfers:', err);
@@ -39,6 +40,8 @@ const SampleRouting = () => {
 
     fetchRoutings();
   }, []);
+
+  console.log("rountings",routings)
 
   // Filter routings based on active tab and search query
   const filteredRoutings = routings.filter(routing => {
@@ -87,6 +90,9 @@ const SampleRouting = () => {
     e.preventDefault();
   };
 
+
+
+  console.log("filterroutings",filteredRoutings)
   return (
     <div className="sample-routing-container">
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -186,7 +192,7 @@ const SampleRouting = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {filteredRoutings.map(routing => (
+                      {filteredRoutings?.map(routing => (
                         <tr key={routing.id}>
                           <td>
                             {routing.sample ? (
@@ -265,8 +271,9 @@ const SampleRouting = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {filteredRoutings.map(routing => (
+                      {filteredRoutings?.map(routing => (
                         <tr key={routing.id}>
+                          {console.log("smapleroutings",routing)}
                           <td>
                             {routing.sample ? (
                               <Link to={`/samples/${routing.sample.id}`}>

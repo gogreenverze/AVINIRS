@@ -140,7 +140,7 @@ const Dashboard = () => {
                     Pending Orders
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
-                    {dashboardData.pendingOrders}
+                    {dashboardData?.pendingOrders}
                   </div>
                 </div>
                 <div className="col-auto">
@@ -161,7 +161,7 @@ const Dashboard = () => {
                     Today's Patients
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
-                    {dashboardData.todayPatients}
+                    {dashboardData?.todayPatients}
                   </div>
                 </div>
                 <div className="col-auto">
@@ -182,7 +182,7 @@ const Dashboard = () => {
                     Pending Results
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
-                    {dashboardData.pendingResults}
+                    {dashboardData?.pendingResults}
                   </div>
                 </div>
                 <div className="col-auto">
@@ -203,7 +203,7 @@ const Dashboard = () => {
                     Low Stock Items
                   </div>
                   <div className="h5 mb-0 font-weight-bold text-gray-800">
-                    {dashboardData.lowStockItems}
+                    {dashboardData?.lowStockItems}
                   </div>
                 </div>
                 <div className="col-auto">
@@ -249,10 +249,10 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {dashboardData.recentOrders.map(order => (
+                    {dashboardData?.recentOrders.map(order => (
                       <tr key={order.id}>
                         <td>{order.order_id}</td>
-                        <td>{order.patient.first_name} {order.patient.last_name}</td>
+                        <td>{order?.patient?.first_name} {order.patient?.last_name}</td>
                         <td>
                           <span className={`badge bg-${
                             order.status === 'Completed' ? 'success' :
@@ -297,7 +297,7 @@ const Dashboard = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {tenantData.franchises.map(franchise => (
+                      {tenantData?.franchises.map(franchise => (
                         <tr key={franchise.id}>
                           <td>{franchise.name}</td>
                           <td>{franchise.site_code}</td>

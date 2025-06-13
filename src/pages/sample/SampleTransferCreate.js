@@ -19,7 +19,12 @@ const SampleTransferCreate = () => {
     sample_id: '',
     to_tenant_id: '',
     reason: '',
-    notes: ''
+    notes: '',
+    dispatch_immediately: false,
+    dispatch_date: new Date().toISOString().split('T')[0],
+    dispatch_time: new Date().toTimeString().split(' ')[0].substring(0, 5),
+    tracking_number: '',
+    courier_service: ''
   });
 
   // Fetch samples and tenants on component mount
@@ -27,12 +32,16 @@ const SampleTransferCreate = () => {
     const fetchData = async () => {
       try {
         const [samplesResponse, tenantsResponse] = await Promise.all([
-          sampleAPI.getSamples(),
-          tenantAPI.getTenants()
+           sampleAPI.getAllSamples(),
+         tenantAPI.getTenants()
         ]);
-        
-        setSamples(samplesResponse.data.data || []);
-        setTenants(tenantsResponse.data.data || []);
+
+
+        console.log("setSamples",samplesResponse.data.items)
+        console.log("setTenants",tenantsResponse.data)
+       
+        setSamples(samplesResponse?.data?.items || []);
+        setTenants(tenantsResponse?.data || []);
       } catch (err) {
         console.error('Error fetching data:', err);
         setError('Failed to load required data. Please try again.');
@@ -41,6 +50,10 @@ const SampleTransferCreate = () => {
 
     fetchData();
   }, []);
+
+
+  console.log("smaples",samples)
+  console.log("tenants",tenants)
 
   // Handle form input changes
   const handleInputChange = (e) => {
@@ -54,24 +67,52 @@ const SampleTransferCreate = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validate required fields
     if (!formData.sample_id || !formData.to_tenant_id || !formData.reason) {
       setError('Please fill in all required fields.');
       return;
     }
 
+    // Validate dispatch fields if dispatching immediately
+    if (formData.dispatch_immediately && !formData.tracking_number.trim()) {
+      setError('Tracking number is required when dispatching immediately.');
+      return;
+    }
+
     try {
       setLoading(true);
       setError(null);
-      
-      await sampleAPI.createSampleTransfer(formData);
-      
+
+      // Create the transfer
+      const transferData = {
+        sample_id: formData.sample_id,
+        to_tenant_id: formData.to_tenant_id,
+        reason: formData.reason,
+        notes: formData.notes
+      };
+
+      const response = await sampleAPI.createSampleTransfer(transferData);
+
+      // If dispatching immediately, dispatch the transfer
+      if (formData.dispatch_immediately) {
+        const dispatchData = {
+          dispatch_date: formData.dispatch_date,
+          dispatch_time: formData.dispatch_time,
+          tracking_number: formData.tracking_number,
+          courier_service: formData.courier_service,
+          status: 'In Transit',
+          transferred_at: new Date().toISOString()
+        };
+
+        await sampleAPI.dispatchSampleTransfer(response.data.id, dispatchData);
+      }
+
       setSuccess(true);
       setTimeout(() => {
         navigate('/samples/routing');
       }, 2000);
-      
+
     } catch (err) {
       console.error('Error creating sample transfer:', err);
       setError(err.response?.data?.message || 'Failed to create sample transfer. Please try again.');
@@ -132,9 +173,9 @@ const SampleTransferCreate = () => {
                     required
                   >
                     <option value="">Select a sample...</option>
-                    {samples.map(sample => (
+                    {samples?.map(sample => (
                       <option key={sample.id} value={sample.id}>
-                        {sample.sample_id} - {sample.patient?.first_name} {sample.patient?.last_name}
+                        {sample?.sample_id} - {sample.patient?.first_name} {sample.patient?.last_name}
                       </option>
                     ))}
                   </Form.Select>
@@ -151,9 +192,9 @@ const SampleTransferCreate = () => {
                     required
                   >
                     <option value="">Select destination...</option>
-                    {availableTenants.map(tenant => (
+                    {availableTenants?.map(tenant => (
                       <option key={tenant.id} value={tenant.id}>
-                        {tenant.name} ({tenant.site_code})
+                        {tenant?.name} ({tenant?.site_code})
                       </option>
                     ))}
                   </Form.Select>
@@ -199,6 +240,86 @@ const SampleTransferCreate = () => {
                 </Form.Group>
               </Col>
             </Row>
+
+            {/* Dispatch Options */}
+            <Row>
+              <Col md={12}>
+                <Form.Group className="mb-3">
+                  <Form.Check
+                    type="checkbox"
+                    name="dispatch_immediately"
+                    checked={formData.dispatch_immediately}
+                    onChange={handleInputChange}
+                    label="Dispatch immediately after creating transfer"
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+
+            {formData.dispatch_immediately && (
+              <>
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Dispatch Date <span className="text-danger">*</span></Form.Label>
+                      <Form.Control
+                        type="date"
+                        name="dispatch_date"
+                        value={formData.dispatch_date}
+                        onChange={handleInputChange}
+                        required={formData.dispatch_immediately}
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Dispatch Time <span className="text-danger">*</span></Form.Label>
+                      <Form.Control
+                        type="time"
+                        name="dispatch_time"
+                        value={formData.dispatch_time}
+                        onChange={handleInputChange}
+                        required={formData.dispatch_immediately}
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Tracking Number <span className="text-danger">*</span></Form.Label>
+                      <Form.Control
+                        type="text"
+                        name="tracking_number"
+                        value={formData.tracking_number}
+                        onChange={handleInputChange}
+                        placeholder="Enter tracking number"
+                        required={formData.dispatch_immediately}
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Courier Service</Form.Label>
+                      <Form.Select
+                        name="courier_service"
+                        value={formData.courier_service}
+                        onChange={handleInputChange}
+                      >
+                        <option value="">Select courier service</option>
+                        <option value="FedEx">FedEx</option>
+                        <option value="UPS">UPS</option>
+                        <option value="DHL">DHL</option>
+                        <option value="USPS">USPS</option>
+                        <option value="Local Courier">Local Courier</option>
+                        <option value="Other">Other</option>
+                      </Form.Select>
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </>
+            )}
 
             <div className="d-flex justify-content-end">
               <Button 

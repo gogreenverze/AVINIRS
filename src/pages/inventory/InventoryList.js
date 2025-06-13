@@ -254,7 +254,7 @@ const InventoryList = () => {
               value={filterCategory}
               onChange={handleFilter}
             >
-              {categories.map(category => (
+              {categories?.map(category => (
                 <option key={category.value} value={category.value}>
                   {category.label}
                 </option>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Milligrams per deciliter",
+    "symbol": "mg/dL",
+    "type": "Concentration",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:00:00",
+    "updated_at": "2024-01-15T09:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Grams per liter",
+    "symbol": "g/L",
+    "type": "Concentration",
+    "conversion_factor": 100.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:05:00",
+    "updated_at": "2024-01-15T09:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "International Units per liter",
+    "symbol": "IU/L",
+    "type": "Activity",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:10:00",
+    "updated_at": "2024-01-15T09:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "name": "Millimoles per liter",
+    "symbol": "mmol/L",
+    "type": "Concentration",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:15:00",
+    "updated_at": "2024-01-15T09:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "name": "Micrograms per liter",
+    "symbol": "μg/L",
+    "type": "Concentration",
+    "conversion_factor": 0.001,
+    "is_active": true,
+    "created_at": "2024-01-15T09:20:00",
+    "updated_at": "2024-01-15T09:20:00",
+    "created_by": 1
+  },
+  {
+    "id": 6,
+    "name": "Cells per microliter",
+    "symbol": "cells/μL",
+    "type": "Count",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:25:00",
+    "updated_at": "2024-01-15T09:25:00",
+    "created_by": 1
+  },
+  {
+    "id": 7,
+    "name": "Percentage",
+    "symbol": "%",
+    "type": "Ratio",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:30:00",
+    "updated_at": "2024-01-15T09:30:00",
+    "created_by": 1
+  },
+  {
+    "id": 8,
+    "name": "Milliliters",
+    "symbol": "mL",
+    "type": "Volume",
+    "conversion_factor": 1.0,
+    "is_active": true,
+    "created_at": "2024-01-15T09:35:00",
+    "updated_at": "2024-01-15T09:35:00",
+    "created_by": 1
+  }
+]

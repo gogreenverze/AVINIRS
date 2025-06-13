@@ -59,7 +59,7 @@ const FranchiseCreate = () => {
       
       setSuccess(true);
       setTimeout(() => {
-        navigate('/admin/franchises');
+        navigate('/admin');
       }, 2000);
       
     } catch (err) {
@@ -79,7 +79,7 @@ const FranchiseCreate = () => {
         </h1>
         <Button 
           variant="secondary" 
-          onClick={() => navigate('/admin/franchises')}
+          onClick={() => navigate('/admin')}
           className="btn-sm"
         >
           <FontAwesomeIcon icon={faArrowLeft} className="me-2" />

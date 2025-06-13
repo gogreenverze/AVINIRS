@@ -56,6 +56,7 @@ const ResultReports = () => {
 
         const response = await resultAPI.getReports(params);
         setReports(response.data.items);
+      
         setTotalPages(response.data.total_pages);
       } catch (err) {
         console.error('Error fetching reports:', err);

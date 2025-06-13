@@ -26,6 +26,8 @@ import SampleView from './pages/sample/SampleView';
 import SampleCreate from './pages/sample/SampleCreate';
 import SampleRouting from './pages/sample/SampleRouting';
 import SampleTransferCreate from './pages/sample/SampleTransferCreate';
+import SampleDispatch from './pages/sample/SampleDispatch';
+import SampleTransferView from './pages/sample/SampleTransferView';
 
 // Result Pages
 import ResultList from './pages/result/ResultList';
@@ -66,6 +68,7 @@ import UserCreate from './pages/admin/UserCreate';
 import UserEdit from './pages/admin/UserEdit';
 import Settings from './pages/admin/Settings';
 import MasterData from './pages/admin/MasterData';
+import TechnicalMasterData from './pages/admin/TechnicalMasterData';
 import Analytics from './pages/admin/Analytics';
 import WhatsAppConfig from './pages/admin/WhatsAppConfig';
 import WhatsAppMessages from './pages/admin/WhatsAppMessages';
@@ -83,6 +86,9 @@ import TestManagement from './pages/admin/TestManagement';
 
 // Not Found Page
 import NotFound from './pages/NotFound';
+import SampleEdit from './pages/sample/SampleEdit';
+import FranchiseView from './pages/admin/FranchiseView';
+import FranchiseEdit from './pages/admin/FranchiseEdit';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -125,7 +131,10 @@ function App() {
         <Route path="/samples/create" element={<SampleCreate />} />
         <Route path="/samples/routing" element={<SampleRouting />} />
         <Route path="/samples/routing/create" element={<SampleTransferCreate />} />
+        <Route path="/samples/routing/:id" element={<SampleTransferView />} />
+        <Route path="/samples/routing/:id/dispatch" element={<SampleDispatch />} />
         <Route path="/samples/:id" element={<SampleView />} />
+        <Route path="/samples/:id/edit" element={<SampleEdit />} />
 
         {/* Result Routes */}
         <Route path="/results" element={<ResultList />} />
@@ -167,6 +176,7 @@ function App() {
         <Route path="/admin/users/:id/edit" element={<UserEdit />} />
         <Route path="/admin/settings" element={<Settings />} />
         <Route path="/admin/master-data" element={<MasterData />} />
+        <Route path="/admin/technical-master-data" element={<TechnicalMasterData />} />
         <Route path="/admin/whatsapp/config" element={<WhatsAppConfig />} />
         <Route path="/admin/whatsapp/messages" element={<WhatsAppMessages />} />
         <Route path="/admin/doctors" element={<DoctorManagement />} />
@@ -176,6 +186,8 @@ function App() {
         <Route path="/admin/test-panels" element={<TestPanelManagement />} />
         <Route path="/admin/containers" element={<ContainerManagement />} />
         <Route path="/admin/franchises/create" element={<FranchiseCreate />} />
+        <Route path="/admin/franchises/:id" element={<FranchiseView />} />
+        <Route path="/admin/franchises/:id/edit" element={<FranchiseEdit />} />
         <Route path="/admin/roles" element={<RoleManagement />} />
         <Route path="/admin/permissions" element={<PermissionManagement />} />
         <Route path="/admin/sample-types" element={<SampleTypeManagement />} />

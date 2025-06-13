@@ -50,7 +50,7 @@ const SampleView = () => {
       case 'Transferred':
         return 'secondary';
       default:
-        return 'light';
+        return 'dark';
     }
   };
 

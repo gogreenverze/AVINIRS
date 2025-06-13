@@ -8,7 +8,23 @@ import json
 from utils import generate_token, token_required, read_data, write_data, paginate_results
 
 app = Flask(__name__)
-CORS(app)
+
+# Configure CORS with specific settings
+CORS(app,
+     origins=['http://localhost:3000', 'http://localhost:3001'],
+     methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+     allow_headers=['Content-Type', 'Authorization'],
+     supports_credentials=True)
+
+# Add a global OPTIONS handler for preflight requests
+@app.before_request
+def handle_preflight():
+    if request.method == "OPTIONS":
+        response = make_response()
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add('Access-Control-Allow-Headers', "*")
+        response.headers.add('Access-Control-Allow-Methods', "*")
+        return response
 
 # Import routes
 from routes.patient_routes import patient_bp
@@ -18,6 +34,8 @@ from routes.billing_routes import billing_bp
 from routes.admin_routes import admin_bp
 from routes.inventory_routes import inventory_bp
 from routes.whatsapp_routes import whatsapp_bp
+
+from routes.tenants import tenants_bp  # assuming your code is in tenants_api.py
 
 # Load mock data
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -219,7 +237,11 @@ app.register_blueprint(billing_bp)
 app.register_blueprint(admin_bp)
 app.register_blueprint(inventory_bp)
 app.register_blueprint(whatsapp_bp)
+app.register_blueprint(tenants_bp)
 
 # Start the server
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
+
+

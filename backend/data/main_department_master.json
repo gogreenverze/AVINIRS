@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "major_department": "TECHNICAL",
+    "code": "LB",
+    "department": "LAB",
+    "order": 1,
+    "short_name": "LAB",
+    "queue": "",
+    "is_active": true,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "major_department": "TECHNICAL",
+    "code": "RD",
+    "department": "RADIOLOGY",
+    "order": 2,
+    "short_name": "RAD",
+    "queue": "",
+    "is_active": true,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "major_department": "CLINICAL",
+    "code": "CA",
+    "department": "CARDIOLOGY",
+    "order": 3,
+    "short_name": "CARD",
+    "queue": "",
+    "is_active": true,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "major_department": "CLINICAL",
+    "code": "NE",
+    "department": "NEUROLOGY",
+    "order": 4,
+    "short_name": "NEURO",
+    "queue": "",
+    "is_active": true,
+    "created_at": "2024-01-15T08:15:00",
+    "updated_at": "2024-01-15T08:15:00",
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "major_department": "SUPPORT",
+    "code": "AD",
+    "department": "ADMIN",
+    "order": 5,
+    "short_name": "ADM",
+    "queue": "",
+    "is_active": true,
+    "created_at": "2024-01-15T08:20:00",
+    "updated_at": "2024-01-15T08:20:00",
+    "created_by": 1
+  }
+]

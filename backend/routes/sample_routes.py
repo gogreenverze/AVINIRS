@@ -297,7 +297,8 @@ def get_sample_transfers():
     for transfer in transfers:
         sample_id = transfer.get('sample_id')
         if sample_id:
-            sample = next((s for s in samples if s.get('id') == sample_id), None)
+            # Handle both string and integer sample IDs
+            sample = next((s for s in samples if str(s.get('id')) == str(sample_id) or s.get('sample_id') == str(sample_id)), None)
             if sample:
                 transfer['sample'] = {
                     'id': sample.get('id'),
@@ -321,7 +322,8 @@ def get_sample_transfers():
         to_tenant_id = transfer.get('to_tenant_id')
 
         if from_tenant_id:
-            from_tenant = next((t for t in tenants if t.get('id') == from_tenant_id), None)
+            # Handle both string and integer tenant IDs
+            from_tenant = next((t for t in tenants if str(t.get('id')) == str(from_tenant_id)), None)
             if from_tenant:
                 transfer['from_tenant'] = {
                     'id': from_tenant.get('id'),
@@ -330,7 +332,8 @@ def get_sample_transfers():
                 }
 
         if to_tenant_id:
-            to_tenant = next((t for t in tenants if t.get('id') == to_tenant_id), None)
+            # Handle both string and integer tenant IDs
+            to_tenant = next((t for t in tenants if str(t.get('id')) == str(to_tenant_id)), None)
             if to_tenant:
                 transfer['to_tenant'] = {
                     'id': to_tenant.get('id'),
@@ -383,6 +386,90 @@ def create_sample_transfer():
     write_data('sample_transfers.json', transfers)
 
     return jsonify(new_transfer), 201
+
+@sample_bp.route('/api/samples/transfers/<int:transfer_id>', methods=['GET'])
+@token_required
+def get_sample_transfer_by_id(transfer_id):
+    """Get a specific sample transfer by ID."""
+    transfers = read_data('sample_transfers.json')
+
+    # Find the transfer
+    transfer = next((t for t in transfers if t['id'] == transfer_id), None)
+    if not transfer:
+        return jsonify({'message': 'Transfer not found'}), 404
+
+    # Check if user has access to this transfer
+    user_tenant_id = request.current_user.get('tenant_id')
+    if (transfer.get('from_tenant_id') != user_tenant_id and
+        transfer.get('to_tenant_id') != user_tenant_id):
+        return jsonify({'message': 'Access denied'}), 403
+
+    # Add sample and tenant information
+    samples = read_data('samples.json')
+    tenants = read_data('tenants.json')
+
+    # Find related sample
+    sample = next((s for s in samples if str(s['id']) == str(transfer['sample_id'])), None)
+    if sample:
+        transfer['sample'] = sample
+
+    # Find related tenants
+    from_tenant = next((t for t in tenants if str(t['id']) == str(transfer['from_tenant_id'])), None)
+    to_tenant = next((t for t in tenants if str(t['id']) == str(transfer['to_tenant_id'])), None)
+
+    if from_tenant:
+        transfer['from_tenant'] = from_tenant
+    if to_tenant:
+        transfer['to_tenant'] = to_tenant
+
+    return jsonify(transfer)
+
+@sample_bp.route('/api/samples/transfers/<int:transfer_id>/dispatch', methods=['PUT'])
+@token_required
+def dispatch_sample_transfer(transfer_id):
+    """Dispatch a sample transfer."""
+    data = request.get_json()
+
+    transfers = read_data('sample_transfers.json')
+
+    # Find the transfer
+    transfer_index = next((i for i, t in enumerate(transfers) if t['id'] == transfer_id), None)
+    if transfer_index is None:
+        return jsonify({'message': 'Transfer not found'}), 404
+
+    transfer = transfers[transfer_index]
+
+    # Check if user has access to dispatch this transfer (must be from sender's tenant)
+    user_tenant_id = request.current_user.get('tenant_id')
+    if transfer.get('from_tenant_id') != user_tenant_id:
+        return jsonify({'message': 'Access denied'}), 403
+
+    # Check if transfer is in pending status
+    if transfer.get('status') != 'Pending':
+        return jsonify({'message': 'Transfer cannot be dispatched. Current status: ' + transfer.get('status', 'Unknown')}), 400
+
+    # Validate required fields
+    required_fields = ['dispatch_date', 'tracking_number']
+    for field in required_fields:
+        if field not in data or not data[field]:
+            return jsonify({'message': f'Missing required field: {field}'}), 400
+
+    # Update transfer with dispatch information
+    transfer.update({
+        'status': data.get('status', 'In Transit'),
+        'dispatch_date': data['dispatch_date'],
+        'dispatch_time': data.get('dispatch_time'),
+        'tracking_number': data['tracking_number'],
+        'courier_service': data.get('courier_service', ''),
+        'dispatch_notes': data.get('notes', ''),
+        'transferred_at': data.get('transferred_at', datetime.now().isoformat()),
+        'updated_at': datetime.now().isoformat()
+    })
+
+    transfers[transfer_index] = transfer
+    write_data('sample_transfers.json', transfers)
+
+    return jsonify(transfer)
 
 @sample_bp.route('/api/samples/transfers/<int:id>', methods=['PUT'])
 @token_required

@@ -53,10 +53,10 @@ Report Details:
 
 Please find your detailed test report attached to this email. If you have any questions about your results, please don't hesitate to contact us.
 
-Thank you for choosing RSAVINI Lab Management System.
+Thank you for choosing AVINI Labs Management System.
 
 Best regards,
-RSAVINI Lab Team`
+AVINI Labs Team`
         }));
         
       } catch (err) {

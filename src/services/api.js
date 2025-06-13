@@ -88,8 +88,10 @@ export const sampleAPI = {
   getContainers: () => api.get('/samples/containers'),
   getSampleRouting: () => api.get('/samples/routing'),
   getSampleTransfers: (page = 1, limit = 20) => api.get(`/samples/transfers?page=${page}&limit=${limit}`),
+  getSampleTransferById: (id) => api.get(`/samples/transfers/${id}`),
   createSampleTransfer: (data) => api.post('/samples/transfers', data),
-  updateSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}`, data)
+  updateSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}`, data),
+  dispatchSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}/dispatch`, data)
 };
 
 // Result API
@@ -146,10 +148,50 @@ export const adminAPI = {
   deleteFranchise: (id) => api.delete(`/admin/franchises/${id}`),
   getSettings: () => api.get('/admin/settings'),
   updateSettings: (data) => api.put('/admin/settings', data),
+
+  // Master Data Management
   getMasterData: () => api.get('/admin/master-data'),
   addMasterDataItem: (category, data) => api.post(`/admin/master-data/${category}`, data),
   updateMasterDataItem: (category, id, data) => api.put(`/admin/master-data/${category}/${id}`, data),
   deleteMasterDataItem: (category, id) => api.delete(`/admin/master-data/${category}/${id}`),
+
+  // Excel Import/Export for Master Data
+  importMasterData: (formData) => {
+    return api.post('/admin/master-data/import', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+  },
+  exportMasterData: (category) => {
+    return api.get(`/admin/master-data/export/${category}`, {
+      responseType: 'blob',
+    });
+  },
+  exportAllMasterData: () => {
+    return api.get('/admin/master-data/export', {
+      responseType: 'blob',
+    });
+  },
+  downloadTemplate: (category) => {
+    return api.get(`/admin/master-data/template/${category}`, {
+      responseType: 'blob',
+    });
+  },
+  bulkImportMasterData: (formData) => {
+    return api.post('/admin/master-data/bulk-import', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+  },
+
+  // Technical Master Data Management
+  getTechnicalMasterData: () => api.get('/admin/technical-master-data'),
+  addTechnicalMasterDataItem: (category, data) => api.post(`/admin/technical-master-data/${category}`, data),
+  updateTechnicalMasterDataItem: (category, id, data) => api.put(`/admin/technical-master-data/${category}/${id}`, data),
+  deleteTechnicalMasterDataItem: (category, id) => api.delete(`/admin/technical-master-data/${category}/${id}`),
+
   // Doctor Management
   getDoctors: () => api.get('/admin/doctors'),
   getDoctorById: (id) => api.get(`/admin/doctors/${id}`),
@@ -199,7 +241,25 @@ export const adminAPI = {
   getSampleTypeById: (id) => api.get(`/admin/sample-types/${id}`),
   createSampleType: (data) => api.post('/admin/sample-types', data),
   updateSampleType: (id, data) => api.put(`/admin/sample-types/${id}`, data),
-  deleteSampleType: (id) => api.delete(`/admin/sample-types/${id}`)
+  deleteSampleType: (id) => api.delete(`/admin/sample-types/${id}`),
+  // Test Parameter Management
+  getTestParameters: () => api.get('/admin/test-parameters'),
+  getTestParameterById: (id) => api.get(`/admin/test-parameters/${id}`),
+  createTestParameter: (data) => api.post('/admin/test-parameters', data),
+  updateTestParameter: (id, data) => api.put(`/admin/test-parameters/${id}`, data),
+  deleteTestParameter: (id) => api.delete(`/admin/test-parameters/${id}`),
+  // Department Management
+  getDepartments: () => api.get('/admin/departments'),
+  getDepartmentById: (id) => api.get(`/admin/departments/${id}`),
+  createDepartment: (data) => api.post('/admin/departments', data),
+  updateDepartment: (id, data) => api.put(`/admin/departments/${id}`, data),
+  deleteDepartment: (id) => api.delete(`/admin/departments/${id}`),
+  // Payment Method Management
+  getPaymentMethods: () => api.get('/admin/payment-methods'),
+  getPaymentMethodById: (id) => api.get(`/admin/payment-methods/${id}`),
+  createPaymentMethod: (data) => api.post('/admin/payment-methods', data),
+  updatePaymentMethod: (id, data) => api.put(`/admin/payment-methods/${id}`, data),
+  deletePaymentMethod: (id) => api.delete(`/admin/payment-methods/${id}`)
 };
 
 // Dashboard API
@@ -219,6 +279,7 @@ export const whatsappAPI = {
   updateConfig: (tenantId, data) => api.put(`/whatsapp/config/${tenantId}`, data),
   getMessages: (page = 1, limit = 20) => api.get(`/whatsapp/messages?page=${page}&limit=${limit}`),
   sendReport: (data) => api.post('/whatsapp/send/report', data),
+  
   sendInvoice: (data) => api.post('/whatsapp/send/invoice', data),
   getStatus: () => api.get('/whatsapp/status')
 };
