@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import { authAPI } from '../services/api';
+import api from '../services/api';
 
 const AuthContext = createContext();
 
@@ -26,14 +26,13 @@ export const AuthProvider = ({ children }) => {
 
           if (decodedToken.exp < currentTime) {
             // Token is expired
+            console.log('[AUTH] Token expired during check, removing from storage');
             localStorage.removeItem('token');
             setIsAuthenticated(false);
             setCurrentUser(null);
           } else {
-            // Set auth header
-            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
-            // Get user data
+            console.log('[AUTH] Token valid, fetching user data');
+            // Token is valid, get user data
             const response = await authAPI.getCurrentUser();
             setCurrentUser(response.data);
             setIsAuthenticated(true);
@@ -62,11 +61,9 @@ export const AuthProvider = ({ children }) => {
       // Save token to localStorage
       localStorage.setItem('token', token);
 
-      // Set auth header
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
       setCurrentUser(user);
       setIsAuthenticated(true);
+      console.log('[AUTH] Login successful for user:', user.username);
       return true;
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
@@ -77,16 +74,16 @@ export const AuthProvider = ({ children }) => {
   // Logout function
   const logout = async () => {
     try {
-      // Call logout endpoint
-      await axios.post('/api/auth/logout');
+      // Call logout endpoint using the api instance
+      await api.post('/auth/logout');
     } catch (error) {
       console.error('Logout error:', error);
     } finally {
       // Clear local storage and state regardless of API call result
       localStorage.removeItem('token');
-      delete axios.defaults.headers.common['Authorization'];
       setCurrentUser(null);
       setIsAuthenticated(false);
+      console.log('[AUTH] User logged out');
     }
   };
 

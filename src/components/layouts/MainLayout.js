@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useTenant } from '../../context/TenantContext';
+import { usePermissions } from '../../context/PermissionContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUserCircle, faTachometerAlt, faUser, faVial,
   faExchangeAlt, faFlask, faClipboardCheck, faFileAlt,
   faFileInvoiceDollar, faBoxes, faChartBar, faCogs, faBars,
-  faSignOutAlt, faThLarge, faDatabase
+  faSignOutAlt, faThLarge, faDatabase, faShieldAlt, faSignature
 } from '@fortawesome/free-solid-svg-icons';
 import '../../styles/MainLayout.css';
 import logo from "./logo.png"
@@ -15,8 +16,15 @@ import logo from "./logo.png"
 const MainLayout = () => {
   const { currentUser, logout } = useAuth();
   const { tenantData } = useTenant();
+  const { hasModuleAccess } = usePermissions();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Desktop auto-hide state management
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [isAutoHideEnabled, setIsAutoHideEnabled] = useState(false);
+  const hoverTimeoutRef = useRef(null);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -26,7 +34,95 @@ const MainLayout = () => {
     setSidebarOpen(false);
   };
 
-  
+  // Screen size detection for desktop auto-hide
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const isDesktopSize = window.innerWidth > 768;
+      setIsDesktop(isDesktopSize);
+
+      // Enable auto-hide only on desktop
+      if (isDesktopSize) {
+        setIsAutoHideEnabled(true);
+        setSidebarVisible(false); // Start with sidebar hidden on desktop
+      } else {
+        setIsAutoHideEnabled(false);
+        setSidebarVisible(true); // Always visible on mobile (controlled by sidebarOpen)
+      }
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Handle sidebar hover events for auto-hide
+  const handleSidebarMouseEnter = () => {
+    if (isAutoHideEnabled && isDesktop) {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+        hoverTimeoutRef.current = null;
+      }
+      setSidebarVisible(true);
+    }
+  };
+
+  const handleSidebarMouseLeave = () => {
+    if (isAutoHideEnabled && isDesktop) {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+      hoverTimeoutRef.current = setTimeout(() => {
+        setSidebarVisible(false);
+      }, 300); // 300ms delay to prevent flickering
+    }
+  };
+
+  // Handle trigger zone hover
+  const handleTriggerMouseEnter = () => {
+    if (isAutoHideEnabled && isDesktop && !sidebarVisible) {
+      handleSidebarMouseEnter();
+    }
+  };
+
+  // Handle keyboard navigation and accessibility
+  const handleKeyDown = useCallback((event) => {
+    // Alt+M to toggle sidebar visibility
+    if (event.altKey && event.key === 'm') {
+      event.preventDefault();
+      if (isAutoHideEnabled && isDesktop) {
+        setSidebarVisible(!sidebarVisible);
+        if (hoverTimeoutRef.current) {
+          clearTimeout(hoverTimeoutRef.current);
+          hoverTimeoutRef.current = null;
+        }
+      }
+    }
+  }, [isAutoHideEnabled, isDesktop, sidebarVisible]);
+
+  // Handle focus events for accessibility
+  const handleSidebarFocus = () => {
+    if (isAutoHideEnabled && isDesktop && !sidebarVisible) {
+      setSidebarVisible(true);
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+        hoverTimeoutRef.current = null;
+      }
+    }
+  };
+
+  // Add keyboard event listener
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   // Check if user has access to admin features
   const hasAdminAccess = () => {
@@ -57,24 +153,50 @@ const MainLayout = () => {
       {/* User Info Header */}
       <div className="user-info-header">
         <div className="user-info-content">
-          <FontAwesomeIcon icon={faUserCircle} className="me-2" />
-          <span>
-            User: {currentUser?.first_name} {currentUser?.last_name} ({getRoleDisplayName()}) |
-            Site: {tenantData?.name}
-          </span>
+          <div className="user-info-left">
+            <FontAwesomeIcon icon={faUserCircle} className="me-2" />
+            <span className="user-info-text">
+              <span className="d-none d-md-inline">
+                User: {currentUser?.first_name} {currentUser?.last_name} ({getRoleDisplayName()}) |
+                Site: {tenantData?.name}
+              </span>
+              <span className="d-md-none">
+                {currentUser?.first_name} | {tenantData?.name}
+              </span>
+            </span>
+          </div>
           <button
-            className="btn btn-sm btn-outline-light ms-3"
+            className="btn btn-sm btn-outline-light"
             onClick={logout}
             title="Logout"
           >
-            <FontAwesomeIcon icon={faSignOutAlt} className="me-1" />
-            Logout
+            <FontAwesomeIcon icon={faSignOutAlt} className="d-md-none" />
+            <span className="d-none d-md-inline">
+              <FontAwesomeIcon icon={faSignOutAlt} className="me-1" />
+              Logout
+            </span>
           </button>
         </div>
       </div>
 
+      {/* Hover Trigger Zone for Desktop Auto-Hide */}
+      {isAutoHideEnabled && isDesktop && (
+        <div
+          className="sidebar-hover-trigger"
+          onMouseEnter={handleTriggerMouseEnter}
+        />
+      )}
+
       {/* Sidebar */}
-      <div className={`sidebar ${sidebarOpen ? 'mobile-visible' : ''}`}>
+      <nav
+        className={`sidebar ${sidebarOpen ? 'mobile-visible' : ''} ${isAutoHideEnabled && isDesktop ? (sidebarVisible ? 'desktop-visible' : 'desktop-hidden') : ''}`}
+        onMouseEnter={handleSidebarMouseEnter}
+        onMouseLeave={handleSidebarMouseLeave}
+        onFocus={handleSidebarFocus}
+        aria-label="Main navigation"
+        aria-hidden={isAutoHideEnabled && isDesktop && !sidebarVisible}
+        role="navigation"
+      >
         <Link to="/dashboard" className="sidebar-brand d-flex align-items-center justify-content-center" onClick={closeSidebar}>
           <div className="sidebar-brand-icon me-2">
             <img src={logo} alt="AVINI LABS" height="40" />
@@ -99,7 +221,7 @@ const MainLayout = () => {
               <span>Dashboard</span>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link
               to="/modules"
               className={`nav-link ${location.pathname === '/modules' ? 'active' : ''}`}
@@ -108,98 +230,128 @@ const MainLayout = () => {
               <FontAwesomeIcon icon={faThLarge} className="fa-fw" />
               <span>Modules</span>
             </Link>
-          </li>
+          </li> */}
         </ul>
+
+      
+
+        {/* <div className="sidebar-heading">Analytical</div> */}
+
+        {/* <ul className="nav flex-column">
+          {hasModuleAccess('LAB') && (
+            <li className="nav-item">
+              <Link
+                to="/lab"
+                className={`nav-link ${location.pathname.startsWith('/lab') ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faFlask} className="fa-fw" />
+                <span>Laboratory</span>
+              </Link>
+            </li>
+          )}
+        </ul> */}
 
         <hr className="sidebar-divider" />
 
         <div className="sidebar-heading">Pre-analytical</div>
 
         <ul className="nav flex-column">
-          <li className="nav-item">
-            <Link
-              to="/patients"
-              className={`nav-link ${location.pathname.startsWith('/patients') ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faUser} className="fa-fw" />
-              <span>Patients</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/samples"
-              className={`nav-link ${location.pathname.startsWith('/samples') && location.pathname !== '/samples/routing' ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faVial} className="fa-fw" />
-              <span>Samples</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/samples/routing"
-              className={`nav-link ${location.pathname === '/samples/routing' ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faExchangeAlt} className="fa-fw" />
-              <span>Sample Routing</span>
-            </Link>
-          </li>
+           {hasModuleAccess('BILLING') && (
+            <li className="nav-item">
+              <Link
+                to="/billing"
+                className={`nav-link ${location.pathname === '/billing' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faFileInvoiceDollar} className="fa-fw" />
+                <span>Billing</span>
+              </Link>
+            </li>
+          )}
+          {hasModuleAccess('BILLING') && (
+            <li className="nav-item">
+              <Link
+                to="/billing/reports"
+                className={`nav-link ${location.pathname === '/billing/reports' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faFileAlt} className="fa-fw" />
+                <span>Billing Reports</span>
+              </Link>
+            </li>
+          )}
+          {/* {hasModuleAccess('RESULTS') && (
+            <li className="nav-item">
+              <Link
+                to="/results"
+                className={`nav-link ${location.pathname === '/results' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faClipboardCheck} className="fa-fw" />
+                <span>Results</span>
+              </Link>
+            </li>
+          )} */}
+          {/* {hasModuleAccess('REPORTS') && (
+            <li className="nav-item">
+              <Link
+                to="/results/reports"
+                className={`nav-link ${location.pathname === '/results/reports' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faFileAlt} className="fa-fw" />
+                <span>Reports</span>
+              </Link>
+            </li>
+          )} */}
+         
         </ul>
 
         <hr className="sidebar-divider" />
 
-        <div className="sidebar-heading">Analytical</div>
 
-        <ul className="nav flex-column">
-          <li className="nav-item">
-            <Link
-              to="/lab"
-              className={`nav-link ${location.pathname.startsWith('/lab') ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faFlask} className="fa-fw" />
-              <span>Laboratory</span>
-            </Link>
-          </li>
-        </ul>
-
-        <hr className="sidebar-divider" />
+          <hr className="sidebar-divider" />
 
         <div className="sidebar-heading">Post-analytical</div>
 
         <ul className="nav flex-column">
-          <li className="nav-item">
-            <Link
-              to="/results"
-              className={`nav-link ${location.pathname === '/results' ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faClipboardCheck} className="fa-fw" />
-              <span>Results</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/results/reports"
-              className={`nav-link ${location.pathname === '/results/reports' ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faFileAlt} className="fa-fw" />
-              <span>Reports</span>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/billing"
-              className={`nav-link ${location.pathname.startsWith('/billing') ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faFileInvoiceDollar} className="fa-fw" />
-              <span>Billing</span>
-            </Link>
-          </li>
+          {hasModuleAccess('PATIENTS') && (
+            <li className="nav-item">
+              <Link
+                to="/patients"
+                className={`nav-link ${location.pathname.startsWith('/patients') ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faUser} className="fa-fw" />
+                <span>Patients</span>
+              </Link>
+            </li>
+          )}
+          {hasModuleAccess('SAMPLES') && (
+            <li className="nav-item">
+              <Link
+                to="/samples"
+                className={`nav-link ${location.pathname.startsWith('/samples') && location.pathname !== '/samples/routing' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faVial} className="fa-fw" />
+                <span>Samples</span>
+              </Link>
+            </li>
+          )}
+          {hasModuleAccess('SAMPLE_ROUTING') && (
+            <li className="nav-item">
+              <Link
+                to="/samples/routing"
+                className={`nav-link ${location.pathname === '/samples/routing' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faExchangeAlt} className="fa-fw" />
+                <span>Sample Routing</span>
+              </Link>
+            </li>
+          )}
         </ul>
 
         <hr className="sidebar-divider" />
@@ -207,16 +359,18 @@ const MainLayout = () => {
         <div className="sidebar-heading">Cross-functional</div>
 
         <ul className="nav flex-column">
-          <li className="nav-item">
-            <Link
-              to="/inventory"
-              className={`nav-link ${location.pathname.startsWith('/inventory') ? 'active' : ''}`}
-              onClick={closeSidebar}
-            >
-              <FontAwesomeIcon icon={faBoxes} className="fa-fw" />
-              <span>Inventory</span>
-            </Link>
-          </li>
+          {hasModuleAccess('INVENTORY') && (
+            <li className="nav-item">
+              <Link
+                to="/inventory"
+                className={`nav-link ${location.pathname.startsWith('/inventory') ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faBoxes} className="fa-fw" />
+                <span>Inventory</span>
+              </Link>
+            </li>
+          )}
           {hasFullSystemAccess() && (
             <li className="nav-item">
               <Link
@@ -229,7 +383,7 @@ const MainLayout = () => {
               </Link>
             </li>
           )}
-          {hasAdminAccess() && (
+          {hasModuleAccess('ADMIN') && (
             <li className="nav-item">
               <Link
                 to="/admin"
@@ -241,7 +395,7 @@ const MainLayout = () => {
               </Link>
             </li>
           )}
-          {hasAdminAccess() && (
+          {hasModuleAccess('USER_MANAGEMENT') && (
             <li className="nav-item">
               <Link
                 to="/admin/users"
@@ -253,7 +407,7 @@ const MainLayout = () => {
               </Link>
             </li>
           )}
-          {hasAdminAccess() && (
+          {hasModuleAccess('SETTINGS') && (
             <li className="nav-item">
               <Link
                 to="/admin/settings"
@@ -265,7 +419,7 @@ const MainLayout = () => {
               </Link>
             </li>
           )}
-          {hasFullSystemAccess() && (
+          {hasModuleAccess('MASTER_DATA') && (
             <li className="nav-item">
               <Link
                 to="/admin/master-data"
@@ -274,6 +428,30 @@ const MainLayout = () => {
               >
                 <FontAwesomeIcon icon={faDatabase} className="fa-fw" />
                 <span>Master Data</span>
+              </Link>
+            </li>
+          )}
+          {hasModuleAccess('ACCESS_MANAGEMENT') && (
+            <li className="nav-item">
+              <Link
+                to="/admin/access-management"
+                className={`nav-link ${location.pathname === '/admin/access-management' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faShieldAlt} className="fa-fw" />
+                <span>Access Management</span>
+              </Link>
+            </li>
+          )}
+          {hasFullSystemAccess() && (
+            <li className="nav-item">
+              <Link
+                to="/admin/signature-management"
+                className={`nav-link ${location.pathname === '/admin/signature-management' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faSignature} className="fa-fw" />
+                <span>Signature Management</span>
               </Link>
             </li>
           )}
@@ -289,6 +467,19 @@ const MainLayout = () => {
               </Link>
             </li>
           )}
+
+          {/* {hasFullSystemAccess() && (
+                      <li className="nav-item">
+              <Link
+                to="profile"
+                className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`}
+                onClick={closeSidebar}
+              >
+                <FontAwesomeIcon icon={faChartBar} className="fa-fw" />
+                <span>Profile Master</span>
+              </Link>
+            </li>
+              )} */}
         </ul>
 
         <hr className="sidebar-divider" />
@@ -307,7 +498,7 @@ const MainLayout = () => {
             </button>
           </li>
         </ul>
-      </div>
+      </nav>
 
       {/* Mobile Menu Button */}
       <div className="mobile-menu-button" onClick={toggleSidebar}>
@@ -315,7 +506,7 @@ const MainLayout = () => {
       </div>
 
       {/* Main Content */}
-      <div className="content">
+      <div className={`content ${isAutoHideEnabled && isDesktop ? (sidebarVisible ? 'content-sidebar-visible' : 'content-sidebar-hidden') : ''}`}>
         <Outlet />
       </div>
 

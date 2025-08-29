@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Card, Table, Button, Form, InputGroup, Pagination, Row, Col, Badge } from 'react-bootstrap';
+import { Card, Button, Form, InputGroup, Row, Col, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faSearch, faEye, faEdit, faCheck, faTimes,
-  faUser, faVial, faCalendarAlt, faClipboardCheck, faFileAlt
+  faSearch, faEye, faEdit, faCheck, faClipboardCheck, faFileAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { resultAPI } from '../../services/api';
+import ResponsiveDataTable from '../../components/admin/ResponsiveDataTable';
 import '../../styles/ResultList.css';
 
 const ResultList = () => {
@@ -18,23 +18,113 @@ const ResultList = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [patientId, setPatientId] = useState(patientIdParam || '');
   const [sampleId, setSampleId] = useState(sampleIdParam || '');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [filterStatus, setFilterStatus] = useState('');
 
-  // Handle window resize for responsive design
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  // Get status badge variant
+  const getStatusBadgeVariant = (status) => {
+    switch (status) {
+      case 'Pending':
+        return 'warning';
+      case 'Completed':
+        return 'success';
+      case 'Verified':
+        return 'primary';
+      case 'Rejected':
+        return 'danger';
+      default:
+        return 'secondary';
+    }
+  };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  // Handle result actions
+  const handleViewResult = (result) => {
+    window.location.href = `/results/${result.id}`;
+  };
+
+  // Table columns configuration
+  const columns = [
+    {
+      key: 'result_id',
+      label: 'Result ID',
+      minWidth: '120px'
+    },
+    {
+      key: 'patient',
+      label: 'Patient',
+      render: (value, row) => row.patient ? (
+        <Link to={`/patients/${row.patient.id}`}>
+          {row.patient.first_name} {row.patient.last_name}
+        </Link>
+      ) : 'N/A',
+      minWidth: '150px'
+    },
+    {
+      key: 'sample',
+      label: 'Sample',
+      render: (value, row) => row.sample ? (
+        <Link to={`/samples/${row.sample.id}`}>
+          {row.sample.sample_id}
+        </Link>
+      ) : 'N/A',
+      minWidth: '120px'
+    },
+    {
+      key: 'test',
+      label: 'Test',
+      render: (value, row) => row.test?.test_name || 'N/A',
+      minWidth: '150px'
+    },
+    {
+      key: 'result_date',
+      label: 'Result Date',
+      type: 'date',
+      minWidth: '120px'
+    },
+    {
+      key: 'status',
+      label: 'Status',
+      render: (value, row) => (
+        <Badge bg={getStatusBadgeVariant(row.status)}>
+          {row.status}
+        </Badge>
+      ),
+      minWidth: '100px'
+    },
+    {
+      key: 'actions',
+      label: 'Actions',
+      render: (value, result) => (
+        <div className="d-flex gap-1">
+          <Link to={`/results/${result.id}`} className="btn btn-info btn-sm" title="View">
+            <FontAwesomeIcon icon={faEye} />
+          </Link>
+          {result.status === 'Pending' && (
+            <Link to={`/results/${result.id}/edit`} className="btn btn-primary btn-sm" title="Edit">
+              <FontAwesomeIcon icon={faEdit} />
+            </Link>
+          )}
+          {result.status === 'Completed' && (
+            <Link to={`/results/${result.id}`} className="btn btn-success btn-sm" title="Verify">
+              <FontAwesomeIcon icon={faCheck} />
+            </Link>
+          )}
+        </div>
+      ),
+      minWidth: '150px'
+    }
+  ];
+
+  // Mobile card configuration
+  const mobileCardConfig = {
+    title: (result) => `Result ${result.result_id}`,
+    subtitle: (result) => result.patient ? `${result.patient.first_name} ${result.patient.last_name}` : 'N/A',
+    primaryField: 'test',
+    secondaryField: 'status',
+    statusField: 'status'
+  };
 
   // Fetch results data
   useEffect(() => {
@@ -51,11 +141,10 @@ const ResultList = () => {
         } else if (searchQuery) {
           response = await resultAPI.searchResults(searchQuery);
         } else {
-          response = await resultAPI.getAllResults(currentPage);
+          response = await resultAPI.getAllResults();
         }
 
-        setResults(response.data.items);
-        setTotalPages(response.data.total_pages);
+        setResults(response.data.items || response.data);
       } catch (err) {
         console.error('Error fetching results:', err);
         setError('Failed to load results. Please try again later.');
@@ -65,105 +154,11 @@ const ResultList = () => {
     };
 
     fetchResults();
-  }, [currentPage, searchQuery, patientId, sampleId]);
+  }, [searchQuery, patientId, sampleId]);
 
   // Handle search
   const handleSearch = (e) => {
     e.preventDefault();
-    setCurrentPage(1); // Reset to first page on new search
-  };
-
-  // Handle pagination
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
-  // Generate pagination items
-  const renderPaginationItems = () => {
-    const items = [];
-
-    // Previous button
-    items.push(
-      <Pagination.Prev
-        key="prev"
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-      />
-    );
-
-    // First page
-    items.push(
-      <Pagination.Item
-        key={1}
-        active={currentPage === 1}
-        onClick={() => handlePageChange(1)}
-      >
-        1
-      </Pagination.Item>
-    );
-
-    // Ellipsis if needed
-    if (currentPage > 3) {
-      items.push(<Pagination.Ellipsis key="ellipsis1" disabled />);
-    }
-
-    // Pages around current page
-    for (let page = Math.max(2, currentPage - 1); page <= Math.min(totalPages - 1, currentPage + 1); page++) {
-      items.push(
-        <Pagination.Item
-          key={page}
-          active={currentPage === page}
-          onClick={() => handlePageChange(page)}
-        >
-          {page}
-        </Pagination.Item>
-      );
-    }
-
-    // Ellipsis if needed
-    if (currentPage < totalPages - 2) {
-      items.push(<Pagination.Ellipsis key="ellipsis2" disabled />);
-    }
-
-    // Last page if not first page
-    if (totalPages > 1) {
-      items.push(
-        <Pagination.Item
-          key={totalPages}
-          active={currentPage === totalPages}
-          onClick={() => handlePageChange(totalPages)}
-        >
-          {totalPages}
-        </Pagination.Item>
-      );
-    }
-
-    // Next button
-    items.push(
-      <Pagination.Next
-        key="next"
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      />
-    );
-
-    return items;
-  };
-
-  // Get status badge variant
-  const getStatusBadgeVariant = (status) => {
-    switch (status) {
-      case 'Pending':
-        return 'warning';
-      case 'Completed':
-        return 'success';
-      case 'Verified':
-        return 'primary';
-      case 'Rejected':
-        return 'danger';
-      default:
-        return 'secondary';
-    }
   };
 
   // Filter results by status
@@ -258,8 +253,8 @@ const ResultList = () => {
         </div>
       )}
 
-      {/* Desktop View */}
-      {!loading && !error && !isMobile && (
+      {/* Responsive Result Table */}
+      {!loading && !error && (
         <Card className="shadow mb-4">
           <Card.Header className="py-3">
             <h6 className="m-0 font-weight-bold text-primary">
@@ -269,156 +264,17 @@ const ResultList = () => {
               </span>
             </h6>
           </Card.Header>
-          <Card.Body>
-            <div className="table-responsive">
-              <Table className="table-hover" width="100%" cellSpacing="0">
-                <thead>
-                  <tr>
-                    <th>Result ID</th>
-                    <th>Patient</th>
-                    <th>Sample</th>
-                    <th>Test</th>
-                    <th>Result Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredResults.map(result => (
-                    <tr key={result.id}>
-                      <td>{result.result_id}</td>
-                      <td>
-                        {result.patient ? (
-                          <Link to={`/patients/${result.patient.id}`}>
-                            {result.patient.first_name} {result.patient.last_name}
-                          </Link>
-                        ) : (
-                          'N/A'
-                        )}
-                      </td>
-                      <td>
-                        {result.sample ? (
-                          <Link to={`/samples/${result.sample.id}`}>
-                            {result.sample.sample_id}
-                          </Link>
-                        ) : (
-                          'N/A'
-                        )}
-                      </td>
-                      <td>{result.test?.test_name || 'N/A'}</td>
-                      <td>{result.result_date ? new Date(result.result_date).toLocaleDateString() : 'N/A'}</td>
-                      <td>
-                        <Badge bg={getStatusBadgeVariant(result.status)}>
-                          {result.status}
-                        </Badge>
-                      </td>
-                      <td>
-                        <Link to={`/results/${result.id}`} className="btn btn-info btn-sm me-1">
-                          <FontAwesomeIcon icon={faEye} />
-                        </Link>
-                        {result.status === 'Pending' && (
-                          <Link to={`/results/${result.id}/edit`} className="btn btn-primary btn-sm me-1">
-                            <FontAwesomeIcon icon={faEdit} />
-                          </Link>
-                        )}
-                        {result.status === 'Completed' && (
-                          <Link to={`/results/${result.id}`} className="btn btn-success btn-sm me-1">
-                            <FontAwesomeIcon icon={faCheck} />
-                          </Link>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
+          <Card.Body className="p-0">
+            <ResponsiveDataTable
+              data={filteredResults}
+              columns={columns}
+              onViewDetails={handleViewResult}
+              loading={loading}
+              emptyMessage="No results found."
+              mobileCardConfig={mobileCardConfig}
+            />
           </Card.Body>
         </Card>
-      )}
-
-      {/* Mobile View */}
-      {!loading && !error && isMobile && (
-        <div className="mobile-result-list">
-          <div className="record-count mb-3">
-            <span className="badge bg-primary">
-              {filteredResults.length} Records
-            </span>
-          </div>
-
-          {filteredResults.map(result => (
-            <Card key={result.id} className="mb-3 mobile-card">
-              <Card.Header className="py-2">
-                <div className="d-flex justify-content-between align-items-center">
-                  <h6 className="card-title mb-0">Result {result.result_id}</h6>
-                  <Badge bg={getStatusBadgeVariant(result.status)}>
-                    {result.status}
-                  </Badge>
-                </div>
-              </Card.Header>
-              <Card.Body className="p-3">
-                <div className="result-info mb-3">
-                  {result.patient && (
-                    <div className="d-flex align-items-center mb-1">
-                      <FontAwesomeIcon icon={faUser} className="me-2 text-primary" />
-                      <strong>Patient:</strong>
-                      <span className="ms-2">
-                        <Link to={`/patients/${result.patient.id}`}>
-                          {result.patient.first_name} {result.patient.last_name}
-                        </Link>
-                      </span>
-                    </div>
-                  )}
-                  {result.sample && (
-                    <div className="d-flex align-items-center mb-1">
-                      <FontAwesomeIcon icon={faVial} className="me-2 text-primary" />
-                      <strong>Sample:</strong>
-                      <span className="ms-2">
-                        <Link to={`/samples/${result.sample.id}`}>
-                          {result.sample.sample_id}
-                        </Link>
-                      </span>
-                    </div>
-                  )}
-                  <div className="d-flex align-items-center mb-1">
-                    <FontAwesomeIcon icon={faClipboardCheck} className="me-2 text-primary" />
-                    <strong>Test:</strong>
-                    <span className="ms-2">{result.test?.test_name || 'N/A'}</span>
-                  </div>
-                  <div className="d-flex align-items-center mb-1">
-                    <FontAwesomeIcon icon={faCalendarAlt} className="me-2 text-primary" />
-                    <strong>Date:</strong>
-                    <span className="ms-2">
-                      {result.result_date ? new Date(result.result_date).toLocaleDateString() : 'N/A'}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mobile-btn-group">
-                  <Link to={`/results/${result.id}`} className="btn btn-info">
-                    <FontAwesomeIcon icon={faEye} className="me-1" /> View
-                  </Link>
-                  {result.status === 'Pending' && (
-                    <Link to={`/results/${result.id}/edit`} className="btn btn-primary">
-                      <FontAwesomeIcon icon={faEdit} className="me-1" /> Edit
-                    </Link>
-                  )}
-                  {result.status === 'Completed' && (
-                    <Link to={`/results/${result.id}`} className="btn btn-success">
-                      <FontAwesomeIcon icon={faCheck} className="me-1" /> Verify
-                    </Link>
-                  )}
-                </div>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      )}
-
-      {/* Pagination */}
-      {!loading && !error && totalPages > 1 && (
-        <div className="d-flex justify-content-center mt-4">
-          <Pagination>{renderPaginationItems()}</Pagination>
-        </div>
       )}
     </div>
   );

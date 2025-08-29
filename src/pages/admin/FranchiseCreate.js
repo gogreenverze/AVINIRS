@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card, Form, Button, Row, Col, Alert } from 'react-bootstrap';
+import { Card, Form, Button, Row, Col, Alert, Badge, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave, faArrowLeft, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faSave, faArrowLeft, faBuilding, faShieldAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { adminAPI } from '../../services/api';
 
 const FranchiseCreate = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [modulesLoading, setModulesLoading] = useState(true);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
-  
+
+  // Available modules and selected permissions
+  const [modules, setModules] = useState([]);
+  const [selectedPermissions, setSelectedPermissions] = useState([]);
+
   const [formData, setFormData] = useState({
     name: '',
     site_code: '',
@@ -24,6 +29,7 @@ const FranchiseCreate = () => {
     established_date: '',
     is_hub: false,
     is_active: true,
+    use_site_code_prefix: true,
     franchise_fee: '',
     monthly_fee: '',
     commission_rate: '',
@@ -32,36 +38,123 @@ const FranchiseCreate = () => {
     notes: ''
   });
 
+  // Load available modules on component mount
+  useEffect(() => {
+    loadModules();
+  }, []);
+
+  const loadModules = async () => {
+    try {
+      setModulesLoading(true);
+      const response = await adminAPI.getModules();
+      setModules(response.data.data);
+
+      // Set default permissions based on franchise type
+      updateDefaultPermissions(response.data.data, formData.is_hub);
+    } catch (err) {
+      console.error('Error loading modules:', err);
+      setError('Failed to load available modules');
+    } finally {
+      setModulesLoading(false);
+    }
+  };
+
+  // Update default permissions based on franchise type
+  const updateDefaultPermissions = (availableModules, isHub) => {
+    if (isHub) {
+      // Hub franchises get all modules by default
+      setSelectedPermissions(availableModules.map(module => module.id));
+    } else {
+      // Regular franchises get only core modules by default
+      const coreModules = availableModules.filter(module => module.is_core);
+      setSelectedPermissions(coreModules.map(module => module.id));
+    }
+  };
+
   // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
+    const newValue = type === 'checkbox' ? checked : value;
+
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: newValue
     }));
+
+    // Update default permissions when hub status changes
+    if (name === 'is_hub' && modules.length > 0) {
+      updateDefaultPermissions(modules, newValue);
+    }
+  };
+
+  // Handle permission changes
+  const handlePermissionChange = (moduleId, checked) => {
+    if (checked) {
+      setSelectedPermissions(prev => [...prev, moduleId]);
+    } else {
+      setSelectedPermissions(prev => prev.filter(id => id !== moduleId));
+    }
+  };
+
+  // Get modules organized by category
+  const getModulesByCategory = () => {
+    const categories = {};
+    modules.forEach(module => {
+      if (!categories[module.category]) {
+        categories[module.category] = [];
+      }
+      categories[module.category].push(module);
+    });
+    return categories;
+  };
+
+  // Get category display name
+  const getCategoryDisplayName = (category) => {
+    const categoryNames = {
+      'main': 'Main',
+      'pre_analytical': 'Pre-Analytical',
+      'analytical': 'Analytical',
+      'post_analytical': 'Post-Analytical',
+      'management': 'Management',
+      'administration': 'Administration'
+    };
+    return categoryNames[category] || category;
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Validate required fields
     if (!formData.name || !formData.site_code || !formData.contact_phone) {
       setError('Please fill in all required fields.');
       return;
     }
 
+    // Validate permissions
+    if (selectedPermissions.length === 0) {
+      setError('Please select at least one module permission for the franchise.');
+      return;
+    }
+
     try {
       setLoading(true);
       setError(null);
-      
-      await adminAPI.createFranchise(formData);
-      
+
+      // Create franchise first
+      const franchiseResponse = await adminAPI.createFranchise(formData);
+      const franchiseId = franchiseResponse.data.franchise.id;
+
+      // Then assign permissions
+      await adminAPI.updateFranchisePermissions(franchiseId, {
+        module_permissions: selectedPermissions
+      });
+
       setSuccess(true);
       setTimeout(() => {
         navigate('/admin');
       }, 2000);
-      
+
     } catch (err) {
       console.error('Error creating franchise:', err);
       setError(err.response?.data?.message || 'Failed to create franchise. Please try again.');
@@ -340,7 +433,7 @@ const FranchiseCreate = () => {
                   />
                 </Form.Group>
               </Col>
-              
+
               <Col md={6}>
                 <Form.Group className="mb-3">
                   <Form.Check
@@ -350,6 +443,24 @@ const FranchiseCreate = () => {
                     checked={formData.is_active}
                     onChange={handleInputChange}
                   />
+                </Form.Group>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col md={12}>
+                <Form.Group className="mb-3">
+                  <Form.Check
+                    type="checkbox"
+                    name="use_site_code_prefix"
+                    label="Use Site Code Prefix for SID Generation"
+                    checked={formData.use_site_code_prefix}
+                    onChange={handleInputChange}
+                  />
+                  <Form.Text className="text-muted">
+                    When enabled, SIDs will be generated with site code prefix (e.g., MYD001).
+                    When disabled, SIDs will be generated as numbers only (e.g., 001).
+                  </Form.Text>
                 </Form.Group>
               </Col>
             </Row>
@@ -370,11 +481,74 @@ const FranchiseCreate = () => {
               </Col>
             </Row>
 
+            {/* Module Permissions */}
+            <h6 className="text-primary mb-3 mt-4">
+              <FontAwesomeIcon icon={faShieldAlt} className="me-2" />
+              Module Access Permissions
+            </h6>
+            <p className="text-muted mb-3">
+              Select which modules this franchise will have access to.
+              {formData.is_hub ? (
+                <span className="text-info"> Hub franchises have all modules selected by default.</span>
+              ) : (
+                <span> Core modules are selected by default for regular franchises.</span>
+              )}
+            </p>
+
+            {modulesLoading ? (
+              <div className="text-center py-3">
+                <Spinner animation="border" size="sm" className="me-2" />
+                Loading available modules...
+              </div>
+            ) : (
+              <div className="border rounded p-3 mb-4">
+                {Object.entries(getModulesByCategory()).map(([category, categoryModules]) => (
+                  <div key={category} className="mb-4">
+                    <h6 className="text-secondary mb-3">
+                      {getCategoryDisplayName(category)}
+                    </h6>
+                    <Row>
+                      {categoryModules.map((module) => (
+                        <Col md={6} lg={4} key={module.id} className="mb-2">
+                          <Form.Check
+                            type="checkbox"
+                            id={`module-${module.id}`}
+                            label={
+                              <div className="d-flex align-items-center">
+                                <span className="me-2">{module.name}</span>
+                                {module.is_core && (
+                                  <Badge bg="info" size="sm">Core</Badge>
+                                )}
+                              </div>
+                            }
+                            checked={selectedPermissions.includes(module.id)}
+                            onChange={(e) => handlePermissionChange(module.id, e.target.checked)}
+                          />
+                          <small className="text-muted d-block ms-3">
+                            {module.description}
+                          </small>
+                        </Col>
+                      ))}
+                    </Row>
+                  </div>
+                ))}
+
+                {selectedPermissions.length > 0 && (
+                  <div className="mt-3 p-2 bg-light rounded">
+                    <small className="text-muted">
+                      <FontAwesomeIcon icon={faCheck} className="me-1 text-success" />
+                      {selectedPermissions.length} module(s) selected
+                    </small>
+                  </div>
+                )}
+              </div>
+            )}
+
             <div className="d-flex justify-content-end">
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="me-2"
-                onClick={() => navigate('/admin/franchises')}
+                onClick={() => navigate('/admin')}
                 disabled={loading}
               >
                 Cancel

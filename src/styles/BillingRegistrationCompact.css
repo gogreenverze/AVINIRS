@@ -1,0 +1,863 @@
+/* Compact Billing Registration Styles */
+.billing-registration-compact {
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/* Header Section */
+.header-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.header-section h4 {
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-section .text-muted {
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.9rem;
+}
+
+/* Search Section */
+.search-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.patient-search-compact {
+  position: relative;
+}
+
+.patient-search-compact .input-group {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-results-compact {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+/* Form Sections */
+.form-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.form-section:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.form-section h6 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9ecef;
+  position: relative;
+}
+
+.form-section h6::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Enhanced Form Controls */
+.form-control, .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: translateY(-1px);
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.search-result-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #f8f9fa;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.patient-details {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.selected-patient-info {
+  margin-top: 10px;
+}
+
+/* Form Sections */
+.form-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* Color-Coded Form Labels */
+.form-section .form-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+/* Primary fields (required) - Dark blue */
+.form-section .form-label.text-primary {
+  color: #2c3e50 !important;
+}
+
+/* Secondary fields (optional) - Medium gray */
+.form-section .form-label.text-secondary {
+  color: #6c757d !important;
+}
+
+/* Financial fields - Green */
+.form-section .form-label.text-success {
+  color: #28a745 !important;
+}
+
+/* Date/Time fields - Purple */
+.form-section .form-label.text-purple {
+  color: #6f42c1 !important;
+}
+
+/* Clinical fields - Orange */
+.form-section .form-label.text-orange {
+  color: #fd7e14 !important;
+}
+
+.form-section .form-control,
+.form-section .form-select {
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+.form-section .form-control:focus,
+.form-section .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Test Selection */
+.test-selection {
+  position: relative;
+}
+
+.test-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.test-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.test-item:hover {
+  background-color: #f8f9fa;
+}
+
+.test-item:last-child {
+  border-bottom: none;
+}
+
+.test-price {
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* Enhanced Test Selection Styles */
+.test-item.enhanced {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
+
+.test-item.enhanced:hover {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+  transform: translateX(3px);
+  box-shadow: inset 3px 0 0 #2c5aa0;
+}
+
+.test-item.no-results {
+  cursor: default;
+  padding: 20px;
+  text-align: center;
+}
+
+.test-item.no-results:hover {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.test-code {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #666;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 600;
+  border: 1px solid #ddd;
+}
+
+.test-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.test-short-name {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.test-method, .test-specimen {
+  margin-bottom: 2px;
+}
+
+.test-source {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.test-price-section {
+  text-align: right;
+  min-width: 80px;
+}
+
+.test-unit {
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* Enhanced Selected Tests Table with Scrolling */
+.tests-table.enhanced {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: 400px; /* Limit height for scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.tests-table.enhanced .table-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.tests-table.enhanced .table-body {
+  overflow-y: auto;
+  flex: 1;
+  max-height: 350px;
+}
+
+.tests-table.enhanced .test-row {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.tests-table.enhanced .test-row:hover {
+  background-color: #f8f9ff;
+}
+
+/* Custom scrollbar for selected tests */
+.tests-table.enhanced .table-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tests-table.enhanced .table-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.tests-table.enhanced .table-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+}
+
+.tests-table.enhanced .table-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.test-name-main {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.test-short-name {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+}
+
+.test-method {
+  margin-top: 2px;
+}
+
+/* Enhanced Test Selection */
+.test-item .test-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.test-item .test-code {
+  font-size: 10px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.test-item .test-name {
+  font-size: 12px;
+  color: #495057;
+}
+
+/* Selected Tests Table */
+.selected-tests {
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.tests-table {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px 50px;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  font-size: 11px;
+  color: #495057;
+  background-color: #e9ecef;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.test-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px 50px;
+  gap: 8px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+}
+
+.test-row:last-child {
+  border-bottom: none;
+}
+
+.test-row .test-code {
+  font-size: 10px;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.test-row .test-name {
+  font-size: 11px;
+  color: #495057;
+}
+
+.test-row .test-price {
+  font-size: 11px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.test-row .remove-btn {
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.no-tests-message {
+  border: 1px dashed #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+/* Billing Calculations */
+.billing-calculations {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.billing-calculations .form-control[readonly] {
+  background-color: #e9ecef;
+  font-weight: 600;
+}
+
+/* Discount Section */
+.discount-section {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #28a745;
+  margin-top: 10px;
+}
+
+.discount-section .form-check {
+  margin-bottom: 0;
+}
+
+.discount-section .form-check-input:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Age Input Section */
+.age-input-section {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+/* Emergency Checkbox */
+.form-check-input[type="checkbox"]:checked {
+  background-color: #fd7e14;
+  border-color: #fd7e14;
+}
+
+/* Submit Section */
+.submit-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .billing-registration-compact {
+    padding: 10px;
+  }
+  
+  .form-section {
+    margin-bottom: 15px;
+  }
+  
+  .header-section .d-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .header-section .d-flex > div:last-child {
+    align-self: stretch;
+  }
+  
+  .header-section .d-flex > div:last-child .d-flex {
+    justify-content: stretch;
+  }
+  
+  .header-section .btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .billing-registration-compact {
+    padding: 8px;
+    font-size: 13px;
+  }
+  
+  .form-section {
+    padding: 15px;
+  }
+  
+  .section-title {
+    font-size: 14px;
+  }
+  
+  .form-section .form-label {
+    font-size: 11px;
+  }
+  
+  .form-section .form-control,
+  .form-section .form-select {
+    font-size: 12px;
+    padding: 5px 6px;
+  }
+  
+  .test-item {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  
+  .test-row {
+    padding: 4px 0;
+  }
+  
+  .test-name {
+    font-size: 11px;
+  }
+  
+  .test-row .test-price {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .billing-registration-compact {
+    padding: 5px;
+  }
+  
+  .header-section,
+  .search-section,
+  .form-section,
+  .submit-section {
+    padding: 10px;
+  }
+  
+  .section-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  
+  .billing-calculations {
+    padding: 10px;
+  }
+  
+  /* Stack form groups vertically on mobile */
+  .row.g-2 > .col-md-3,
+  .row.g-2 > .col-md-4,
+  .row.g-2 > .col-md-6 {
+    margin-bottom: 8px;
+  }
+}
+
+/* Dense Layout Optimizations */
+.billing-registration-compact .row.g-2 {
+  --bs-gutter-x: 0.5rem;
+  --bs-gutter-y: 0.5rem;
+}
+
+.billing-registration-compact .row.g-3 {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+/* Compact spacing */
+.billing-registration-compact .mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.billing-registration-compact .mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.billing-registration-compact .mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.billing-registration-compact .mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.billing-registration-compact .mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+/* Button Styling */
+.billing-registration-compact .btn {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.billing-registration-compact .btn-sm {
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+/* Alert Styling */
+.billing-registration-compact .alert {
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* Badge Styling */
+.billing-registration-compact .badge {
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+/* Input Group Styling */
+.billing-registration-compact .input-group-text {
+  font-size: 12px;
+  padding: 6px 8px;
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+}
+
+/* Focus States */
+.billing-registration-compact .form-control:focus,
+.billing-registration-compact .form-select:focus,
+.billing-registration-compact .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Hover Effects */
+.billing-registration-compact .btn:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.billing-registration-compact .test-item:hover,
+.billing-registration-compact .search-result-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  .billing-registration-compact {
+    padding: 10px;
+  }
+
+  .header-section,
+  .search-section,
+  .form-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form-section h6 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 44px; /* Touch-friendly */
+  }
+
+  .btn {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .search-results-compact {
+    max-height: 200px;
+  }
+
+  .test-cards-container {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .billing-registration-compact {
+    padding: 8px;
+  }
+
+  .header-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .form-section {
+    padding: 12px;
+  }
+
+  .row.g-2 > * {
+    margin-bottom: 10px;
+  }
+}
+
+/* Enhanced Test Cards Styling */
+.test-cards-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.test-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.test-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.test-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  transform: translateY(-3px);
+}
+
+.test-card:hover::before {
+  opacity: 1;
+}
+
+.test-card .test-name {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.test-card .test-price {
+  color: #28a745;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Print Styles */
+@media print {
+  .billing-registration-compact {
+    background: white;
+    padding: 0;
+  }
+  
+  .header-section .d-flex > div:last-child,
+  .submit-section {
+    display: none !important;
+  }
+  
+  .form-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "AUD_20250620_100602_700",
+    "timestamp": "2025-06-20T10:06:02.234073",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100602_700",
+    "timestamp": "2025-06-20T10:06:02.234073",
+    "event_type": "report_generation_failed",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": false,
+    "details": {
+      "billing_id": 40,
+      "error": "billing_not_found"
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171309_18684",
+    "timestamp": "2025-08-28T17:13:09.322746",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171309_18684",
+    "timestamp": "2025-08-28T17:13:09.330409",
+    "event_type": "report_generation_failed",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": false,
+    "details": {
+      "billing_id": 109,
+      "error": "billing_not_found"
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171404_53052",
+    "timestamp": "2025-08-28T17:14:04.989853",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171404_53052",
+    "timestamp": "2025-08-28T17:14:04.997601",
+    "event_type": "report_generation_failed",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": false,
+    "details": {
+      "billing_id": 109,
+      "error": "billing_not_found"
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171455_19904",
+    "timestamp": "2025-08-28T17:14:55.995510",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171455_19904",
+    "timestamp": "2025-08-28T17:14:55.999590",
+    "event_type": "report_generation_failed",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": false,
+    "details": {
+      "billing_id": 109,
+      "error": "billing_not_found"
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  }
+]

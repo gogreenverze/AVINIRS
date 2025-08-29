@@ -1,0 +1,19 @@
+{
+  "migrationDate": "2025-08-28T05:45:39.486Z",
+  "summary": {
+    "totalReferrals": 5,
+    "validReferrals": 5,
+    "invalidReferrals": 0,
+    "warningsCount": 0,
+    "errorsCount": 0
+  },
+  "warnings": [],
+  "errors": [],
+  "nextSteps": [
+    "Review and update default email addresses",
+    "Review and update default phone numbers",
+    "Review and update default addresses",
+    "Update type-specific fields with accurate information",
+    "Test the enhanced referral system functionality"
+  ]
+}

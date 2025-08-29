@@ -1,4 +1,4 @@
-# RSAVINI LIS - User Credentials & System Documentation
+# AVINI Multi-Tenant Franchise Management System - User Credentials
 
 ## System Access Information
 
@@ -8,15 +8,110 @@
 
 ## User Accounts & Credentials
 
-### System Administrator
+### Super Administrator (Main Hub)
 | Username | Password | Role | Tenant | Access Level |
 |----------|----------|------|---------|--------------|
-| `sysadmin` | `admin123` | admin | System-wide | Full system access across all tenants |
+| `mayiladhuthurai` | `super123` | admin | AVINI Labs Mayiladuthurai (Hub) | Complete system-wide access to all franchises |
 
-### Hub Administrator
-| Username | Password | Role | Tenant | Access Level |
-|----------|----------|------|---------|--------------|
-| `myiladuthurai` | `hub123` | hub_admin | AVINI Labs Mayiladuthurai (Hub) | Hub management + all franchise oversight |
+### Franchise Administrators
+| Username | Password | Role | Franchise | Site Code | Access Level |
+|----------|----------|------|-----------|-----------|--------------|
+| `sirkazhi` | `sirkazhi123` | franchise_admin | AVINI Labs Sirkazhi | SKZ | Franchise-only access |
+| `thanjavur` | `thanjavur123` | franchise_admin | AVINI Labs Thanjavur | TNJ | Franchise-only access |
+| `kuthalam` | `kuthalam123` | franchise_admin | AVINI Labs Kuthalam | KTL | Franchise-only access |
+| `aduthurai` | `aduthurai123` | franchise_admin | AVINI Labs Aduthurai | ADT | Franchise-only access |
+| `thiruppanandal` | `thiruppanandal123` | franchise_admin | AVINI Labs Thiruppanandal | TPN | Franchise-only access |
+| `eravancherry` | `eravancherry123` | franchise_admin | AVINI Labs Eravancherry | ERC | Franchise-only access |
+| `nachiyarkovil` | `nachiyarkovil123` | franchise_admin | AVINI Labs Nachiyarkovil | NCK | Franchise-only access |
+| `mykidneycare` | `mykidneycare123` | franchise_admin | My Kidney Care MYD | MKC | Franchise-only access |
+| `velanclinic` | `velanclinic123` | franchise_admin | Velan Clinic | VCL | Franchise-only access |
+| `swamimalai` | `swamimalai123` | franchise_admin | AVINI Labs Swamimalai | SWM | Franchise-only access |
+| `pandhanallur` | `pandhanallur123` | franchise_admin | AVINI Labs Pandhanallur | PDN | Franchise-only access |
+| `kumbakonam` | `kumbakonam123` | franchise_admin | AVINI Labs Kumbakonam | KBK | Franchise-only access |
+| `mannargudi` | `mannargudi123` | franchise_admin | AVINI Labs Mannargudi | MNG | Franchise-only access |
+| `thirukkattupalli` | `thirukkattupalli123` | franchise_admin | AVINI Labs Thirukkattupalli | TKP | Franchise-only access |
+| `sembanarkovil` | `sembanarkovil123` | franchise_admin | AVINI Labs Sembanarkovil | SBK | Franchise-only access |
+| `thuvakudi` | `thuvakudi123` | franchise_admin | AVINI Labs Thuvakudi | TVK | Franchise-only access |
+| `avadi` | `avadi123` | franchise_admin | AVINI Labs Avadi | AVD | Franchise-only access |
+
+## Access Control Features
+
+### Super Administrator Capabilities
+- **Tenant Switching**: Can switch between franchise views using the Tenant Switcher component
+- **System-wide Access**: View and manage data across all 17 franchise locations
+- **User Management**: Create and manage franchise admin accounts
+- **Global Reporting**: Access aggregated reports and analytics
+- **System Configuration**: Manage system-wide settings and configurations
+
+### Franchise Administrator Capabilities
+- **Isolated Access**: Can only access their own franchise data
+- **Local Management**: Manage inventory, billing, patients, and reports for their location
+- **User Creation**: Create staff users within their franchise scope
+- **Data Security**: Cannot view or access other franchises' information
+
+### Data Isolation Implementation
+- **Inventory Management**: Each franchise maintains separate inventory stocks
+- **Billing System**: Franchise-specific invoicing and payment tracking
+- **Patient Records**: Patient data isolated by franchise location
+- **Reporting**: Analytics and reports scoped to franchise level
+- **User Management**: Staff users inherit franchise limitations
+
+### Security Features
+- **Role-based Access Control**: Strict permission enforcement
+- **Tenant Validation**: All operations validated against user's tenant access
+- **Cross-tenant Protection**: Prevents unauthorized data access
+- **Audit Trails**: Track administrative actions across franchises
+
+## Usage Instructions
+
+### For Super Admin (MAYILADHUTHURAI)
+1. Login with `mayiladhuthurai` / `super123`
+2. Navigate to Admin Dashboard
+3. Use Tenant Switcher to select franchise or "All Franchises"
+4. All data views will be filtered based on selection
+5. Switch contexts as needed for different franchise management
+
+### For Franchise Admins
+1. Login with franchise-specific credentials
+2. Access automatically limited to your franchise
+3. All operations scoped to your location only
+4. Cannot access other franchises' data or settings
+
+## System Architecture
+
+### Multi-Tenant Design
+- **Hub Model**: Central hub (MAYILADHUTHURAI) with franchise oversight
+- **Data Isolation**: Complete separation of franchise data
+- **Scalable Architecture**: Support for additional franchises
+- **Centralized Management**: Hub admin can manage all franchises
+
+### Technical Implementation
+- **Backend**: Tenant-based data filtering and access control
+- **Frontend**: Context-aware UI with tenant switching
+- **Database**: Tenant ID-based data segregation
+- **API Security**: Route-level access control and validation
+
+## Support Information
+
+### System Administrator Contact
+- **Email**: admin@avinilabs.com
+- **Phone**: 6384440505
+- **Location**: Main Hub, Mayiladuthurai, Tamil Nadu
+
+### Franchise Support
+- Each franchise admin is responsible for their location's operations
+- Technical issues should be escalated to the main hub
+- System-wide issues handled by super administrator
+
+## Important Notes
+
+1. **Password Security**: Change default passwords after first login
+2. **Data Backup**: Each franchise should maintain local data backups
+3. **User Training**: Ensure staff understand access limitations
+4. **Regular Audits**: Periodic review of user access and permissions
+5. **System Updates**: Coordinated updates across all franchise locations
+
+This multi-tenant system ensures complete data isolation while providing the main hub with comprehensive oversight capabilities across all AVINI franchise locations.
 
 ### Franchise Administrators
 | Username | Password | Role | Tenant | Access Level |

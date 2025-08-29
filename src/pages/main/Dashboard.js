@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Row, Col, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faClipboardList, faUserPlus, faClipboardCheck, 
+import {
+  faClipboardList, faUserPlus, faClipboardCheck,
   faExclamationTriangle, faHospital, faEye
 } from '@fortawesome/free-solid-svg-icons';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { useAuth } from '../../context/AuthContext';
 import { useTenant } from '../../context/TenantContext';
-import axios from 'axios';
+import { dashboardAPI } from '../../services/api';
 import '../../styles/Dashboard.css';
 
 // Register ChartJS components
@@ -34,7 +34,7 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         setError(null);
-        const response = await axios.get('/api/dashboard');
+        const response = await dashboardAPI.getDashboardData();
         setDashboardData(response.data);
       } catch (err) {
         console.error('Dashboard data fetch error:', err);

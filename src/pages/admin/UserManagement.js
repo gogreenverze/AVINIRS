@@ -4,7 +4,8 @@ import { Card, Button, Form, InputGroup, Table, Badge, Row, Col } from 'react-bo
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUsers, faUserPlus, faSearch, faEdit, faEye, faTrash,
-  faSort, faSortUp, faSortDown, faFilter, faUserShield
+  faSort, faSortUp, faSortDown, faFilter, faUserShield,
+  faFileExcel, faFileImport
 } from '@fortawesome/free-solid-svg-icons';
 import { adminAPI } from '../../services/api';
 import {
@@ -13,6 +14,8 @@ import {
   SuccessModal,
   ErrorModal
 } from '../../components/common';
+import ResponsiveDataTable from '../../components/admin/ResponsiveDataTable';
+import MobilePageHeader from '../../components/common/MobilePageHeader';
 import { useAuth } from '../../context/AuthContext';
 import '../../styles/UserManagement.css';
 
@@ -193,67 +196,58 @@ const UserManagement = () => {
   };
 
 
-  // Table columns
+  // Table columns for ResponsiveDataTable
   const columns = [
     {
-      header: 'Name',
-      accessor: 'name',
-      sortable: true,
-      cell: (row) => (
-        <Link to={`/admin/users/${row.id}`}>{row.first_name} {row.last_name}</Link>
+      key: 'name',
+      label: 'Name',
+      render: (value, row) => (
+        <Link to={`/admin/users/${row.id}`} className="text-decoration-none">
+          {row.first_name} {row.last_name}
+        </Link>
       )
     },
     {
-      header: 'Username',
-      accessor: 'username',
-      sortable: true
+      key: 'username',
+      label: 'Username'
     },
     {
-      header: 'Email',
-      accessor: 'email',
-      sortable: true
+      key: 'email',
+      label: 'Email'
     },
     {
-      header: 'Role',
-      accessor: 'role',
-      sortable: true,
-      cell: (row) => (
+      key: 'role',
+      label: 'Role',
+      render: (value, row) => (
         <Badge bg={getRoleBadgeVariant(row.role)}>
           {getRoleDisplayName(row.role)}
         </Badge>
       )
     },
     {
-      header: 'Site',
-      accessor: 'tenant',
-      sortable: false,
-      cell: (row) => row.tenant?.name || 'N/A'
-    },
-    {
-      header: 'Actions',
-      accessor: 'actions',
-      sortable: false,
-      cell: (row) => (
-        <div className="d-flex">
-          <Link to={`/admin/users/${row.id}`} className="btn btn-sm btn-info me-1">
-            <FontAwesomeIcon icon={faEye} />
-          </Link>
-          <Link to={`/admin/users/${row.id}/edit`} className="btn btn-sm btn-primary me-1">
-            <FontAwesomeIcon icon={faEdit} />
-          </Link>
-          {currentUser?.id !== row.id && (
-            <Button
-              variant="danger"
-              size="sm"
-              onClick={() => handleDeleteConfirm(row)}
-            >
-              <FontAwesomeIcon icon={faTrash} />
-            </Button>
-          )}
-        </div>
-      )
+      key: 'tenant',
+      label: 'Site',
+      render: (value, row) => row.tenant?.name || 'N/A'
     }
   ];
+
+  // Mobile card configuration
+  const mobileCardConfig = {
+    title: (user) => `${user.first_name} ${user.last_name}`,
+    subtitle: (user) => user.email,
+    primaryField: 'username',
+    secondaryField: 'role',
+    statusField: 'is_active'
+  };
+
+  // Handle user actions
+  const handleViewUser = (user) => {
+    window.location.href = `/admin/users/${user.id}`;
+  };
+
+  const handleEditUser = (user) => {
+    window.location.href = `/admin/users/${user.id}/edit`;
+  };
 
   if (loading) {
     return (
@@ -268,80 +262,106 @@ const UserManagement = () => {
 
   return (
     <div className="user-management-container">
-      <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">
-          <FontAwesomeIcon icon={faUsers} className="me-2" />
-          User Management
-        </h1>
-        <Link to="/admin/users/create" className="btn btn-primary">
-          <FontAwesomeIcon icon={faUserPlus} className="me-2" />
-          Add New User
-        </Link>
-      </div>
+      <MobilePageHeader
+        title="User Management"
+        subtitle="Manage system users, roles, and permissions"
+        icon={faUsers}
+        primaryAction={{
+          label: "Add New User",
+          shortLabel: "Add User",
+          icon: faUserPlus,
+          onClick: () => window.location.href = "/admin/users/create",
+          variant: "primary"
+        }}
+        secondaryActions={[
+          {
+            label: "Export Users",
+            shortLabel: "Export",
+            icon: faFileExcel,
+            onClick: () => console.log("Export users"),
+            variant: "outline-success"
+          },
+          {
+            label: "Import Users",
+            shortLabel: "Import",
+            icon: faFileImport,
+            onClick: () => console.log("Import users"),
+            variant: "outline-info"
+          }
+        ]}
+        breadcrumbs={[
+          { label: "Admin", shortLabel: "Admin", link: "/admin" },
+          { label: "User Management", shortLabel: "Users" }
+        ]}
+      />
 
       <Card className="shadow mb-4">
-        <Card.Header className="py-3 d-flex flex-wrap justify-content-between align-items-center">
-          <h6 className="m-0 font-weight-bold text-primary">Users</h6>
-          <div className="d-flex">
-            <Form.Select
-              className="me-2"
-              style={{ width: 'auto' }}
-              value={filterRole}
-              onChange={handleFilter}
-            >
-              {roleOptions.map(role => (
-                <option key={role.value} value={role.value}>
-                  {role.label}
-                </option>
-              ))}
-            </Form.Select>
-            <InputGroup style={{ width: 'auto' }}>
-              <Form.Control
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={handleSearch}
-              />
-              <Button variant="outline-secondary">
-                <FontAwesomeIcon icon={faSearch} />
-              </Button>
-            </InputGroup>
+        <Card.Header className="py-3">
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
+            <h6 className="m-0 font-weight-bold text-primary">
+              <FontAwesomeIcon icon={faUsers} className="me-2 d-lg-none" />
+              Users ({filteredUsers.length})
+            </h6>
+            <div className="d-flex flex-column flex-sm-row gap-2 w-100 w-lg-auto">
+              <Form.Select
+                className="flex-shrink-0"
+                style={{ minWidth: '150px' }}
+                value={filterRole}
+                onChange={handleFilter}
+              >
+                {roleOptions.map(role => (
+                  <option key={role.value} value={role.value}>
+                    {role.label}
+                  </option>
+                ))}
+              </Form.Select>
+              <InputGroup style={{ minWidth: '200px' }}>
+                <Form.Control
+                  type="text"
+                  placeholder="Search users..."
+                  value={searchQuery}
+                  onChange={handleSearch}
+                />
+                <Button variant="outline-secondary">
+                  <FontAwesomeIcon icon={faSearch} />
+                </Button>
+              </InputGroup>
+            </div>
           </div>
         </Card.Header>
-        <Card.Body>
+        <Card.Body className="p-0">
           {error ? (
-            <div className="alert alert-danger" role="alert">
+            <div className="alert alert-danger m-3" role="alert">
               {error}
             </div>
           ) : (
-            <div className="table-responsive">
-              <DataTable
-                columns={columns}   
-                data={currentUsers}
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-                onSort={handleSort}
-                sortField={sortField}
-                sortDirection={sortDirection}
-                loading={loading}
-                emptyMessage="No users found."
-              />
-            </div>
+            <ResponsiveDataTable
+              data={currentUsers}
+              columns={columns}
+              onEdit={handleEditUser}
+              onDelete={(user) => currentUser?.id !== user.id ? handleDeleteConfirm(user) : null}
+              onViewDetails={handleViewUser}
+              loading={loading}
+              emptyMessage="No users found."
+              mobileCardConfig={mobileCardConfig}
+            />
           )}
         </Card.Body>
       </Card>
 
       {/* Role Summary */}
       <Row className="mb-4">
-        <Col md={12}>
+        <Col xs={12}>
           <Card className="shadow">
             <Card.Header className="py-3">
-              <h6 className="m-0 font-weight-bold text-primary">Role Summary</h6>
+              <h6 className="m-0 font-weight-bold text-primary">
+                <FontAwesomeIcon icon={faUserShield} className="me-2" />
+                Role Summary
+              </h6>
             </Card.Header>
             <Card.Body>
-              <Row>
-                <Col md={2} className="mb-3">
+              <Row className="g-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-danger">
                       <FontAwesomeIcon icon={faUserShield} />
@@ -352,7 +372,7 @@ const UserManagement = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={2} className="mb-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-primary">
                       <FontAwesomeIcon icon={faUserShield} />
@@ -363,7 +383,7 @@ const UserManagement = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={2} className="mb-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-success">
                       <FontAwesomeIcon icon={faUsers} />
@@ -374,7 +394,7 @@ const UserManagement = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={2} className="mb-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-info">
                       <FontAwesomeIcon icon={faUsers} />
@@ -385,7 +405,7 @@ const UserManagement = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={2} className="mb-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-warning">
                       <FontAwesomeIcon icon={faUsers} />
@@ -396,7 +416,7 @@ const UserManagement = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={2} className="mb-3">
+                <Col xs={6} sm={4} md={2}>
                   <div className="role-summary-item">
                     <div className="role-badge bg-secondary">
                       <FontAwesomeIcon icon={faUsers} />

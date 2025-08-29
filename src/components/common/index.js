@@ -1,5 +1,6 @@
 // Export all common components
 import DataTable from './DataTable';
+import Pagination from './Pagination';
 import {
   TextInput,
   PasswordInput,
@@ -54,6 +55,9 @@ import {
 export {
   // DataTable
   DataTable,
+
+  // Pagination
+  Pagination,
 
   // FormComponents
   TextInput,

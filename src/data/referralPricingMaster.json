@@ -1,0 +1,477 @@
+{
+  "referralMaster": {
+    "doctor": {
+      "id": "doctor",
+      "name": "Doctor Referral",
+      "description": "Patients referred by doctors",
+      "category": "medical",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 0,
+      "commissionPercentage": 10,
+      "isActive": true,
+      "priority": 1
+    },
+    "self": {
+      "id": "self",
+      "name": "Self Referral",
+      "description": "Walk-in patients",
+      "category": "direct",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 0,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 2
+    },
+    "hospital": {
+      "id": "hospital",
+      "name": "Hospital Partnership",
+      "description": "Patients from partner hospitals",
+      "category": "institutional",
+      "defaultPricingScheme": "hospital",
+      "discountPercentage": 5,
+      "commissionPercentage": 8,
+      "isActive": true,
+      "priority": 3
+    },
+    "corporate": {
+      "id": "corporate",
+      "name": "Corporate Contract",
+      "description": "Corporate employee health packages",
+      "category": "corporate",
+      "defaultPricingScheme": "corporate",
+      "discountPercentage": 15,
+      "commissionPercentage": 5,
+      "isActive": true,
+      "priority": 4
+    },
+    "insurance": {
+      "id": "insurance",
+      "name": "Insurance Provider",
+      "description": "Insurance covered patients",
+      "category": "insurance",
+      "defaultPricingScheme": "insurance",
+      "discountPercentage": 8,
+      "commissionPercentage": 3,
+      "isActive": true,
+      "priority": 5
+    },
+    "lab": {
+      "id": "lab",
+      "name": "Lab-to-Lab",
+      "description": "Referrals from other laboratories",
+      "category": "professional",
+      "defaultPricingScheme": "wholesale",
+      "discountPercentage": 15,
+      "commissionPercentage": 12,
+      "isActive": true,
+      "priority": 6
+    },
+    "online": {
+      "id": "online",
+      "name": "Online Booking",
+      "description": "Patients booking through online platforms",
+      "category": "digital",
+      "defaultPricingScheme": "promotional",
+      "discountPercentage": 3,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 7
+    },
+    "emergency": {
+      "id": "emergency",
+      "name": "Emergency",
+      "description": "Emergency/urgent test requests",
+      "category": "urgent",
+      "defaultPricingScheme": "emergency",
+      "discountPercentage": 0,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 8
+    },
+    "vip": {
+      "id": "vip",
+      "name": "VIP Customer",
+      "description": "VIP customers with special pricing",
+      "category": "premium",
+      "defaultPricingScheme": "vip",
+      "discountPercentage": 20,
+      "commissionPercentage": 8,
+      "isActive": true,
+      "priority": 9
+    },
+    "student": {
+      "id": "student",
+      "name": "Student Discount",
+      "description": "Special rates for students",
+      "category": "educational",
+      "defaultPricingScheme": "student",
+      "discountPercentage": 25,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 10
+    },
+    "senior": {
+      "id": "senior",
+      "name": "Senior Citizen",
+      "description": "Discounted rates for senior citizens",
+      "category": "social",
+      "defaultPricingScheme": "senior",
+      "discountPercentage": 18,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 11
+    }
+  },
+  "pricingSchemes": {
+    "standard": {
+      "id": "standard",
+      "name": "Standard Pricing",
+      "description": "Regular pricing for walk-in patients",
+      "baseMultiplier": 1.0,
+      "isDefault": true,
+      "applicableReferrals": ["doctor", "self"],
+      "isActive": true
+    },
+    "hospital": {
+      "id": "hospital",
+      "name": "Hospital Partnership",
+      "description": "Special rates for hospital partners",
+      "baseMultiplier": 0.95,
+      "isDefault": false,
+      "applicableReferrals": ["hospital"],
+      "isActive": true
+    },
+    "corporate": {
+      "id": "corporate",
+      "name": "Corporate Rates",
+      "description": "Discounted rates for corporate contracts",
+      "baseMultiplier": 0.88,
+      "isDefault": false,
+      "applicableReferrals": ["corporate"],
+      "isActive": true
+    },
+    "insurance": {
+      "id": "insurance",
+      "name": "Insurance Rates",
+      "description": "Insurance provider negotiated rates",
+      "baseMultiplier": 0.92,
+      "isDefault": false,
+      "applicableReferrals": ["insurance"],
+      "isActive": true
+    },
+    "wholesale": {
+      "id": "wholesale",
+      "name": "Wholesale Rates",
+      "description": "Bulk rates for lab-to-lab referrals",
+      "baseMultiplier": 0.85,
+      "isDefault": false,
+      "applicableReferrals": ["lab"],
+      "isActive": true
+    },
+    "promotional": {
+      "id": "promotional",
+      "name": "Promotional Rates",
+      "description": "Special promotional pricing",
+      "baseMultiplier": 0.97,
+      "isDefault": false,
+      "applicableReferrals": ["online", "self"],
+      "isActive": true
+    },
+    "emergency": {
+      "id": "emergency",
+      "name": "Emergency Rates",
+      "description": "Premium rates for emergency services",
+      "baseMultiplier": 1.2,
+      "isDefault": false,
+      "applicableReferrals": ["emergency"],
+      "isActive": true
+    },
+    "vip": {
+      "id": "vip",
+      "name": "VIP Pricing",
+      "description": "Premium service with discounts for VIP customers",
+      "baseMultiplier": 0.8,
+      "isDefault": false,
+      "applicableReferrals": ["vip"],
+      "isActive": true
+    },
+    "student": {
+      "id": "student",
+      "name": "Student Pricing",
+      "description": "Heavily discounted rates for students",
+      "baseMultiplier": 0.75,
+      "isDefault": false,
+      "applicableReferrals": ["student"],
+      "isActive": true
+    },
+    "senior": {
+      "id": "senior",
+      "name": "Senior Citizen Pricing",
+      "description": "Discounted rates for senior citizens",
+      "baseMultiplier": 0.82,
+      "isDefault": false,
+      "applicableReferrals": ["senior"],
+      "isActive": true
+    }
+  },
+  "testPricingMatrix": {
+    "@000003": {
+      "testId": "@000003",
+      "testName": "17 HYDROXY CORTICO STEROID 24 HR URINE",
+      "basePrice": 4000.0,
+      "department": "Biochemistry",
+      "category": "Hormone",
+      "pricingByScheme": {
+        "standard": {
+          "price": 4000.0,
+          "referralPrices": {
+            "doctor": 4000.0,
+            "self": 4000.0
+          }
+        },
+        "hospital": {
+          "price": 3800.0,
+          "referralPrices": {
+            "hospital": 3800.0
+          }
+        },
+        "corporate": {
+          "price": 3520.0,
+          "referralPrices": {
+            "corporate": 3520.0
+          }
+        },
+        "insurance": {
+          "price": 3680.0,
+          "referralPrices": {
+            "insurance": 3680.0
+          }
+        },
+        "wholesale": {
+          "price": 3400.0,
+          "referralPrices": {
+            "lab": 3400.0
+          }
+        },
+        "promotional": {
+          "price": 3880.0,
+          "referralPrices": {
+            "online": 3880.0
+          }
+        },
+        "emergency": {
+          "price": 4800.0,
+          "referralPrices": {
+            "emergency": 4800.0
+          }
+        }
+      },
+      "discountRules": {
+        "maxDiscount": 20,
+        "volumeDiscounts": {
+          "5": 2,
+          "10": 5,
+          "20": 8
+        }
+      }
+    },
+    "@000009": {
+      "testId": "@000009",
+      "testName": "24 hrs URINE PROTEIN CREATININE RATIO",
+      "basePrice": 400.0,
+      "department": "Biochemistry",
+      "category": "Kidney Function",
+      "pricingByScheme": {
+        "standard": {
+          "price": 400.0,
+          "referralPrices": {
+            "doctor": 400.0,
+            "self": 400.0
+          }
+        },
+        "hospital": {
+          "price": 380.0,
+          "referralPrices": {
+            "hospital": 380.0
+          }
+        },
+        "corporate": {
+          "price": 352.0,
+          "referralPrices": {
+            "corporate": 352.0
+          }
+        },
+        "insurance": {
+          "price": 368.0,
+          "referralPrices": {
+            "insurance": 368.0
+          }
+        },
+        "wholesale": {
+          "price": 340.0,
+          "referralPrices": {
+            "lab": 340.0
+          }
+        },
+        "promotional": {
+          "price": 388.0,
+          "referralPrices": {
+            "online": 388.0
+          }
+        },
+        "emergency": {
+          "price": 480.0,
+          "referralPrices": {
+            "emergency": 480.0
+          }
+        }
+      },
+      "discountRules": {
+        "maxDiscount": 15,
+        "volumeDiscounts": {
+          "5": 2,
+          "10": 4,
+          "20": 6
+        }
+      }
+    },
+    "CBC001": {
+      "testId": "CBC001",
+      "testName": "Complete Blood Count (CBC)",
+      "basePrice": 500.0,
+      "department": "Hematology",
+      "category": "Blood Test",
+      "pricingByScheme": {
+        "standard": {
+          "price": 500.0,
+          "referralPrices": {
+            "doctor": 500.0,
+            "self": 500.0
+          }
+        },
+        "hospital": {
+          "price": 475.0,
+          "referralPrices": {
+            "hospital": 475.0
+          }
+        },
+        "corporate": {
+          "price": 425.0,
+          "referralPrices": {
+            "corporate": 425.0
+          }
+        },
+        "insurance": {
+          "price": 460.0,
+          "referralPrices": {
+            "insurance": 460.0
+          }
+        },
+        "wholesale": {
+          "price": 425.0,
+          "referralPrices": {
+            "lab": 425.0
+          }
+        },
+        "promotional": {
+          "price": 485.0,
+          "referralPrices": {
+            "online": 485.0
+          }
+        },
+        "emergency": {
+          "price": 600.0,
+          "referralPrices": {
+            "emergency": 600.0
+          }
+        },
+        "vip": {
+          "price": 400.0,
+          "referralPrices": {
+            "vip": 400.0
+          }
+        },
+        "student": {
+          "price": 375.0,
+          "referralPrices": {
+            "student": 375.0
+          }
+        },
+        "senior": {
+          "price": 410.0,
+          "referralPrices": {
+            "senior": 410.0
+          }
+        }
+      },
+      "discountRules": {
+        "maxDiscount": 25,
+        "volumeDiscounts": {
+          "5": 3,
+          "10": 6,
+          "20": 10
+        }
+      }
+    }
+  },
+  "discountRules": {
+    "global": {
+      "maxDiscountPercentage": 25,
+      "requiresApproval": {
+        "above": 15,
+        "approvers": ["admin", "manager"]
+      },
+      "volumeDiscounts": {
+        "enabled": true,
+        "tiers": {
+          "5": 2,
+          "10": 5,
+          "20": 8,
+          "50": 12
+        }
+      },
+      "loyaltyDiscounts": {
+        "enabled": true,
+        "tiers": {
+          "bronze": 2,
+          "silver": 5,
+          "gold": 8,
+          "platinum": 12
+        }
+      }
+    },
+    "referralSpecific": {
+      "corporate": {
+        "additionalDiscount": 5,
+        "minimumOrderValue": 1000
+      },
+      "insurance": {
+        "additionalDiscount": 3,
+        "preApprovalRequired": true
+      }
+    }
+  },
+  "commissionRules": {
+    "doctor": {
+      "percentage": 10,
+      "minimumAmount": 100,
+      "paymentCycle": "monthly"
+    },
+    "hospital": {
+      "percentage": 8,
+      "minimumAmount": 500,
+      "paymentCycle": "monthly"
+    },
+    "lab": {
+      "percentage": 12,
+      "minimumAmount": 200,
+      "paymentCycle": "monthly"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-08-24T17:30:00Z",
+    "updatedBy": "system",
+    "description": "Comprehensive referral and pricing master configuration"
+  }
+}

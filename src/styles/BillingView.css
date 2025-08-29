@@ -4,6 +4,109 @@
   padding: 1.5rem;
 }
 
+/* Invoice Item Mobile Cards */
+.invoice-item-mobile-card {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color, #e0e0e0);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.invoice-item-mobile-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary, #d4006e);
+}
+
+.invoice-item-mobile-card .mobile-card-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+  padding: 1rem;
+}
+
+.invoice-item-mobile-card .mobile-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark-gray, #2c2c2c);
+  margin-bottom: 0.25rem;
+}
+
+.invoice-item-mobile-card .mobile-card-body {
+  padding: 1rem;
+}
+
+.invoice-item-mobile-card .mobile-card-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.invoice-item-mobile-card .mobile-card-field:last-child {
+  border-bottom: none;
+}
+
+.invoice-item-mobile-card .mobile-card-label {
+  font-weight: 600;
+  color: var(--medium-gray, #5a5a5a);
+  font-size: 0.875rem;
+  flex: 0 0 45%;
+}
+
+.invoice-item-mobile-card .mobile-card-value {
+  font-size: 0.875rem;
+  color: var(--dark-gray, #2c2c2c);
+  text-align: right;
+  flex: 1;
+  font-weight: 500;
+}
+
+/* Mobile Invoice Summary */
+.mobile-invoice-summary {
+  background-color: #f8f9fa;
+}
+
+.mobile-invoice-summary .mobile-card-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-invoice-summary .mobile-card-field:last-child {
+  border-bottom: none;
+}
+
+.mobile-invoice-summary .mobile-card-label {
+  font-weight: 600;
+  color: var(--medium-gray, #5a5a5a);
+  font-size: 0.875rem;
+  flex: 0 0 60%;
+}
+
+.mobile-invoice-summary .mobile-card-value {
+  font-size: 0.875rem;
+  color: var(--dark-gray, #2c2c2c);
+  text-align: right;
+  flex: 1;
+  font-weight: 600;
+}
+
+/* Mobile Container Styles */
+.mobile-invoice-items-container .mobile-data-container {
+  padding: 0.5rem;
+}
+
+.desktop-invoice-items-container,
+.mobile-invoice-items-container {
+  width: 100%;
+  max-width: 100%;
+}
+
 .billing-detail-item {
   margin-bottom: 0.75rem;
   display: flex;
@@ -95,25 +198,74 @@
 /* Responsive Styles */
 @media (max-width: 767.98px) {
   .billing-view-container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  
+
   .billing-detail-item {
     margin-bottom: 0.5rem;
   }
-  
+
   .billing-detail-item strong {
     min-width: 100px;
   }
-  
-  .table th, 
+
+  .table th,
   .table td {
     padding: 0.5rem;
     font-size: 0.85rem;
   }
-  
+
   .btn-sm {
     padding: 0.25rem 0.4rem;
     font-size: 0.75rem;
   }
+
+  /* Invoice item mobile card responsive adjustments */
+  .invoice-item-mobile-card .mobile-card-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .invoice-item-mobile-card .mobile-card-label {
+    flex: none;
+  }
+
+  .invoice-item-mobile-card .mobile-card-value {
+    text-align: left;
+    flex: none;
+    width: 100%;
+  }
+
+  /* Mobile invoice summary responsive adjustments */
+  .mobile-invoice-summary .mobile-card-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .mobile-invoice-summary .mobile-card-label {
+    flex: none;
+  }
+
+  .mobile-invoice-summary .mobile-card-value {
+    text-align: left;
+    flex: none;
+    width: 100%;
+  }
+}
+@media print {
+  /* Hide non-printable elements */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Style the printable area */
+  .print-area {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Add any other print-specific styles here */
 }

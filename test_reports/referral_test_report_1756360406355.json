@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-08-28T05:53:26.354Z",
+  "summary": {
+    "passed": 4,
+    "failed": 18,
+    "total": 22
+  },
+  "errors": [
+    "API connectivity test failed: Request failed with status code 403",
+    "Valid type Doctor test failed: Request failed with status code 403",
+    "Valid type Hospital test failed: Request failed with status code 403",
+    "Valid type Lab test failed: Request failed with status code 403",
+    "Valid type Corporate test failed: Request failed with status code 403",
+    "Valid type Insurance test failed: Request failed with status code 403",
+    "Valid type Patient test failed: Request failed with status code 403",
+    "CRUD operations test failed: Request failed with status code 403",
+    "Type-specific field test for Doctor failed: Request failed with status code 403",
+    "Type-specific field test for Hospital failed: Request failed with status code 403",
+    "Type-specific field test for Lab failed: Request failed with status code 403",
+    "Type-specific field test for Corporate failed: Request failed with status code 403",
+    "Type-specific field test for Insurance failed: Request failed with status code 403",
+    "Type-specific field test for Patient failed: Request failed with status code 403",
+    "Pricing integration test failed: Request failed with status code 403",
+    "Excel import test failed: Request failed with status code 403",
+    "Business rules validation test failed: Request failed with status code 403",
+    "Cascading dropdown test failed: Request failed with status code 403"
+  ],
+  "warnings": []
+}

@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Card, Form, Button, Row, Col, Alert } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSave, faArrowLeft, faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
-import { sampleAPI, tenantAPI } from '../../services/api';
+import { faSave, faArrowLeft, faExchangeAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { sampleAPI, tenantAPI, billingAPI } from '../../services/api';
 import { useTenant } from '../../context/TenantContext';
 
 const SampleTransferCreate = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { tenantData } = useTenant();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [samples, setSamples] = useState([]);
   const [tenants, setTenants] = useState([]);
+  const [billingInfo, setBillingInfo] = useState(null);
+
+  // Get URL parameters
+  const queryParams = new URLSearchParams(location.search);
+  const billingId = queryParams.get('billing_id');
+  const sampleId = queryParams.get('sample_id');
   
   const [formData, setFormData] = useState({
-    sample_id: '',
+    sample_id: sampleId || '',
     to_tenant_id: '',
     reason: '',
     notes: '',
@@ -31,17 +38,38 @@ const SampleTransferCreate = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [samplesResponse, tenantsResponse] = await Promise.all([
-           sampleAPI.getAllSamples(),
-         tenantAPI.getTenants()
-        ]);
+        let promises = [
+          sampleAPI.getAllSamples(),
+         tenantAPI.getAllTenants()
+        ];
 
+        // If billing_id is provided, fetch billing info
+        // if (billingId) {
+        //   promises.push(billingAPI.getBilling(billingId));
+        // }
 
-        console.log("setSamples",samplesResponse.data.items)
-        console.log("setTenants",tenantsResponse.data)
-       
+        const responses = await Promise.all(promises);
+        const [samplesResponse, tenantsResponse, billingResponse] = responses;
+
+        console.log("responses", responses);
+        console.log("setSamples", samplesResponse);
+        console.log("setTenants", tenantsResponse);
+
         setSamples(samplesResponse?.data?.items || []);
         setTenants(tenantsResponse?.data || []);
+
+        // If billing info was fetched, set it and filter samples by patient
+        if (billingResponse) {
+          const billing = billingResponse.data;
+          setBillingInfo(billing);
+          console.log("setBillingInfo", billing);
+
+          // Filter samples to show only those for the same patient
+          const patientSamples = samplesResponse?.data?.items?.filter(
+            sample => sample.patient_id === billing.patient_id
+          ) || [];
+          setSamples(patientSamples);
+        }
       } catch (err) {
         console.error('Error fetching data:', err);
         setError('Failed to load required data. Please try again.');
@@ -49,7 +77,7 @@ const SampleTransferCreate = () => {
     };
 
     fetchData();
-  }, []);
+  }, [billingId]);
 
 
   console.log("smaples",samples)
@@ -110,7 +138,7 @@ const SampleTransferCreate = () => {
 
       setSuccess(true);
       setTimeout(() => {
-        navigate('/samples/routing');
+        navigate(billingInfo ? '/samples' : '/samples/routing');
       }, 2000);
 
     } catch (err) {
@@ -129,17 +157,45 @@ const SampleTransferCreate = () => {
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 className="h3 mb-0 text-gray-800">
           <FontAwesomeIcon icon={faExchangeAlt} className="me-2" />
-          Create Sample Transfer
+          {billingInfo ? 'Transfer Billing Report Sample' : 'Create Sample Transfer'}
         </h1>
-        <Button 
-          variant="secondary" 
-          onClick={() => navigate('/samples/routing')}
+        <Button
+          variant="secondary"
+          onClick={() => navigate(billingInfo ? '/samples' : '/samples/routing')}
           className="btn-sm"
         >
           <FontAwesomeIcon icon={faArrowLeft} className="me-2" />
-          Back to Transfers
+          {billingInfo ? 'Back to Reports' : 'Back to Transfers'}
         </Button>
       </div>
+
+      {/* Billing Information Card */}
+      {billingInfo && (
+        <Card className="shadow mb-4 border-left-info">
+          <Card.Header className="py-3">
+            <h6 className="m-0 font-weight-bold text-info">
+              <FontAwesomeIcon icon={faInfoCircle} className="me-2" />
+              Billing Report Information
+            </h6>
+          </Card.Header>
+          <Card.Body>
+            <Row>
+              <Col md={6}>
+                <p><strong>Invoice Number:</strong> {billingInfo.invoice_number}</p>
+                <p><strong>SID Number:</strong> {billingInfo.sid_number}</p>
+              </Col>
+              <Col md={6}>
+                <p><strong>Patient:</strong> {billingInfo.patient?.first_name} {billingInfo.patient?.last_name}</p>
+                <p><strong>Total Amount:</strong> ₹{billingInfo.total_amount}</p>
+              </Col>
+            </Row>
+            <Alert variant="info" className="mb-0">
+              <FontAwesomeIcon icon={faInfoCircle} className="me-2" />
+              Showing samples for this patient only. Select a sample to transfer for this billing report.
+            </Alert>
+          </Card.Body>
+        </Card>
+      )}
 
       {/* Success Message */}
       {success && (
@@ -172,13 +228,23 @@ const SampleTransferCreate = () => {
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Select a sample...</option>
+                    <option value="">
+                      {samples?.length === 0
+                        ? (billingInfo ? 'No samples available for this patient' : 'No samples available')
+                        : 'Select a sample...'
+                      }
+                    </option>
                     {samples?.map(sample => (
                       <option key={sample.id} value={sample.id}>
                         {sample?.sample_id} - {sample.patient?.first_name} {sample.patient?.last_name}
                       </option>
                     ))}
                   </Form.Select>
+                  {billingInfo && samples?.length === 0 && (
+                    <Form.Text className="text-muted">
+                      No samples found for this patient. You may need to create a sample first before transferring.
+                    </Form.Text>
+                  )}
                 </Form.Group>
               </Col>
               

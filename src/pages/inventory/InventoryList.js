@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Button, Form, InputGroup, Table, Badge, Row, Col } from 'react-bootstrap';
+import { Card, Button, Form, InputGroup, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faBoxes, faPlus, faSearch, faEdit, faEye, faTrash,
-  faExchangeAlt, faSort, faSortUp, faSortDown, faFilter
+  faBoxes, faPlus, faSearch, faFilter
 } from '@fortawesome/free-solid-svg-icons';
 import { inventoryAPI } from '../../services/api';
 import {
-  DataTable,
   DeleteConfirmationModal,
   SuccessModal,
   ErrorModal
 } from '../../components/common';
+import ResponsiveInventoryTable from '../../components/inventory/ResponsiveInventoryTable';
 import '../../styles/InventoryList.css';
 
 const InventoryList = () => {
@@ -155,70 +154,7 @@ const InventoryList = () => {
     }
   };
 
-  // Table columns
-  const columns = [
-    {
-      header: 'Name',
-      field: 'name',
-      sortable: true,
-      render: (row) => (
-        <Link to={`/inventory/${row.id}`}>{row.name}</Link>
-      )
-    },
-    {
-      header: 'SKU',
-      field: 'sku',
-      sortable: true
-    },
-    {
-      header: 'Category',
-      field: 'category',
-      sortable: true
-    },
-    {
-      header: 'Quantity',
-      field: 'quantity',
-      sortable: true,
-      render: (row) => (
-        <span>{row.quantity} {row.unit}</span>
-      )
-    },
-    {
-      header: 'Stock Level',
-      field: 'stock_level',
-      sortable: false,
-      render: (row) => (
-        <Badge bg={getStockLevelBadgeVariant(row.quantity, row.reorder_level)}>
-          {getStockLevelText(row.quantity, row.reorder_level)}
-        </Badge>
-      )
-    },
-    {
-      header: 'Actions',
-      field: 'actions',
-      sortable: false,
-      render: (row) => (
-        <div className="d-flex">
-          <Link to={`/inventory/${row.id}`} className="btn btn-sm btn-info me-1">
-            <FontAwesomeIcon icon={faEye} />
-          </Link>
-          <Link to={`/inventory/${row.id}/edit`} className="btn btn-sm btn-primary me-1">
-            <FontAwesomeIcon icon={faEdit} />
-          </Link>
-          <Link to={`/inventory/${row.id}/transactions`} className="btn btn-sm btn-success me-1">
-            <FontAwesomeIcon icon={faExchangeAlt} />
-          </Link>
-          <Button
-            variant="danger"
-            size="sm"
-            onClick={() => handleDeleteConfirm(row)}
-          >
-            <FontAwesomeIcon icon={faTrash} />
-          </Button>
-        </div>
-      )
-    }
-  ];
+
 
   if (loading) {
     return (
@@ -279,20 +215,16 @@ const InventoryList = () => {
               {error}
             </div>
           ) : (
-            <div className="table-responsive">
-              <DataTable
-                columns={columns}
-                data={currentItems}
-                currentPage={currentPage}
-                totalPages={totalPages}
-                onPageChange={setCurrentPage}
-                onSort={handleSort}
-                sortField={sortField}
-                sortDirection={sortDirection}
-                loading={loading}
-                emptyMessage="No inventory items found."
-              />
-            </div>
+            <ResponsiveInventoryTable
+              items={currentItems}
+              title="Inventory Items"
+              loading={loading}
+              itemsPerPage={itemsPerPage}
+              onDelete={handleDeleteConfirm}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
           )}
         </Card.Body>
       </Card>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ERR_20250620_095056_8332",
+    "timestamp": "2025-06-20T09:50:56.558988",
+    "error_type": "billing_not_found",
+    "error_message": "Billing record not found: 39",
+    "severity": "medium",
+    "context": {
+      "billing_id": 39
+    },
+    "user_id": null,
+    "tenant_id": null,
+    "resolved": false,
+    "resolution_notes": null
+  }
+]

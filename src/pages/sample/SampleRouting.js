@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Table, Button, Form, InputGroup, Badge, Row, Col, Tabs, Tab } from 'react-bootstrap';
+import { Card, Button, Form, InputGroup, Row, Col, Tabs, Tab, Alert } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faSearch, faPlus, faEye, faVial, faExchangeAlt,
-  faArrowRight, faArrowLeft, faCheck, faTimes, faEnvelope
+  faSearch, faPlus, faVial, faExchangeAlt, faEnvelope, faArrowRight, faCheck, faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import { sampleAPI } from '../../services/api';
 import { useTenant } from '../../context/TenantContext';
+import ResponsiveRoutingTable from '../../components/sample/ResponsiveRoutingTable';
 import '../../styles/SampleRouting.css';
 
 const SampleRouting = () => {
@@ -67,23 +67,7 @@ const SampleRouting = () => {
     return true;
   });
 
-  // Get status badge variant
-  const getStatusBadgeVariant = (status) => {
-    switch (status) {
-      case 'Pending':
-        return 'warning';
-      case 'In Transit':
-        return 'info';
-      case 'Received':
-        return 'success';
-      case 'Rejected':
-        return 'danger';
-      case 'Completed':
-        return 'primary';
-      default:
-        return 'secondary';
-    }
-  };
+
 
   // Handle search
   const handleSearch = (e) => {
@@ -162,157 +146,23 @@ const SampleRouting = () => {
         className="mb-4"
       >
         <Tab eventKey="incoming" title="Incoming Transfers">
-          {!loading && !error && filteredRoutings.length === 0 && (
-            <div className="alert alert-info">
-              No incoming transfers found.
-            </div>
-          )}
-
-          {!loading && !error && filteredRoutings.length > 0 && (
-            <Card className="shadow mb-4">
-              <Card.Header className="py-3">
-                <h6 className="m-0 font-weight-bold text-primary">
-                  Incoming Transfers
-                  <span className="badge bg-primary float-end">
-                    {filteredRoutings.length} Records
-                  </span>
-                </h6>
-              </Card.Header>
-              <Card.Body>
-                <div className="table-responsive">
-                  <Table className="table-hover" width="100%" cellSpacing="0">
-                    <thead>
-                      <tr>
-                        <th>Sample ID</th>
-                        <th>From</th>
-                        <th>Dispatch Date</th>
-                        <th>Tracking #</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filteredRoutings?.map(routing => (
-                        <tr key={routing.id}>
-                          <td>
-                            {routing.sample ? (
-                              <Link to={`/samples/${routing.sample.id}`}>
-                                {routing.sample.sample_id}
-                              </Link>
-                            ) : (
-                              'N/A'
-                            )}
-                          </td>
-                          <td>{routing.from_tenant?.name || 'Unknown'}</td>
-                          <td>
-                            {routing.dispatch_date ?
-                              new Date(routing.dispatch_date).toLocaleDateString() :
-                              'Not dispatched'}
-                          </td>
-                          <td>{routing.tracking_number || 'N/A'}</td>
-                          <td>
-                            <Badge bg={getStatusBadgeVariant(routing.status)}>
-                              {routing.status}
-                            </Badge>
-                          </td>
-                          <td>
-                            <Link to={`/samples/routing/${routing.id}`} className="btn btn-info btn-sm me-1">
-                              <FontAwesomeIcon icon={faEye} />
-                            </Link>
-                            {routing.status === 'In Transit' && (
-                              <Link to={`/samples/routing/${routing.id}/receive`} className="btn btn-success btn-sm me-1">
-                                <FontAwesomeIcon icon={faCheck} />
-                              </Link>
-                            )}
-                            {routing.status === 'In Transit' && (
-                              <Link to={`/samples/routing/${routing.id}/reject`} className="btn btn-danger btn-sm">
-                                <FontAwesomeIcon icon={faTimes} />
-                              </Link>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </Table>
-                </div>
-              </Card.Body>
-            </Card>
-          )}
+          <ResponsiveRoutingTable
+            routings={filteredRoutings}
+            type="incoming"
+            title="Incoming Transfers"
+            loading={loading}
+            itemsPerPage={20}
+          />
         </Tab>
 
         <Tab eventKey="outgoing" title="Outgoing Transfers">
-          {!loading && !error && filteredRoutings.length === 0 && (
-            <div className="alert alert-info">
-              No outgoing transfers found.
-            </div>
-          )}
-
-          {!loading && !error && filteredRoutings.length > 0 && (
-            <Card className="shadow mb-4">
-              <Card.Header className="py-3">
-                <h6 className="m-0 font-weight-bold text-primary">
-                  Outgoing Transfers
-                  <span className="badge bg-primary float-end">
-                    {filteredRoutings.length} Records
-                  </span>
-                </h6>
-              </Card.Header>
-              <Card.Body>
-                <div className="table-responsive">
-                  <Table className="table-hover" width="100%" cellSpacing="0">
-                    <thead>
-                      <tr>
-                        <th>Sample ID</th>
-                        <th>To</th>
-                        <th>Dispatch Date</th>
-                        <th>Tracking #</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filteredRoutings?.map(routing => (
-                        <tr key={routing.id}>
-                          {console.log("smapleroutings",routing)}
-                          <td>
-                            {routing.sample ? (
-                              <Link to={`/samples/${routing.sample.id}`}>
-                                {routing.sample.sample_id}
-                              </Link>
-                            ) : (
-                              'N/A'
-                            )}
-                          </td>
-                          <td>{routing.to_tenant?.name || 'Unknown'}</td>
-                          <td>
-                            {routing.dispatch_date ?
-                              new Date(routing.dispatch_date).toLocaleDateString() :
-                              'Not dispatched'}
-                          </td>
-                          <td>{routing.tracking_number || 'N/A'}</td>
-                          <td>
-                            <Badge bg={getStatusBadgeVariant(routing.status)}>
-                              {routing.status}
-                            </Badge>
-                          </td>
-                          <td>
-                            <Link to={`/samples/routing/${routing.id}`} className="btn btn-info btn-sm me-1">
-                              <FontAwesomeIcon icon={faEye} />
-                            </Link>
-                            {routing.status === 'Pending' && (
-                              <Link to={`/samples/routing/${routing.id}/dispatch`} className="btn btn-primary btn-sm">
-                                <FontAwesomeIcon icon={faArrowRight} />
-                              </Link>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </Table>
-                </div>
-              </Card.Body>
-            </Card>
-          )}
+          <ResponsiveRoutingTable
+            routings={filteredRoutings}
+            type="outgoing"
+            title="Outgoing Transfers"
+            loading={loading}
+            itemsPerPage={20}
+          />
         </Tab>
       </Tabs>
 

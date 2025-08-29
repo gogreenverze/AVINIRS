@@ -1,0 +1,29 @@
+[
+  {
+    "id": "AUD_20250620_095056_8332",
+    "timestamp": "2025-06-20T09:50:56.558988",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 39
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_095056_8332",
+    "timestamp": "2025-06-20T09:50:56.558988",
+    "event_type": "report_generation_failed",
+    "user_id": null,
+    "tenant_id": null,
+    "success": false,
+    "details": {
+      "billing_id": 39,
+      "error": "billing_not_found"
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  }
+]

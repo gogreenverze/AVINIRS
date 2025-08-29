@@ -4,6 +4,116 @@
   padding: 1.5rem;
 }
 
+/* Inventory Mobile Cards */
+.inventory-mobile-card {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color, #e0e0e0);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.inventory-mobile-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary, #d4006e);
+}
+
+.inventory-mobile-card .mobile-card-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid var(--border-color, #e0e0e0);
+  padding: 1rem;
+}
+
+.inventory-mobile-card .mobile-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark-gray, #2c2c2c);
+  margin-bottom: 0.25rem;
+}
+
+.inventory-mobile-card .mobile-card-subtitle {
+  font-size: 0.875rem;
+  color: var(--medium-gray, #5a5a5a);
+}
+
+.inventory-mobile-card .mobile-card-body {
+  padding: 1rem;
+}
+
+.inventory-mobile-card .mobile-card-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.inventory-mobile-card .mobile-card-field:last-child {
+  border-bottom: none;
+}
+
+.inventory-mobile-card .mobile-card-label {
+  font-weight: 600;
+  color: var(--medium-gray, #5a5a5a);
+  font-size: 0.875rem;
+  flex: 0 0 45%;
+}
+
+.inventory-mobile-card .mobile-card-value {
+  font-size: 0.875rem;
+  color: var(--dark-gray, #2c2c2c);
+  text-align: right;
+  flex: 1;
+  font-weight: 500;
+}
+
+.inventory-mobile-card .mobile-card-actions {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.inventory-mobile-card .mobile-action-btn {
+  min-height: 44px;
+  min-width: 80px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.inventory-mobile-card .mobile-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.inventory-mobile-card .status-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+/* Mobile Container Styles */
+.mobile-inventory-container .mobile-data-container {
+  padding: 0.5rem;
+}
+
+.desktop-inventory-container,
+.mobile-inventory-container {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Card Styles */
 .border-left-success {
   border-left: 0.25rem solid var(--success) !important;
@@ -49,22 +159,49 @@
 /* Responsive Styles */
 @media (max-width: 767.98px) {
   .inventory-list-container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-  
+
   .card-header {
     flex-direction: column;
     align-items: flex-start !important;
   }
-  
+
   .card-header .d-flex {
     margin-top: 1rem;
     width: 100%;
   }
-  
+
   .card-header .form-select,
   .card-header .input-group {
     width: 100% !important;
     margin-bottom: 0.5rem;
+  }
+
+  /* Inventory mobile card responsive adjustments */
+  .inventory-mobile-card .mobile-card-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .inventory-mobile-card .mobile-action-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .inventory-mobile-card .mobile-card-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .inventory-mobile-card .mobile-card-label {
+    flex: none;
+  }
+
+  .inventory-mobile-card .mobile-card-value {
+    text-align: left;
+    flex: none;
+    width: 100%;
   }
 }

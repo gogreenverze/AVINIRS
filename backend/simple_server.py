@@ -7,6 +7,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import json
 import os
+from utils import transform_master_data
 
 app = Flask(__name__)
 CORS(app)
@@ -14,12 +15,14 @@ CORS(app)
 # Helper function to read JSON data
 def read_json_file(filename):
     try:
-        filepath = os.path.join('data', filename)
+        # Look for data files in backend/data directory
+        filepath = os.path.join(os.path.dirname(__file__), 'data', filename)
         if os.path.exists(filepath):
             with open(filepath, 'r') as f:
                 return json.load(f)
         return []
-    except:
+    except Exception as e:
+        print(f"Error reading {filename}: {e}")
         return []
 
 # Helper function to write JSON data
@@ -41,19 +44,34 @@ def health():
 def get_master_data():
     """Get all master data"""
     try:
+        # Read raw data from files
+        test_categories = read_json_file('test_categories.json')
+        test_parameters = read_json_file('test_parameters.json')
+        sample_types = read_json_file('sample_types.json')
+        departments = read_json_file('departments.json')
+        payment_methods = read_json_file('payment_methods.json')
+        containers = read_json_file('containers.json')
+        instruments = read_json_file('instruments.json')
+        reagents = read_json_file('reagents.json')
+        suppliers = read_json_file('suppliers.json')
+        units = read_json_file('units.json')
+        test_methods = read_json_file('test_methods.json')
+        patients = read_json_file('patients.json')
+
+        # Apply transformations to fix field name mismatches
         master_data = {
-            'testCategories': read_json_file('test_categories.json'),
-            'testParameters': read_json_file('test_parameters.json'),
-            'sampleTypes': read_json_file('sample_types.json'),
-            'departments': read_json_file('departments.json'),
-            'paymentMethods': read_json_file('payment_methods.json'),
-            'containers': read_json_file('containers.json'),
-            'instruments': read_json_file('instruments.json'),
-            'reagents': read_json_file('reagents.json'),
-            'suppliers': read_json_file('suppliers.json'),
-            'units': read_json_file('units.json'),
-            'testMethods': read_json_file('test_methods.json'),
-            'patients': read_json_file('patients.json'),
+            'testCategories': transform_master_data(test_categories, 'testCategories'),
+            'testParameters': transform_master_data(test_parameters, 'testParameters'),
+            'sampleTypes': transform_master_data(sample_types, 'sampleTypes'),
+            'departments': transform_master_data(departments, 'departments'),
+            'paymentMethods': transform_master_data(payment_methods, 'paymentMethods'),
+            'containers': transform_master_data(containers, 'containers'),
+            'instruments': transform_master_data(instruments, 'instruments'),
+            'reagents': transform_master_data(reagents, 'reagents'),
+            'suppliers': transform_master_data(suppliers, 'suppliers'),
+            'units': transform_master_data(units, 'units'),
+            'testMethods': transform_master_data(test_methods, 'testMethods'),
+            'patients': transform_master_data(patients, 'patients'),
             'profileMaster': read_json_file('profile_master.json'),
             'methodMaster': read_json_file('method_master.json'),
             'antibioticMaster': read_json_file('antibiotic_master.json'),

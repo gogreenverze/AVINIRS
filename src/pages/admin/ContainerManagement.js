@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Table, Button, Form, InputGroup, Badge, Row, Col, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
+import {
   faSearch, faPlus, faEdit, faTrash, faVial,
-  faSave, faTimes
+  faSave, faTimes, faFileExcel, faFileImport
 } from '@fortawesome/free-solid-svg-icons';
 import { adminAPI } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
+import ResponsiveDataTable from '../../components/admin/ResponsiveDataTable';
+import MobilePageHeader from '../../components/common/MobilePageHeader';
+import {
+  DeleteConfirmationModal,
+  SuccessModal,
+  ErrorModal
+} from '../../components/common';
 
 const ContainerManagement = () => {
-  const { user } = useAuth();
+  const { currentUser } = useAuth();
   const [containers, setContainers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,6 +31,13 @@ const ContainerManagement = () => {
     color: '',
     is_active: true
   });
+
+  // Modal states
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [containerToDelete, setContainerToDelete] = useState(null);
 
   // Fetch containers on component mount
   useEffect(() => {
@@ -122,16 +136,24 @@ const ContainerManagement = () => {
     }
   };
 
+  // Handle delete confirmation
+  const handleDeleteConfirm = (container) => {
+    setContainerToDelete(container);
+    setShowDeleteModal(true);
+  };
+
   // Handle delete container
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this container?')) {
-      try {
-        await adminAPI.deleteContainer(id);
-        setContainers(containers.filter(container => container.id !== id));
-      } catch (err) {
-        console.error('Error deleting container:', err);
-        setError('Failed to delete container. Please try again.');
-      }
+  const handleDelete = async () => {
+    try {
+      await adminAPI.deleteContainer(containerToDelete.id);
+      setContainers(containers.filter(container => container.id !== containerToDelete.id));
+      setShowDeleteModal(false);
+      setShowSuccessModal(true);
+    } catch (err) {
+      console.error('Error deleting container:', err);
+      setErrorMessage('Failed to delete container. Please try again.');
+      setShowDeleteModal(false);
+      setShowErrorModal(true);
     }
   };
 
@@ -147,7 +169,7 @@ const ContainerManagement = () => {
       'Orange': '#fd7e14',
       'Pink': '#d63384'
     };
-    
+
     return {
       backgroundColor: colorMap[color] || '#6c757d',
       color: 'white',
@@ -155,160 +177,155 @@ const ContainerManagement = () => {
     };
   };
 
+  // Table columns configuration
+  const columns = [
+    {
+      key: 'name',
+      label: 'Container',
+      render: (value, row) => (
+        <div className="d-flex align-items-center">
+          <div className="avatar avatar-sm me-3">
+            <div className="avatar-initial bg-primary rounded-circle">
+              <FontAwesomeIcon icon={faVial} className="text-white" />
+            </div>
+          </div>
+          <div>
+            <div className="fw-bold">{row.name}</div>
+            <div className="text-muted small">
+              {row.description || 'No description'}
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      key: 'code',
+      label: 'Code',
+      render: (value, row) => (
+        <code className="bg-light px-2 py-1 rounded text-primary">
+          {row.code}
+        </code>
+      )
+    },
+    {
+      key: 'volume',
+      label: 'Volume',
+      render: (value, row) => row.volume || 'N/A'
+    },
+    {
+      key: 'color',
+      label: 'Color',
+      render: (value, row) => (
+        <Badge style={getColorBadgeStyle(row.color)}>
+          {row.color || 'Unknown'}
+        </Badge>
+      )
+    },
+    {
+      key: 'is_active',
+      label: 'Status',
+      render: (value, row) => (
+        <Badge bg={row.is_active !== false ? 'success' : 'secondary'}>
+          {row.is_active !== false ? 'Active' : 'Inactive'}
+        </Badge>
+      )
+    }
+  ];
+
+  // Mobile card configuration
+  const mobileCardConfig = {
+    title: (container) => container.name,
+    subtitle: (container) => `${container.code} • ${container.color || 'Unknown'}`,
+    primaryField: 'volume',
+    secondaryField: 'description',
+    statusField: 'is_active'
+  };
+
+  // Handle container actions
+  const handleViewContainer = (container) => {
+    handleShowModal(container);
+  };
+
+  const handleEditContainer = (container) => {
+    handleShowModal(container);
+  };
+
   return (
     <div className="container-management-container">
-      <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">
-          <FontAwesomeIcon icon={faVial} className="me-2" />
-          Container Management
-        </h1>
-        {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-          <Button variant="primary" onClick={() => handleShowModal()}>
-            <FontAwesomeIcon icon={faPlus} className="me-2" />
-            Add Container
-          </Button>
-        )}
-      </div>
+      <MobilePageHeader
+        title="Container Management"
+        subtitle="Manage sample containers and collection tubes"
+        icon={faVial}
+        primaryAction={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? {
+          label: "Add New Container",
+          shortLabel: "Add Container",
+          icon: faPlus,
+          onClick: () => handleShowModal(),
+          variant: "primary"
+        } : null}
+        secondaryActions={[
+          {
+            label: "Export Containers",
+            shortLabel: "Export",
+            icon: faFileExcel,
+            onClick: () => console.log("Export containers"),
+            variant: "outline-success"
+          },
+          {
+            label: "Import Containers",
+            shortLabel: "Import",
+            icon: faFileImport,
+            onClick: () => console.log("Import containers"),
+            variant: "outline-info"
+          }
+        ]}
+        breadcrumbs={[
+          { label: "Admin", shortLabel: "Admin", link: "/admin" },
+          { label: "Container Management", shortLabel: "Containers" }
+        ]}
+      />
 
-      {/* Search Card */}
       <Card className="shadow mb-4">
         <Card.Header className="py-3">
-          <h6 className="m-0 font-weight-bold text-primary">Search Containers</h6>
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
+            <h6 className="m-0 font-weight-bold text-primary">
+              <FontAwesomeIcon icon={faVial} className="me-2 d-lg-none" />
+              Sample Containers ({filteredContainers.length})
+            </h6>
+            <div className="d-flex flex-column flex-sm-row gap-2 w-100 w-lg-auto">
+              <InputGroup style={{ minWidth: '200px' }}>
+                <Form.Control
+                  type="text"
+                  placeholder="Search containers..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <Button variant="outline-secondary">
+                  <FontAwesomeIcon icon={faSearch} />
+                </Button>
+              </InputGroup>
+            </div>
+          </div>
         </Card.Header>
-        <Card.Body>
-          <Form onSubmit={handleSearch}>
-            <InputGroup>
-              <Form.Control
-                type="text"
-                placeholder="Search by name, code, description, or color..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <Button variant="primary" type="submit">
-                <FontAwesomeIcon icon={faSearch} />
-              </Button>
-            </InputGroup>
-          </Form>
+        <Card.Body className="p-0">
+          {error ? (
+            <div className="alert alert-danger m-3" role="alert">
+              {error}
+            </div>
+          ) : (
+            <ResponsiveDataTable
+              data={filteredContainers}
+              columns={columns}
+              onEdit={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? handleEditContainer : null}
+              onDelete={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? handleDeleteConfirm : null}
+              onViewDetails={handleViewContainer}
+              loading={loading}
+              emptyMessage="No containers found. Click 'Add Container' to create a new container."
+              mobileCardConfig={mobileCardConfig}
+            />
+          )}
         </Card.Body>
       </Card>
-
-      {/* Error Message */}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error}
-        </div>
-      )}
-
-      {/* Loading Message */}
-      {loading && (
-        <div className="text-center my-4">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <p className="mt-2">Loading containers...</p>
-        </div>
-      )}
-
-      {/* Containers Table */}
-      {!loading && !error && (
-        <Card className="shadow mb-4">
-          <Card.Header className="py-3">
-            <h6 className="m-0 font-weight-bold text-primary">
-              Sample Containers
-              <span className="badge bg-primary float-end">
-                {filteredContainers.length} Records
-              </span>
-            </h6>
-          </Card.Header>
-          <Card.Body>
-            {filteredContainers.length === 0 ? (
-              <div className="text-center py-4">
-                <FontAwesomeIcon icon={faVial} size="3x" className="text-gray-300 mb-3" />
-                <p className="text-gray-500">No containers found.</p>
-                {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-                  <Button variant="primary" onClick={() => handleShowModal()}>
-                    <FontAwesomeIcon icon={faPlus} className="me-2" />
-                    Add First Container
-                  </Button>
-                )}
-              </div>
-            ) : (
-              <div className="table-responsive">
-                <Table className="table-hover" width="100%" cellSpacing="0">
-                  <thead>
-                    <tr>
-                      <th>Container</th>
-                      <th>Code</th>
-                      <th>Volume</th>
-                      <th>Color</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredContainers.map(container => (
-                      <tr key={container.id}>
-                        <td>
-                          <div className="d-flex align-items-center">
-                            <div className="avatar avatar-sm me-3">
-                              <div className="avatar-initial bg-primary rounded-circle">
-                                <FontAwesomeIcon icon={faVial} className="text-white" />
-                              </div>
-                            </div>
-                            <div>
-                              <div className="fw-bold">{container.name}</div>
-                              <div className="text-muted small">
-                                {container.description || 'No description'}
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <code className="bg-light px-2 py-1 rounded">
-                            {container.code}
-                          </code>
-                        </td>
-                        <td>{container.volume || 'N/A'}</td>
-                        <td>
-                          <Badge style={getColorBadgeStyle(container.color)}>
-                            {container.color || 'Unknown'}
-                          </Badge>
-                        </td>
-                        <td>
-                          <Badge bg={container.is_active !== false ? 'success' : 'secondary'}>
-                            {container.is_active !== false ? 'Active' : 'Inactive'}
-                          </Badge>
-                        </td>
-                        <td>
-                          {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-                            <>
-                              <Button 
-                                variant="warning" 
-                                size="sm" 
-                                className="me-1"
-                                onClick={() => handleShowModal(container)}
-                              >
-                                <FontAwesomeIcon icon={faEdit} />
-                              </Button>
-                              <Button 
-                                variant="danger" 
-                                size="sm"
-                                onClick={() => handleDelete(container.id)}
-                              >
-                                <FontAwesomeIcon icon={faTrash} />
-                              </Button>
-                            </>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              </div>
-            )}
-          </Card.Body>
-        </Card>
-      )}
 
       {/* Create/Edit Modal */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -411,6 +428,31 @@ const ContainerManagement = () => {
           </Modal.Footer>
         </Form>
       </Modal>
+
+      {/* Delete Confirmation Modal */}
+      <DeleteConfirmationModal
+        show={showDeleteModal}
+        onHide={() => setShowDeleteModal(false)}
+        onConfirm={handleDelete}
+        title="Delete Container"
+        message={`Are you sure you want to delete the container "${containerToDelete?.name}"? This action cannot be undone.`}
+      />
+
+      {/* Success Modal */}
+      <SuccessModal
+        show={showSuccessModal}
+        onHide={() => setShowSuccessModal(false)}
+        title="Success"
+        message="Container has been deleted successfully."
+      />
+
+      {/* Error Modal */}
+      <ErrorModal
+        show={showErrorModal}
+        onHide={() => setShowErrorModal(false)}
+        title="Error"
+        message={errorMessage}
+      />
     </div>
   );
 };

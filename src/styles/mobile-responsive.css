@@ -1,0 +1,581 @@
+/* Mobile Responsive Styles - Global Application */
+
+/* CSS Variables for Mobile Breakpoints */
+:root {
+  --mobile-xs: 320px;
+  --mobile-sm: 375px;
+  --mobile-md: 414px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  
+  /* Touch target sizes */
+  --touch-target-min: 44px;
+  --touch-target-comfortable: 48px;
+  
+  /* Mobile spacing */
+  --mobile-padding-xs: 0.5rem;
+  --mobile-padding-sm: 0.75rem;
+  --mobile-padding-md: 1rem;
+  
+  /* Mobile font sizes */
+  --mobile-font-xs: 0.75rem;
+  --mobile-font-sm: 0.875rem;
+  --mobile-font-md: 1rem;
+  --mobile-font-lg: 1.125rem;
+}
+
+/* Global Mobile Optimizations */
+@media (max-width: 767.98px) {
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  /* Improve touch scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure all containers respect viewport width */
+  .container,
+  .container-fluid,
+  .row,
+  .col {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Touch target improvements */
+  .btn,
+  .form-control,
+  .form-select,
+  .nav-link,
+  .dropdown-toggle {
+    min-height: var(--touch-target-min);
+    min-width: var(--touch-target-min);
+  }
+  
+  /* Improve button spacing for touch */
+  .btn + .btn {
+    margin-left: 0.5rem;
+  }
+  
+  /* Stack buttons vertically on very small screens */
+  .btn-group-vertical .btn,
+  .d-grid .btn {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile Card Optimizations */
+@media (max-width: 767.98px) {
+  .card {
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    padding: var(--mobile-padding-sm);
+    font-size: var(--mobile-font-sm);
+  }
+  
+  .card-body {
+    padding: var(--mobile-padding-md);
+  }
+  
+  .card-footer {
+    padding: var(--mobile-padding-sm);
+  }
+}
+
+/* Mobile Table Responsive Improvements */
+@media (max-width: 767.98px) {
+  .table-responsive {
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table {
+    font-size: var(--mobile-font-xs);
+    margin-bottom: 0;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.5rem 0.25rem;
+    vertical-align: middle;
+  }
+  
+  .table th {
+    font-size: var(--mobile-font-xs);
+    font-weight: 600;
+  }
+  
+  /* Hide less important columns on mobile */
+  .table .d-none.d-md-table-cell {
+    display: none !important;
+  }
+}
+
+/* Mobile Form Improvements */
+@media (max-width: 767.98px) {
+  .form-control,
+  .form-select {
+    font-size: var(--mobile-font-md);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
+  
+  .form-label {
+    font-size: var(--mobile-font-sm);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-group .btn {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Mobile Navigation Enhancements */
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: var(--mobile-font-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .navbar-brand {
+    font-size: var(--mobile-font-lg);
+  }
+}
+
+/* Mobile Tab Navigation Enhancements */
+@media (max-width: 767.98px) {
+  /* Bootstrap Tabs Mobile Optimization */
+  .nav-tabs {
+    border-bottom: 2px solid var(--border-color, #dee2e6);
+    margin-bottom: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding-bottom: 2px;
+  }
+
+  .nav-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .nav-tabs .nav-item {
+    flex-shrink: 0;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.75rem 1rem !important;
+    font-size: var(--mobile-font-sm) !important;
+    font-weight: 500;
+    min-height: var(--touch-target-min);
+    min-width: var(--touch-target-min);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-right: 0.25rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .nav-tabs .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    border-color: rgba(13, 110, 253, 0.2);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .nav-tabs .nav-link:active {
+    transform: translateY(0);
+    background-color: rgba(13, 110, 253, 0.15);
+  }
+
+  .nav-tabs .nav-link.active {
+    background-color: var(--bs-primary, #0d6efd) !important;
+    color: white !important;
+    border-color: var(--bs-primary, #0d6efd);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+  }
+
+  .nav-tabs .nav-link.active:hover {
+    background-color: var(--bs-primary, #0d6efd) !important;
+    transform: none;
+  }
+
+  /* Add visual feedback for touch interactions */
+  .nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .nav-tabs .nav-link:active::after {
+    opacity: 1;
+  }
+
+  /* Icon spacing in tabs */
+  .nav-tabs .nav-link .fa-icon,
+  .nav-tabs .nav-link svg {
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Tab content spacing */
+  .tab-content {
+    margin-top: 1rem;
+  }
+
+  .tab-pane {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Extra small screens - stack tabs vertically */
+@media (max-width: 575.98px) {
+  .nav-tabs {
+    flex-direction: column !important;
+    border-bottom: none;
+    border-right: 2px solid var(--border-color, #dee2e6);
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .nav-tabs .nav-link {
+    margin-right: 0 !important;
+    margin-bottom: 0.25rem;
+    border-radius: 0.5rem !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    width: 100%;
+  }
+
+  .nav-tabs .nav-link.active {
+    margin-left: 0.25rem;
+  }
+}
+
+/* Mobile Modal Improvements */
+@media (max-width: 767.98px) {
+  .modal-dialog {
+    margin: 0.5rem;
+    max-width: calc(100vw - 1rem);
+  }
+  
+  .modal-header {
+    padding: var(--mobile-padding-md);
+  }
+  
+  .modal-body {
+    padding: var(--mobile-padding-md);
+  }
+  
+  .modal-footer {
+    padding: var(--mobile-padding-md);
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Mobile Badge and Status Improvements */
+@media (max-width: 767.98px) {
+  .badge {
+    font-size: var(--mobile-font-xs);
+    padding: 0.35rem 0.65rem;
+  }
+  
+  .status-badge {
+    font-size: var(--mobile-font-xs);
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Mobile Alert Improvements */
+@media (max-width: 767.98px) {
+  .alert {
+    margin-bottom: 1rem;
+    padding: var(--mobile-padding-md);
+    font-size: var(--mobile-font-sm);
+    border-radius: 0.5rem;
+  }
+  
+  .alert-dismissible .btn-close {
+    padding: 0.75rem;
+  }
+}
+
+/* Mobile Dropdown Improvements */
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    font-size: var(--mobile-font-sm);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .dropdown-divider {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mobile Pagination Improvements */
+@media (max-width: 767.98px) {
+  .pagination {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .page-link {
+    padding: 0.5rem 0.75rem;
+    font-size: var(--mobile-font-sm);
+    min-width: var(--touch-target-min);
+    min-height: var(--touch-target-min);
+  }
+  
+  /* Hide page numbers on very small screens, keep only prev/next */
+  .pagination .page-item:not(.previous):not(.next) {
+    display: none;
+  }
+  
+  .pagination .page-item.active {
+    display: block;
+  }
+}
+
+/* Mobile Breadcrumb Improvements */
+@media (max-width: 767.98px) {
+  .breadcrumb {
+    font-size: var(--mobile-font-xs);
+    padding: var(--mobile-padding-sm);
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+  }
+  
+  .breadcrumb-item {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile Loading States */
+@media (max-width: 767.98px) {
+  .loading-spinner {
+    padding: 2rem 1rem;
+  }
+  
+  .spinner-border {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Mobile Accessibility Improvements */
+@media (max-width: 767.98px) {
+  /* Improve focus visibility */
+  .btn:focus,
+  .form-control:focus,
+  .form-select:focus,
+  .nav-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  /* Improve contrast for better readability */
+  .text-muted {
+    color: #6c757d !important;
+  }
+
+  /* Ensure sufficient color contrast */
+  .text-secondary {
+    color: #495057 !important;
+  }
+}
+
+/* Mobile Page Header Styles */
+.mobile-page-header {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-page-header .mobile-breadcrumb {
+  margin-bottom: 0.5rem;
+}
+
+.mobile-page-header .breadcrumb {
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.mobile-page-header .header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-page-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.mobile-page-header .title-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobile-page-header .page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--dark-gray);
+  line-height: 1.3;
+}
+
+.mobile-page-header .page-subtitle {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+.mobile-page-header .actions-section {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.mobile-page-header .mobile-primary-action {
+  min-height: var(--touch-target-min);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-page-header .mobile-secondary-action {
+  min-height: var(--touch-target-min);
+  border-radius: 0.5rem;
+}
+
+.mobile-page-header .mobile-actions-toggle {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  border-radius: 0.5rem;
+}
+
+.mobile-page-header .collapsible-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.mobile-page-header .actions-toggle-btn {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  background: none;
+}
+
+.mobile-page-header .actions-toggle-btn:hover {
+  color: var(--primary);
+  background-color: rgba(var(--primary-rgb), 0.05);
+  text-decoration: none;
+}
+
+.mobile-page-header .actions-content {
+  background-color: rgba(var(--primary-rgb), 0.02);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Mobile Page Header Responsive Adjustments */
+@media (max-width: 575.98px) {
+  .mobile-page-header {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-page-header .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .mobile-page-header .actions-section {
+    justify-content: flex-end;
+  }
+
+  .mobile-page-header .page-title {
+    font-size: 1.1rem;
+  }
+
+  .mobile-page-header .page-subtitle {
+    font-size: 0.8rem;
+  }
+}

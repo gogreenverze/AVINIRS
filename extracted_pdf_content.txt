@@ -1,0 +1,51 @@
+Patient :Mr. PRABHAKARAN SID No. :01003515
+Age / Sex :47 Y / Male Reg Date & Time :28/05/2025 14:52:33
+Referrer :Self Coll Date & Time :28/05/2025 14:52:33
+Branch :MAYILADUTHURAI Report Date & Time :28/05/2025 16:39:48
+Partial Test Report
+INVESTIGATION / METHOD RESULT UNITS BIOLOGICAL REFERENCE INTERVAL
+BIOCHEMISTRY
+HbA1c
+(NEPHELOMETRY)  
+5.4 Glycosylated  Haemoglobin  (HbA1c)
+( Specimen:  EDTA  BLOOD)% 4.0 - 6.0   : Non Diabetic
+6.1 - 7.0   : Good control
+7.1 - 8.0   : Fair control
+8.1 - 10.0  : Unsatisfactory
+> 10.0      : Poor control
+108.3 Estimated  Average  Glucose  (eAG)
+( Specimen:  EDTA  BLOOD)mg/dL
+Notes:HbA1c  level reflects  the mean  glucose  concentration  over the previous  period  (approximately  6-8 weeks)  and provides  a much  better  
+indication  of long term glycemic  control  than blood  and urine glucose  determinations.  The American  Diabetes  Association  recommends  
+measurement  of HbA1c  every  3 months  to determine  whether  a patient’s  metabolic  control  has remained  continuously  within  the target  
+range.A1C  test should  be performed  at least 2 times  a year in patients  who are meeting  treatment  goals  (and who have stable  glycemic  
+control).  A1C test should  be performed  quarterly  in patients  whose  therapy  has changed  or who are not meeting  glycemic  goals.  
+Predicting  development  and progression  of diabetic  microvascular  complications.  This assay  is not useful  in determining  day to day 
+glucose  control  and should  not be used to replace  routine  blood  glucose  testing.
+IMMUNOLOGY
+15.7 25 Hydroxy  Vitamin  D3
+( Method  : NEPHELOMETRY)
+( Specimen:  Serum)ng/ml < 20      : Deficiency
+20-29     : Insufficiency
+30-100    : Sufficiency
+> 100     : Toxicity
+Notes:Comments  : Vitamin  D is a fat-soluble  steroid  hormone  precursor  that is mainly  produced  in the skin by exposure  to sunlight.  Vitamin  D is 
+biologically  inert and must undergo  two successive  hydroxylations  in the liver and kidney  to become  the biologically  active  1,25 - 
+dihydroxyvitamin  D. It is commonly  agreed  that 25-hydroxyvitamin  D is the metabolite  to determine  the overall  vitamin  D status  as it is 
+the major  storage  form of vitamin  D in the human  body.  This primary  circulating  form of vitamin  D is present  human  body with levels  
+approximately  1000 fold greater  than the circulating  1,25-dihydroxyvitamin  D. The half-life of circulating  25-hydroxyvitamin  D is 2-3 
+weeks.  Vitamin  D is essential  for : Bone health.  In children,  severe  deficiency  leads  to bone-malformation,  known  as rickets.  Milder  
+degrees  of insufficiency  are believed  to cause  reduced  efficiency  in the utilization  of dietary  calcium.  Vitamin  D deficiency  causes  : Muscle  
+weakness  in elderly,  the risk of falling  has been attributed  to the effect  of vitamin  D on muscle  function.  Vitamin  D deficiency  is a common  
+cause  of secondary  hyperparathyroidism.  Elevations  of PTH levels,  especially  in elderly  vitamin  D deficient  adults  can result  in 
+osteomalacia,  increased  bone turnover,  reduced  bone mass  and risk of bone fractures.  Low vitamin  D (25-OH) concentrations  are also 
+associated  with lower  bone mineral  density.  The results  should  always  be assessed  in conjunction  with the patient’s  medical  history,  
+clinical  examination  and other  findings.
+End of the Report
+Page : 1 of 2
+
+Dr. S.Asokkumar, PhD., Verified By
+Clinical Biochemist & Q M V. Jothi Lakshmi
+Lab Technician
+Page : 2 of 2
+

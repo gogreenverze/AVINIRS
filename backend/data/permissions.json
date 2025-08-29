@@ -163,5 +163,27 @@
     "created_at": "2020-01-01T10:00:00",
     "updated_at": "2020-01-01T10:00:00",
     "created_by": 1
+  },
+  {
+    "id": 16,
+    "name": "View Referral Master",
+    "code": "REFERRAL_MASTER_VIEW",
+    "description": "View referral sources and pricing information",
+    "module": "referral_master",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 17,
+    "name": "Manage Referral Master",
+    "code": "REFERRAL_MASTER_MANAGE",
+    "description": "Create, edit, and delete referral sources and pricing schemes",
+    "module": "referral_master",
+    "is_active": true,
+    "created_at": "2020-01-01T10:00:00",
+    "updated_at": "2020-01-01T10:00:00",
+    "created_by": 1
   }
 ]

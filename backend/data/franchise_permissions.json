@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "franchise_id": 1,
+    "franchise_name": "AVINI Labs Mayiladuthurai",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "is_hub": true,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T14:51:47.512114",
+    "created_by": 1,
+    "updated_by": 4
+  },
+  {
+    "id": 2,
+    "franchise_id": 2,
+    "franchise_name": "AVINI Labs Sirkazhi",
+    "module_permissions": [
+      1,
+      2,
+      5,
+      8,
+      9,
+      6,
+      3,
+      4
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-25T17:20:59.087713",
+    "created_by": 1,
+    "updated_by": 4
+  },
+  {
+    "id": 3,
+    "franchise_id": 3,
+    "franchise_name": "AVINI Labs Thanjavur",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 4,
+    "franchise_id": 4,
+    "franchise_name": "AVINI Labs Kuthalam",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 5,
+    "franchise_id": 5,
+    "franchise_name": "AVINI Labs Aduthurai",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 6,
+    "franchise_id": 6,
+    "franchise_name": "AVINI Labs Thiruppanandal",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 7,
+    "franchise_id": 7,
+    "franchise_name": "AVINI Labs Eravancherry",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 8,
+    "franchise_id": 8,
+    "franchise_name": "AVINI Labs Chidambaram",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 9,
+    "franchise_id": 9,
+    "franchise_name": "AVINI Labs Kumbakonam",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 10,
+    "franchise_id": 10,
+    "franchise_name": "AVINI Labs Needamangalam",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 11,
+    "franchise_id": 11,
+    "franchise_name": "AVINI Labs Sankarapanthal",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  },
+  {
+    "id": 12,
+    "franchise_id": 12,
+    "franchise_name": "AVINI Labs Nachiyarkovil",
+    "module_permissions": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ],
+    "is_hub": false,
+    "created_at": "2025-06-21T10:00:00",
+    "updated_at": "2025-06-21T10:00:00",
+    "created_by": 1,
+    "updated_by": 1
+  }
+]

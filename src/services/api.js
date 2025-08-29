@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with default config
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5001/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5002/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -12,12 +12,14 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
+    console.log('[API] Request:', config.method?.toUpperCase(), config.url, 'Token:', token ? 'Present' : 'Missing');
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;
     }
     return config;
   },
   (error) => {
+    console.error('[API] Request Error:', error);
     return Promise.reject(error);
   }
 );
@@ -25,21 +27,53 @@ api.interceptors.request.use(
 // Add response interceptor to handle token expiration
 api.interceptors.response.use(
   (response) => {
+    console.log('[API] Response:', response.status, response.config.method?.toUpperCase(), response.config.url);
     return response;
   },
   async (error) => {
     const originalRequest = error.config;
+    const status = error.response?.status;
+    const message = error.response?.data?.message;
+
+    // console.error('[API] Response Error:', status, originalRequest.method?.toUpperCase(), originalRequest.url, message);
 
     // If error is 401 and not already retrying
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    if (status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
 
-      // Redirect to login page
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      window.location.href = '/login';
+      // Don't try to refresh token for auth endpoints
+      if (originalRequest.url?.includes('/auth/')) {
+        console.log('[API] 401 on auth endpoint, clearing auth and redirecting to login');
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/login';
+        return Promise.reject(error);
+      }
 
-      return Promise.reject(error);
+      // Try to refresh the token
+      try {
+        console.log('[API] Attempting token refresh...');
+        const refreshResponse = await api.post('/auth/refresh');
+        const newToken = refreshResponse.data.token;
+
+        // Update token in localStorage
+        localStorage.setItem('token', newToken);
+
+        // Update the original request with new token
+        originalRequest.headers['Authorization'] = `Bearer ${newToken}`;
+
+        console.log('[API] Token refreshed successfully, retrying original request');
+        // Retry the original request
+        return api(originalRequest);
+
+      } catch (refreshError) {
+        console.log('[API] Token refresh failed, clearing auth and redirecting to login');
+        // Refresh failed, clear auth and redirect
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/login';
+        return Promise.reject(error);
+      }
     }
 
     return Promise.reject(error);
@@ -50,13 +84,16 @@ api.interceptors.response.use(
 export const authAPI = {
   login: (credentials) => api.post('/auth/login', credentials),
   register: (userData) => api.post('/auth/register', userData),
-  getCurrentUser: () => api.get('/auth/user')
+  getCurrentUser: () => api.get('/auth/user'),
+  refreshToken: () => api.post('/auth/refresh'),
+  validateToken: () => api.post('/auth/validate')
 };
 
 // Tenant API
 export const tenantAPI = {
   getCurrentTenant: () => api.get('/tenants/current'),
   getAllTenants: () => api.get('/tenants/accessible'),
+  getAccessibleTenants: () => api.get('/tenants/accessible'),
   getTenants: () => api.get('/tenants'),
   getTenant: (id) => api.get(`/tenants/${id}`),
   createTenant: (data) => api.post('/tenants', data),
@@ -71,12 +108,19 @@ export const patientAPI = {
   createPatient: (patientData) => api.post('/patients', patientData),
   updatePatient: (id, patientData) => api.put(`/patients/${id}`, patientData),
   deletePatient: (id) => api.delete(`/patients/${id}`),
-  searchPatients: (query) => api.get(`/patients/search?q=${query}`),
+  searchPatients: (query, branchId = null) => {
+    let url = `/patients/search?q=${query}`;
+    if (branchId) {
+      url += `&branch_id=${branchId}`;
+    }
+    return api.get(url);
+  },
 };
 
 // Sample API
 export const sampleAPI = {
   getAllSamples: (page = 1, limit = 20) => api.get(`/samples?page=${page}&limit=${limit}`),
+  getSamples: (params = {}) => api.get('/samples', { params }),
   getSampleById: (id) => api.get(`/samples/${id}`),
   getSamplesByPatient: (patientId) => api.get(`/samples?patient_id=${patientId}`),
   getSamplesByStatus: (status) => api.get(`/samples?status=${status}`),
@@ -91,7 +135,8 @@ export const sampleAPI = {
   getSampleTransferById: (id) => api.get(`/samples/transfers/${id}`),
   createSampleTransfer: (data) => api.post('/samples/transfers', data),
   updateSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}`, data),
-  dispatchSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}/dispatch`, data)
+  dispatchSampleTransfer: (id, data) => api.put(`/samples/transfers/${id}/dispatch`, data),
+  
 };
 
 // Result API
@@ -116,7 +161,9 @@ export const billingAPI = {
   createBilling: (data) => api.post('/billing', data),
   updateBilling: (id, data) => api.put(`/billing/${id}`, data),
   collectPayment: (id, data) => api.post(`/billing/${id}/collect`, data),
-  searchBillings: (query) => api.get(`/billing/search?q=${query}`)
+  searchBillings: (query) => api.get(`/billing/search?q=${query}`),
+  deleteBilling: (id) => api.delete(`/billing/${id}`),
+
 };
 
 // Inventory API
@@ -163,6 +210,12 @@ export const adminAPI = {
       },
     });
   },
+
+  // GST Configuration Management
+  getGSTConfig: () => api.get('/admin/gst-config'),
+  createGSTConfig: (data) => api.post('/admin/gst-config', data),
+  updateGSTConfig: (id, data) => api.put(`/admin/gst-config/${id}`, data),
+  deleteGSTConfig: (id) => api.delete(`/admin/gst-config/${id}`),
   exportMasterData: (category) => {
     return api.get(`/admin/master-data/export/${category}`, {
       responseType: 'blob',
@@ -191,6 +244,36 @@ export const adminAPI = {
   addTechnicalMasterDataItem: (category, data) => api.post(`/admin/technical-master-data/${category}`, data),
   updateTechnicalMasterDataItem: (category, id, data) => api.put(`/admin/technical-master-data/${category}/${id}`, data),
   deleteTechnicalMasterDataItem: (category, id) => api.delete(`/admin/technical-master-data/${category}/${id}`),
+  updateEnhancedTestMaster: (id, data) => api.put(`/admin/test-master-enhanced/${id}`, data),
+
+  updateEnhancedResultMaster: (id, data) => api.put(`/admin/result-master-enhanced/${id}`, data),
+
+  // Excel Data Integration
+  getExcelData: () => api.get('/admin/excel-data'),
+  searchExcelData: (query) => api.get(`/admin/excel-data/search?q=${encodeURIComponent(query)}`),
+  lookupTestByCode: (testCode) => api.get(`/admin/excel-data/lookup/${testCode}`),
+  lookupTestByName: (testName) => api.get(`/admin/excel-data/lookup-by-name/${encodeURIComponent(testName)}`),
+
+  // Enhanced Test Master
+  getEnhancedTestMaster: () => api.get('/admin/test-master-enhanced'),
+  addEnhancedTestMaster: (data) => api.post('/admin/test-master-enhanced', data),
+  updateEnhancedTestMaster: (id, data) => api.put(`/admin/test-master-enhanced/${id}`, data),
+  deleteEnhancedTestMaster: (id) => api.delete(`/admin/test-master-enhanced/${id}`),
+
+  // Referrer Master Data (legacy)
+  getReferrerMasterData: () => api.get('/admin/referrer-master-data'),
+
+  // Referral Master Data CRUD
+  getReferralMaster: () => api.get('/admin/referral-master'),
+  addReferralMaster: (data) => api.post('/admin/referral-master', data),
+  updateReferralMaster: (id, data) => api.put(`/admin/referral-master/${id}`, data),
+  deleteReferralMaster: (id) => api.delete(`/admin/referral-master/${id}`),
+
+  // Enhanced Result Master
+  getEnhancedResultMaster: () => api.get('/admin/result-master-enhanced'),
+  addEnhancedResultMaster: (data) => api.post('/admin/result-master-enhanced', data),
+  updateEnhancedResultMaster: (id, data) => api.put(`/admin/result-master-enhanced/${id}`, data),
+  deleteEnhancedResultMaster: (id) => api.delete(`/admin/result-master-enhanced/${id}`),
 
   // Doctor Management
   getDoctors: () => api.get('/admin/doctors'),
@@ -234,8 +317,6 @@ export const adminAPI = {
   createPermission: (data) => api.post('/admin/permissions', data),
   updatePermission: (id, data) => api.put(`/admin/permissions/${id}`, data),
   deletePermission: (id) => api.delete(`/admin/permissions/${id}`),
-  // Franchise Management
-  createFranchise: (data) => api.post('/admin/franchises', data),
   // Sample Type Management
   getSampleTypes: () => api.get('/admin/sample-types'),
   getSampleTypeById: (id) => api.get(`/admin/sample-types/${id}`),
@@ -259,12 +340,38 @@ export const adminAPI = {
   getPaymentMethodById: (id) => api.get(`/admin/payment-methods/${id}`),
   createPaymentMethod: (data) => api.post('/admin/payment-methods', data),
   updatePaymentMethod: (id, data) => api.put(`/admin/payment-methods/${id}`, data),
-  deletePaymentMethod: (id) => api.delete(`/admin/payment-methods/${id}`)
+  deletePaymentMethod: (id) => api.delete(`/admin/payment-methods/${id}`),
+
+  // Access Management
+  getModules: () => api.get('/access-management/modules'),
+  getFranchisesWithPermissions: () => api.get('/access-management/franchises-with-permissions'),
+  updateFranchisePermissions: (franchiseId, data) => api.put(`/access-management/franchise-permissions/${franchiseId}`, data),
+  checkModuleAccess: (moduleCode) => api.get(`/access-management/check-module-access/${moduleCode}`),
+  getMyPermissions: () => api.get('/access-management/my-permissions'),
+  getMyModules: () => api.get('/access-management/my-modules'),
+
+  // Signature Management
+  getCurrentSignature: () => api.get('/admin/signature'),
+  uploadSignature: (formData) => {
+    return api.post('/admin/signature/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+  },
+  removeSignature: () => api.delete('/admin/signature'),
+
+  // Generic API access for custom endpoints
+  get: (url) => api.get(url),
+  post: (url, data) => api.post(url, data),
+  put: (url, data) => api.put(url, data),
+  delete: (url) => api.delete(url)
 };
 
 // Dashboard API
 export const dashboardAPI = {
-  getDashboardData: () => api.get('/dashboard')
+  getDashboardData: () => api.get('/dashboard'),
+  getComprehensiveDashboard: () => api.get('/dashboard/comprehensive')
 };
 
 // Email API
@@ -279,23 +386,74 @@ export const whatsappAPI = {
   updateConfig: (tenantId, data) => api.put(`/whatsapp/config/${tenantId}`, data),
   getMessages: (page = 1, limit = 20) => api.get(`/whatsapp/messages?page=${page}&limit=${limit}`),
   sendReport: (data) => api.post('/whatsapp/send/report', data),
-  
+
   sendInvoice: (data) => api.post('/whatsapp/send/invoice', data),
   getStatus: () => api.get('/whatsapp/status')
 };
 
+// Sample Routing API
+export const routingAPI = {
+  getRoutings: (params) => api.get('/samples/routing', { params }),
+  getRoutingById: (id) => api.get(`/samples/routing/${id}`),
+createRouting: (data) =>
+  api.post('/samples/routing', data, {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+  }),
 
-
-// Export all APIs
-export default {
-  authAPI,
-  tenantAPI,
-  dashboardAPI,
-  patientAPI,
-  sampleAPI,
-  resultAPI,
-  billingAPI,
-  inventoryAPI,
-  adminAPI,
-  whatsappAPI
+  approveRouting: (id, data) => api.post(`/samples/routing/${id}/approve`, data),
+  rejectRouting: (id, data) => api.post(`/samples/routing/${id}/reject`, data),
+  dispatchRouting: (id, data) => api.post(`/samples/routing/${id}/dispatch`, data),
+  receiveRouting: (id, data) => api.post(`/samples/routing/${id}/receive`, data),
+  completeRouting: (id, data) => api.post(`/samples/routing/${id}/complete`, data),
+  getRoutingHistory: (id) => api.get(`/samples/routing/${id}/history`)
 };
+
+// Chat API
+export const chatAPI = {
+  getMessages: (routingId) => api.get(`/routing/${routingId}/messages`),
+  sendMessage: (routingId, data) => api.post(`/routing/${routingId}/messages`, data),
+  markAsRead: (routingId, messageId) => api.post(`/routing/${routingId}/messages/${messageId}/read`),
+  getUnreadCount: (routingId) => api.get(`/routing/${routingId}/messages/unread-count`),
+  getUnreadSummary: () => api.get('/routing/messages/unread-summary')
+};
+
+// File API
+export const fileAPI = {
+  getFiles: (routingId) => api.get(`/routing/${routingId}/files`),
+  uploadFile: (routingId, formData) => api.post(`/routing/${routingId}/files`, formData, {
+    headers: { 'Content-Type': 'multipart/form-data' }
+  }),
+  downloadFile: (routingId, fileId) => api.get(`/routing/${routingId}/files/${fileId}/download`, {
+    responseType: 'blob'
+  }),
+  deleteFile: (routingId, fileId) => api.delete(`/routing/${routingId}/files/${fileId}`),
+  getFilesSummary: () => api.get('/routing/files/summary')
+};
+
+// Invoice API
+export const invoiceAPI = {
+  getInvoices: (routingId) => api.get(`/routing/${routingId}/invoices`),
+  createInvoice: (routingId, data) => api.post(`/routing/${routingId}/invoices`, data),
+  getInvoiceById: (invoiceId) => api.get(`/invoices/${invoiceId}`),
+  updateInvoice: (invoiceId, data) => api.put(`/invoices/${invoiceId}`, data),
+  deleteInvoice: (invoiceId) => api.delete(`/invoices/${invoiceId}`),
+  updateInvoiceStatus: (invoiceId, status) => api.post(`/invoices/${invoiceId}/status`, { status }),
+  generateInvoicePDF: (invoiceId) => api.get(`/invoices/${invoiceId}/pdf`, {
+    responseType: 'blob'
+  })
+};
+
+// Notifications API
+export const notificationAPI = {
+  getNotifications: (params) => api.get('/notifications', { params }),
+  markAsRead: (notificationId) => api.post(`/notifications/${notificationId}/read`),
+  markAllAsRead: () => api.post('/notifications/mark-all-read'),
+  getUnreadCount: () => api.get('/notifications/unread-count')
+};
+
+
+
+// Export the api instance as default
+export default api;

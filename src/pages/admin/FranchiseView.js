@@ -38,41 +38,7 @@ const FranchiseView = () => {
         setLoading(true);
         setError(null);
 
-        // Replace with your actual API call to get franchise by ID
-        // For demonstration, we'll simulate an API call with the provided data
-        // const dummyFranchises = [
-        //   {
-        //     "address": "45 DB Road, RS Puram, Coimbatore, Tamil Nadu",
-        //     "contact_phone": "9876543211",
-        //     "id": 2,
-        //     "is_active": true,
-        //     "is_hub": false,
-        //     "name": "AVINI Labs Coimbatore",
-        //     "site_code": "CBE"
-        //   },
-        //   {
-        //     "address": "78 North Veli Street, Madurai, Tamil Nadu",
-        //     "contact_phone": "9876543212",
-        //     "id": 3,
-        //     "is_active": true,
-        //     "is_hub": false,
-        //     "name": "AVINI Labs Madurai",
-        //     "site_code": "MDU"
-        //   }
-        // ];
-
-        // const foundFranchise = dummyFranchises?.find(f => f.id === parseInt(id));
-
-        //    const userResponse = await adminAPI.getUserById(id);
-        //         setFranchies(userResponse.data);
-
-        // if (foundFranchise) {
-        //   setFranchise(foundFranchise);
-        // } else {
-        //   setError('Franchise not found.');
-        // }
-
-        // If you have a real API:
+        // Fetch franchise data from API
         const response = await adminAPI.getFranchiseById(id);
         setFranchise(response.data);
 

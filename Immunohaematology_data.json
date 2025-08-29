@@ -1,0 +1,22 @@
+[
+  {
+    "Test Name": "BLOOD GROUPING & Rh",
+    "code": 345,
+    "Department": "Immunohaematology",
+    "Price": 50,
+    "Result Type": "Pick List",
+    "Min. Process Time": 4,
+    "      Test Done On": "all ",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "BONE  MARROW ASPIRATION.",
+    "code": 447,
+    "Department": "Immunohaematology",
+    "Price": 150,
+    "Result Type": "No Unit / Ref. Value",
+    "Min. Process Time": 0,
+    "      Test Done On": "all ",
+    "Applicable to": "Both"
+  }
+]

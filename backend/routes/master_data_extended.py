@@ -37,9 +37,9 @@ def create_patient_generic(data):
     return jsonify(new_patient), 201
 
 def create_profile_master_generic(data):
-    required_fields = ['code', 'test_profile']
+    required_fields = ['code', 'test_profile', 'test_price']
     for field in required_fields:
-        if field not in data:
+        if field not in data or data[field] in [None, ""]:
             return jsonify({'message': f'Missing required field: {field}'}), 400
 
     profiles = read_data('profile_master.json')
@@ -52,7 +52,22 @@ def create_profile_master_generic(data):
         'code': data['code'],
         'procedure_code': data.get('procedure_code', ''),
         'test_profile': data['test_profile'],
-        'test_price': data.get('test_price', 0),
+        'description': data.get('description', ''),
+        'department': data.get('department', ''),
+
+        # Pricing Info
+        'test_price': float(data.get('test_price', 0)),
+        'discount_price': float(data.get('discount_price', 0)),
+        'emergency_price': float(data.get('emergency_price', 0)),
+        'home_visit_price': float(data.get('home_visit_price', 0)),
+        'discount': float(data.get('discount', 0)),
+        'category': data.get('category', ''),
+
+        # Test Configuration
+        'test_count': int(data.get('test_count', 0)),
+        'test_names': [t.strip() for t in data.get('test_names', '').split(",") if t.strip()],
+
+        # Meta
         'is_active': data.get('is_active', True),
         'created_at': datetime.now().isoformat(),
         'updated_at': datetime.now().isoformat(),
@@ -62,6 +77,7 @@ def create_profile_master_generic(data):
     profiles.append(new_profile)
     write_data('profile_master.json', profiles)
     return jsonify(new_profile), 201
+
 
 def create_method_master_generic(data):
     required_fields = ['code', 'method']
@@ -1073,3 +1089,5 @@ def delete_profile_data_generic(item_id):
 
     except Exception as e:
         return jsonify({'message': f'Failed to delete profile data: {str(e)}'}), 500
+
+

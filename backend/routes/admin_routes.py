@@ -10,8 +10,22 @@ from functools import wraps
 from werkzeug.utils import secure_filename
 from io import BytesIO
 
+# Import image processing
+try:
+    from PIL import Image as PILImage
+    IMAGE_SUPPORT = True
+except ImportError:
+    IMAGE_SUPPORT = False
+
 # Import utilities
-from utils import token_required, read_data, write_data, paginate_results
+from utils import token_required, read_data, write_data, paginate_results, filter_data_by_tenant, check_tenant_access, transform_master_data, require_module_access
+
+# Import Excel parsing library
+try:
+    from openpyxl import load_workbook
+    EXCEL_SUPPORT = True
+except ImportError:
+    EXCEL_SUPPORT = False
 
 # Import extended master data functions
 from .master_data_extended import (
@@ -40,6 +54,286 @@ from .master_data_extended import (
 
 admin_bp = Blueprint('admin', __name__)
 
+def safe_float(value, default=0):
+    """Safely convert value to float, handling strings and None"""
+    try:
+        if value is None or value == '':
+            return default
+        return float(value)
+    except (ValueError, TypeError):
+        return default
+
+def calculate_dashboard_metrics(patients, samples, results, billings, inventory, invoices, user_role):
+    """Calculate comprehensive dashboard metrics"""
+    today = datetime.now().strftime('%Y-%m-%d')
+    current_month = datetime.now().strftime('%Y-%m')
+    last_7_days = [(datetime.now() - timedelta(days=i)).strftime('%Y-%m-%d') for i in range(6, -1, -1)]
+
+    # Patient Management Metrics
+    total_patients = len(patients)
+    today_patients = len([p for p in patients if p.get('created_at', '').startswith(today)])
+    monthly_patients = len([p for p in patients if p.get('created_at', '').startswith(current_month)])
+
+    # Sample & Test Metrics
+    total_samples = len(samples)
+    pending_samples = len([s for s in samples if s.get('status') == 'Pending'])
+    completed_samples = len([s for s in samples if s.get('status') == 'Completed'])
+
+    # Results Metrics
+    total_results = len(results)
+    pending_results = len([r for r in results if r.get('status') == 'Pending'])
+    completed_results = len([r for r in results if r.get('status') == 'Completed'])
+
+    # Financial Metrics - Use safe_float to handle string/numeric inconsistencies
+    total_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings)
+    monthly_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('invoice_date', '').startswith(current_month))
+    pending_payments = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('payment_status') == 'Pending')
+
+    # Invoice Metrics
+    total_invoices = len(invoices)
+    pending_invoices = len([i for i in invoices if i.get('status') == 'Pending'])
+    paid_invoices = len([i for i in invoices if i.get('status') == 'Paid'])
+
+    # Inventory Metrics
+    total_inventory_items = len(inventory)
+    low_stock_items = len([i for i in inventory if i.get('quantity', 0) <= i.get('reorder_level', 0)])
+    out_of_stock_items = len([i for i in inventory if i.get('quantity', 0) == 0])
+
+    # Daily trends for last 7 days
+    daily_trends = []
+    for date in last_7_days:
+        day_patients = len([p for p in patients if p.get('created_at', '').startswith(date)])
+        day_samples = len([s for s in samples if s.get('created_at', '').startswith(date)])
+        day_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('invoice_date', '').startswith(date))
+
+        daily_trends.append({
+            'date': date,
+            'patients': day_patients,
+            'samples': day_samples,
+            'revenue': day_revenue
+        })
+
+    # Recent activities (last 10 items)
+    recent_patients = sorted([p for p in patients], key=lambda x: x.get('created_at', ''), reverse=True)[:10]
+    recent_samples = sorted([s for s in samples], key=lambda x: x.get('created_at', ''), reverse=True)[:10]
+    recent_billings = sorted([b for b in billings], key=lambda x: x.get('created_at', ''), reverse=True)[:10]
+
+    return {
+        'overview': {
+            'total_patients': total_patients,
+            'today_patients': today_patients,
+            'monthly_patients': monthly_patients,
+            'total_samples': total_samples,
+            'pending_samples': pending_samples,
+            'completed_samples': completed_samples,
+            'total_results': total_results,
+            'pending_results': pending_results,
+            'completed_results': completed_results,
+            'total_revenue': total_revenue,
+            'monthly_revenue': monthly_revenue,
+            'pending_payments': pending_payments,
+            'total_invoices': total_invoices,
+            'pending_invoices': pending_invoices,
+            'paid_invoices': paid_invoices,
+            'total_inventory_items': total_inventory_items,
+            'low_stock_items': low_stock_items,
+            'out_of_stock_items': out_of_stock_items
+        },
+        'trends': {
+            'daily_trends': daily_trends,
+            'monthly_revenue': monthly_revenue,
+            'revenue_growth': calculate_revenue_growth(billings, current_month)
+        },
+        'recent_activities': {
+            'patients': recent_patients,
+            'samples': recent_samples,
+            'billings': recent_billings
+        },
+        'alerts': generate_dashboard_alerts(inventory, billings, samples, results),
+        'ai_insights': generate_ai_insights(patients, samples, results, billings, inventory, user_role)
+    }
+
+def calculate_revenue_growth(billings, current_month):
+    """Calculate revenue growth compared to previous month"""
+    try:
+        current_year, current_month_num = current_month.split('-')
+        prev_month_num = int(current_month_num) - 1
+        prev_year = current_year
+
+        if prev_month_num == 0:
+            prev_month_num = 12
+            prev_year = str(int(current_year) - 1)
+
+        prev_month = f"{prev_year}-{prev_month_num:02d}"
+
+        current_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('invoice_date', '').startswith(current_month))
+        prev_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('invoice_date', '').startswith(prev_month))
+
+        if prev_revenue > 0:
+            growth = ((current_revenue - prev_revenue) / prev_revenue) * 100
+            return round(growth, 2)
+        return 0
+    except:
+        return 0
+
+def generate_dashboard_alerts(inventory, billings, samples, results):
+    """Generate important alerts for dashboard"""
+    alerts = []
+
+    # Low stock alerts
+    low_stock = [i for i in inventory if i.get('quantity', 0) <= i.get('reorder_level', 0)]
+    if low_stock:
+        alerts.append({
+            'type': 'warning',
+            'title': 'Low Stock Alert',
+            'message': f'{len(low_stock)} items are running low on stock',
+            'count': len(low_stock),
+            'action': '/inventory?filter=low_stock'
+        })
+
+    # Pending results alerts
+    pending_results = [r for r in results if r.get('status') == 'Pending']
+    if len(pending_results) > 10:
+        alerts.append({
+            'type': 'info',
+            'title': 'Pending Results',
+            'message': f'{len(pending_results)} results are pending review',
+            'count': len(pending_results),
+            'action': '/results?status=pending'
+        })
+
+    # Overdue payments
+    overdue_payments = [b for b in billings if b.get('payment_status') == 'Pending' and
+                       b.get('due_date') and b.get('due_date') < datetime.now().strftime('%Y-%m-%d')]
+    if overdue_payments:
+        alerts.append({
+            'type': 'danger',
+            'title': 'Overdue Payments',
+            'message': f'{len(overdue_payments)} payments are overdue',
+            'count': len(overdue_payments),
+            'action': '/billing?status=overdue'
+        })
+
+    return alerts
+
+def generate_ai_insights(patients, samples, results, billings, inventory, user_role):
+    """Generate AI-powered insights and recommendations"""
+    insights = []
+
+    # Patient volume insights
+    today = datetime.now().strftime('%Y-%m-%d')
+    today_patients = len([p for p in patients if p.get('created_at', '').startswith(today)])
+    avg_daily_patients = len(patients) / max(30, 1)  # Average over last 30 days
+
+    if today_patients > avg_daily_patients * 1.5:
+        insights.append({
+            'type': 'trend',
+            'category': 'Patient Management',
+            'title': 'High Patient Volume Detected',
+            'description': f'Today\'s patient count ({today_patients}) is {int((today_patients/avg_daily_patients - 1) * 100)}% above average',
+            'recommendation': 'Consider allocating additional staff or extending hours',
+            'priority': 'high'
+        })
+
+    # Revenue insights
+    current_month = datetime.now().strftime('%Y-%m')
+    monthly_revenue = sum(safe_float(b.get('total_amount', 0)) for b in billings if b.get('invoice_date', '').startswith(current_month))
+
+    if monthly_revenue > 0:
+        insights.append({
+            'type': 'financial',
+            'category': 'Financial Performance',
+            'title': 'Revenue Performance',
+            'description': f'Current month revenue: ₹{monthly_revenue:,.2f}',
+            'recommendation': 'Monitor daily revenue trends for optimization opportunities',
+            'priority': 'medium'
+        })
+
+    # Inventory optimization
+    low_stock_items = [i for i in inventory if i.get('quantity', 0) <= i.get('reorder_level', 0)]
+    if low_stock_items:
+        insights.append({
+            'type': 'operational',
+            'category': 'Inventory Management',
+            'title': 'Inventory Optimization Needed',
+            'description': f'{len(low_stock_items)} items need restocking',
+            'recommendation': 'Review reorder levels and supplier lead times',
+            'priority': 'high'
+        })
+
+    # Test efficiency insights
+    pending_results_ratio = len([r for r in results if r.get('status') == 'Pending']) / max(len(results), 1)
+    if pending_results_ratio > 0.3:
+        insights.append({
+            'type': 'operational',
+            'category': 'Lab Efficiency',
+            'title': 'Result Processing Bottleneck',
+            'description': f'{int(pending_results_ratio * 100)}% of results are pending',
+            'recommendation': 'Review lab workflow and consider additional resources',
+            'priority': 'high'
+        })
+
+    return insights
+
+# Enhanced Dashboard API
+@admin_bp.route('/api/dashboard/comprehensive', methods=['GET'])
+@token_required
+def get_comprehensive_dashboard():
+    """Get comprehensive dashboard data with role-based filtering"""
+    try:
+        user = request.current_user
+        user_role = user.get('role')
+        user_tenant_id = user.get('tenant_id')
+
+        # Get all data files
+        patients = read_data('patients.json')
+        samples = read_data('samples.json')
+        results = read_data('results.json')
+        billings = read_data('billings.json')
+        inventory = read_data('inventory.json')
+        invoices = read_data('invoices.json')
+
+        # Apply role-based filtering
+        if user_role in ['admin', 'hub_admin']:
+            # Admin and hub_admin see all data
+            filtered_patients = patients
+            filtered_samples = samples
+            filtered_results = results
+            filtered_billings = billings
+            filtered_inventory = inventory
+            filtered_invoices = invoices
+        else:
+            # Franchise admin and other roles see only their tenant data
+            filtered_patients = filter_data_by_tenant(patients, user)
+            filtered_samples = filter_data_by_tenant(samples, user)
+            filtered_results = filter_data_by_tenant(results, user)
+            filtered_billings = filter_data_by_tenant(billings, user)
+            filtered_inventory = filter_data_by_tenant(inventory, user)
+            filtered_invoices = filter_data_by_tenant(invoices, user)
+
+        # Calculate dashboard metrics
+        dashboard_data = calculate_dashboard_metrics(
+            filtered_patients, filtered_samples, filtered_results,
+            filtered_billings, filtered_inventory, filtered_invoices, user_role
+        )
+
+        return jsonify({
+            'success': True,
+            'data': dashboard_data,
+            'user_context': {
+                'role': user_role,
+                'tenant_id': user_tenant_id,
+                'access_level': 'system_wide' if user_role in ['admin', 'hub_admin'] else 'franchise_only'
+            }
+        }), 200
+
+    except Exception as e:
+        print(f"[DASHBOARD ERROR] {str(e)}")
+        return jsonify({
+            'success': False,
+            'message': f'Error fetching dashboard data: {str(e)}'
+        }), 500
+
 # Admin Routes
 @admin_bp.route('/api/admin/analytics', methods=['GET'])
 @token_required
@@ -57,7 +351,7 @@ def get_analytics():
     # Calculate monthly revenue
     current_month = datetime.now().strftime('%Y-%m')
     monthly_revenue = sum(
-        b.get('total_amount', 0)
+        safe_float(b.get('total_amount', 0))
         for b in billings
         if b.get('invoice_date', '').startswith(current_month)
     )
@@ -104,6 +398,7 @@ def get_analytics():
 
 @admin_bp.route('/api/admin/users', methods=['GET'])
 @token_required
+@require_module_access('USER_MANAGEMENT')
 def get_users():
     # Check if user has admin privileges
     if request.current_user.get('role') not in ['admin', 'hub_admin', 'franchise_admin']:
@@ -293,21 +588,9 @@ def get_franchises():
 
     tenants = read_data('tenants.json')
 
-    # If hub_admin, only return franchises of the hub
-    if request.current_user.get('role') == 'hub_admin':
-        tenant_id = request.current_user.get('tenant_id')
-        tenant = next((t for t in tenants if t.get('id') == tenant_id), None)
-
-        if tenant and tenant.get('is_hub'):
-            # Return all franchises
-            franchises = [t for t in tenants if not t.get('is_hub')]
-            return jsonify(franchises)
-
-        return jsonify({'message': 'Unauthorized'}), 403
-
-    # If admin, return all franchises
-    franchises = [t for t in tenants if not t.get('is_hub')]
-    return jsonify(franchises)
+    # For franchise management, return ALL tenants (including hub)
+    # This allows proper management of all franchise locations
+    return jsonify(tenants)
 
 @admin_bp.route('/api/admin/franchises/<int:id>', methods=['GET'])
 @token_required
@@ -322,15 +605,18 @@ def get_franchise(id):
     if not tenant:
         return jsonify({'message': 'Franchise not found'}), 404
 
-    # If hub_admin, check if franchise belongs to the hub
+    # If hub_admin, they can access their own hub and all franchises under it
     if request.current_user.get('role') == 'hub_admin':
-        if tenant.get('is_hub'):
+        user_tenant_id = request.current_user.get('tenant_id')
+        # Hub admin can access their own hub or any franchise (non-hub)
+        if tenant.get('is_hub') and tenant.get('id') != user_tenant_id:
             return jsonify({'message': 'Unauthorized'}), 403
 
     return jsonify(tenant)
 
 @admin_bp.route('/api/admin/settings', methods=['GET'])
 @token_required
+@require_module_access('SETTINGS')
 def get_settings():
     # Check if user has admin privileges
     if request.current_user.get('role') not in ['admin', 'hub_admin']:
@@ -413,6 +699,134 @@ def update_settings():
     except Exception as e:
         return jsonify({'message': f'Failed to update settings: {str(e)}'}), 500
 
+# GST Configuration Master Routes
+@admin_bp.route('/api/admin/gst-config', methods=['GET'])
+@token_required
+def get_gst_config():
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin', 'franchise_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    gst_configs = read_data('gst_config.json')
+
+    # Apply tenant-based filtering
+    gst_configs = filter_data_by_tenant(gst_configs, request.current_user)
+
+    return jsonify(gst_configs)
+
+@admin_bp.route('/api/admin/gst-config', methods=['POST'])
+@token_required
+def create_gst_config():
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    data = request.get_json()
+
+    # Validate required fields
+    required_fields = ['name', 'rate', 'applicable_from']
+    for field in required_fields:
+        if field not in data:
+            return jsonify({'message': f'Missing required field: {field}'}), 400
+
+    gst_configs = read_data('gst_config.json')
+
+    # Generate new ID
+    new_id = 1
+    if gst_configs:
+        new_id = max(config['id'] for config in gst_configs) + 1
+
+    # Create new GST configuration
+    new_config = {
+        'id': new_id,
+        'name': data['name'],
+        'description': data.get('description', ''),
+        'rate': float(data['rate']),
+        'applicable_from': data['applicable_from'],
+        'applicable_to': data.get('applicable_to', ''),
+        'is_default': data.get('is_default', False),
+        'is_active': data.get('is_active', True),
+        'tenant_id': request.current_user.get('tenant_id'),
+        'created_at': datetime.now().isoformat(),
+        'updated_at': datetime.now().isoformat(),
+        'created_by': request.current_user.get('id')
+    }
+
+    # If this is set as default, unset other defaults for this tenant
+    if new_config['is_default']:
+        for config in gst_configs:
+            if config.get('tenant_id') == new_config['tenant_id']:
+                config['is_default'] = False
+
+    gst_configs.append(new_config)
+    write_data('gst_config.json', gst_configs)
+
+    return jsonify(new_config), 201
+
+@admin_bp.route('/api/admin/gst-config/<int:config_id>', methods=['PUT'])
+@token_required
+def update_gst_config(config_id):
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    data = request.get_json()
+    gst_configs = read_data('gst_config.json')
+
+    # Find the configuration
+    config = next((c for c in gst_configs if c['id'] == config_id), None)
+    if not config:
+        return jsonify({'message': 'GST configuration not found'}), 404
+
+    # Check tenant access
+    if not check_tenant_access(request.current_user, config.get('tenant_id')):
+        return jsonify({'message': 'Unauthorized access to this GST configuration'}), 403
+
+    # Update fields
+    config.update({
+        'name': data.get('name', config['name']),
+        'description': data.get('description', config['description']),
+        'rate': float(data.get('rate', config['rate'])),
+        'applicable_from': data.get('applicable_from', config['applicable_from']),
+        'applicable_to': data.get('applicable_to', config['applicable_to']),
+        'is_default': data.get('is_default', config['is_default']),
+        'is_active': data.get('is_active', config['is_active']),
+        'updated_at': datetime.now().isoformat()
+    })
+
+    # If this is set as default, unset other defaults for this tenant
+    if config['is_default']:
+        for other_config in gst_configs:
+            if other_config['id'] != config_id and other_config.get('tenant_id') == config['tenant_id']:
+                other_config['is_default'] = False
+
+    write_data('gst_config.json', gst_configs)
+    return jsonify(config)
+
+@admin_bp.route('/api/admin/gst-config/<int:config_id>', methods=['DELETE'])
+@token_required
+def delete_gst_config(config_id):
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    gst_configs = read_data('gst_config.json')
+
+    # Find the configuration
+    config = next((c for c in gst_configs if c['id'] == config_id), None)
+    if not config:
+        return jsonify({'message': 'GST configuration not found'}), 404
+
+    # Check tenant access
+    if not check_tenant_access(request.current_user, config.get('tenant_id')):
+        return jsonify({'message': 'Unauthorized access to this GST configuration'}), 403
+
+    # Remove the configuration
+    gst_configs = [c for c in gst_configs if c['id'] != config_id]
+    write_data('gst_config.json', gst_configs)
+
+    return jsonify({'message': 'GST configuration deleted successfully'})
+
 # Master Data API
 @admin_bp.route('/api/admin/master-data', methods=['GET'])
 @token_required
@@ -456,45 +870,231 @@ def get_master_data():
         sub_test_master = read_data('sub_test_master.json')
         profile_data = read_data('profile_data.json')
 
+        # Apply data transformations to fix field name mismatches
         master_data = {
-            # Original categories
-            'doctors': doctors,
-            'testCategories': test_categories,
-            'testParameters': test_parameters,
-            'sampleTypes': sample_types,
-            'departments': departments,
-            'paymentMethods': payment_methods,
-            'containers': containers,
-            'instruments': instruments,
-            'reagents': reagents,
-            'suppliers': suppliers,
-            'units': units,
-            'testMethods': test_methods,
-            'tests': tests,
-            'test_panels': test_panels,
-            # New categories from Excel
-            'patients': patients,
-            'profileMaster': profile_master,
-            'methodMaster': method_master,
-            'antibioticMaster': antibiotic_master,
-            'organismMaster': organism_master,
-            'unitOfMeasurement': unit_of_measurement,
-            'specimenMaster': specimen_master,
-            'organismVsAntibiotic': organism_vs_antibiotic,
-            'containerMaster': container_master,
-            'mainDepartmentMaster': main_department_master,
-            'departmentSettings': department_settings,
-            'authorizationSettings': authorization_settings,
-            'printOrder': print_order,
-            'testMaster': test_master,
-            'subTestMaster': sub_test_master,
-            'profileData': profile_data
+            # Original categories - apply transformations
+            'doctors': transform_master_data(doctors, 'doctors'),
+            'testCategories': transform_master_data(test_categories, 'testCategories'),
+            'testParameters': transform_master_data(test_parameters, 'testParameters'),
+            'sampleTypes': transform_master_data(sample_types, 'sampleTypes'),
+            'departments': transform_master_data(departments, 'departments'),
+            'paymentMethods': transform_master_data(payment_methods, 'paymentMethods'),
+            'containers': transform_master_data(containers, 'containers'),
+            'instruments': transform_master_data(instruments, 'instruments'),
+            'reagents': transform_master_data(reagents, 'reagents'),
+            'suppliers': transform_master_data(suppliers, 'suppliers'),
+            'units': transform_master_data(units, 'units'),
+            'testMethods': transform_master_data(test_methods, 'testMethods'),
+            'tests': transform_master_data(tests, 'tests'),
+            'test_panels': transform_master_data(test_panels, 'test_panels'),
+            # New categories from Excel - apply transformations
+            'patients': transform_master_data(patients, 'patients'),
+            'profileMaster': transform_master_data(profile_master, 'profileMaster'),
+            'methodMaster': transform_master_data(method_master, 'methodMaster'),
+            'antibioticMaster': transform_master_data(antibiotic_master, 'antibioticMaster'),
+            'organismMaster': transform_master_data(organism_master, 'organismMaster'),
+            'unitOfMeasurement': transform_master_data(unit_of_measurement, 'unitOfMeasurement'),
+            'specimenMaster': transform_master_data(specimen_master, 'specimenMaster'),
+            'organismVsAntibiotic': transform_master_data(organism_vs_antibiotic, 'organismVsAntibiotic'),
+            'containerMaster': transform_master_data(container_master, 'containerMaster'),
+            'mainDepartmentMaster': transform_master_data(main_department_master, 'mainDepartmentMaster'),
+            'departmentSettings': transform_master_data(department_settings, 'departmentSettings'),
+            'authorizationSettings': transform_master_data(authorization_settings, 'authorizationSettings'),
+            'printOrder': transform_master_data(print_order, 'printOrder'),
+            'testMaster': transform_master_data(test_master, 'testMaster'),
+            'subTestMaster': transform_master_data(sub_test_master, 'subTestMaster'),
+            'profileData': transform_master_data(profile_data, 'profileData')
         }
 
         return jsonify(master_data)
 
     except Exception as e:
         return jsonify({'message': f'Failed to load master data: {str(e)}'}), 500
+
+# Excel Reference Data API
+@admin_bp.route('/api/admin/excel-reference-data', methods=['GET'])
+@token_required
+def get_excel_reference_data():
+    """
+    Parse Excel file server-side and return JSON data with normalized test name keys
+    for efficient lookup in the frontend Result Master form.
+    """
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    if not EXCEL_SUPPORT:
+        # Return sample data structure for testing when openpyxl is not available
+        print("Warning: openpyxl not installed. Returning sample Excel reference data for testing.")
+        sample_data = {
+            "gad-65 - igg": {
+                "testName": "GAD-65 - IgG",
+                "code": "123",
+                "department": "IMMUNOLOGY",
+                "referenceRange": "< 1.0 U/ml",
+                "resultUnit": "U/ml",
+                "decimals": "1",
+                "notes": "Autoimmune marker for diabetes",
+                "criticalLow": "",
+                "criticalHigh": "",
+                "sheetName": "IMMUNOLOGY"
+            },
+            "25 hydroxy vitamin d3": {
+                "testName": "25 Hydroxy Vitamin D3",
+                "code": "630",
+                "department": "IMMUNOLOGY",
+                "referenceRange": "< 20 : Deficiency, 20-29 : Insufficiency, 30-100 : Sufficiency, > 100 : Toxicity",
+                "resultUnit": "ng/ml",
+                "decimals": "1",
+                "notes": "Vitamin D status assessment",
+                "criticalLow": "",
+                "criticalHigh": "",
+                "sheetName": "IMMUNOLOGY"
+            },
+            "1,25 dihydroxyvitamin d": {
+                "testName": "1,25 Dihydroxyvitamin D",
+                "code": "648",
+                "department": "IMMUNOLOGY",
+                "referenceRange": "19.9 - 79.3 pg/ml",
+                "resultUnit": "pg/ml",
+                "decimals": "1",
+                "notes": "Active form of vitamin D",
+                "criticalLow": "",
+                "criticalHigh": "",
+                "sheetName": "IMMUNOLOGY"
+            }
+        }
+        return jsonify(sample_data)
+
+    try:
+        # Path to the Excel file
+        excel_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '..', 'public', 'dynamic data fetch.xlsx')
+
+        if not os.path.exists(excel_file_path):
+            return jsonify({'message': 'Excel file not found'}), 404
+
+        # Load the workbook
+        workbook = load_workbook(excel_file_path, data_only=True)
+
+        reference_data = {}
+
+        # Helper function to extract value from row with multiple possible column names
+        def get_value_from_row(row_dict, possible_keys):
+            for key in possible_keys:
+                if key in row_dict and row_dict[key] is not None and str(row_dict[key]).strip():
+                    return str(row_dict[key]).strip()
+            return ''
+
+        # Process each sheet
+        for sheet_name in workbook.sheetnames:
+            sheet = workbook[sheet_name]
+
+            # Get header row
+            headers = []
+            for cell in sheet[1]:
+                if cell.value:
+                    headers.append(str(cell.value).strip())
+                else:
+                    headers.append('')
+
+            # Process data rows
+            for row_num in range(2, sheet.max_row + 1):
+                row_data = {}
+
+                # Create row dictionary
+                for col_num, header in enumerate(headers, 1):
+                    if header:
+                        cell_value = sheet.cell(row=row_num, column=col_num).value
+                        row_data[header] = cell_value if cell_value is not None else ''
+
+                # Extract test name with multiple possible column names
+                test_name = get_value_from_row(row_data, [
+                    'Test Name',
+                    'Test Name ',
+                    'TestName',
+                    'test_name',
+                    'Test'
+                ])
+
+                if test_name:
+                    # Normalize the key for consistent lookup
+                    normalized_key = test_name.lower().strip()
+
+                    reference_data[normalized_key] = {
+                        'testName': test_name,
+                        # Enhanced code extraction
+                        'code': get_value_from_row(row_data, [
+                            'code',
+                            'Code',
+                            'TEST_CODE',
+                            'Test Code',
+                            'TestCode'
+                        ]),
+                        # Enhanced department extraction
+                        'department': get_value_from_row(row_data, [
+                            'Department',
+                            'department',
+                            'DEPARTMENT',
+                            'Dept'
+                        ]) or sheet_name,
+                        # Enhanced reference range extraction
+                        'referenceRange': get_value_from_row(row_data, [
+                            'Referance Range',
+                            'Reference Range',
+                            '\r\nReference Range',
+                            'ReferenceRange',
+                            'Normal Range',
+                            'Range'
+                        ]),
+                        # Enhanced result unit extraction
+                        'resultUnit': get_value_from_row(row_data, [
+                            'Result Unit',
+                            'Result unit',
+                            'ResultUnit',
+                            'Unit',
+                            'Units'
+                        ]),
+                        # Enhanced decimals extraction
+                        'decimals': get_value_from_row(row_data, [
+                            'No of decimals',
+                            'No. of Decimals',
+                            '\tNo. of Decimals',
+                            'Decimals',
+                            'Decimal Places',
+                            'DecimalPlaces'
+                        ]),
+                        # Enhanced notes extraction
+                        'notes': get_value_from_row(row_data, [
+                            'Notes',
+                            'Note',
+                            'Comments',
+                            'Comment',
+                            'Remarks'
+                        ]),
+                        # Enhanced critical values extraction
+                        'criticalLow': get_value_from_row(row_data, [
+                            'Critical Low',
+                            'CriticalLow',
+                            'Low Critical',
+                            'Panic Low'
+                        ]),
+                        'criticalHigh': get_value_from_row(row_data, [
+                            'Critical High',
+                            'CriticalHigh',
+                            'High Critical',
+                            'Panic High'
+                        ]),
+                        'sheetName': sheet_name
+                    }
+
+        # Log the number of entries processed
+        print(f"Excel reference data loaded: {len(reference_data)} entries from {len(workbook.sheetnames)} sheets")
+
+        return jsonify(reference_data)
+
+    except Exception as e:
+        print(f"Error parsing Excel file: {str(e)}")
+        return jsonify({'message': f'Failed to parse Excel file: {str(e)}'}), 500
 
 # Doctor Management Routes
 @admin_bp.route('/api/admin/doctors', methods=['GET'])
@@ -1429,16 +2029,16 @@ def create_franchise():
         if field not in data:
             return jsonify({'message': f'Missing required field: {field}'}), 400
 
-    franchises = read_data('franchises.json')
+    tenants = read_data('tenants.json')
 
     # Check if site code already exists
-    if any(f.get('site_code') == data['site_code'].upper() for f in franchises):
+    if any(t.get('site_code') == data['site_code'].upper() for t in tenants):
         return jsonify({'message': 'Site code already exists'}), 400
 
     # Generate new franchise ID
     new_id = 1
-    if franchises:
-        new_id = max(f['id'] for f in franchises) + 1
+    if tenants:
+        new_id = max(t['id'] for t in tenants) + 1
 
     # Create new franchise
     new_franchise = {
@@ -1455,6 +2055,7 @@ def create_franchise():
         'established_date': data.get('established_date', ''),
         'is_hub': data.get('is_hub', False),
         'is_active': data.get('is_active', True),
+        'use_site_code_prefix': data.get('use_site_code_prefix', True),  # Default to True for backward compatibility
         'franchise_fee': data.get('franchise_fee', 0),
         'monthly_fee': data.get('monthly_fee', 0),
         'commission_rate': data.get('commission_rate', 0),
@@ -1466,10 +2067,72 @@ def create_franchise():
         'created_by': request.current_user.get('id')
     }
 
-    franchises.append(new_franchise)
-    write_data('franchises.json', franchises)
+    tenants.append(new_franchise)
+    write_data('tenants.json', tenants)
 
     return jsonify(new_franchise), 201
+
+@admin_bp.route('/api/admin/franchises/<int:id>', methods=['PUT'])
+@token_required
+def update_franchise(id):
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    data = request.get_json()
+    tenants = read_data('tenants.json')
+
+    # Find the franchise
+    tenant_index = next((i for i, t in enumerate(tenants) if t['id'] == id), None)
+    if tenant_index is None:
+        return jsonify({'message': 'Franchise not found'}), 404
+
+    # Check if site code already exists (excluding current franchise)
+    if 'site_code' in data:
+        if any(t.get('site_code') == data['site_code'].upper() and t['id'] != id for t in tenants):
+            return jsonify({'message': 'Site code already exists'}), 400
+
+    # Update franchise fields
+    franchise = tenants[tenant_index]
+
+    # Update only provided fields
+    for key, value in data.items():
+        if key not in ['id', 'created_at', 'created_by']:
+            if key == 'site_code':
+                franchise[key] = value.upper()
+            else:
+                franchise[key] = value
+
+    franchise['updated_at'] = datetime.now().isoformat()
+
+    # Save updated tenants
+    write_data('tenants.json', tenants)
+    return jsonify(franchise)
+
+@admin_bp.route('/api/admin/franchises/<int:id>', methods=['DELETE'])
+@token_required
+def delete_franchise(id):
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    tenants = read_data('tenants.json')
+
+    # Find the franchise
+    tenant_index = next((i for i, t in enumerate(tenants) if t['id'] == id), None)
+    if tenant_index is None:
+        return jsonify({'message': 'Franchise not found'}), 404
+
+    # Check if it's the hub - prevent deletion of hub
+    franchise = tenants[tenant_index]
+    if franchise.get('is_hub'):
+        return jsonify({'message': 'Cannot delete hub franchise'}), 400
+
+    # Delete franchise
+    deleted_franchise = tenants.pop(tenant_index)
+    write_data('tenants.json', tenants)
+
+    return jsonify({'message': 'Franchise deleted successfully'})
 
 # Sample Type Management Routes
 @admin_bp.route('/api/admin/sample-types', methods=['GET'])
@@ -3564,7 +4227,8 @@ def get_technical_master_data():
             'qualityControlRules': [],
             'instrumentMaster': [],
             'reagentMaster': [],
-            'calibrationStandards': []
+            'calibrationStandards': [],
+            'referrerMaster': []
         }
 
         # Try to read existing data files
@@ -3608,9 +4272,482 @@ def get_technical_master_data():
         except:
             technical_data['calibrationStandards'] = []
 
+        try:
+            technical_data['referrerMaster'] = read_data('referrer_master.json')
+        except:
+            technical_data['referrerMaster'] = []
+
         return jsonify(technical_data)
     except Exception as e:
         return jsonify({'message': f'Error fetching technical master data: {str(e)}'}), 500
+
+# Referral Master Data CRUD Operations
+@admin_bp.route('/api/admin/referral-master', methods=['GET'])
+@token_required
+def get_referral_master():
+    """Get all referral master data"""
+    try:
+        # Try to read from referral pricing master file
+        try:
+            referral_data = read_data('referralPricingMaster.json')
+            # Extract referral sources from the comprehensive data
+            referral_sources = []
+            if 'referralMaster' in referral_data:
+                for ref_id, ref_data in referral_data['referralMaster'].items():
+                    referral_sources.append(ref_data)
+
+            return jsonify({
+                'success': True,
+                'data': referral_sources,
+                'total': len(referral_sources)
+            })
+        except:
+            # Return empty list if file doesn't exist
+            return jsonify({
+                'success': True,
+                'data': [],
+                'total': 0
+            })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error fetching referral master data: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/referral-master', methods=['POST'])
+@token_required
+def add_referral_master():
+    """Add new referral source"""
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'success': False, 'message': 'Unauthorized'}), 403
+
+    try:
+        data = request.get_json()
+
+        # Validate required fields - updated for new structure
+        required_fields = ['id', 'name', 'description', 'referralType', 'email', 'phone', 'address']
+        for field in required_fields:
+            if field not in data or not data[field]:
+                return jsonify({
+                    'success': False,
+                    'message': f'Missing required field: {field}'
+                }), 400
+
+        # Validate email format
+        import re
+        email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+        if not re.match(email_pattern, data['email']):
+            return jsonify({
+                'success': False,
+                'message': 'Invalid email format'
+            }), 400
+
+        # Validate referral type
+        valid_types = ['Doctor', 'Hospital', 'Lab', 'Corporate', 'Insurance', 'Patient']
+        if data['referralType'] not in valid_types:
+            return jsonify({
+                'success': False,
+                'message': f'Invalid referral type. Must be one of: {", ".join(valid_types)}'
+            }), 400
+
+        # Validate type-specific fields
+        type_specific_requirements = {
+            'Doctor': ['specialization'],
+            'Hospital': ['branch'],
+            'Lab': ['accreditation'],
+            'Corporate': ['registrationDetails'],
+            'Insurance': ['policyCoverage'],
+            'Patient': []  # patientReference is optional
+        }
+
+        referral_type = data['referralType']
+        type_specific_fields = data.get('typeSpecificFields', {})
+
+        for required_field in type_specific_requirements.get(referral_type, []):
+            if required_field not in type_specific_fields or not type_specific_fields[required_field]:
+                return jsonify({
+                    'success': False,
+                    'message': f'Missing required {referral_type}-specific field: {required_field}'
+                }), 400
+
+        # Load existing data
+        try:
+            referral_data = read_data('referralPricingMaster.json')
+        except:
+            # Initialize with default structure if file doesn't exist
+            referral_data = {
+                'referralMaster': {},
+                'pricingSchemes': {},
+                'testPricingMatrix': {},
+                'discountRules': {},
+                'commissionRules': {},
+                'metadata': {
+                    'version': '1.0',
+                    'lastUpdated': datetime.now().isoformat(),
+                    'updatedBy': request.current_user.get('id'),
+                    'description': 'Comprehensive referral and pricing master configuration'
+                }
+            }
+
+        # Check if referral ID already exists
+        if data['id'] in referral_data['referralMaster']:
+            return jsonify({
+                'success': False,
+                'message': f'Referral source with ID "{data["id"]}" already exists'
+            }), 400
+
+        # Auto-determine category based on referral type
+        type_to_category = {
+            'Doctor': 'medical',
+            'Hospital': 'institutional',
+            'Lab': 'institutional',
+            'Corporate': 'corporate',
+            'Insurance': 'insurance',
+            'Patient': 'direct'
+        }
+
+        # Create new referral source with enhanced structure
+        new_referral = {
+            'id': data['id'],
+            'name': data['name'],
+            'description': data['description'],
+            'referralType': data['referralType'],
+            'category': type_to_category[data['referralType']],
+            'defaultPricingScheme': data.get('defaultPricingScheme', 'standard'),
+            'discountPercentage': float(data.get('discountPercentage', 0)),
+            'commissionPercentage': float(data.get('commissionPercentage', 0)),
+            'isActive': data.get('isActive', True),
+            'priority': int(data.get('priority', 1)),
+            # Common contact fields
+            'email': data['email'],
+            'phone': data['phone'],
+            'address': data['address'],
+            # Type-specific fields
+            'typeSpecificFields': data.get('typeSpecificFields', {}),
+            # Metadata
+            'createdAt': datetime.now().isoformat(),
+            'updatedAt': datetime.now().isoformat(),
+            'createdBy': request.current_user.get('id')
+        }
+
+        # Add to referral master
+        referral_data['referralMaster'][data['id']] = new_referral
+
+        # Update metadata
+        referral_data['metadata']['lastUpdated'] = datetime.now().isoformat()
+        referral_data['metadata']['updatedBy'] = request.current_user.get('id')
+
+        # Save to file
+        write_data('referralPricingMaster.json', referral_data)
+
+        return jsonify({
+            'success': True,
+            'message': 'Referral source added successfully',
+            'data': new_referral
+        }), 201
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error adding referral source: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/referral-master/<referral_id>', methods=['PUT'])
+@token_required
+def update_referral_master(referral_id):
+    """Update existing referral source"""
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'success': False, 'message': 'Unauthorized'}), 403
+
+    try:
+        data = request.get_json()
+
+        # Load existing data
+        try:
+            referral_data = read_data('referralPricingMaster.json')
+        except:
+            return jsonify({
+                'success': False,
+                'message': 'Referral master data file not found'
+            }), 404
+
+        # Check if referral exists
+        if referral_id not in referral_data['referralMaster']:
+            return jsonify({
+                'success': False,
+                'message': f'Referral source with ID "{referral_id}" not found'
+            }), 404
+
+        # Get existing referral
+        existing_referral = referral_data['referralMaster'][referral_id]
+
+        # Validate required fields for update
+        if 'email' in data:
+            import re
+            email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+            if not re.match(email_pattern, data['email']):
+                return jsonify({
+                    'success': False,
+                    'message': 'Invalid email format'
+                }), 400
+
+        # Validate referral type if being updated
+        if 'referralType' in data:
+            valid_types = ['Doctor', 'Hospital', 'Lab', 'Corporate', 'Insurance', 'Patient']
+            if data['referralType'] not in valid_types:
+                return jsonify({
+                    'success': False,
+                    'message': f'Invalid referral type. Must be one of: {", ".join(valid_types)}'
+                }), 400
+
+        # Auto-determine category based on referral type
+        type_to_category = {
+            'Doctor': 'medical',
+            'Hospital': 'institutional',
+            'Lab': 'institutional',
+            'Corporate': 'corporate',
+            'Insurance': 'insurance',
+            'Patient': 'direct'
+        }
+
+        # Update fields (preserve creation info)
+        updatable_fields = [
+            'name', 'description', 'referralType', 'defaultPricingScheme',
+            'discountPercentage', 'commissionPercentage', 'isActive', 'priority',
+            'email', 'phone', 'address', 'typeSpecificFields'
+        ]
+
+        for field in updatable_fields:
+            if field in data:
+                if field in ['discountPercentage', 'commissionPercentage']:
+                    existing_referral[field] = float(data[field])
+                elif field == 'priority':
+                    existing_referral[field] = int(data[field])
+                elif field == 'referralType':
+                    existing_referral[field] = data[field]
+                    # Auto-update category when referral type changes
+                    existing_referral['category'] = type_to_category[data[field]]
+                else:
+                    existing_referral[field] = data[field]
+
+        # Update metadata
+        existing_referral['updatedAt'] = datetime.now().isoformat()
+        referral_data['metadata']['lastUpdated'] = datetime.now().isoformat()
+        referral_data['metadata']['updatedBy'] = request.current_user.get('id')
+
+        # Save to file
+        write_data('referralPricingMaster.json', referral_data)
+
+        return jsonify({
+            'success': True,
+            'message': 'Referral source updated successfully',
+            'data': existing_referral
+        })
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error updating referral source: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/referral-master/<referral_id>', methods=['DELETE'])
+@token_required
+def delete_referral_master(referral_id):
+    """Delete referral source"""
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'success': False, 'message': 'Unauthorized'}), 403
+
+    try:
+        # Load existing data
+        try:
+            referral_data = read_data('referralPricingMaster.json')
+        except:
+            return jsonify({
+                'success': False,
+                'message': 'Referral master data file not found'
+            }), 404
+
+        # Check if referral exists
+        if referral_id not in referral_data['referralMaster']:
+            return jsonify({
+                'success': False,
+                'message': f'Referral source with ID "{referral_id}" not found'
+            }), 404
+
+        # Remove from referral master
+        deleted_referral = referral_data['referralMaster'].pop(referral_id)
+
+        # Update metadata
+        referral_data['metadata']['lastUpdated'] = datetime.now().isoformat()
+        referral_data['metadata']['updatedBy'] = request.current_user.get('id')
+
+        # Save to file
+        write_data('referralPricingMaster.json', referral_data)
+
+        return jsonify({
+            'success': True,
+            'message': 'Referral source deleted successfully',
+            'data': deleted_referral
+        })
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error deleting referral source: {str(e)}'
+        }), 500
+
+# Price Scheme Master Import for Lab-to-Lab Pricing
+@admin_bp.route('/api/admin/price-scheme-master/import', methods=['POST'])
+@token_required
+def import_price_scheme_data():
+    """Import lab-to-lab pricing data from Excel"""
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'success': False, 'message': 'Unauthorized'}), 403
+
+    try:
+        data = request.get_json()
+        import_data = data.get('data', [])
+
+        if not import_data:
+            return jsonify({
+                'success': False,
+                'message': 'No data provided for import'
+            }), 400
+
+        # Load existing price scheme data
+        try:
+            existing_data = read_data('price_scheme_master.json')
+        except:
+            existing_data = []
+
+        # Get the next ID
+        next_id = max([item.get('id', 0) for item in existing_data], default=0) + 1
+
+        # Process and validate import data
+        processed_data = []
+        errors = []
+
+        for index, row in enumerate(import_data):
+            try:
+                # Validate required fields
+                required_fields = ['test_code', 'test_name', 'default_price', 'scheme_price']
+                for field in required_fields:
+                    if field not in row or not row[field]:
+                        errors.append(f'Row {index + 1}: Missing required field {field}')
+                        continue
+
+                # Create processed record
+                processed_record = {
+                    'id': next_id,
+                    'dept_code': row.get('dept_code', '@BC'),
+                    'dept_name': row.get('dept_name', 'LAB'),
+                    'scheme_code': row.get('scheme_code', '@000002'),
+                    'scheme_name': row.get('scheme_name', 'L2L'),
+                    'test_type': row.get('test_type', 'T'),
+                    'test_code': str(row['test_code']),
+                    'test_name': str(row['test_name']),
+                    'default_price': float(row['default_price']),
+                    'scheme_price': float(row['scheme_price']),
+                    'price_percentage': float(row.get('price_percentage',
+                        round((float(row['scheme_price']) / float(row['default_price'])) * 100, 2))),
+                    'is_active': row.get('is_active', True),
+                    'created_at': datetime.now().isoformat(),
+                    'updated_at': datetime.now().isoformat(),
+                    'created_by': request.current_user.get('id', 1)
+                }
+
+                processed_data.append(processed_record)
+                next_id += 1
+
+            except Exception as e:
+                errors.append(f'Row {index + 1}: Error processing data - {str(e)}')
+
+        if errors:
+            return jsonify({
+                'success': False,
+                'message': 'Validation errors found',
+                'errors': errors
+            }), 400
+
+        # Add processed data to existing data
+        existing_data.extend(processed_data)
+
+        # Save updated data
+        write_data('price_scheme_master.json', existing_data)
+
+        return jsonify({
+            'success': True,
+            'message': f'Successfully imported {len(processed_data)} records',
+            'imported_count': len(processed_data),
+            'total_records': len(existing_data)
+        }), 201
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error importing price scheme data: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/referrer-master-data', methods=['GET'])
+@token_required
+def get_referrer_master_data():
+    """Get referrer master data (legacy endpoint for compatibility)"""
+    try:
+        # Try to read from JSON file first, then fallback to default data
+        try:
+            referrer_data = read_data('referrer_master.json')
+        except:
+            # Default referrer data structure
+            referrer_data = {
+                'referrerTypes': [
+                    {'id': 'doctor', 'name': 'Doctor', 'description': 'Medical practitioners and physicians'},
+                    {'id': 'self', 'name': 'Self', 'description': 'Self-referred patients'},
+                    {'id': 'lab', 'name': 'Lab', 'description': 'Other laboratory facilities'},
+                    {'id': 'hospital', 'name': 'Hospital', 'description': 'Hospital and medical institutions'},
+                    {'id': 'corporate', 'name': 'Corporate', 'description': 'Corporate health programs'},
+                    {'id': 'insurance', 'name': 'Insurance', 'description': 'Insurance companies and health plans'},
+                    {'id': 'staff', 'name': 'Staff', 'description': 'Internal staff referrals'},
+                    {'id': 'consultant', 'name': 'Consultant', 'description': 'Medical consultants and specialists'},
+                    {'id': 'outstation', 'name': 'Outstation', 'description': 'Out-of-station referrals'}
+                ],
+                'referrerNames': {
+                    'doctor': [
+                        {'id': 'dr_001', 'name': 'Dr. Rajesh Kumar', 'specialization': 'Cardiologist'},
+                        {'id': 'dr_002', 'name': 'Dr. Priya Sharma', 'specialization': 'Endocrinologist'},
+                        {'id': 'dr_003', 'name': 'Dr. Amit Patel', 'specialization': 'General Physician'}
+                    ],
+                    'hospital': [
+                        {'id': 'hosp_001', 'name': 'City General Hospital', 'type': 'Multi-specialty'},
+                        {'id': 'hosp_002', 'name': 'Metro Medical Center', 'type': 'Super Specialty'}
+                    ],
+                    'lab': [
+                        {'id': 'lab_001', 'name': 'PathLab Diagnostics', 'type': 'Full Service Lab'},
+                        {'id': 'lab_002', 'name': 'QuickTest Laboratory', 'type': 'Express Testing'}
+                    ],
+                    'corporate': [
+                        {'id': 'corp_001', 'name': 'TechCorp Health Program', 'company': 'TechCorp Industries'}
+                    ],
+                    'insurance': [
+                        {'id': 'ins_001', 'name': 'HealthFirst Insurance', 'type': 'Health Insurance'}
+                    ],
+                    'staff': [
+                        {'id': 'staff_001', 'name': 'Internal Medicine Department', 'department': 'Internal Medicine'}
+                    ],
+                    'consultant': [
+                        {'id': 'cons_001', 'name': 'Dr. Expert Consultant', 'specialization': 'Radiology Consultant'}
+                    ],
+                    'outstation': [
+                        {'id': 'out_001', 'name': 'Regional Medical Center', 'location': 'North Region'}
+                    ],
+                    'self': [
+                        {'id': 'self_001', 'name': 'Walk-in Patient', 'description': 'Patient came directly without referral'}
+                    ]
+                }
+            }
+
+        return jsonify(referrer_data)
+    except Exception as e:
+        return jsonify({'message': f'Error fetching referrer master data: {str(e)}'}), 500
 
 @admin_bp.route('/api/admin/technical-master-data/<category>', methods=['POST'])
 @token_required
@@ -3961,3 +5098,583 @@ def delete_reagent_master_item(item_id):
     deleted_item = reagent_master.pop(item_index)
     write_data('reagent_master.json', reagent_master)
     return jsonify({'message': 'Reagent master item deleted successfully', 'deleted_item': deleted_item})
+
+# Signature Management Routes
+@admin_bp.route('/api/admin/signature', methods=['GET'])
+@token_required
+def get_current_signature():
+    """Get current signature information"""
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    try:
+        # Check if signature file exists
+        signature_path = os.path.join('public', 'signature.jpeg')
+        if os.path.exists(signature_path):
+            # Get file stats
+            stat = os.stat(signature_path)
+            signature_info = {
+                'url': '/signature.jpeg',
+                'uploaded_at': datetime.fromtimestamp(stat.st_mtime).isoformat(),
+                'size': stat.st_size
+            }
+            return jsonify({
+                'success': True,
+                'data': signature_info
+            })
+        else:
+            return jsonify({
+                'success': True,
+                'data': None,
+                'message': 'No signature found'
+            })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error retrieving signature: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/signature/upload', methods=['POST'])
+@token_required
+def upload_signature():
+    """Upload a new signature image"""
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    try:
+        # Check if file is present
+        if 'signature' not in request.files:
+            return jsonify({
+                'success': False,
+                'message': 'No signature file provided'
+            }), 400
+
+        file = request.files['signature']
+        if file.filename == '':
+            return jsonify({
+                'success': False,
+                'message': 'No file selected'
+            }), 400
+
+        # Validate file type
+        allowed_extensions = {'jpg', 'jpeg', 'png'}
+        file_extension = file.filename.rsplit('.', 1)[1].lower() if '.' in file.filename else ''
+
+        if file_extension not in allowed_extensions:
+            return jsonify({
+                'success': False,
+                'message': 'Invalid file type. Please upload JPEG, JPG, or PNG files only.'
+            }), 400
+
+        # Validate file size (max 2MB)
+        file.seek(0, os.SEEK_END)
+        file_size = file.tell()
+        file.seek(0)
+
+        max_size = 2 * 1024 * 1024  # 2MB
+        if file_size > max_size:
+            return jsonify({
+                'success': False,
+                'message': 'File size exceeds 2MB limit'
+            }), 400
+
+        # Validate image using PIL if available
+        if IMAGE_SUPPORT:
+            try:
+                img = PILImage.open(file)
+                img.verify()
+                file.seek(0)  # Reset file pointer after verification
+            except Exception:
+                return jsonify({
+                    'success': False,
+                    'message': 'Invalid image file'
+                }), 400
+
+        # Ensure public directory exists
+        public_dir = 'public'
+        if not os.path.exists(public_dir):
+            os.makedirs(public_dir)
+
+        # Save the file as signature.jpeg
+        signature_path = os.path.join(public_dir, 'signature.jpeg')
+
+        # If file is not JPEG, convert it
+        if file_extension.lower() in ['png']:
+            if IMAGE_SUPPORT:
+                # Convert PNG to JPEG
+                img = PILImage.open(file)
+                if img.mode in ('RGBA', 'LA', 'P'):
+                    # Convert to RGB for JPEG
+                    background = PILImage.new('RGB', img.size, (255, 255, 255))
+                    if img.mode == 'P':
+                        img = img.convert('RGBA')
+                    background.paste(img, mask=img.split()[-1] if img.mode == 'RGBA' else None)
+                    img = background
+                img.save(signature_path, 'JPEG', quality=95)
+            else:
+                return jsonify({
+                    'success': False,
+                    'message': 'PNG conversion not supported. Please upload JPEG files.'
+                }), 400
+        else:
+            # Save JPEG directly
+            file.save(signature_path)
+
+        return jsonify({
+            'success': True,
+            'message': 'Signature uploaded successfully',
+            'data': {
+                'url': '/signature.jpeg',
+                'uploaded_at': datetime.now().isoformat()
+            }
+        })
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error uploading signature: {str(e)}'
+        }), 500
+
+@admin_bp.route('/api/admin/signature', methods=['DELETE'])
+@token_required
+def remove_signature():
+    """Remove the current signature"""
+    # Check if user has admin privileges
+    if request.current_user.get('role') not in ['admin', 'hub_admin']:
+        return jsonify({'message': 'Unauthorized'}), 403
+
+    try:
+        signature_path = os.path.join('public', 'signature.jpeg')
+
+        if os.path.exists(signature_path):
+            os.remove(signature_path)
+            return jsonify({
+                'success': True,
+                'message': 'Signature removed successfully'
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'message': 'No signature found to remove'
+            }), 404
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Error removing signature: {str(e)}'
+        }), 500
+
+# Excel Data Integration Routes
+@admin_bp.route('/api/admin/excel-data', methods=['GET'])
+@token_required
+def get_excel_data():
+    """Get all Excel imported data"""
+    try:
+        data = read_data('excel_test_data.json')
+        return jsonify({'data': data})
+    except Exception as e:
+        return jsonify({'message': f'Failed to fetch Excel data: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/excel-data/search', methods=['GET'])
+@token_required
+def search_excel_data():
+    """Search Excel data by test name or code"""
+    try:
+        query = request.args.get('q', '').strip().lower()
+        if not query:
+            return jsonify({'data': []})
+
+        data = read_data('excel_test_data.json')
+
+        # Search by test name or test code
+        results = []
+        for item in data:
+            test_name = str(item.get('test_name', '')).lower()
+            test_code = str(item.get('test_code', '')).lower()
+
+            if query in test_name or query in test_code:
+                results.append(item)
+
+        return jsonify({'data': results})
+    except Exception as e:
+        return jsonify({'message': f'Search failed: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/excel-data/lookup/<test_code>', methods=['GET'])
+@token_required
+def lookup_test_by_code(test_code):
+    """Lookup test data by test code for auto-population"""
+    try:
+        # Format test code to 6 digits
+        formatted_code = f"{int(test_code):06d}" if test_code.isdigit() else test_code
+
+        data = read_data('excel_test_data.json')
+
+        # Find test by code
+        for item in data:
+            if item.get('test_code') == formatted_code:
+                return jsonify({'data': item, 'found': True})
+
+        return jsonify({'data': None, 'found': False})
+    except Exception as e:
+        return jsonify({'message': f'Lookup failed: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/excel-data/lookup-by-name/<test_name>', methods=['GET'])
+@token_required
+def lookup_test_by_name(test_name):
+    """Lookup test data by test name for auto-population"""
+    try:
+        data = read_data('excel_test_data.json')
+
+        # Find test by name (case insensitive)
+        test_name_lower = test_name.lower()
+        for item in data:
+            if item.get('test_name', '').lower() == test_name_lower:
+                return jsonify({'data': item, 'found': True})
+
+        return jsonify({'data': None, 'found': False})
+    except Exception as e:
+        return jsonify({'message': f'Lookup failed: {str(e)}'}), 500
+
+# Enhanced Test Master Routes
+@admin_bp.route('/api/admin/test-master-enhanced', methods=['GET'])
+@token_required
+def get_enhanced_test_master():
+    """Get enhanced test master data"""
+    try:
+        data = read_data('test_master_enhanced.json')
+        return jsonify({'data': data})
+    except Exception as e:
+        return jsonify({'message': f'Failed to fetch enhanced test master: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/test-master-enhanced', methods=['POST'])
+@token_required
+def add_enhanced_test_master():
+    """Add new enhanced test master entry"""
+    try:
+        data = request.get_json()
+
+        # Read existing data
+        existing_data = read_data('test_master_enhanced.json')
+
+        # Generate new ID
+        new_id = max([item.get('id', 0) for item in existing_data], default=0) + 1
+
+        # Add metadata
+        data['id'] = new_id
+        data['created_at'] = datetime.now().isoformat()
+        data['updated_at'] = datetime.now().isoformat()
+        data['excel_source'] = False  # Manual entry
+
+        # Add to existing data
+        existing_data.append(data)
+
+        # Save
+        write_data('test_master_enhanced.json', existing_data)
+
+        return jsonify({'data': data, 'message': 'Test master entry added successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to add test master entry: {str(e)}'}), 500
+
+# Enhanced Result Master Routes
+@admin_bp.route('/api/admin/result-master-enhanced', methods=['GET'])
+@token_required
+def get_enhanced_result_master():
+    """Get enhanced result master data"""
+    try:
+        data = read_data('result_master_enhanced.json')
+        return jsonify({'data': data})
+    except Exception as e:
+        return jsonify({'message': f'Failed to fetch enhanced result master: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/result-master-enhanced', methods=['POST'])
+@token_required
+def add_enhanced_result_master():
+    """Add new enhanced result master entry"""
+    try:
+        data = request.get_json()
+
+        # Read existing data
+        existing_data = read_data('result_master_enhanced.json')
+
+        # Generate new ID
+        new_id = max([item.get('id', 0) for item in existing_data], default=0) + 1
+
+        # Add metadata
+        data['id'] = new_id
+        data['created_at'] = datetime.now().isoformat()
+        data['updated_at'] = datetime.now().isoformat()
+        data['excel_source'] = False  # Manual entry
+
+        # Add to existing data
+        existing_data.append(data)
+
+        # Save
+        write_data('result_master_enhanced.json', existing_data)
+
+        return jsonify({'data': data, 'message': 'Result master entry added successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to add result master entry: {str(e)}'}), 500
+    
+    
+    
+@admin_bp.route('/api/admin/test-master-enhanced/<int:item_id>', methods=['PUT'])
+@token_required
+def update_enhanced_test_master(item_id):
+    """Update an existing test master entry by ID"""
+    try:
+        updated_data = request.get_json()
+        existing_data = read_data('test_master_enhanced.json')
+
+        # Find and update the matching item
+        for index, item in enumerate(existing_data):
+            if item.get('id') == item_id:
+                updated_data['id'] = item_id  # Preserve original ID
+                updated_data['created_at'] = item.get('created_at')  # Preserve original creation time
+                updated_data['updated_at'] = datetime.now().isoformat()
+                updated_data['excel_source'] = item.get('excel_source', False)
+
+                # Update the item
+                existing_data[index] = updated_data
+
+                # Save the updated data
+                write_data('test_master_enhanced.json', existing_data)
+
+                return jsonify({
+                    'data': updated_data,
+                    'message': 'Test master entry updated successfully'
+                }), 200
+
+        return jsonify({'message': 'Test master entry not found'}), 404
+
+    except Exception as e:
+        return jsonify({'message': f'Failed to update test master entry: {str(e)}'}), 500
+
+
+@admin_bp.route('/api/admin/result-master-enhanced/<int:item_id>', methods=['PUT'])
+@token_required
+def update_enhanced_result_master(item_id):
+    """Update an existing result master entry by ID"""
+    try:
+        updated_data = request.get_json()
+        existing_data = read_data('result_master_enhanced.json')
+
+        # Find item by ID
+        for index, item in enumerate(existing_data):
+            if item.get('id') == item_id:
+                updated_data['id'] = item_id  # Ensure ID stays unchanged
+                updated_data['created_at'] = item.get('created_at')  # Preserve original
+                updated_data['updated_at'] = datetime.now().isoformat()
+                existing_data[index] = updated_data
+
+                # Save updated data
+                write_data('result_master_enhanced.json', existing_data)
+
+                return jsonify({
+                    'data': updated_data,
+                    'message': 'Result master entry updated successfully'
+                }), 200
+
+        return jsonify({'message': 'Result master entry not found'}), 404
+
+    except Exception as e:
+        return jsonify({'message': f'Failed to update result master entry: {str(e)}'}), 500
+
+# Price Scheme Master Routes
+@admin_bp.route('/api/admin/price-scheme-master', methods=['GET'])
+@token_required
+def get_price_scheme_master():
+    """Get all price scheme master data"""
+    try:
+        # Check if user has admin privileges
+        if request.current_user.get('role') not in ['admin', 'hub_admin']:
+            return jsonify({'message': 'Unauthorized'}), 403
+
+        data = read_data('price_scheme_master.json')
+        return jsonify({'data': data})
+    except Exception as e:
+        return jsonify({'message': f'Failed to fetch price scheme master: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/price-scheme-master', methods=['POST'])
+@token_required
+def add_price_scheme_master():
+    """Add new price scheme master entry"""
+    try:
+        # Check if user has admin privileges
+        if request.current_user.get('role') not in ['admin', 'hub_admin']:
+            return jsonify({'message': 'Unauthorized'}), 403
+
+        data = request.get_json()
+
+        # Validate required fields
+        required_fields = ['test_code', 'test_name', 'scheme_code', 'default_price']
+        for field in required_fields:
+            if field not in data or data[field] in [None, ""]:
+                return jsonify({'message': f'Missing required field: {field}'}), 400
+
+        # Read existing data
+        existing_data = read_data('price_scheme_master.json')
+
+        # Generate new ID
+        new_id = max([item.get('id', 0) for item in existing_data], default=0) + 1
+
+        # Calculate price percentage if scheme_price is provided
+        default_price = float(data['default_price'])
+        scheme_price = float(data.get('scheme_price', default_price))
+        price_percentage = round((scheme_price / default_price) * 100, 2) if default_price > 0 else 0
+
+        # Add metadata
+        new_entry = {
+            'id': new_id,
+            'dept_code': data.get('dept_code', ''),
+            'dept_name': data.get('dept_name', ''),
+            'scheme_code': data['scheme_code'],
+            'scheme_name': data.get('scheme_name', ''),
+            'test_type': data.get('test_type', 'T'),
+            'test_code': data['test_code'],
+            'test_name': data['test_name'],
+            'default_price': default_price,
+            'scheme_price': scheme_price,
+            'price_percentage': price_percentage,
+            'is_active': data.get('is_active', True),
+            'created_at': datetime.now().isoformat(),
+            'updated_at': datetime.now().isoformat(),
+            'created_by': request.current_user.get('id', 1)
+        }
+
+        # Add to existing data
+        existing_data.append(new_entry)
+
+        # Save
+        write_data('price_scheme_master.json', existing_data)
+
+        return jsonify({'data': new_entry, 'message': 'Price scheme entry added successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to add price scheme entry: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/price-scheme-master/<int:item_id>', methods=['PUT'])
+@token_required
+def update_price_scheme_master(item_id):
+    """Update an existing price scheme master entry by ID"""
+    try:
+        # Check if user has admin privileges
+        if request.current_user.get('role') not in ['admin', 'hub_admin']:
+            return jsonify({'message': 'Unauthorized'}), 403
+
+        updated_data = request.get_json()
+        existing_data = read_data('price_scheme_master.json')
+
+        # Find the item to update
+        item_index = next((i for i, item in enumerate(existing_data) if item.get('id') == item_id), None)
+        if item_index is None:
+            return jsonify({'message': 'Price scheme entry not found'}), 404
+
+        # Update the item
+        item = existing_data[item_index]
+
+        # Update fields
+        for key, value in updated_data.items():
+            if key not in ['id', 'created_at', 'created_by']:
+                item[key] = value
+
+        # Recalculate price percentage if prices changed
+        if 'default_price' in updated_data or 'scheme_price' in updated_data:
+            default_price = float(item.get('default_price', 0))
+            scheme_price = float(item.get('scheme_price', default_price))
+            item['price_percentage'] = round((scheme_price / default_price) * 100, 2) if default_price > 0 else 0
+
+        item['updated_at'] = datetime.now().isoformat()
+
+        # Save
+        write_data('price_scheme_master.json', existing_data)
+
+        return jsonify({'data': item, 'message': 'Price scheme entry updated successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to update price scheme entry: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/price-scheme-master/<int:item_id>', methods=['DELETE'])
+@token_required
+def delete_price_scheme_master(item_id):
+    """Delete a price scheme master entry by ID"""
+    try:
+        # Check if user has admin privileges
+        if request.current_user.get('role') not in ['admin', 'hub_admin']:
+            return jsonify({'message': 'Unauthorized'}), 403
+
+        existing_data = read_data('price_scheme_master.json')
+
+        # Find the item to delete
+        item_index = next((i for i, item in enumerate(existing_data) if item.get('id') == item_id), None)
+        if item_index is None:
+            return jsonify({'message': 'Price scheme entry not found'}), 404
+
+        # Remove the item
+        deleted_item = existing_data.pop(item_index)
+
+        # Save
+        write_data('price_scheme_master.json', existing_data)
+
+        return jsonify({'message': 'Price scheme entry deleted successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to delete price scheme entry: {str(e)}'}), 500
+
+# Schemes Master Routes (for dropdown data)
+@admin_bp.route('/api/admin/schemes-master', methods=['GET'])
+@token_required
+def get_schemes_master():
+    """Get all schemes master data for dropdowns"""
+    try:
+        data = read_data('schemes_master.json')
+        return jsonify({'data': data})
+    except Exception as e:
+        return jsonify({'message': f'Failed to fetch schemes master: {str(e)}'}), 500
+
+@admin_bp.route('/api/admin/schemes-master', methods=['POST'])
+@token_required
+def add_schemes_master():
+    """Add new scheme master entry"""
+    try:
+        # Check if user has admin privileges
+        if request.current_user.get('role') not in ['admin', 'hub_admin']:
+            return jsonify({'message': 'Unauthorized'}), 403
+
+        data = request.get_json()
+
+        # Validate required fields
+        required_fields = ['scheme_code', 'scheme_name']
+        for field in required_fields:
+            if field not in data or data[field] in [None, ""]:
+                return jsonify({'message': f'Missing required field: {field}'}), 400
+
+        # Read existing data
+        existing_data = read_data('schemes_master.json')
+
+        # Check for duplicate scheme code
+        if any(item.get('scheme_code') == data['scheme_code'] for item in existing_data):
+            return jsonify({'message': 'Scheme code already exists'}), 400
+
+        # Generate new ID
+        new_id = max([item.get('id', 0) for item in existing_data], default=0) + 1
+
+        # Add metadata
+        new_entry = {
+            'id': new_id,
+            'scheme_code': data['scheme_code'],
+            'scheme_name': data['scheme_name'],
+            'description': data.get('description', ''),
+            'is_active': data.get('is_active', True),
+            'created_at': datetime.now().isoformat(),
+            'updated_at': datetime.now().isoformat(),
+            'created_by': request.current_user.get('id', 1)
+        }
+
+        # Add to existing data
+        existing_data.append(new_entry)
+
+        # Save
+        write_data('schemes_master.json', existing_data)
+
+        return jsonify({'data': new_entry, 'message': 'Scheme added successfully'})
+    except Exception as e:
+        return jsonify({'message': f'Failed to add scheme: {str(e)}'}), 500

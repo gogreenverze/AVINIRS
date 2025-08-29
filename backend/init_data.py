@@ -82,32 +82,55 @@ tests = [
     {'id': 10, 'test_name': 'Dengue NS1 Antigen', 'sample_type_id': 2, 'turnaround_time': '1 day', 'price': 700}
 ]
 
-# Tenants (Labs)
+# Tenants (Labs) - Real franchise data based on PRABAGARAN.pdf reference
 tenants = [
     {
         "id": 1,
-        "name": "AVINI Labs Chennai",
-        "site_code": "CHN",
-        "address": "123 Anna Salai, Chennai, Tamil Nadu",
-        "contact_phone": "9876543210",
+        "name": "AVINI Labs Mayiladuthurai",
+        "site_code": "MYD",
+        "address": "Main Hub, Mayiladuthurai, Tamil Nadu",
+        "contact_phone": "6384440505",
+        "email": "info@avinilabs.com",
         "is_hub": True,
         "is_active": True
     },
     {
         "id": 2,
-        "name": "AVINI Labs Coimbatore",
-        "site_code": "CBE",
-        "address": "45 DB Road, RS Puram, Coimbatore, Tamil Nadu",
-        "contact_phone": "9876543211",
+        "name": "AVINI Labs Sirkazhi",
+        "site_code": "SKZ",
+        "address": "Sirkazhi, Tamil Nadu",
+        "contact_phone": "6384440502",
+        "email": "admin@sirkazhi.avinilabs.com",
         "is_hub": False,
         "is_active": True
     },
     {
         "id": 3,
-        "name": "AVINI Labs Madurai",
-        "site_code": "MDU",
-        "address": "78 North Veli Street, Madurai, Tamil Nadu",
-        "contact_phone": "9876543212",
+        "name": "AVINI Labs Thanjavur",
+        "site_code": "TNJ",
+        "address": "Thanjavur, Tamil Nadu",
+        "contact_phone": "6384440520",
+        "email": "admin@thanjavur.avinilabs.com",
+        "is_hub": False,
+        "is_active": True
+    },
+    {
+        "id": 4,
+        "name": "AVINI Labs Kuthalam",
+        "site_code": "KTL",
+        "address": "Kuthalam, Tamil Nadu",
+        "contact_phone": "9488776966",
+        "email": "admin@kuthalam.avinilabs.com",
+        "is_hub": False,
+        "is_active": True
+    },
+    {
+        "id": 5,
+        "name": "AVINI Labs Aduthurai",
+        "site_code": "ADT",
+        "address": "Aduthurai, Tamil Nadu",
+        "contact_phone": "6384440510",
+        "email": "admin@aduthurai.avinilabs.com",
         "is_hub": False,
         "is_active": True
     }

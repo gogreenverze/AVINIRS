@@ -1,0 +1,50 @@
+[
+  {
+    "Test Name": "C/S - OTHERS.",
+    "code": 1555,
+    "Department": "MICROBIOLOGY SURVEILLANCE",
+    "Price": 450,
+    "Result Type": "Pick List",
+    "      Test Done On": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "Microbiology Surveillance Test (1 Swab)",
+    "code": 1347,
+    "Department": "MICROBIOLOGY SURVEILLANCE",
+    "Price": 175,
+    "Result Type": "Template",
+    "      Test Done On": "all",
+    "Applicable to": "Both",
+    "  Reporting Days": 5
+  },
+  {
+    "Test Name": "Microbiology Surveillance Test (Anaerobic)",
+    "code": 738,
+    "Department": "MICROBIOLOGY SURVEILLANCE",
+    "Price": 400,
+    "Result Type": "Template",
+    "      Test Done On": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "Open End Specimen",
+    "code": 1363,
+    "Department": "MICROBIOLOGY SURVEILLANCE",
+    "Price": 175,
+    "Result Type": "Template",
+    "Short Name": "OES",
+    "      Test Done On": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "Water Culture (Direct & Enrichment)",
+    "code": 1346,
+    "Department": "MICROBIOLOGY SURVEILLANCE",
+    "Price": 500,
+    "Result Type": "Template",
+    "      Test Done On": "all",
+    "Applicable to": "Both",
+    "  Reporting Days": 5
+  }
+]

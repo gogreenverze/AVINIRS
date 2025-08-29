@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "Dashboard",
+    "code": "DASHBOARD",
+    "description": "Main dashboard with overview and metrics",
+    "route": "/dashboard",
+    "icon": "faTachometerAlt",
+    "category": "main",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Patients",
+    "code": "PATIENTS",
+    "description": "Patient management and records",
+    "route": "/patients",
+    "icon": "faUser",
+    "category": "pre_analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "Samples",
+    "code": "SAMPLES",
+    "description": "Sample collection and management",
+    "route": "/samples",
+    "icon": "faVial",
+    "category": "pre_analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "Sample Routing",
+    "code": "SAMPLE_ROUTING",
+    "description": "Sample routing and transfer management",
+    "route": "/samples/routing",
+    "icon": "faRoute",
+    "category": "pre_analytical",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "Results",
+    "code": "RESULTS",
+    "description": "Test results and reporting",
+    "route": "/results",
+    "icon": "faClipboardList",
+    "category": "analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "name": "Lab Processing",
+    "code": "LAB",
+    "description": "Laboratory processing and workflow",
+    "route": "/lab",
+    "icon": "faFlask",
+    "category": "analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "name": "Quality Control",
+    "code": "QUALITY_CONTROL",
+    "description": "Quality control and assurance",
+    "route": "/lab/quality-control",
+    "icon": "faCheckCircle",
+    "category": "analytical",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "name": "Billing",
+    "code": "BILLING",
+    "description": "Billing and invoice management",
+    "route": "/billing",
+    "icon": "faFileInvoiceDollar",
+    "category": "post_analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 9,
+    "name": "Reports",
+    "code": "REPORTS",
+    "description": "Analytics and reporting",
+    "route": "/reports",
+    "icon": "faChartBar",
+    "category": "post_analytical",
+    "is_core": true,
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "Inventory",
+    "code": "INVENTORY",
+    "description": "Inventory and stock management",
+    "route": "/inventory",
+    "icon": "faBoxes",
+    "category": "management",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 11,
+    "name": "Admin",
+    "code": "ADMIN",
+    "description": "System administration and configuration",
+    "route": "/admin",
+    "icon": "faCog",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 12,
+    "name": "User Management",
+    "code": "USER_MANAGEMENT",
+    "description": "User and role management",
+    "route": "/admin/users",
+    "icon": "faUsers",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 13,
+    "name": "Master Data",
+    "code": "MASTER_DATA",
+    "description": "Master data configuration",
+    "route": "/admin/master-data",
+    "icon": "faDatabase",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 14,
+    "name": "Settings",
+    "code": "SETTINGS",
+    "description": "System settings and configuration",
+    "route": "/admin/settings",
+    "icon": "faWrench",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 15,
+    "name": "Access Management",
+    "code": "ACCESS_MANAGEMENT",
+    "description": "Manage franchise module access permissions and restrictions",
+    "route": "/admin/access-management",
+    "icon": "faShieldAlt",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  },
+  {
+    "id": 16,
+    "name": "Referral Master",
+    "code": "REFERRAL_MASTER",
+    "description": "Manage referral sources, pricing schemes, and commission rules",
+    "route": "/admin/technical-master-data",
+    "icon": "faUsers",
+    "category": "administration",
+    "is_core": false,
+    "is_active": true
+  }
+]

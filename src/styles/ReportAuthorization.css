@@ -1,0 +1,323 @@
+/* Report Authorization Styles */
+.report-authorization {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header-title-section h1 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.header-title-section p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.header-actions {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Card Styling */
+.report-authorization .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.report-authorization .card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.report-authorization .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 12px 12px 0 0 !important;
+}
+
+/* Table Styling */
+.report-authorization .table {
+  margin-bottom: 0;
+}
+
+.report-authorization .table th {
+  background-color: #f8f9fa;
+  border-top: none;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.875rem;
+  padding: 1rem 0.75rem;
+}
+
+.report-authorization .table td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-top: 1px solid #e9ecef;
+}
+
+.report-authorization .table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.report-authorization .badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Button Styling */
+.report-authorization .btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.report-authorization .btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.report-authorization .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  transform: translateY(-1px);
+}
+
+.report-authorization .btn-outline-success:hover {
+  background-color: #198754;
+  border-color: #198754;
+  transform: translateY(-1px);
+}
+
+/* Search and Filter Section */
+.report-authorization .input-group-text {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+  color: #6c757d;
+}
+
+.report-authorization .form-control:focus,
+.report-authorization .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Empty State */
+.report-authorization .text-center.py-5 {
+  padding: 3rem 1rem !important;
+}
+
+.report-authorization .text-center.py-5 .fa-info-circle {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+/* Loading State */
+.report-authorization .spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Modal Styling */
+.report-authorization .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.report-authorization .modal-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.report-authorization .modal-body {
+  padding: 1.5rem;
+}
+
+.report-authorization .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.report-authorization .form-control,
+.report-authorization .form-select {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+}
+
+.report-authorization .form-control:focus,
+.report-authorization .form-select:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Alert Styling */
+.report-authorization .alert {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.report-authorization .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-authorization {
+    padding: 15px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+  
+  .header-actions .btn {
+    flex: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .report-authorization .table-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .report-authorization .table th,
+  .report-authorization .table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .report-authorization .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .report-authorization .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .report-authorization {
+    padding: 10px;
+  }
+  
+  .header-title-section h1 {
+    font-size: 1.25rem;
+  }
+  
+  .report-authorization .card-body {
+    padding: 1rem;
+  }
+  
+  .report-authorization .table th,
+  .report-authorization .table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Hide less important columns on mobile */
+  .report-authorization .table th:nth-child(4),
+  .report-authorization .table td:nth-child(4),
+  .report-authorization .table th:nth-child(6),
+  .report-authorization .table td:nth-child(6) {
+    display: none;
+  }
+}
+
+/* Animation for loading states */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.report-authorization .card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Checkbox styling */
+.report-authorization .form-check-input {
+  border-radius: 4px;
+  border: 2px solid #ced4da;
+}
+
+.report-authorization .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.report-authorization .form-check-input:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Action buttons container */
+.report-authorization .d-flex.gap-1 {
+  gap: 0.25rem !important;
+}
+
+/* Status-specific styling */
+.report-authorization .badge.bg-success {
+  background-color: #198754 !important;
+}
+
+.report-authorization .badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000;
+}
+
+.report-authorization .badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.report-authorization .badge.bg-info {
+  background-color: #0dcaf0 !important;
+  color: #000;
+}
+
+/* Hover effects for table rows */
+.report-authorization .table-hover tbody tr {
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Focus states for accessibility */
+.report-authorization .btn:focus,
+.report-authorization .form-control:focus,
+.report-authorization .form-select:focus,
+.report-authorization .form-check-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Print styles */
+@media print {
+  .report-authorization .header-actions,
+  .report-authorization .card:first-child,
+  .report-authorization .card:nth-child(2) {
+    display: none !important;
+  }
+  
+  .report-authorization .table {
+    font-size: 12px;
+  }
+  
+  .report-authorization .table th,
+  .report-authorization .table td {
+    padding: 0.25rem;
+  }
+}

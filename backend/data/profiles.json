@@ -1,0 +1,992 @@
+[
+  {
+    "code": "P00024",
+    "procedure_code": "wew",
+    "test_profile": "wewq",
+    "test_price": "02",
+    "discount_price": "02",
+    "emergency_price": "02",
+    "home_visit_price": "02",
+    "discount": "02",
+    "category": "Standard",
+    "test_count": "02",
+    "is_active": true,
+    "description": "jkhk",
+    "testItems": [
+      {
+        "test_id": 2,
+        "testName": "Abs.Eosinophils in #.",
+        "amount": 0
+      },
+      {
+        "test_id": 49,
+        "testName": "NASAL SMEAR FOR EOSINOPHILS",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "994c11af-3f22-412c-9c79-8b742109b8a9"
+  },
+  {
+    "code": "testing profile master",
+    "procedure_code": "90829031",
+    "test_profile": "testing profile",
+    "test_price": "02",
+    "discount_price": "02",
+    "emergency_price": "02",
+    "home_visit_price": "02",
+    "discount": "02",
+    "category": "Standard",
+    "test_count": "02",
+    "is_active": true,
+    "description": "test",
+    "testItems": [
+      {
+        "test_id": 48,
+        "testName": "MYOGLOBIN-SERUM",
+        "amount": 0
+      },
+      {
+        "test_id": 12,
+        "testName": "Chromosome Analysis - Product of Conception",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "1535110d-a306-4d07-ade6-2c12d781d085"
+  },
+  {
+    "code": "P000242",
+    "procedure_code": "23",
+    "test_profile": "new profile",
+    "test_price": "02",
+    "discount_price": "02",
+    "emergency_price": "02",
+    "home_visit_price": "02",
+    "discount": "02",
+    "category": "Standard",
+    "test_count": "02",
+    "is_active": true,
+    "description": "test",
+    "testItems": [
+      {
+        "test_id": 49,
+        "testName": "NASAL SMEAR FOR EOSINOPHILS",
+        "amount": 0
+      },
+      {
+        "test_id": 21,
+        "testName": "ESR",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "1ae4e947-5b16-4fac-9c13-c3ddc008785c"
+  },
+  {
+    "code": "7898",
+    "procedure_code": "879",
+    "test_profile": "chekinf",
+    "test_price": "020",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "",
+    "test_count": "02",
+    "is_active": true,
+    "description": "test",
+    "testItems": [
+      {
+        "test_id": 25,
+        "testName": "FILARIAL ANTIBODY",
+        "amount": 0
+      },
+      {
+        "test_id": 26,
+        "testName": "FILARIAL ANTIGEN",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "0f0dd280-46c3-4d5e-b47d-948ba0558e4c"
+  },
+  {
+    "code": "P00001",
+    "procedure_code": "P00001",
+    "test_profile": "Lipid Profile",
+    "test_price": "400",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "7",
+    "is_active": true,
+    "description": "Lipid Profile",
+    "testItems": [
+      {
+        "test_id": 255,
+        "testName": "Cholesterol, Total",
+        "amount": 0
+      },
+      {
+        "test_id": 583,
+        "testName": "Triglycerides",
+        "amount": 0
+      },
+      {
+        "test_id": 252,
+        "testName": "Cholesterol, HDL",
+        "amount": 0
+      },
+      {
+        "test_id": 253,
+        "testName": "Cholesterol, LDL",
+        "amount": 0
+      },
+      {
+        "test_id": 256,
+        "testName": "Cholesterol, VLDL",
+        "amount": 0
+      },
+      {
+        "test_id": 257,
+        "testName": "Cholesterol/HDL Ratio",
+        "amount": 0
+      },
+      {
+        "test_id": 526,
+        "testName": "LDL/HDL Ratio",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "c1d4fe27-8f93-4a8a-80ae-62aef9af3564"
+  },
+  {
+    "code": "P00002",
+    "procedure_code": "P00002",
+    "test_profile": "Liver Function test",
+    "test_price": "500",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "11",
+    "is_active": true,
+    "description": "Liver Function test",
+    "testItems": [
+      {
+        "test_id": 424,
+        "testName": "Bilirubin, Total",
+        "amount": 0
+      },
+      {
+        "test_id": 422,
+        "testName": "Bilirubin, Direct",
+        "amount": 0
+      },
+      {
+        "test_id": 423,
+        "testName": "Bilirubin, Indirect",
+        "amount": 0
+      },
+      {
+        "test_id": 418,
+        "testName": "Aspartate aminotransferase (AST/SGOT)",
+        "amount": 0
+      },
+      {
+        "test_id": 402,
+        "testName": "Alanine aminotransferase (ALT/SGPT)",
+        "amount": 0
+      },
+      {
+        "test_id": 407,
+        "testName": "Alkaline phosphatase",
+        "amount": 0
+      },
+      {
+        "test_id": 417,
+        "testName": "Gamma Glutamyl-Transferase (GGT)",
+        "amount": 0
+      },
+      {
+        "test_id": 578,
+        "testName": "Total Protein.",
+        "amount": 0
+      },
+      {
+        "test_id": 403,
+        "testName": "Albumin",
+        "amount": 0
+      },
+      {
+        "test_id": 485,
+        "testName": "Globulin",
+        "amount": 0
+      },
+      {
+        "test_id": 404,
+        "testName": "Albumin/Globulin",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "be21dd7a-4686-470a-bcc4-8031730d62c7"
+  },
+  {
+    "code": "P00003",
+    "procedure_code": "P00003",
+    "test_profile": "Complete Blood count- 5P",
+    "test_price": "400",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "",
+    "test_count": "14",
+    "is_active": true,
+    "description": "Complete Blood count- 5P",
+    "testItems": [
+      {
+        "test_id": 78,
+        "testName": "Total WBC count",
+        "amount": 0
+      },
+      {
+        "test_id": 18,
+        "testName": "DIFFERENTIAL COUNT-5 Part",
+        "amount": 0
+      },
+      {
+        "test_id": 28,
+        "testName": "Haemoglobin",
+        "amount": 0
+      },
+      {
+        "test_id": 53,
+        "testName": "PCV",
+        "amount": 0
+      },
+      {
+        "test_id": 70,
+        "testName": "Red Blood Cell (RBC) Count",
+        "amount": 0
+      },
+      {
+        "test_id": 43,
+        "testName": "MCV",
+        "amount": 0
+      },
+      {
+        "test_id": 41,
+        "testName": "MCH",
+        "amount": 0
+      },
+      {
+        "test_id": 42,
+        "testName": "MCHC",
+        "amount": 0
+      },
+      {
+        "test_id": 55,
+        "testName": "Platelet count",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "ef569a17-a1e0-4ec2-b12d-f261a7d8fd34"
+  },
+  {
+    "code": "P00017",
+    "procedure_code": "P00017",
+    "test_profile": "LIVER FUNCTION TEST WITH GGT",
+    "test_price": "600.00",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "",
+    "test_count": "7",
+    "is_active": true,
+    "description": "LIVER FUNCTION TEST WITH GGT",
+    "testItems": [
+      {
+        "test_id": 424,
+        "testName": "Bilirubin, Total",
+        "amount": 0
+      },
+      {
+        "test_id": 422,
+        "testName": "Bilirubin, Direct",
+        "amount": 0
+      },
+      {
+        "test_id": 423,
+        "testName": "Bilirubin, Indirect",
+        "amount": 0
+      },
+      {
+        "test_id": 418,
+        "testName": "Aspartate aminotransferase (AST/SGOT)",
+        "amount": 0
+      },
+      {
+        "test_id": 402,
+        "testName": "Alanine aminotransferase (ALT/SGPT)",
+        "amount": 0
+      },
+      {
+        "test_id": 407,
+        "testName": "Alkaline phosphatase",
+        "amount": 0
+      },
+      {
+        "test_id": 417,
+        "testName": "Gamma Glutamyl-Transferase (GGT)",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "ce65ece8-1920-4f38-97c0-9f33e94a1881"
+  },
+  {
+    "code": "P00004",
+    "procedure_code": "P00004",
+    "test_profile": "TOTAL PROTEIN & A/G RATIO",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "",
+    "test_count": "4",
+    "is_active": true,
+    "description": "TOTAL PROTEIN & A/G RATIO",
+    "testItems": [
+      {
+        "test_id": 578,
+        "testName": "Total Protein.",
+        "amount": 0
+      },
+      {
+        "test_id": 403,
+        "testName": "Albumin",
+        "amount": 0
+      },
+      {
+        "test_id": 485,
+        "testName": "Globulin",
+        "amount": 0
+      },
+      {
+        "test_id": 404,
+        "testName": "Albumin/Globulin",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "fad350d6-e611-4397-94f5-58a38ecb1e42"
+  },
+  {
+    "code": "P00006",
+    "procedure_code": "P00006",
+    "test_profile": "ELECTROLYTES",
+    "test_price": "500",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "",
+    "test_count": "3",
+    "is_active": true,
+    "description": "ELECTROLYTES",
+    "testItems": [
+      {
+        "test_id": 574,
+        "testName": "Sodium",
+        "amount": 0
+      },
+      {
+        "test_id": 559,
+        "testName": "Potassium",
+        "amount": 0
+      },
+      {
+        "test_id": 441,
+        "testName": "Chloride",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "830b9165-6d55-4005-86d3-645b4f7a7081"
+  },
+  {
+    "code": "P00008",
+    "procedure_code": "P00008",
+    "test_profile": "BILIRUBIN PROFILE",
+    "test_price": "150",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "3",
+    "is_active": true,
+    "description": "BILIRUBIN PROFILE",
+    "testItems": [
+      {
+        "test_id": 424,
+        "testName": "Bilirubin, Total",
+        "amount": 0
+      },
+      {
+        "test_id": 422,
+        "testName": "Bilirubin, Direct",
+        "amount": 0
+      },
+      {
+        "test_id": 423,
+        "testName": "Bilirubin, Indirect",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "c4b14d9e-94c1-41b7-b77b-ec5021fbed83"
+  },
+  {
+    "code": "P00014",
+    "procedure_code": "P00014",
+    "test_profile": "ENA PROFILE",
+    "test_price": "3600",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "6",
+    "is_active": true,
+    "description": "ENA PROFILE",
+    "testItems": [
+      {
+        "test_id": 357,
+        "testName": "S S A ANTI R-O ANTIBODY",
+        "amount": 0
+      },
+      {
+        "test_id": 358,
+        "testName": "S S B-La ANTIBODY",
+        "amount": 0
+      },
+      {
+        "test_id": 231,
+        "testName": "Antibody to Sm Antigen",
+        "amount": 0
+      },
+      {
+        "test_id": 352,
+        "testName": "RNP-Sm Antibody",
+        "amount": 0
+      },
+      {
+        "test_id": 317,
+        "testName": "Jo-1 Antibody",
+        "amount": 0
+      },
+      {
+        "test_id": 362,
+        "testName": "Scl-70 Antibody IgG (DNA Topoisomerase-1)",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "868a7c1f-315f-44f7-a2eb-a8c04846e24b"
+  },
+  {
+    "code": "P00080",
+    "procedure_code": "P00080",
+    "test_profile": "FERTILITY PACKAGE- FEMALE",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "7",
+    "is_active": true,
+    "description": "FERTILITY PACKAGE- FEMALE",
+    "testItems": [
+      {
+        "test_id": 506,
+        "testName": "Glucose, Random",
+        "amount": 0
+      },
+      {
+        "test_id": 387,
+        "testName": "BLOOD GROUPING & Rh",
+        "amount": 0
+      },
+      {
+        "test_id": 106,
+        "testName": "Urine Complete Examination",
+        "amount": 0
+      },
+      {
+        "test_id": 207,
+        "testName": "ANTI HCV (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 214,
+        "testName": "ANTI HIV 1&2 (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 296,
+        "testName": "HBsAg (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 366,
+        "testName": "Syphilis (VDRL)",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "cf764720-3e53-4c98-a5ee-c968f5533fde"
+  },
+  {
+    "code": "P00079",
+    "procedure_code": "P00079",
+    "test_profile": "AROGYAM C PROFLE-THYROCARE",
+    "test_price": "2400",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "1",
+    "is_active": true,
+    "description": "AROGYAM C PROFLE-THYROCARE",
+    "testItems": [
+      {
+        "test_id": 509,
+        "testName": "HbA1c",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "eff4a9d5-fa00-4ba6-9689-462b35de0fc9"
+  },
+  {
+    "code": "P00078",
+    "procedure_code": "P00078",
+    "test_profile": "AROGYAM B PROFLE-THYROCARE",
+    "test_price": "2400",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "1",
+    "is_active": true,
+    "description": "AROGYAM B PROFLE-THYROCARE",
+    "testItems": [
+      {
+        "amount": 0,
+        "testName": "HbA1c",
+        "test_id": 509
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "1562fad0-cc85-4488-ba1a-dd8b58cddab6"
+  },
+  {
+    "code": "P00077",
+    "procedure_code": "P00077",
+    "test_profile": "PRE PROCEDURE TEST FOR PERCUTANEOUS FUE- TITANIUM HAIR TRANSPLANTATION",
+    "test_price": "0",
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "8",
+    "is_active": true,
+    "description": "PRE PROCEDURE TEST FOR PERCUTANEOUS FUE- TITANIUM HAIR TRANSPLANTATION",
+    "testItems": [
+      {
+        "amount": 0,
+        "testName": "Glucose, Random",
+        "test_id": 506
+      },
+      {
+        "amount": 0,
+        "testName": "BLEEDING TIME",
+        "test_id": 10
+      },
+      {
+        "amount": 0,
+        "testName": "CLOTTING TIME",
+        "test_id": 13
+      },
+      {
+        "amount": 0,
+        "testName": "HBsAg (CARD)",
+        "test_id": 296
+      },
+      {
+        "amount": 0,
+        "testName": "ANTI HIV 1&2 (CARD)",
+        "test_id": 214
+      },
+      {
+        "amount": 0,
+        "testName": "ANTI HCV (CARD)",
+        "test_id": 207
+      },
+      {
+        "amount": 0,
+        "testName": "ESR",
+        "test_id": 21
+      },
+      {
+        "amount": 0,
+        "testName": "CRP",
+        "test_id": 460
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "148a8d41-f286-4b75-adf7-ec686316c45d"
+  },
+  {
+    "code": "P00075",
+    "procedure_code": "P00075",
+    "test_profile": "MAXI VISION CATARACT PROFILE",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "6",
+    "is_active": true,
+    "description": "MAXI VISION CATARACT PROFILE",
+    "testItems": [
+      {
+        "test_id": 28,
+        "testName": "Haemoglobin",
+        "amount": 0
+      },
+      {
+        "test_id": 506,
+        "testName": "Glucose, Random",
+        "amount": 0
+      },
+      {
+        "test_id": 588,
+        "testName": "Urea",
+        "amount": 0
+      },
+      {
+        "test_id": 459,
+        "testName": "Creatinine",
+        "amount": 0
+      },
+      {
+        "test_id": 296,
+        "testName": "HBsAg (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 214,
+        "testName": "ANTI HIV 1&2 (CARD)",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "9a4f315d-c261-4824-8921-ad09ab8fb535"
+  },
+  {
+    "code": "P00074",
+    "procedure_code": "P00074",
+    "test_profile": "PRE PROCEDURE TEST FOR ADVANCED GEL PRP, STEM X27, REGEN PRO 9- FEMALE",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "9",
+    "is_active": true,
+    "description": "PRE PROCEDURE TEST FOR ADVANCED GEL PRP, STEM X27, REGEN PRO 9- FEMALE",
+    "testItems": [
+      {
+        "amount": 0,
+        "testName": "Glucose, Fasting",
+        "test_id": 499
+      },
+      {
+        "amount": 0,
+        "testName": "Glucose, Random",
+        "test_id": 506
+      },
+      {
+        "amount": 0,
+        "testName": "BLEEDING TIME",
+        "test_id": 10
+      },
+      {
+        "amount": 0,
+        "testName": "CLOTTING TIME",
+        "test_id": 13
+      },
+      {
+        "amount": 0,
+        "testName": "HBsAg (CARD)",
+        "test_id": 296
+      },
+      {
+        "amount": 0,
+        "testName": "ANTI HIV 1&2 (CARD)",
+        "test_id": 214
+      },
+      {
+        "amount": 0,
+        "testName": "ANTI HCV (CARD)",
+        "test_id": 207
+      },
+      {
+        "amount": 0,
+        "testName": "CRP",
+        "test_id": 460
+      },
+      {
+        "amount": 0,
+        "testName": "ESR",
+        "test_id": 21
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "2b45efdd-858c-4761-8aea-700f9d9580c4"
+  },
+  {
+    "code": "P00073",
+    "procedure_code": "P00073",
+    "test_profile": "DIWALI SPECIAL OFFER -DIABETIC PROFILE",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": 0,
+    "is_active": true,
+    "description": "DIWALI SPECIAL OFFER -DIABETIC PROFILE",
+    "testItems": [
+      {
+        "amount": 0,
+        "testName": "Urine Complete Examination",
+        "test_id": 106
+      },
+      {
+        "amount": 0,
+        "testName": "Glucose, Random",
+        "test_id": 506
+      },
+      {
+        "amount": 0,
+        "testName": "HbA1c",
+        "test_id": 509
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "d44bb714-7a57-418c-8bd1-b4e3c2689208"
+  },
+  {
+    "code": "P00071",
+    "procedure_code": "P00071",
+    "test_profile": "PRE PROCEDURE TEST FOR ADVANCED GEL PRP",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "7",
+    "is_active": true,
+    "description": "PRE PROCEDURE TEST FOR ADVANCED GEL PRP",
+    "testItems": [
+      {
+        "test_id": 499,
+        "testName": "Glucose, Fasting",
+        "amount": 0
+      },
+      {
+        "test_id": 10,
+        "testName": "BLEEDING TIME",
+        "amount": 0
+      },
+      {
+        "test_id": 13,
+        "testName": "CLOTTING TIME",
+        "amount": 0
+      },
+      {
+        "test_id": 296,
+        "testName": "HBsAg (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 214,
+        "testName": "ANTI HIV 1&2 (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 207,
+        "testName": "ANTI HCV (CARD)",
+        "amount": 0
+      },
+      {
+        "test_id": 460,
+        "testName": "CRP",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "gstRate": 18,
+    "id": "f0072d1c-657a-4f98-b7c1-5b47bdf259a7"
+  },
+  {
+    "code": "P00069",
+    "procedure_code": "P00069",
+    "test_profile": "INAUGURAL OFFER",
+    "test_price": 0,
+    "discount_price": 0,
+    "emergency_price": 0,
+    "home_visit_price": 0,
+    "discount": 0,
+    "category": "Standard",
+    "test_count": "4",
+    "is_active": true,
+    "description": "INAUGURAL OFFER",
+    "testItems": [
+      {
+        "test_id": 499,
+        "testName": "Glucose, Fasting",
+        "amount": 0
+      },
+      {
+        "test_id": 503,
+        "testName": "Glucose, Post-prandial",
+        "amount": 0
+      },
+      {
+        "test_id": 509,
+        "testName": "HbA1c",
+        "amount": 0
+      },
+      {
+        "test_id": 106,
+        "testName": "Urine Complete Examination",
+        "amount": 0
+      }
+    ],
+    "currentTest": {
+      "test_id": null,
+      "testName": "",
+      "amount": 0
+    },
+    "id": "241d7670-d9bd-4b37-bbc6-29f7f9d30e23"
+  }
+]

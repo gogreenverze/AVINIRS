@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pricing Implementation Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 280px;
+            background: #2c3e50;
+            color: white;
+            overflow-y: auto;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        
+        .sidebar.collapsed {
+            transform: translateX(-280px);
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .main-content.expanded {
+            margin-left: 0;
+        }
+        
+        .sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: #3498db;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .nav-link {
+            color: #bdc3c7 !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 2px 0;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: #34495e;
+            color: #3498db !important;
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature-card {
+            border-left: 4px solid #3498db;
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .step-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .badge-custom {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+        
+        .alert-custom {
+            border-left: 4px solid #f39c12;
+            background: #fef9e7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .pricing-matrix {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .app-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+        }
+        
+        .app-link {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .app-link:hover {
+            background: #219a52;
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-280px);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- App Links -->
+    <div class="app-links">
+        <a href="http://localhost:3000" target="_blank" class="app-link">
+            <i class="fas fa-external-link-alt"></i> Open React App
+        </a>
+        <a href="http://localhost:5001" target="_blank" class="app-link">
+            <i class="fas fa-server"></i> Backend API
+        </a>
+    </div>
+
+    <!-- Sidebar Toggle -->
+    <button class="sidebar-toggle d-md-none" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="p-3">
+            <h4 class="text-center mb-4">
+                <i class="fas fa-calculator text-primary"></i>
+                Dynamic Pricing
+            </h4>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="showSection('overview')">
+                        <i class="fas fa-home"></i> Overview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('features')">
+                        <i class="fas fa-star"></i> Key Features
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('implementation')">
+                        <i class="fas fa-code"></i> Implementation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('configuration')">
+                        <i class="fas fa-cog"></i> Configuration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('usage')">
+                        <i class="fas fa-user"></i> Usage Guide
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('testing')">
+                        <i class="fas fa-vial"></i> Testing
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('admin')">
+                        <i class="fas fa-shield-alt"></i> Admin Panel
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('troubleshooting')">
+                        <i class="fas fa-wrench"></i> Troubleshooting
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Overview Section -->
+        <section id="overview" class="section active">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-4 mb-4">
+                            <i class="fas fa-calculator text-primary"></i>
+                            Dynamic Pricing Implementation
+                        </h1>
+                        <p class="lead">
+                            A comprehensive dynamic pricing system for your medical billing application that automatically 
+                            determines test prices based on referral sources and pricing schemes.
+                        </p>
+                        
+                        <div class="row mt-5">
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h5><i class="fas fa-magic text-primary"></i> Automatic Pricing</h5>
+                                    <p>Prices update automatically when test or referral source changes</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h5><i class="fas fa-shield-alt text-success"></i> Fallback Safety</h5>
+                                    <p>Multiple fallback levels ensure pricing always works</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-card">
+                                    <h5><i class="fas fa-chart-line text-info"></i> Flexible Schemes</h5>
+                                    <p>Support for Standard, Corporate, Insurance, and Promotional pricing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-custom mt-4">
+                            <h6><i class="fas fa-info-circle"></i> Quick Start</h6>
+                            <p class="mb-0">
+                                Your React app is running at <strong>localhost:3000</strong> and backend at <strong>localhost:5001</strong>.
+                                Navigate to Billing → Create New Bill to test the enhanced dynamic pricing system with referral discounts and commission calculations.
+                            </p>
+                        </div>
+
+                        <div class="alert alert-success mt-4">
+                            <h6><i class="fas fa-check-circle"></i> Latest Updates</h6>
+                            <ul class="mb-0">
+                                <li><strong>SID Generation Fixed:</strong> Resolved tenant ID parsing issues</li>
+                                <li><strong>Comprehensive Referral Master:</strong> Added discount percentages and commission rules</li>
+                                <li><strong>Enhanced Pricing Logic:</strong> Volume discounts, loyalty tiers, and detailed breakdowns</li>
+                                <li><strong>Admin Interface:</strong> New Referral Master Management component</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-star text-primary"></i> Key Features</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>🎯 Multiple Pricing Schemes</h5>
+                            <ul>
+                                <li><span class="badge-custom">Standard</span> Regular patient pricing</li>
+                                <li><span class="badge-custom">Corporate</span> Company employee discounts</li>
+                                <li><span class="badge-custom">Insurance</span> Insurance covered rates</li>
+                                <li><span class="badge-custom">Promotional</span> Special offer pricing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>🏥 Referral Source Integration</h5>
+                            <ul>
+                                <li>Doctor referrals</li>
+                                <li>Self-referred patients</li>
+                                <li>Hospital partnerships</li>
+                                <li>Corporate contracts</li>
+                                <li>Insurance providers</li>
+                                <li>Lab-to-lab referrals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-matrix">
+                    <h5>📊 Pricing Logic Flow</h5>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <ol>
+                                <li><strong>Test Selection:</strong> User selects a test from dropdown</li>
+                                <li><strong>Referral Source:</strong> User selects referral source (defaults to "Self")</li>
+                                <li><strong>Scheme Determination:</strong> System determines pricing scheme automatically</li>
+                                <li><strong>Price Calculation:</strong> System calculates price with fallback logic</li>
+                                <li><strong>Display:</strong> Price updates in real-time with calculation details</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="alert alert-info">
+                                <h6>💡 Smart Fallbacks</h6>
+                                <small>
+                                    If specific pricing isn't found, the system automatically falls back through 
+                                    5 levels to ensure a price is always available.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Section -->
+        <section id="implementation" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-code text-primary"></i> Implementation Details</h2>
+                
+                <div class="step-card">
+                    <h5>📁 Files Created/Modified</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>✨ New Files:</h6>
+                            <ul>
+                                <li><code>src/data/dynamicPricingConfig.json</code></li>
+                                <li><code>src/services/dynamicPricingService.js</code></li>
+                                <li><code>src/components/admin/DynamicPricingManager.js</code></li>
+                                <li><code>test_dynamic_pricing.js</code></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>🔧 Modified Files:</h6>
+                            <ul>
+                                <li><code>src/pages/billing/BillingRegistration.js</code></li>
+                                <li><code>src/pages/billing/BillingView.js</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h5>⚙️ Core Service Integration</h5>
+                    <div class="code-block">
+<pre><code>// Dynamic pricing service usage
+import dynamicPricingService from '../../services/dynamicPricingService';
+
+const priceResult = dynamicPricingService.getTestPrice(
+  testId,           // e.g., "@000003"
+  referralSource,   // e.g., "doctor"
+  scheme,           // optional explicit scheme
+  fallbackPrice     // original test price
+);
+
+console.log(priceResult);
+// {
+//   price: 4000,
+//   source: "scheme_referral",
+//   reason: "Used standard scheme for doctor referral"
+// }</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuration Section -->
+        <section id="configuration" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-cog text-primary"></i> Configuration Structure</h2>
+                
+                <div class="step-card">
+                    <h5>📋 Pricing Configuration Format</h5>
+                    <div class="code-block">
+<pre><code>{
+  "pricingSchemes": {
+    "standard": { "name": "Standard", "isDefault": true },
+    "corporate": { "name": "Corporate" },
+    "insurance": { "name": "Insurance" },
+    "promotional": { "name": "Promotional" }
+  },
+  "referralSources": {
+    "doctor": { "defaultScheme": "standard" },
+    "corporate": { "defaultScheme": "corporate" },
+    "insurance": { "defaultScheme": "insurance" }
+  },
+  "testPricingMappings": {
+    "@000003": {
+      "testName": "17 HYDROXY CORTICO STEROID 24 HR URINE",
+      "defaultPrice": 4000.0,
+      "schemes": {
+        "standard": {
+          "price": 4000.0,
+          "referralSources": {
+            "doctor": 4000.0,
+            "self": 4000.0,
+            "hospital": 3800.0
+          }
+        }
+      }
+    }
+  }
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="alert-custom">
+                    <h6><i class="fas fa-lightbulb"></i> Configuration Tips</h6>
+                    <ul class="mb-0">
+                        <li>Add new tests by extending the <code>testPricingMappings</code> object</li>
+                        <li>Create new pricing schemes in the <code>pricingSchemes</code> section</li>
+                        <li>Map referral sources to default schemes for automatic selection</li>
+                        <li>Use the admin panel for easy visual configuration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Section -->
+        <section id="usage" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-user text-primary"></i> Usage Guide</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>👩‍💼 For Billing Staff</h5>
+                            <ol>
+                                <li><strong>Navigate to Billing:</strong> Go to Billing → Create New Bill</li>
+                                <li><strong>Select Patient:</strong> Choose or create patient</li>
+                                <li><strong>Add Tests:</strong>
+                                    <ul>
+                                        <li>Select test from dropdown</li>
+                                        <li>Choose referral source</li>
+                                        <li>Price updates automatically</li>
+                                        <li>See calculation details</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Complete Billing:</strong> Proceed with normal billing process</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>👨‍💻 For Administrators</h5>
+                            <ol>
+                                <li><strong>Access Admin Panel:</strong> Navigate to Admin → Dynamic Pricing Manager</li>
+                                <li><strong>View Pricing Matrix:</strong> See all pricing combinations</li>
+                                <li><strong>Edit Prices:</strong> Click to edit specific price points</li>
+                                <li><strong>Add New Rules:</strong> Create pricing for new tests</li>
+                                <li><strong>Validate Config:</strong> Check for missing settings</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-matrix">
+                    <h5>🎨 Price Indicators</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="badge bg-success">Dynamic</span>
+                            <p><small>Price calculated using scheme + referral combination</small></p>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="badge bg-warning">Fallback</span>
+                            <p><small>Using fallback pricing due to missing configuration</small></p>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="badge bg-secondary">Default</span>
+                            <p><small>Using original test default price</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testing Section -->
+        <section id="testing" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-vial text-primary"></i> Testing & Validation</h2>
+                
+                <div class="step-card">
+                    <h5>🧪 Automated Testing</h5>
+                    <p>Run the test suite in your browser console:</p>
+                    <div class="code-block">
+<pre><code>// Open browser console (F12) and run:
+runDynamicPricingTests();
+testBillingIntegration();</code></pre>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>✅ Test Scenarios</h5>
+                            <ul>
+                                <li>Doctor referral with standard pricing</li>
+                                <li>Corporate referral with auto scheme selection</li>
+                                <li>Insurance referral with explicit scheme</li>
+                                <li>Self referral with promotional pricing</li>
+                                <li>Unknown test fallback behavior</li>
+                                <li>Missing configuration handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>🔍 Manual Testing Steps</h5>
+                            <ol>
+                                <li>Open the React app at <a href="http://localhost:3000" target="_blank">localhost:3000</a></li>
+                                <li>Navigate to Billing → Create New Bill</li>
+                                <li>Select different tests and referral sources</li>
+                                <li>Verify prices update automatically</li>
+                                <li>Check price calculation details</li>
+                                <li>Test fallback scenarios</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Section -->
+        <section id="admin" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-shield-alt text-primary"></i> Admin Management</h2>
+                
+                <div class="step-card">
+                    <h5>🎛️ Dynamic Pricing Manager</h5>
+                    <p>The admin interface provides a visual way to manage pricing configurations:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Features:</h6>
+                            <ul>
+                                <li>Pricing matrix visualization</li>
+                                <li>Point-and-click editing</li>
+                                <li>Configuration validation</li>
+                                <li>Scheme and referral management</li>
+                                <li>Real-time price calculation</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Access Path:</h6>
+                            <ol>
+                                <li>Login to the application</li>
+                                <li>Navigate to Admin section</li>
+                                <li>Click "Dynamic Pricing Manager"</li>
+                                <li>Select test to view pricing matrix</li>
+                                <li>Edit prices as needed</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-custom">
+                    <h6><i class="fas fa-exclamation-triangle"></i> Important Notes</h6>
+                    <ul class="mb-0">
+                        <li>Always validate configuration after making changes</li>
+                        <li>Test pricing changes in a development environment first</li>
+                        <li>Keep backup of working configurations</li>
+                        <li>Monitor system logs for pricing calculation issues</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section id="troubleshooting" class="section">
+            <div class="container-fluid">
+                <h2><i class="fas fa-wrench text-primary"></i> Troubleshooting</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>🐛 Common Issues</h5>
+                            <div class="mb-3">
+                                <h6>Price not updating:</h6>
+                                <ul>
+                                    <li>Check if test exists in pricing configuration</li>
+                                    <li>Verify referral source mapping</li>
+                                    <li>Look for JavaScript console errors</li>
+                                </ul>
+                            </div>
+                            <div class="mb-3">
+                                <h6>Wrong price applied:</h6>
+                                <ul>
+                                    <li>Verify referral source to scheme mapping</li>
+                                    <li>Check pricing configuration structure</li>
+                                    <li>Review fallback logic in console</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-card">
+                            <h5>🔧 Debug Information</h5>
+                            <p>The system provides detailed logging:</p>
+                            <div class="code-block">
+<pre><code>// Check browser console for:
+- Price calculation steps
+- Fallback reasons  
+- Configuration validation results
+- Service initialization status</code></pre>
+                            </div>
+                            <div class="alert alert-info mt-3">
+                                <small>
+                                    <strong>Pro Tip:</strong> Enable verbose logging by setting 
+                                    <code>localStorage.debug = 'pricing'</code> in browser console.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h5>📞 Support Resources</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h6>Configuration Validation</h6>
+                            <p>Use the admin panel's validation feature to check for configuration issues.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Test Suite</h6>
+                            <p>Run the automated test suite to verify pricing logic functionality.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h6>Console Logs</h6>
+                            <p>Check browser console for detailed pricing calculation information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+            
+            // Close sidebar on mobile
+            if (window.innerWidth < 768) {
+                toggleSidebar();
+            }
+        }
+        
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('expanded');
+        }
+        
+        // Auto-hide sidebar on mobile
+        if (window.innerWidth < 768) {
+            toggleSidebar();
+        }
+        
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

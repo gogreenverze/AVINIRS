@@ -125,9 +125,9 @@ const Modules = () => {
             className="module-icon"
             style={{ color: module.color }}
           />
-          <h5 className="module-title">{module.name}</h5>
-          <p className="module-description">{module.description}</p>
-          <span className="module-lifecycle">{module.lifecycle}</span>
+          <h5 className="module-title text-white">{module.name}</h5>
+          <p className="module-description text-white">{module.description}</p>
+          <span className="module-lifecycle text-white">{module.lifecycle}</span>
         </Card.Body>
         <Card.Footer>
           <Link
@@ -148,11 +148,11 @@ const Modules = () => {
 
   return (
     <div className="modules-container">
-      <h1 className="h3 mb-4 text-gray-800">Modules</h1>
+      <h1 className="h3 mb-4 ">Modules</h1>
 
       {/* Pre-analytical Modules */}
       <div className="mb-4">
-        <h2 className="h4 mb-3 text-gray-800">Pre-analytical</h2>
+        <h2 className="h4 mb-3 ">Pre-analytical</h2>
         <Row>
           {preAnalyticalModules.map((module, index) => (
             <ModuleCard key={`pre-${index}`} module={module} />
@@ -162,7 +162,7 @@ const Modules = () => {
 
       {/* Analytical Modules */}
       <div className="mb-4">
-        <h2 className="h4 mb-3 text-gray-800">Analytical</h2>
+        <h2 className="h4 mb-3 ">Analytical</h2>
         <Row>
           {analyticalModules.map((module, index) => (
             <ModuleCard key={`ana-${index}`} module={module} />
@@ -172,7 +172,7 @@ const Modules = () => {
 
       {/* Post-analytical Modules */}
       <div className="mb-4">
-        <h2 className="h4 mb-3 text-gray-800">Post-analytical</h2>
+        <h2 className="h4 mb-3 ">Post-analytical</h2>
         <Row>
           {postAnalyticalModules.map((module, index) => (
             <ModuleCard key={`post-${index}`} module={module} />
@@ -182,7 +182,7 @@ const Modules = () => {
 
       {/* Cross-functional Modules */}
       <div className="mb-4">
-        <h2 className="h4 mb-3 text-gray-800">Cross-functional</h2>
+        <h2 className="h4 mb-3 ">Cross-functional</h2>
         <Row>
           {crossFunctionalModules.map((module, index) => (
             <ModuleCard key={`cross-${index}`} module={module} />

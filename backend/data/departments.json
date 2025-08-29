@@ -1,14 +1,13 @@
 [
-  
   {
     "code": "P00024",
     "test_profile": "*PALEO Health Package-Comprehensive",
     "department": "Profile",
-    "test_price": 0.0,
+    "test_price": "20",
     "id": 7,
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.327557",
-    "updated_at": "2025-06-12T15:22:48.327559",
+    "updated_at": "2025-08-06T15:06:44.202979",
     "created_by": 1
   },
   {
@@ -42,7 +41,14 @@
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.327580",
     "updated_at": "2025-06-12T15:22:48.327581",
-    "created_by": 1
+    "created_by": 1,
+    "referenceRange": "Adults Male: 2.0-8.0 mg/24hr\nAdults Female: 2.0-6.0 mg/24hr\nChildren (1-11 yrs): 1.0-4.0 mg/24hr\nInfants (0-11 months): 0.5-2.0 mg/24hr\nPregnancy: 3.0-12.0 mg/24hr",
+    "resultUnit": "mg/24hr",
+    "decimals": "2",
+    "notes": "24-hour urine collection required\nPatient should avoid certain medications\nCollect in acidified container (HCl)\nStore refrigerated during collection\nStart collection after first morning void\nComplete collection with next morning void\nRecord exact collection time\nAvoid contamination with feces or toilet paper",
+    "criticalLow": "< 1.0",
+    "criticalHigh": "> 20.0",
+    "sheetName": "Biochemistry"
   },
   {
     "code": 228,
@@ -75,7 +81,14 @@
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.327600",
     "updated_at": "2025-06-12T15:22:48.327601",
-    "created_by": 1
+    "created_by": 1,
+    "referenceRange": "Deficiency: < 20 ng/ml\nInsufficiency: 20-29 ng/ml\nSufficiency: 30-100 ng/ml\nToxicity: > 150 ng/ml\nOptimal: 40-60 ng/ml\nSevere Deficiency: < 10 ng/ml\nPregnancy: 30-100 ng/ml\nPediatric (1-18 years): 30-100 ng/ml",
+    "resultUnit": "ng/ml",
+    "decimals": "1",
+    "notes": "Vitamin D deficiency marker\nBest indicator of vitamin D status\nNo fasting required\nAvoid hemolyzed samples\nStable at room temperature for 8 hours\nSeasonal variation may occur\n\nBiological Function:\nEssential for calcium and phosphate homeostasis\nRegulates bone mineralization and remodeling\nSupports immune system function\nInfluences muscle strength and function\nPlays role in cell differentiation and proliferation\n\nBone Health Effects:\nDeficiency leads to rickets in children\nCauses osteomalacia in adults\nIncreases risk of osteoporosis\nImpairs calcium absorption from intestines\nReduces bone mineral density\n\nDeficiency Symptoms:\nBone pain and muscle weakness\nIncreased susceptibility to infections\nFatigue and depression\nHair loss and delayed wound healing\nMuscle cramps and spasms\n\nSecondary Hyperparathyroidism:\nVitamin D deficiency stimulates PTH release\nElevated PTH mobilizes calcium from bones\nLeads to bone demineralization\nCan cause hypocalcemia\nResults in increased bone turnover markers\n\nClinical Assessment Guidelines:\nTest recommended for high-risk patients\nInclude elderly, pregnant women, dark-skinned individuals\nPatients with limited sun exposure\nThose with malabsorption disorders\nIndividuals on certain medications\nPatients with chronic kidney or liver disease\n\nSample Requirements:\nSerum or plasma acceptable\nNo special preparation required\nStable for 7 days at 2-8\u00c2\u00b0C\nCan be frozen for long-term storage\nAvoid exposure to direct sunlight",
+    "criticalLow": "< 10",
+    "criticalHigh": "> 150",
+    "sheetName": "Clinical Chemistry"
   },
   {
     "code": 653,
@@ -394,7 +407,32 @@
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.327797",
     "updated_at": "2025-06-12T15:22:48.327799",
-    "created_by": 1
+    "created_by": 1,
+    "referenceRange": "Adults: 3.5-5.0 g/dL\nChildren (1-18 years): 3.8-5.4 g/dL\nInfants (0-12 months): 2.8-4.4 g/dL\nPregnancy: 2.3-4.2 g/dL\nElderly (>65 years): 3.2-4.6 g/dL",
+    "resultUnit": "g/dL",
+    "decimals": "1",
+    "notes": "Protein synthesis marker\nReflects liver function\nNutritional status indicator\nFasting not required\nAffected by hydration status\nDecreased in liver disease\nDecreased in malnutrition\nIncreased in dehydration",
+    "criticalLow": "< 2.0",
+    "criticalHigh": "> 6.0",
+    "sheetName": "Biochemistry"
+  },
+  {
+    "code": 650,
+    "test_profile": "C-peptide, postprandial",
+    "department": "IMMUNOLOGY",
+    "test_price": 1800.0,
+    "id": 11047,
+    "is_active": true,
+    "created_at": "2025-06-18T15:22:48.327797",
+    "updated_at": "2025-06-18T15:22:48.327799",
+    "created_by": 1,
+    "referenceRange": "Fasting: 0.9-7.1 ng/ml\nPostprandial (2 hours): 1.8-14.4 ng/ml\nDiabetic (Type 1): < 0.5 ng/ml\nDiabetic (Type 2): Variable, often elevated\nInsulinoma: > 5.0 ng/ml (fasting)\nRenal Failure: Elevated due to decreased clearance",
+    "resultUnit": "ng/ml",
+    "decimals": "2",
+    "notes": "C-peptide postprandial measurement\nConnecting peptide of proinsulin\nReflects endogenous insulin production\nNot affected by exogenous insulin\nUseful in diabetic patients on insulin therapy\n\nClinical Significance:\nAssesses pancreatic beta-cell function\nDifferentiates Type 1 from Type 2 diabetes\nMonitors residual insulin production\nEvaluates insulinoma and factitious hypoglycemia\nGuides insulin therapy decisions\n\nPostprandial Testing:\nCollect 2 hours after standard meal\nOr after 75g glucose load\nReflects stimulated insulin response\nMore sensitive than fasting levels\nBetter assessment of beta-cell reserve\n\nSample Collection:\nFasting sample: 8-12 hours fasting\nPostprandial: Exactly 2 hours after meal\nSerum or plasma acceptable\nStable at room temperature for 8 hours\nRefrigerate if processing delayed\nFreeze for long-term storage\n\nInterpretation Guidelines:\nLow levels suggest Type 1 diabetes\nNormal/high levels suggest Type 2 diabetes\nVery high levels may indicate insulinoma\nRenal disease affects clearance\nCorrelate with clinical presentation\n\nInterferences:\nRenal dysfunction increases levels\nLiver disease may affect metabolism\nSome medications can interfere\nHemolysis may affect results\nLipemia can cause interference",
+    "criticalLow": "< 0.2",
+    "criticalHigh": "> 20.0",
+    "sheetName": "Immunology"
   },
   {
     "code": 297,
@@ -4728,7 +4766,14 @@
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.330065",
     "updated_at": "2025-06-12T15:22:48.330067",
-    "created_by": 1
+    "created_by": 1,
+    "referenceRange": "Adults: < 1.0 U/ml (Negative)\nChildren: < 0.8 U/ml (Negative)\nBorderline: 1.0-1.4 U/ml\nPositive: > 1.4 U/ml",
+    "resultUnit": "U/ml",
+    "decimals": "2",
+    "notes": "Glutamic Acid Decarboxylase Antibody\nUsed for Type 1 diabetes diagnosis\nFasting not required\nStore serum at 2-8\u00c2\u00b0C\nStable for 7 days refrigerated\nAssociated with autoimmune diabetes",
+    "criticalLow": "",
+    "criticalHigh": "> 10.0",
+    "sheetName": "Immunology"
   },
   {
     "code": 79,
@@ -5069,17 +5114,6 @@
     "is_active": true,
     "created_at": "2025-06-12T15:22:48.330243",
     "updated_at": "2025-06-12T15:22:48.330244",
-    "created_by": 1
-  },
-  {
-    "code": 123,
-    "test_profile": "Glucose, Post-prandial",
-    "department": "BIOCHEMISTRY",
-    "test_price": 20.0,
-    "id": 468,
-    "is_active": true,
-    "created_at": "2025-06-12T15:22:48.330248",
-    "updated_at": "2025-06-12T15:22:48.330250",
     "created_by": 1
   },
   {

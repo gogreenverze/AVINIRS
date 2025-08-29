@@ -1,0 +1,5045 @@
+[
+  {
+    "id": "notif-001-uuid",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00001",
+    "recipient_id": 1,
+    "sender_id": 15,
+    "routing_id": 1,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2024-01-15T09:00:00",
+    "read_at": "2024-01-15T09:30:00",
+    "data": {
+      "sample_id": "S00001",
+      "reason": "Specialized cardiac enzyme testing required"
+    }
+  },
+  {
+    "id": "notif-002-uuid",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for S00001 has been approved",
+    "recipient_id": 15,
+    "sender_id": 1,
+    "routing_id": 1,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2024-01-15T10:30:00",
+    "read_at": "2024-01-15T11:00:00",
+    "data": {
+      "sample_id": "S00001",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved for urgent processing"
+    }
+  },
+  {
+    "id": "notif-003-uuid",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample S00001 is now in transit",
+    "recipient_id": 1,
+    "sender_id": 15,
+    "routing_id": 1,
+    "priority": "low",
+    "is_read": true,
+    "created_at": "2024-01-15T14:00:00",
+    "read_at": "2024-01-15T14:30:00",
+    "data": {
+      "sample_id": "S00001",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "tracking_number": "RT000001"
+    }
+  },
+  {
+    "id": "notif-004-uuid",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample S00001 has been delivered successfully",
+    "recipient_id": 15,
+    "sender_id": 1,
+    "routing_id": 1,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2024-01-16T09:45:00",
+    "read_at": "2024-01-16T10:00:00",
+    "data": {
+      "sample_id": "S00001",
+      "old_stage": "in_transit",
+      "new_stage": "delivered"
+    }
+  },
+  {
+    "id": "notif-005-uuid",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00003",
+    "recipient_id": 1,
+    "sender_id": 17,
+    "routing_id": 2,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2024-01-17T11:00:00",
+    "read_at": "2024-01-17T11:30:00",
+    "data": {
+      "sample_id": "S00003",
+      "reason": "Advanced molecular testing not available locally"
+    }
+  },
+  {
+    "id": "notif-006-uuid",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample S00003",
+    "recipient_id": 1,
+    "sender_id": 17,
+    "routing_id": 2,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2024-01-17T11:30:00",
+    "read_at": "2024-01-17T12:00:00",
+    "data": {
+      "sample_id": "S00003",
+      "sender_name": "Dr. Thanjavur Lab"
+    }
+  },
+  {
+    "id": "notif-007-uuid",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 3,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2024-01-18T08:30:00",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "Toxicology screening required"
+    }
+  },
+  {
+    "id": "notif-008-uuid",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 3,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2024-01-18T08:45:00",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "sender_name": "Dr. Kuthalam Lab"
+    }
+  },
+  {
+    "id": "notif-009-uuid",
+    "type": "routing_rejected",
+    "title": "Sample Routing Rejected",
+    "message": "Sample routing for S00009 has been rejected: Sample contaminated during collection",
+    "recipient_id": 23,
+    "sender_id": 1,
+    "routing_id": 5,
+    "priority": "high",
+    "is_read": false,
+    "created_at": "2024-01-19T11:30:00",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00009",
+      "old_stage": "pending_approval",
+      "new_stage": "rejected",
+      "reason": "Sample contaminated during collection"
+    }
+  },
+  {
+    "id": "51a63eef-b61f-479e-ad52-fa49c6ee6920",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.552285",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "a187cab0-0e29-44e7-834c-41b68d99008c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.552285",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "b7fef826-b1f4-4594-a569-0c875ee81cae",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.552285",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "76806429-51ad-4596-bd13-d841a0267c0b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.552285",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "780490fc-4903-47cb-9875-9c1baff21db4",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.568042",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "16a0e911-1e1c-46ae-bb9d-627b32f11316",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.568498",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "eb35e2c4-ef41-4399-97d7-c66f1cdc7899",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 6,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:23.568498",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "08a6d31e-99a6-4ff0-9831-d12cffe9702b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.753759",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "5c6fb35f-5d4e-43cb-8ee8-463c4eefd0e5",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.767694",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "8eec257d-0613-4d7f-a2f1-2e95d53c2743",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.767694",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "da6af835-d0b6-4931-8bf7-03b5edfaae4c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.767694",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "ade3ac63-3293-4047-9f75-24be10f660ab",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.767694",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "96c7bf32-d6bc-4631-b60b-5d740021c465",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.782704",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "447a87a7-3ee9-4af1-a3c6-8ebd3d0af82b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:11:58.784130",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "ce12522f-85d0-4990-8bc7-4b8a92350a58",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.575094",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "2b8041f6-33d6-4b28-9750-39da38e509ab",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.591606",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "5e08e9dd-5305-4237-a927-887efa098716",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.592972",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "8b3dcc0b-bb0c-4d28-9224-68df699f5201",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.592972",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "ec97793b-c947-42d3-b9ec-aa7091313264",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.592972",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "d0012b80-1f6d-4790-916b-dda07c2bb1fb",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.609712",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "0ce64109-2552-4c73-98b0-6fc5434d670c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:16:36.609712",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "6c590696-7d57-483c-ac72-7924ef285972",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.140910",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "acc5c3ab-e15a-476b-8441-1c2a90cd151a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.140910",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "6303d51c-f735-4508-9b20-dd61478e02f4",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.140910",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "0a154f20-6eae-482e-ad54-e88f1ce0dbb4",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.154815",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "7ea6776c-580b-4aa4-a8c3-e30eea471716",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.157724",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "9c5379b8-ba6d-484d-bdbc-75836ad70bad",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.157724",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "29f366d7-eb6b-4306-b719-73ee2c46e506",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 9,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:18:02.157724",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "2e06689b-73b1-40c9-9ee8-5f2b767aad65",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.649419",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "a1e16461-1f4a-4f46-b808-3532b4690835",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.665554",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "b6c6321c-9d43-4947-9a84-ad74ff41b1cb",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.665554",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "f631cbd0-f7a0-44b8-9db2-77d4222d1c2a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.665554",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "a380a432-7ba3-4b38-a47d-cc8a9a85927a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.681919",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "42d6df60-b808-48df-9e69-2c182061ce2f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.681919",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "28a07d24-3c1e-45d6-95c2-23324f76063c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 10,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:22:03.697328",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "d6e2b304-53a1-4351-b4b2-53782d66557a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.945674",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "7b618a26-7937-4c58-a554-18d408a8fe9c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 3,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.945674",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "0e60ffba-bada-40df-9c6b-d9609df32d2a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.957413",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "100cfc06-d6d1-4584-83b3-205d18c4e71b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.959273",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "fdcf2edb-ed5c-4e59-b30a-19828a861a97",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.959273",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "a6d13f46-1a5d-4f1f-89ba-f83b0e7f15d2",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00005",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 11,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-14T22:25:19.959273",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00005",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "a1085a34-80dc-4af1-be84-e6c732c06717",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00088",
+    "recipient_id": 4,
+    "sender_id": 2,
+    "routing_id": 12,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2025-06-15T08:52:24.829491",
+    "read_at": "2025-07-21T14:54:56.896815",
+    "data": {
+      "sample_id": "S00088",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "7351206f-0fe9-44a0-9780-3f0f0aea0105",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00088",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 12,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T08:52:24.829491",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00088",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "7d1f2feb-635d-4c56-b9ea-1e2da2146517",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 8,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T08:55:41.974771",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "064b2c40-75c4-4933-a513-6e1af0d7064c",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T08:58:39.618544",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "6898c144-a1df-436e-be81-94d957bcf0ab",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T08:59:40.649455",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "bb345f75-50f7-4d44-b808-14fb6a5bcccd",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.063809",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "763fedf4-9768-44f8-9272-2540878fe2b3",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.080629",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "feb5da97-6a6f-4e15-bf98-2c5edc8b9d25",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.080629",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "9cbca595-4cae-4f16-83ee-f768bd9aec8f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.096949",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "37667920-578f-41c0-afb3-7a5359cada9f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.096949",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "8b936ceb-c21b-4502-95ae-4c8b1444d7af",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.113427",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "84351153-88db-4569-8853-92bc4c077a6e",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00074",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:04.113900",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00074",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "e3313681-6a31-4ca4-8bb0-845502205585",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:01:37.930118",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "5414af79-d921-49be-ae61-ce5c6acbb521",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:10:35.361997",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "73c0cf23-662b-4578-ab4b-ba9e04ce0554",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:43.741516",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "b30110c1-88e8-45f3-bb39-5fba96cb9d03",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.944276",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "e5f19c55-8b3a-4189-bd71-450b44b9dead",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.944276",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "94d58429-4d25-4244-a293-35667f16739d",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.944276",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "9c95db92-b96e-42a4-af03-f5fb2501806b",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.959921",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "940db64a-7a63-4844-9f6d-aea35821f3c1",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.959921",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "2e490e1d-ea19-492e-a82e-681b9d0b244e",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.959921",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "235f8473-7fe6-461d-b481-7423f066b77f",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 7,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:11:47.959921",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "Approved via test",
+      "tracking_number": "RT000007",
+      "reason": "Approved via test"
+    }
+  },
+  {
+    "id": "809af399-0604-4aec-9a74-8d3a0059f5af",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:12:45.326907",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "b4ba1988-2a50-43f9-b3a7-7216f3741b6c",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.785720",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "b5cdb850-9a09-49dc-9c55-81b2b83017b9",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.785720",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "e6c74893-033d-48b0-a648-375338e8d8b5",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.785720",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "090178b4-3666-4769-b6cf-2fe3819a76a1",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.785720",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "ffa69bbb-31eb-4ac6-9be6-1d7f12e66593",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.800110",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "a3b90730-3fe1-4798-8f0d-f5795d452630",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.800110",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "38388727-ee8e-4b71-8b1f-12aff300f251",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 13,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:17.800110",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "sds",
+      "tracking_number": "RT000013",
+      "reason": "sds"
+    }
+  },
+  {
+    "id": "0225e6d3-c807-44c0-a0f3-d22fe400feb6",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.532571",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "2724fed9-81d0-46b5-bc3e-141733194022",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.532571",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "42b1d8af-57f9-412a-91d8-b264e8f267de",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.532571",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "6f3fe8c7-ab95-4795-ab7c-ebd431256d03",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.548007",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "c5f61601-b221-4bcd-9b47-4f987030d88e",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.549430",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "a23b7598-bd48-4b2c-8931-ea42dd419c78",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.549430",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "0920b32e-b6b5-4fb1-aeed-5f23fc62fdfc",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:43.549430",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000013",
+      "reason": ""
+    }
+  },
+  {
+    "id": "9ea6f9ad-91ef-44bb-acf5-40c5b0dfaaf7",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.747246",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "8b3ece5c-fae8-4c7b-ac3e-743e54ee9129",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.747246",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "0bf88c82-d75f-4967-89b1-71681a631478",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.747246",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "876a415a-6666-4d66-b93c-06a24f5e2539",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.763916",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "4f0998b1-3fa7-46b9-b338-7f3c831cd856",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.763916",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "1d433e3f-dae0-42e3-903c-6f55b0c403bf",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.763916",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "dddb5e39-c205-4f41-8d25-c6402cb9ca2a",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 13,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:19:50.781959",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "sd",
+      "tracking_number": "RT000013",
+      "reason": "sd"
+    }
+  },
+  {
+    "id": "7b34aa92-a072-44af-9649-df1cca78b9d0",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.339640",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "3f286fc3-88db-4e63-a941-76ca04af00ad",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.355621",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "1d109d53-00ca-443f-9549-507afcd526d4",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.355621",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "2ae3d4f1-f6c4-4bb2-b5c7-0599ee792cfa",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.355621",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "77d72291-aa49-48e7-b3fb-36d9cfb299b9",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.355621",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "48193671-5455-49fc-a88c-04e0ff069d92",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.371993",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "6d81954e-4cbd-4367-aa3d-37333aeaeeb3",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00063",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:24:50.371993",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00063",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "f0e1ab5f-8d96-4e9e-86e6-be7e9d4f4f98",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:25:02.887785",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "8f1a93c9-3228-4c6a-9204-c2e7642b5e78",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:25:47.803154",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "370056c5-5947-4072-8f0f-9210d35a313f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.452756",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "cd8c4ec9-446a-45d5-ba6a-dfabdbd3decf",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 3,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.452756",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "937eeb51-50f4-4f51-8fd1-ece46c972253",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.468587",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "e92e985b-4f2c-4881-aeb2-45fabe9649ce",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.468587",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "82556cd7-905e-4acf-b895-d88971d9ae4c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.468587",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "68bbe9ab-db84-4d84-bc84-4bba34aae269",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00077",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 15,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:26:23.484964",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00077",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "b3720ad4-470f-413d-a291-05e3594eef13",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.267624",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "5a231822-4f0b-4335-9cb3-db0319d622f6",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.269210",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "5ae11f4d-543a-4186-851a-5fbd07dd0ae6",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.285427",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "2d55260e-56ca-4d63-865c-dd1e858fb4a2",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.302313",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "f63da785-1c31-4d37-8e39-d53e0f423288",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.302313",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "2cc0de76-0d78-43bb-bd48-a82a0d9ec24e",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.317479",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "c53ee877-ac56-4665-9bb7-c1b36a89add3",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:24.319433",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "2115fd98-13fc-4063-a609-e9fe7e401458",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.384531",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "a746c6a2-94b5-4cd2-9bd7-b85b1ad3c993",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.401742",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "1335faf6-4d7f-4568-9dcc-4b1e736410d2",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.418467",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "4c1ecdfa-218c-436a-a86c-8ea66bd3dab2",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.418467",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "c6f27575-675c-4c0b-9dfb-1efeb3baf289",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.433150",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "216dafe1-6746-4254-9921-ac9bfefbf5d7",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.434820",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "81dc35a3-e9eb-4acd-a4a1-7b910176741c",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 14,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T09:27:58.434820",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "fgfg",
+      "tracking_number": "RT000014",
+      "reason": "fgfg"
+    }
+  },
+  {
+    "id": "86570bbe-8449-4dbe-944f-e65da3edb056",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.850921",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "73ee81e6-48a3-4692-896c-d38f3b93e53d",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.867391",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "f3597857-0aa7-4b38-8ec2-fa1553fe9241",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.883269",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "e630d53f-5cc3-4b86-a4d8-d42434130eeb",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.898000",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "84b3710e-d824-43e1-99e6-c4ef6b6e7f47",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.900301",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "59db7f7b-b740-400c-9a8e-b32dc8f778c8",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.916727",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "1694cc93-ac6d-4f3e-a9a8-aaec4228669c",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:26.916727",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000014",
+      "reason": ""
+    }
+  },
+  {
+    "id": "7b76b90f-c6d1-4d69-a949-fa9363f90760",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.933404",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "906202fb-9238-41ea-80b2-2bf0a320f65a",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.950931",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "b3263c36-90fa-49e4-8e98-d84405cab56c",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.967188",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "f167c540-662b-4d64-a0de-164170e4190b",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.967188",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "4ec62a91-1900-4431-b3cd-774fbca36513",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.984311",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "ca053761-f23e-4afa-a003-00a5bb89cfd9",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.991351",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "2a544b85-68b3-4aa0-8183-7ffa223c2e7b",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 14,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:28:33.999831",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "df",
+      "tracking_number": "RT000014",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "03190875-51e5-4649-9ff2-e48261b9290e",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.056349",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "44ae03bd-98a6-4831-954b-8fdeb8a13b07",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.072816",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "d4c987ea-c365-4016-aa1d-ae70b465bf76",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.089486",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "af39b642-3c2f-4147-be34-8cfe5a1bd1f8",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.104495",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "a35b192a-d9c2-47c3-985e-1968bc4e1363",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.107534",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "ef80ba84-3d4b-49ba-a1de-fa3d7101c835",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.122606",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "9b2738ba-cc61-42e3-b9d3-bae48bf658a2",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00058",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 16,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T09:54:54.122606",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00058",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "d4c9a7d2-b271-4ea5-8f9b-ebed6c81e745",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.684807",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "e1710905-ff1a-4c7c-8b2c-8d975a4b82d1",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.701273",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "5283a987-4345-4ba2-83f5-2676a791a0a0",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.701273",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "fff61a54-c8da-4d01-95e6-5053ece84e79",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.717767",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "aa144bf7-562a-41f3-a72b-0833bffa538f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.717767",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "d0a6a801-a1a2-4df6-9ccd-940379664dd6",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.733957",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "ccc2abb6-a049-48b7-af65-abfbe36687e1",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00045",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T10:16:10.737871",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00045",
+      "reason": "erere"
+    }
+  },
+  {
+    "id": "b66f90e6-75b0-4e68-b00c-1fa8336271b0",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:14.946805",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "09b1f643-5c65-46a3-8c4d-5617d24a66db",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:14.963190",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "4a539ac7-4b57-490a-a83f-7eacc1165662",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:14.979647",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "dd79dbcd-c1e3-4dfe-bf60-9f259b64b2fd",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:14.979647",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "d06d6b85-a923-4133-8c08-00f1cddf1ab9",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:14.996137",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "e0d91d6e-955b-4ef3-b811-6ba2415ee0bd",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:15.012884",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "19f2458a-27c3-4960-b8ca-8ad30ee1a7ef",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:15.029031",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "gf",
+      "tracking_number": "RT000017",
+      "reason": "gf"
+    }
+  },
+  {
+    "id": "be525553-cf9f-44ba-8627-17e93d842a39",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 1,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.226690",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "258d0a61-e049-45cb-8139-c7e6a103523b",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 2,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.243398",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "f9913eca-0fe2-49cc-8d0a-01eadca50f0e",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 20,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.245224",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "db8f59ad-7fd5-42b4-afe0-9236164462d8",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 21,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.262106",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "4c8d7a2c-a736-4093-a6ff-88807264cbd2",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 22,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.278289",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "eaca9e53-6679-44fe-a0df-4a61c2547675",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 23,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.294870",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "da4abced-cacf-4f48-8230-04bb5c8d1f0a",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 24,
+    "sender_id": 19,
+    "routing_id": 17,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-06-15T11:32:57.311606",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "df",
+      "tracking_number": "RT000017",
+      "reason": "df"
+    }
+  },
+  {
+    "id": "044a221d-a798-4410-8dee-8f43a32b04b6",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.906697",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "e9263fa9-655d-4db8-9079-e6595dff90f0",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.922389",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "b44e00cf-69f3-4fe3-87a7-8d3e2f85d4fb",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.938914",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "b8d3c8b3-93bf-47a2-b175-40f75338ab25",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.938914",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "ab46e3ec-1f0e-4614-bcbf-bf0bf028b82f",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.955433",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "2efd734c-aa91-4ebf-a7c3-6aaff6ae3786",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.955433",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "9d5f0b85-95b5-4388-b36e-c78a6673fa19",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:12.972160",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "0a97f9e5-0d44-4990-ac26-d4025e578769",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 1,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.422066",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "573e22b7-da4d-462e-9119-96efaf81130d",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 19,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.438287",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "afc5095e-501c-4d14-b371-881a88510fc2",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 20,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.452867",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "75b68ece-7d28-41a3-a45f-2736d62f5b8c",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 21,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.454802",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "3382df8a-45e8-4081-9b7a-c78e49c04906",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 22,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.470990",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "0b73060e-ddb3-4a09-be0f-d619cf18d3ed",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 23,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.472224",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "96e0d3a1-489d-46ad-bba7-57bb92544b79",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 24,
+    "sender_id": 2,
+    "routing_id": 17,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-15T11:36:19.488380",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "",
+      "tracking_number": "RT000017",
+      "reason": ""
+    }
+  },
+  {
+    "id": "753d99f8-69dd-4d9f-869c-c78e803b3634",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00052",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:19:27.689473",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00052",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "f05bc777-0262-47d7-acbe-2e55ca0b8e10",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00052",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:19:27.700792",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00052",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "ef2321fd-f1f3-41a5-b96d-0e9f7ace12b8",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00052",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:19:27.710996",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00052",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "c111428a-cc3b-4771-bfac-5c1a9d4c0ca3",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00052",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:19:27.723293",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00052",
+      "reason": "dv"
+    }
+  },
+  {
+    "id": "b83425ce-85cd-4a08-b327-6e3bea2de0db",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:19:52.432623",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "fb0615c0-59d9-467e-8e7c-753245caaf1b",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:21:28.360157",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "",
+      "tracking_number": "RT000018",
+      "reason": ""
+    }
+  },
+  {
+    "id": "0faf11e8-c380-4c75-baef-6e326c48fd05",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:21:28.372470",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "",
+      "tracking_number": "RT000018",
+      "reason": ""
+    }
+  },
+  {
+    "id": "fef7beea-bbaf-4f5a-994b-6ee1cb1a90a3",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:21:28.382641",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "",
+      "tracking_number": "RT000018",
+      "reason": ""
+    }
+  },
+  {
+    "id": "baa82acf-efa7-4b87-9d67-effbd9c91063",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:21:28.392843",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "",
+      "tracking_number": "RT000018",
+      "reason": ""
+    }
+  },
+  {
+    "id": "019c9ecc-2262-40a4-a7ce-bdd054575c06",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-06-25T17:21:40.119013",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "7c2ed8b0-7930-4119-b562-e80645e4193e",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T12:24:23.154423",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "49e948f0-5856-4dbc-a64f-4ec001241494",
+    "type": "file_shared",
+    "title": "File Shared",
+    "message": "A file has been shared for sample Unknown: Bala_Subramanian_MYD059_2025-07-21.pdf",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 18,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T12:25:06.724137",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "filename": "Bala_Subramanian_MYD059_2025-07-21.pdf",
+      "uploader_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "6874e6e1-50f8-46ef-9843-c39f701fc787",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00019",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:22:30.966867",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00019",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "2faeb3b7-f93d-4df4-b7cb-8ef7839ea556",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00019",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:22:30.996402",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00019",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "df0c786d-e691-4b72-bef2-aa81bc5c7290",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00019",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:22:31.046663",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00019",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "6d07bc42-23fd-4449-a362-f7b064a9a315",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00019",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:22:31.072778",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00019",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "5b8959cf-5a38-4932-aa1c-fff92100fcef",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:23:19.179286",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "ef0b827e-fa86-4c50-9412-75f3d6a3eceb",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:26:19.443789",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "9d6e39ca-4406-44b6-b6f9-b195ebe0fde2",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:26:39.280894",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "testing",
+      "tracking_number": "RT000019",
+      "reason": "testing"
+    }
+  },
+  {
+    "id": "6d39c2a8-6fce-48ca-a900-3f524c59f4ef",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:26:39.333436",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "testing",
+      "tracking_number": "RT000019",
+      "reason": "testing"
+    }
+  },
+  {
+    "id": "327f73be-fd1c-4d22-b35e-c5b7a1dda577",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:26:39.385407",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "testing",
+      "tracking_number": "RT000019",
+      "reason": "testing"
+    }
+  },
+  {
+    "id": "6deab784-1df1-45e6-8523-5c16da029a73",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:26:39.433136",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "testing",
+      "tracking_number": "RT000019",
+      "reason": "testing"
+    }
+  },
+  {
+    "id": "014e1baf-b55d-4229-b626-57ddac0a0263",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-07-21T14:37:30.091927",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "Sample dispatched",
+      "tracking_number": "RT000019",
+      "reason": "Sample dispatched"
+    }
+  },
+  {
+    "id": "526d5c16-939c-47de-ab54-598863da8d92",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-07-21T14:37:30.126336",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "Sample dispatched",
+      "tracking_number": "RT000019",
+      "reason": "Sample dispatched"
+    }
+  },
+  {
+    "id": "dca28c59-2335-4ac8-8053-8ce9d3e14e71",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-07-21T14:37:30.171155",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "Sample dispatched",
+      "tracking_number": "RT000019",
+      "reason": "Sample dispatched"
+    }
+  },
+  {
+    "id": "608fe86f-74cf-46bb-a8dd-a0706ac1f783",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 19,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-07-21T14:37:30.240823",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "Sample dispatched",
+      "tracking_number": "RT000019",
+      "reason": "Sample dispatched"
+    }
+  },
+  {
+    "id": "be96aebc-5a32-4c78-b982-6dccf87c174a",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:39:24.433665",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "Sample received in good condition",
+      "tracking_number": "RT000019",
+      "reason": "Sample received in good condition"
+    }
+  },
+  {
+    "id": "fd6b1f0a-d16a-45f8-aa27-a25f8a51d83d",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:39:24.449809",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "Sample received in good condition",
+      "tracking_number": "RT000019",
+      "reason": "Sample received in good condition"
+    }
+  },
+  {
+    "id": "84b5b23a-36c4-44f8-a121-2c136cf34968",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:39:24.475910",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "Sample received in good condition",
+      "tracking_number": "RT000019",
+      "reason": "Sample received in good condition"
+    }
+  },
+  {
+    "id": "3f8b0889-96eb-4706-9ec0-319d898cfd8a",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:39:24.501152",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "Sample received in good condition",
+      "tracking_number": "RT000019",
+      "reason": "Sample received in good condition"
+    }
+  },
+  {
+    "id": "6750a8a5-8f91-4d63-9db3-b87d9bc2c3cb",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:41:25.084681",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "Routing completed",
+      "tracking_number": "RT000019",
+      "reason": "Routing completed"
+    }
+  },
+  {
+    "id": "99d16832-5ef0-4eb8-bbd3-1aae0bc4c1bb",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:41:25.107354",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "Routing completed",
+      "tracking_number": "RT000019",
+      "reason": "Routing completed"
+    }
+  },
+  {
+    "id": "39496390-db6d-48c8-9412-db0e2b6279f6",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T14:41:25.144947",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "Routing completed",
+      "tracking_number": "RT000019",
+      "reason": "Routing completed"
+    }
+  },
+  {
+    "id": "254e971f-cccc-4d40-a52b-e2b92dab53d4",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 19,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2025-07-21T14:41:25.182305",
+    "read_at": "2025-07-21T14:51:09.144970",
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "Routing completed",
+      "tracking_number": "RT000019",
+      "reason": "Routing completed"
+    }
+  },
+  {
+    "id": "105cb007-c5b9-4f20-b128-b350190e7fe7",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00046",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 20,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:30:29.302471",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00046",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "c70f2571-b17e-4431-8315-c86176851e62",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00046",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 20,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:30:29.315178",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00046",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "3fd0f3e7-4125-4c3c-b93e-6f5c9572ed9c",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00046",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 20,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:30:29.335769",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00046",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "a0ca3c5e-b825-4168-b344-b6e46c52986b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00046",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 20,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:30:29.356616",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00046",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "0935d321-b645-466b-a9ce-2260bf360c46",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00066",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 21,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:32:09.319289",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00066",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "cea7b9ee-6721-410e-a983-07d9bebd0e78",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00066",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 21,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:32:09.332690",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00066",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "1d54c48a-d151-4729-ba69-7a940bece08a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00066",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 21,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:32:09.353806",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00066",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "d3efd881-6411-4f83-a5b9-be0db5e4ab85",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00066",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 21,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T17:32:09.374056",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00066",
+      "reason": "testinh"
+    }
+  },
+  {
+    "id": "fb45e2d4-6749-4ed6-be73-862cb1ee091f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00075",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:15:52.572265",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00075",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "161b453b-c918-4431-a730-5a4dcde43e58",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00075",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:15:52.585337",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00075",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "9d86f433-e416-40d2-bb70-e9907f4564ce",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00075",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:15:52.606854",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00075",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "4d1fed50-dec6-4ff4-bdd1-7d5eb5f2827e",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00075",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": true,
+    "created_at": "2025-07-21T18:15:52.629348",
+    "read_at": "2025-07-21T18:23:30.024340",
+    "data": {
+      "sample_id": "S00075",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "04575dfb-faf0-4605-98dc-dff9004a2bde",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:16:30.784685",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "b3d2b4d4-18f8-4594-8470-e2465b2a81fd",
+    "type": "file_shared",
+    "title": "File Shared",
+    "message": "A file has been shared for sample Unknown: soorya_R_MYD064_2025-07-21 (2).pdf",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:17:02.526595",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "filename": "soorya_R_MYD064_2025-07-21 (2).pdf",
+      "uploader_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "fc394063-68ac-463e-91c8-c8568a3438a6",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:22:16.970459",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "sirkazhi"
+    }
+  },
+  {
+    "id": "89ed1dc0-a87a-43d9-86cd-032425ed08e3",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:22:37.374294",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "check",
+      "tracking_number": "RT000022",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "43f3ab98-61f8-481d-85e2-8bb929178dd0",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:22:37.392891",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "check",
+      "tracking_number": "RT000022",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "1a6ec137-a5af-4cfa-a9ee-2f7dfff437fe",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:22:37.424016",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "check",
+      "tracking_number": "RT000022",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "a0f1ecab-5f7c-4298-bc15-627ea9129655",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-21T18:22:37.456167",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "check",
+      "tracking_number": "RT000022",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "f44e6ccb-842e-4a85-8794-0be840156542",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 22,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-07-22T12:05:14.226278",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "08422862-b8ec-4646-858c-723d41a9d58a",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 23,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:05.464045",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "bd9f6932-696c-4b58-b826-7b306420e702",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 23,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:05.495824",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "3c9dfc63-6740-4f10-b0c6-b63a7537f25f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 23,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:05.566621",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "c48a3e80-c087-43a1-b639-181296c8001f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 6,
+    "sender_id": 4,
+    "routing_id": 23,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:05.618274",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "qewe"
+    }
+  },
+  {
+    "id": "01fc9697-4096-4cbb-a61e-75c6e0760718",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00042",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:59.185359",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00042",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "916aa54a-7e3b-4c1e-94bd-071314885afd",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00042",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:59.237667",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00042",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "a0981480-a203-467b-b153-0d100289cb22",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00042",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:59.300075",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00042",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "ad00c8d4-db20-4da2-9f4d-6c8608b9eee2",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00042",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:29:59.350247",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00042",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "1adb8655-f860-4270-a9a3-14a819aaf1f3",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:31:02.466973",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "yes",
+      "tracking_number": "RT000024",
+      "reason": "yes"
+    }
+  },
+  {
+    "id": "4870f99a-0d2f-4ec1-9fc0-2355afebf707",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:31:02.518901",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "yes",
+      "tracking_number": "RT000024",
+      "reason": "yes"
+    }
+  },
+  {
+    "id": "ea13b31c-d4b0-4919-8dae-d1ceb715045c",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:31:02.589919",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "yes",
+      "tracking_number": "RT000024",
+      "reason": "yes"
+    }
+  },
+  {
+    "id": "4ab51f0e-fc9d-4876-a45e-538e27b50e59",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:31:02.650691",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "yes",
+      "tracking_number": "RT000024",
+      "reason": "yes"
+    }
+  },
+  {
+    "id": "67eff995-6e88-4eb4-b2b1-c20250cc08b2",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-08-04T18:32:27.894093",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "check",
+      "tracking_number": "RT000024",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "60a71d25-c50e-467f-8979-3d014bb63c92",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-08-04T18:32:27.935150",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "check",
+      "tracking_number": "RT000024",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "3ecca747-b5c1-489c-a923-dcbbaff852dc",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-08-04T18:32:27.982769",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "check",
+      "tracking_number": "RT000024",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "dc4374a4-41fc-46a2-a9a6-55ec1e964131",
+    "type": "sample_in_transit",
+    "title": "Sample In Transit",
+    "message": "Sample Unknown is now in transit",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "low",
+    "is_read": false,
+    "created_at": "2025-08-04T18:32:28.026765",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "approved",
+      "new_stage": "in_transit",
+      "notes": "check",
+      "tracking_number": "RT000024",
+      "reason": "check"
+    }
+  },
+  {
+    "id": "6b634319-369c-4860-948d-e5e077d8ac0a",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:14.691269",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "test",
+      "tracking_number": "RT000024",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "fde825e1-f260-4ffb-91bf-88a2c6e7cd3e",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:14.726388",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "test",
+      "tracking_number": "RT000024",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "62937c25-043c-4a9e-b96b-7a83d52c9bd3",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:14.783746",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "test",
+      "tracking_number": "RT000024",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "1cc11193-c835-46d3-bace-ef280cff5b1b",
+    "type": "sample_delivered",
+    "title": "Sample Delivered",
+    "message": "Sample Unknown has been delivered successfully",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:14.840826",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "in_transit",
+      "new_stage": "delivered",
+      "notes": "test",
+      "tracking_number": "RT000024",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "0196e353-2785-4029-9ef9-cc0fe1de0cda",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:25.909832",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "chekc",
+      "tracking_number": "RT000024",
+      "reason": "chekc"
+    }
+  },
+  {
+    "id": "21f820c6-b562-4e50-bbb3-0c432720d801",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:25.949510",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "chekc",
+      "tracking_number": "RT000024",
+      "reason": "chekc"
+    }
+  },
+  {
+    "id": "1107452d-4c45-499c-afeb-5c94dc81b8c1",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:26.014769",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "chekc",
+      "tracking_number": "RT000024",
+      "reason": "chekc"
+    }
+  },
+  {
+    "id": "edd79814-0029-46e7-8e04-513d46bd2873",
+    "type": "sample_received",
+    "title": "Sample Received",
+    "message": "Sample Unknown has been received and confirmed",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-04T18:33:26.080963",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "delivered",
+      "new_stage": "completed",
+      "notes": "chekc",
+      "tracking_number": "RT000024",
+      "reason": "chekc"
+    }
+  },
+  {
+    "id": "21b0dbaa-7d65-45ea-8506-2cbd15bcbaf6",
+    "type": "new_message",
+    "title": "New Message",
+    "message": "You have a new message regarding sample Unknown",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 24,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-06T15:19:52.029881",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "sender_name": "mayiladhuthurai"
+    }
+  },
+  {
+    "id": "be86b1da-830a-4c63-aaa8-b80ed68e49a7",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 1,
+    "sender_id": 4,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:12:59.752024",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "3d35903c-f1db-4be7-92a2-83d5ed5da570",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 2,
+    "sender_id": 4,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:12:59.770368",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "5a5c3b78-7c9a-41d4-9fb6-39fbc68a895f",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 3,
+    "sender_id": 4,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:12:59.803074",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "51a3ed74-12a3-41dd-9d83-5a67b8c50d0b",
+    "type": "routing_created",
+    "title": "New Sample Routing Request",
+    "message": "A new sample routing request has been created for sample S00064",
+    "recipient_id": 5,
+    "sender_id": 4,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:12:59.828636",
+    "read_at": null,
+    "data": {
+      "sample_id": "S00064",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "a791ecfc-66cc-4962-bce4-b5f3ac4706db",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 1,
+    "sender_id": 5,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:21:55.516529",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "test",
+      "tracking_number": "RT000025",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "245bd51f-daad-4fa4-b9c5-632f6dd3af4e",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 2,
+    "sender_id": 5,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:21:55.536247",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "test",
+      "tracking_number": "RT000025",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "69b3aa67-0f22-4ea8-88b6-1bde2555db9a",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 3,
+    "sender_id": 5,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:21:55.568479",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "test",
+      "tracking_number": "RT000025",
+      "reason": "test"
+    }
+  },
+  {
+    "id": "a573f1b5-3a30-45c3-8d9e-1e2eb9b805d1",
+    "type": "routing_approved",
+    "title": "Sample Routing Approved",
+    "message": "Sample routing for Unknown has been approved",
+    "recipient_id": 4,
+    "sender_id": 5,
+    "routing_id": 25,
+    "priority": "medium",
+    "is_read": false,
+    "created_at": "2025-08-26T16:21:55.597533",
+    "read_at": null,
+    "data": {
+      "sample_id": "Unknown",
+      "old_stage": "pending_approval",
+      "new_stage": "approved",
+      "notes": "test",
+      "tracking_number": "RT000025",
+      "reason": "test"
+    }
+  }
+]

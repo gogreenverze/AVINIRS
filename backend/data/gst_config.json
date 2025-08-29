@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Standard GST Rate",
+    "description": "Standard GST rate for medical services",
+    "rate": 18.0,
+    "applicable_from": "2024-01-01",
+    "applicable_to": "",
+    "is_default": true,
+    "is_active": true,
+    "tenant_id": 1,
+    "created_at": "2024-01-15T08:00:00",
+    "updated_at": "2024-01-15T08:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "name": "Reduced GST Rate",
+    "description": "Reduced GST rate for specific medical services",
+    "rate": 5.0,
+    "applicable_from": "2024-01-01",
+    "applicable_to": "",
+    "is_default": false,
+    "is_active": true,
+    "tenant_id": 1,
+    "created_at": "2024-01-15T08:05:00",
+    "updated_at": "2024-01-15T08:05:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "name": "Zero GST Rate",
+    "description": "Zero GST rate for exempt medical services",
+    "rate": 0.0,
+    "applicable_from": "2024-01-01",
+    "applicable_to": "",
+    "is_default": false,
+    "is_active": true,
+    "tenant_id": 1,
+    "created_at": "2024-01-15T08:10:00",
+    "updated_at": "2024-01-15T08:10:00",
+    "created_by": 1
+  }
+]

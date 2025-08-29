@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "AVINI Labs Chennai",
+    "site_code": "CHN",
+    "address": "123 Anna Salai, Chennai, Tamil Nadu",
+    "contact_phone": "9876543210",
+    "is_hub": true,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "AVINI Labs Coimbatore",
+    "site_code": "CBE",
+    "address": "45 DB Road, RS Puram, Coimbatore, Tamil Nadu",
+    "contact_phone": "9876543211",
+    "is_hub": false,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "AVINI Labs Madurai",
+    "site_code": "MDU",
+    "address": "78 North Veli Street, Madurai, Tamil Nadu",
+    "contact_phone": "9876543212",
+    "is_hub": false,
+    "is_active": true
+  }
+]

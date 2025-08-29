@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Card, Table, Button, Form, InputGroup, Pagination, Row, Col, Badge } from 'react-bootstrap';
+import { Button, Form, InputGroup, Row, Col, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faSearch, faPlus, faEye, faMoneyBillWave, faPrint, 
-  faUser, faCalendarAlt, faRupeeSign, faFileInvoiceDollar
+import {
+  faSearch, faPlus, faFileInvoiceDollar, faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
 import { billingAPI } from '../../services/api';
+import ResponsiveBillingTable from '../../components/billing/ResponsiveBillingTable';
 import '../../styles/BillingList.css';
 
 const BillingList = () => {
@@ -17,26 +17,15 @@ const BillingList = () => {
   const [billings, setBillings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [patientId, setPatientId] = useState(patientIdParam || '');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [filterStatus, setFilterStatus] = useState('');
   const [dateRange, setDateRange] = useState({
     startDate: '',
     endDate: ''
   });
 
-  // Handle window resize for responsive design
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   // Fetch billings data
   useEffect(() => {
@@ -45,31 +34,30 @@ const BillingList = () => {
         setLoading(true);
         setError(null);
         
-        let params = { page: currentPage };
-        
+        let params = {};
+
         if (patientId) {
           params.patient_id = patientId;
         }
-        
+
         if (searchQuery) {
           params.search = searchQuery;
         }
-        
+
         if (filterStatus) {
           params.status = filterStatus;
         }
-        
+
         if (dateRange.startDate) {
           params.start_date = dateRange.startDate;
         }
-        
+
         if (dateRange.endDate) {
           params.end_date = dateRange.endDate;
         }
-        
+
         const response = await billingAPI.getAllBillings(params);
-        setBillings(response.data.items);
-        setTotalPages(response.data.total_pages);
+        setBillings(response.data.items || response.data);
       } catch (err) {
         console.error('Error fetching billings:', err);
         setError('Failed to load billing records. Please try again later.');
@@ -79,12 +67,11 @@ const BillingList = () => {
     };
 
     fetchBillings();
-  }, [currentPage, searchQuery, patientId, filterStatus, dateRange]);
+  }, [searchQuery, patientId, filterStatus, dateRange]);
 
   // Handle search
   const handleSearch = (e) => {
     e.preventDefault();
-    setCurrentPage(1); // Reset to first page on new search
   };
 
   // Handle date range change
@@ -96,108 +83,31 @@ const BillingList = () => {
     }));
   };
 
-  // Handle pagination
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
 
-  // Generate pagination items
-  const renderPaginationItems = () => {
-    const items = [];
-    
-    // Previous button
-    items.push(
-      <Pagination.Prev 
-        key="prev" 
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-      />
-    );
-    
-    // First page
-    items.push(
-      <Pagination.Item 
-        key={1} 
-        active={currentPage === 1}
-        onClick={() => handlePageChange(1)}
-      >
-        1
-      </Pagination.Item>
-    );
-    
-    // Ellipsis if needed
-    if (currentPage > 3) {
-      items.push(<Pagination.Ellipsis key="ellipsis1" disabled />);
-    }
-    
-    // Pages around current page
-    for (let page = Math.max(2, currentPage - 1); page <= Math.min(totalPages - 1, currentPage + 1); page++) {
-      items.push(
-        <Pagination.Item 
-          key={page} 
-          active={currentPage === page}
-          onClick={() => handlePageChange(page)}
-        >
-          {page}
-        </Pagination.Item>
-      );
-    }
-    
-    // Ellipsis if needed
-    if (currentPage < totalPages - 2) {
-      items.push(<Pagination.Ellipsis key="ellipsis2" disabled />);
-    }
-    
-    // Last page if not first page
-    if (totalPages > 1) {
-      items.push(
-        <Pagination.Item 
-          key={totalPages} 
-          active={currentPage === totalPages}
-          onClick={() => handlePageChange(totalPages)}
-        >
-          {totalPages}
-        </Pagination.Item>
-      );
-    }
-    
-    // Next button
-    items.push(
-      <Pagination.Next 
-        key="next" 
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      />
-    );
-    
-    return items;
-  };
-
-  // Get status badge variant
-  const getStatusBadgeVariant = (status) => {
-    switch (status) {
-      case 'Pending':
-        return 'warning';
-      case 'Paid':
-        return 'success';
-      case 'Partial':
-        return 'info';
-      case 'Cancelled':
-        return 'danger';
-      default:
-        return 'secondary';
-    }
-  };
 
   return (
     <div className="billing-list-container">
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">Billing</h1>
         <div>
-          <Link to="/billing/create" className="btn btn-primary">
+          <h1 className="h3 mb-0 text-gray-800">All Invoices</h1>
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item">
+                <Link to="/billing">Billing Dashboard</Link>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">All Invoices</li>
+            </ol>
+          </nav>
+        </div>
+        <div>
+          <Link to="/billing" className="btn btn-secondary me-2">
+            <FontAwesomeIcon icon={faArrowLeft} className="me-2" />
+            Dashboard
+          </Link>
+          {/* <Link to="/billing/create" className="btn btn-primary">
             <FontAwesomeIcon icon={faPlus} className="me-2" />
             New Invoice
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -213,7 +123,7 @@ const BillingList = () => {
                 <InputGroup className="mb-3">
                   <Form.Control
                     type="text"
-                    placeholder="Search by invoice #, patient name, or ID..."
+                    placeholder="Search by SID #, invoice #, patient name..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
@@ -296,146 +206,14 @@ const BillingList = () => {
         </div>
       )}
 
-      {/* Desktop View */}
-      {!loading && !error && !isMobile && (
-        <Card className="shadow mb-4">
-          <Card.Header className="py-3">
-            <h6 className="m-0 font-weight-bold text-primary">
-              Invoice List
-              <span className="badge bg-primary float-end">
-                {billings.length} Records
-              </span>
-            </h6>
-          </Card.Header>
-          <Card.Body>
-            <div className="table-responsive">
-              <Table className="table-hover" width="100%" cellSpacing="0">
-                <thead>
-                  <tr>
-                    <th>Invoice #</th>
-                    <th>Patient</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {billings.map(billing => (
-                    <tr key={billing.id}>
-                      <td>{billing.invoice_number}</td>
-                      <td>
-                        {billing.patient ? (
-                          <Link to={`/patients/${billing.patient.id}`}>
-                            {billing.patient.first_name} {billing.patient.last_name}
-                          </Link>
-                        ) : (
-                          'N/A'
-                        )}
-                      </td>
-                      <td>{new Date(billing.invoice_date).toLocaleDateString()}</td>
-                      <td>
-                        <FontAwesomeIcon icon={faRupeeSign} className="me-1" />
-                        {billing.total_amount.toFixed(2)}
-                      </td>
-                      <td>
-                        <Badge bg={getStatusBadgeVariant(billing.status)}>
-                          {billing.status}
-                        </Badge>
-                      </td>
-                      <td>
-                        <Link to={`/billing/${billing.id}`} className="btn btn-info btn-sm me-1">
-                          <FontAwesomeIcon icon={faEye} />
-                        </Link>
-                        {billing.status !== 'Paid' && billing.status !== 'Cancelled' && (
-                          <Link to={`/billing/${billing.id}/collect`} className="btn btn-success btn-sm me-1">
-                            <FontAwesomeIcon icon={faMoneyBillWave} />
-                          </Link>
-                        )}
-                        <Link to={`/billing/${billing.id}/print`} className="btn btn-primary btn-sm">
-                          <FontAwesomeIcon icon={faPrint} />
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </div>
-          </Card.Body>
-        </Card>
-      )}
-
-      {/* Mobile View */}
-      {!loading && !error && isMobile && (
-        <div className="mobile-billing-list">
-          <div className="record-count mb-3">
-            <span className="badge bg-primary">
-              {billings.length} Records
-            </span>
-          </div>
-
-          {billings.map(billing => (
-            <Card key={billing.id} className="mb-3 mobile-card">
-              <Card.Header className="py-2">
-                <div className="d-flex justify-content-between align-items-center">
-                  <h6 className="card-title mb-0">Invoice #{billing.invoice_number}</h6>
-                  <Badge bg={getStatusBadgeVariant(billing.status)}>
-                    {billing.status}
-                  </Badge>
-                </div>
-              </Card.Header>
-              <Card.Body className="p-3">
-                <div className="billing-info mb-3">
-                  {billing.patient && (
-                    <div className="d-flex align-items-center mb-1">
-                      <FontAwesomeIcon icon={faUser} className="me-2 text-primary" />
-                      <strong>Patient:</strong>
-                      <span className="ms-2">
-                        <Link to={`/patients/${billing.patient.id}`}>
-                          {billing.patient.first_name} {billing.patient.last_name}
-                        </Link>
-                      </span>
-                    </div>
-                  )}
-                  <div className="d-flex align-items-center mb-1">
-                    <FontAwesomeIcon icon={faCalendarAlt} className="me-2 text-primary" />
-                    <strong>Date:</strong>
-                    <span className="ms-2">{new Date(billing.invoice_date).toLocaleDateString()}</span>
-                  </div>
-                  <div className="d-flex align-items-center mb-1">
-                    <FontAwesomeIcon icon={faFileInvoiceDollar} className="me-2 text-primary" />
-                    <strong>Amount:</strong>
-                    <span className="ms-2">
-                      <FontAwesomeIcon icon={faRupeeSign} className="me-1" />
-                      {billing.total_amount.toFixed(2)}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mobile-btn-group">
-                  <Link to={`/billing/${billing.id}`} className="btn btn-info">
-                    <FontAwesomeIcon icon={faEye} className="me-1" /> View
-                  </Link>
-                  {billing.status !== 'Paid' && billing.status !== 'Cancelled' && (
-                    <Link to={`/billing/${billing.id}/collect`} className="btn btn-success">
-                      <FontAwesomeIcon icon={faMoneyBillWave} className="me-1" /> Collect
-                    </Link>
-                  )}
-                  <Link to={`/billing/${billing.id}/print`} className="btn btn-primary">
-                    <FontAwesomeIcon icon={faPrint} className="me-1" /> Print
-                  </Link>
-                </div>
-              </Card.Body>
-            </Card>
-          ))}
-        </div>
-      )}
-
-      {/* Pagination */}
-      {!loading && !error && totalPages > 1 && (
-        <div className="d-flex justify-content-center mt-4">
-          <Pagination>{renderPaginationItems()}</Pagination>
-        </div>
+      {/* Responsive Billing Table */}
+      {!loading && !error && (
+        <ResponsiveBillingTable
+          billings={billings}
+          title="Invoice List"
+          loading={loading}
+          itemsPerPage={20}
+        />
       )}
     </div>
   );

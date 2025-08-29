@@ -6,19 +6,101 @@ import {
   faArrowLeft, faSave, faPlus, faTrash, faSearch, 
   faFileInvoiceDollar, faUser, faRupeeSign
 } from '@fortawesome/free-solid-svg-icons';
-import { billingAPI, patientAPI } from '../../services/api';
-import { 
-  TextInput, 
-  SelectInput, 
-  DateInput, 
-  NumberInput, 
-  CurrencyInput, 
+import { billingAPI, patientAPI, adminAPI } from '../../services/api';
+import {
+  TextInput,
+  SelectInput,
+  DateInput,
+  NumberInput,
+  CurrencyInput,
   PercentageInput,
   FormSection,
   SuccessModal,
   ErrorModal
 } from '../../components/common';
 import '../../styles/BillingCreate.css';
+
+// Enhanced Searchable Dropdown Component
+const SearchableDropdown = ({
+  options = [],
+  value,
+  onChange,
+  placeholder = "Select...",
+  name,
+  label,
+  isRequired = false,
+  isDisabled = false,
+  isClearable = true,
+  isLoading = false,
+  getOptionLabel = (option) => option.label || option.name || option.description || option.test_profile || option,
+  getOptionValue = (option) => option.value || option.id || option,
+  variant = "mui" // "mui" or "react-select"
+}) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Ensure options is always an array
+  const safeOptions = Array.isArray(options) ? options : [];
+
+  const filteredOptions = safeOptions.filter(option => {
+    const label = getOptionLabel(option);
+    return label && typeof label === 'string' &&
+           label.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const selectedOption = safeOptions.find(option => getOptionValue(option) === value);
+
+  return (
+    <div className="searchable-dropdown">
+      <Form.Group className="mb-3">
+        {label && (
+          <Form.Label>
+            {label} {isRequired && <span className="text-danger">*</span>}
+          </Form.Label>
+        )}
+        <div className="position-relative">
+          <Form.Control
+            type="text"
+            value={selectedOption ? getOptionLabel(selectedOption) : searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setIsOpen(true);
+            }}
+            onFocus={() => setIsOpen(true)}
+            onBlur={() => setTimeout(() => setIsOpen(false), 200)}
+            placeholder={placeholder}
+            disabled={isDisabled}
+            required={isRequired}
+          />
+          {isOpen && filteredOptions.length > 0 && (
+            <div className="dropdown-menu show position-absolute w-100" style={{ zIndex: 1050, maxHeight: '200px', overflowY: 'auto' }}>
+              {filteredOptions.map((option, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className="dropdown-item"
+                  onClick={() => {
+                    const event = {
+                      target: {
+                        name: name,
+                        value: getOptionValue(option)
+                      }
+                    };
+                    onChange(event);
+                    setSearchTerm('');
+                    setIsOpen(false);
+                  }}
+                >
+                  {getOptionLabel(option)}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </Form.Group>
+    </div>
+  );
+};
 
 const BillingCreate = () => {
   const navigate = useNavigate();
@@ -52,13 +134,29 @@ const BillingCreate = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedPatient, setSelectedPatient] = useState(null);
+  const [testProfiles, setTestProfiles] = useState([]);
   const [newItem, setNewItem] = useState({
     description: '',
+    test_profile_id: '',
     quantity: 1,
     unit_price: 0,
     discount: 0,
     total: 0
   });
+
+  // Fetch test profiles on component mount
+  useEffect(() => {
+    const fetchTestProfiles = async () => {
+      try {
+        const response = await adminAPI.getMasterData('departments');
+        setTestProfiles(response.data || []);
+      } catch (err) {
+        console.error('Error fetching test profiles:', err);
+      }
+    };
+
+    fetchTestProfiles();
+  }, []);
 
   // Fetch patient if ID is provided
   useEffect(() => {
@@ -101,17 +199,26 @@ const BillingCreate = () => {
         ...prev,
         [name]: value
       };
-      
+
+      // If test profile is selected, auto-fill description and price
+      if (name === 'test_profile_id') {
+        const selectedProfile = testProfiles.find(profile => profile.id === value);
+        if (selectedProfile) {
+          updated.description = selectedProfile.test_profile;
+          updated.unit_price = parseFloat(selectedProfile.test_price) || 0;
+        }
+      }
+
       // Calculate total for the item
-      if (name === 'quantity' || name === 'unit_price' || name === 'discount') {
+      if (name === 'quantity' || name === 'unit_price' || name === 'discount' || name === 'test_profile_id') {
         const quantity = parseFloat(updated.quantity) || 0;
         const unitPrice = parseFloat(updated.unit_price) || 0;
         const discount = parseFloat(updated.discount) || 0;
-        
+
         const total = quantity * unitPrice * (1 - discount / 100);
         updated.total = parseFloat(total.toFixed(2));
       }
-      
+
       return updated;
     });
   };
@@ -144,6 +251,7 @@ const BillingCreate = () => {
     // Reset new item form
     setNewItem({
       description: '',
+      test_profile_id: '',
       quantity: 1,
       unit_price: 0,
       discount: 0,
@@ -265,10 +373,10 @@ const BillingCreate = () => {
   return (
     <div className="billing-create-container">
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h1 className="h3 mb-0 text-gray-800">
+        {/* <h1 className="h3 mb-0 text-gray-800">
           <FontAwesomeIcon icon={faFileInvoiceDollar} className="me-2" />
           Create New Invoice
-        </h1>
+        </h1> */}
         <Link to="/billing" className="btn btn-secondary">
           <FontAwesomeIcon icon={faArrowLeft} className="me-2" />
           Back to List
@@ -448,12 +556,27 @@ const BillingCreate = () => {
 
                 <FormSection title="Add New Item">
                   <Row>
-                    <Col md={12}>
+                    <Col md={6}>
+                      <SearchableDropdown
+                        name="test_profile_id"
+                        label="Select Test"
+                        value={newItem.test_profile_id}
+                        onChange={handleItemChange}
+                        options={testProfiles}
+                        placeholder="Search and select test profile..."
+                        getOptionLabel={(option) => option.test_profile}
+                        getOptionValue={(option) => option.id}
+                        isRequired={false}
+                        isClearable={true}
+                      />
+                    </Col>
+                    <Col md={6}>
                       <TextInput
                         name="description"
                         label="Description"
                         value={newItem.description}
                         onChange={handleItemChange}
+                        placeholder="Enter custom description or select test above"
                         required
                       />
                     </Col>

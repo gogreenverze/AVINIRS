@@ -1,0 +1,143 @@
+{
+  "pricingSchemes": {
+    "standard": {
+      "id": "standard",
+      "name": "Standard",
+      "description": "Standard pricing for regular patients",
+      "isDefault": true
+    },
+    "corporate": {
+      "id": "corporate", 
+      "name": "Corporate",
+      "description": "Corporate pricing for company employees"
+    },
+    "insurance": {
+      "id": "insurance",
+      "name": "Insurance", 
+      "description": "Insurance pricing for covered patients"
+    },
+    "promotional": {
+      "id": "promotional",
+      "name": "Promotional",
+      "description": "Promotional pricing for special offers"
+    }
+  },
+  "referralSources": {
+    "doctor": {
+      "id": "doctor",
+      "name": "Doctor",
+      "defaultScheme": "standard"
+    },
+    "self": {
+      "id": "self", 
+      "name": "Self",
+      "defaultScheme": "standard"
+    },
+    "hospital": {
+      "id": "hospital",
+      "name": "Hospital", 
+      "defaultScheme": "corporate"
+    },
+    "corporate": {
+      "id": "corporate",
+      "name": "Corporate",
+      "defaultScheme": "corporate"
+    },
+    "insurance": {
+      "id": "insurance",
+      "name": "Insurance",
+      "defaultScheme": "insurance"
+    },
+    "lab": {
+      "id": "lab",
+      "name": "Lab",
+      "defaultScheme": "corporate"
+    }
+  },
+  "testPricingMappings": {
+    "@000003": {
+      "testId": "@000003",
+      "testName": "17 HYDROXY CORTICO STEROID 24 HR URINE",
+      "defaultPrice": 4000.0,
+      "schemes": {
+        "standard": {
+          "price": 4000.0,
+          "referralSources": {
+            "doctor": 4000.0,
+            "self": 4000.0,
+            "hospital": 3800.0
+          }
+        },
+        "corporate": {
+          "price": 3500.0,
+          "referralSources": {
+            "corporate": 3500.0,
+            "hospital": 3400.0,
+            "lab": 3300.0
+          }
+        },
+        "insurance": {
+          "price": 3600.0,
+          "referralSources": {
+            "insurance": 3600.0
+          }
+        },
+        "promotional": {
+          "price": 3200.0,
+          "referralSources": {
+            "doctor": 3200.0,
+            "self": 3000.0
+          }
+        }
+      }
+    },
+    "@000009": {
+      "testId": "@000009", 
+      "testName": "24 hrs URINE PROTEIN CREATININE RATIO",
+      "defaultPrice": 400.0,
+      "schemes": {
+        "standard": {
+          "price": 400.0,
+          "referralSources": {
+            "doctor": 400.0,
+            "self": 400.0,
+            "hospital": 380.0
+          }
+        },
+        "corporate": {
+          "price": 350.0,
+          "referralSources": {
+            "corporate": 350.0,
+            "hospital": 340.0,
+            "lab": 330.0
+          }
+        },
+        "insurance": {
+          "price": 360.0,
+          "referralSources": {
+            "insurance": 360.0
+          }
+        },
+        "promotional": {
+          "price": 300.0,
+          "referralSources": {
+            "doctor": 300.0,
+            "self": 280.0
+          }
+        }
+      }
+    }
+  },
+  "fallbackRules": {
+    "useDefaultScheme": true,
+    "useDefaultPrice": true,
+    "defaultScheme": "standard",
+    "priceCalculationOrder": [
+      "testId_scheme_referralSource",
+      "testId_scheme_default", 
+      "testId_defaultScheme_referralSource",
+      "testId_defaultScheme_default",
+      "testId_defaultPrice"
+    ]
+  }
+}

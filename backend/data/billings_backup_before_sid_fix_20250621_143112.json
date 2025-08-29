@@ -1,0 +1,1523 @@
+[
+  {
+    "id": 1,
+    "invoice_number": "INV00001",
+    "patient_id": 6,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 3,
+        "price": 600,
+        "amount": 1800
+      },
+      {
+        "id": 2,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 1,
+        "price": 150,
+        "amount": 150
+      },
+      {
+        "id": 3,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      }
+    ],
+    "subtotal": 2650,
+    "discount": 10.47,
+    "tax": 477.0,
+    "total_amount": 3116.53,
+    "paid_amount": 3116.53,
+    "balance": 0,
+    "payment_method": "UPI",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-27",
+    "due_date": "2025-05-27",
+    "created_at": "2025-04-27T17:15:25.316838",
+    "updated_at": "2025-04-27T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 2
+  },
+  {
+    "id": 2,
+    "invoice_number": "INV00002",
+    "patient_id": 29,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 2,
+        "price": 600,
+        "amount": 1200
+      },
+      {
+        "id": 2,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 3,
+        "price": 800,
+        "amount": 2400
+      },
+      {
+        "id": 3,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 1,
+        "price": 450,
+        "amount": 450
+      }
+    ],
+    "subtotal": 4050,
+    "discount": 475.17,
+    "tax": 729.0,
+    "total_amount": 4303.83,
+    "paid_amount": 0,
+    "balance": 4303.83,
+    "payment_method": "Card",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-08",
+    "due_date": "2025-06-07",
+    "created_at": "2025-05-08T17:15:25.316838",
+    "updated_at": "2025-05-08T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 3
+  },
+  {
+    "id": 3,
+    "invoice_number": "INV00003",
+    "patient_id": 33,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 3,
+        "price": 450,
+        "amount": 1350
+      }
+    ],
+    "subtotal": 1350,
+    "discount": 94.44,
+    "tax": 243.0,
+    "total_amount": 1498.56,
+    "paid_amount": 1273.46,
+    "balance": 225.0999999999999,
+    "payment_method": "Cash",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-04-04",
+    "due_date": "2025-05-04",
+    "created_at": "2025-04-04T17:15:25.316838",
+    "updated_at": "2025-04-04T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "invoice_number": "INV00004",
+    "patient_id": 12,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 1,
+        "price": 350,
+        "amount": 350
+      },
+      {
+        "id": 2,
+        "test_id": 7,
+        "test_name": "Thyroid Profile",
+        "quantity": 1,
+        "price": 850,
+        "amount": 850
+      }
+    ],
+    "subtotal": 1200,
+    "discount": 94.55,
+    "tax": 216.0,
+    "total_amount": 1321.45,
+    "paid_amount": 1321.45,
+    "balance": 0,
+    "payment_method": "Cash",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-04",
+    "due_date": "2025-05-04",
+    "created_at": "2025-04-04T17:15:25.316838",
+    "updated_at": "2025-04-04T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 1
+  },
+  {
+    "id": 5,
+    "invoice_number": "INV00005",
+    "patient_id": 31,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 2,
+        "price": 600,
+        "amount": 1200
+      },
+      {
+        "id": 2,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 1,
+        "price": 450,
+        "amount": 450
+      },
+      {
+        "id": 3,
+        "test_id": 9,
+        "test_name": "Stool Routine",
+        "quantity": 1,
+        "price": 250,
+        "amount": 250
+      }
+    ],
+    "subtotal": 1900,
+    "discount": 28.52,
+    "tax": 342.0,
+    "total_amount": 2213.48,
+    "paid_amount": 2213.48,
+    "balance": 0,
+    "payment_method": "Cash",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-12",
+    "due_date": "2025-05-12",
+    "created_at": "2025-04-12T17:15:25.316838",
+    "updated_at": "2025-04-12T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 1
+  },
+  {
+    "id": 6,
+    "invoice_number": "INV00006",
+    "patient_id": 31,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      },
+      {
+        "id": 2,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 2,
+        "price": 600,
+        "amount": 1200
+      },
+      {
+        "id": 3,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      },
+      {
+        "id": 4,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 3,
+        "price": 700,
+        "amount": 2100
+      }
+    ],
+    "subtotal": 4700,
+    "discount": 441.76,
+    "tax": 846.0,
+    "total_amount": 5104.24,
+    "paid_amount": 5104.24,
+    "balance": 0,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-18",
+    "due_date": "2025-05-18",
+    "created_at": "2025-04-18T17:15:25.316838",
+    "updated_at": "2025-04-18T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 1
+  },
+  {
+    "id": 7,
+    "invoice_number": "INV00007",
+    "patient_id": 40,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      },
+      {
+        "id": 2,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      },
+      {
+        "id": 3,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      }
+    ],
+    "subtotal": 2550,
+    "discount": 72.01,
+    "tax": 459.0,
+    "total_amount": 2936.99,
+    "paid_amount": 0,
+    "balance": 2936.99,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-04-07",
+    "due_date": "2025-05-07",
+    "created_at": "2025-04-07T17:15:25.316838",
+    "updated_at": "2025-04-07T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 8,
+    "invoice_number": "INV00008",
+    "patient_id": 14,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 9,
+        "test_name": "Stool Routine",
+        "quantity": 1,
+        "price": 250,
+        "amount": 250
+      },
+      {
+        "id": 2,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 3,
+        "price": 600,
+        "amount": 1800
+      }
+    ],
+    "subtotal": 2050,
+    "discount": 125.58,
+    "tax": 369.0,
+    "total_amount": 2293.42,
+    "paid_amount": 2293.42,
+    "balance": 0,
+    "payment_method": "Cash",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-05-05",
+    "due_date": "2025-06-04",
+    "created_at": "2025-05-05T17:15:25.316838",
+    "updated_at": "2025-05-05T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 2
+  },
+  {
+    "id": 9,
+    "invoice_number": "INV00009",
+    "patient_id": 50,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 3,
+        "price": 200,
+        "amount": 600
+      },
+      {
+        "id": 2,
+        "test_id": 9,
+        "test_name": "Stool Routine",
+        "quantity": 1,
+        "price": 250,
+        "amount": 250
+      }
+    ],
+    "subtotal": 850,
+    "discount": 19.72,
+    "tax": 153.0,
+    "total_amount": 983.28,
+    "paid_amount": 0,
+    "balance": 983.28,
+    "payment_method": "Card",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-03-23",
+    "due_date": "2025-04-22",
+    "created_at": "2025-03-23T17:15:25.316838",
+    "updated_at": "2025-03-23T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 1
+  },
+  {
+    "id": 10,
+    "invoice_number": "INV00010",
+    "patient_id": 29,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 2,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 1,
+        "price": 200,
+        "amount": 200
+      },
+      {
+        "id": 3,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      },
+      {
+        "id": 4,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      }
+    ],
+    "subtotal": 1650,
+    "discount": 317.03,
+    "tax": 297.0,
+    "total_amount": 1629.97,
+    "paid_amount": 0,
+    "balance": 1629.97,
+    "payment_method": "UPI",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-03-28",
+    "due_date": "2025-04-27",
+    "created_at": "2025-03-28T17:15:25.316838",
+    "updated_at": "2025-03-28T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 3
+  },
+  {
+    "id": 11,
+    "invoice_number": "INV00011",
+    "patient_id": 13,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      },
+      {
+        "id": 2,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 2,
+        "price": 800,
+        "amount": 1600
+      },
+      {
+        "id": 3,
+        "test_id": 7,
+        "test_name": "Thyroid Profile",
+        "quantity": 3,
+        "price": 850,
+        "amount": 2550
+      },
+      {
+        "id": 4,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      },
+      {
+        "id": 5,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 2,
+        "price": 200,
+        "amount": 400
+      }
+    ],
+    "subtotal": 5700,
+    "discount": 1023.75,
+    "tax": 1026.0,
+    "total_amount": 5702.25,
+    "paid_amount": 0,
+    "balance": 5702.25,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-07",
+    "due_date": "2025-06-06",
+    "created_at": "2025-05-07T17:15:25.316838",
+    "updated_at": "2025-05-07T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 12,
+    "invoice_number": "INV00012",
+    "patient_id": 40,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 1,
+        "price": 450,
+        "amount": 450
+      },
+      {
+        "id": 2,
+        "test_id": 7,
+        "test_name": "Thyroid Profile",
+        "quantity": 3,
+        "price": 850,
+        "amount": 2550
+      },
+      {
+        "id": 3,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 1,
+        "price": 200,
+        "amount": 200
+      }
+    ],
+    "subtotal": 3200,
+    "discount": 514.27,
+    "tax": 576.0,
+    "total_amount": 3261.73,
+    "paid_amount": 0,
+    "balance": 3261.73,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-06-10",
+    "due_date": "2025-07-10",
+    "created_at": "2025-06-10T17:15:25.316838",
+    "updated_at": "2025-06-10T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 13,
+    "invoice_number": "INV00013",
+    "patient_id": 42,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 3,
+        "price": 800,
+        "amount": 2400
+      }
+    ],
+    "subtotal": 2400,
+    "discount": 398.17,
+    "tax": 432.0,
+    "total_amount": 2433.83,
+    "paid_amount": 0,
+    "balance": 2433.83,
+    "payment_method": "Card",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-06-05",
+    "due_date": "2025-07-05",
+    "created_at": "2025-06-05T17:15:25.316838",
+    "updated_at": "2025-06-05T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 14,
+    "invoice_number": "INV00014",
+    "patient_id": 23,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 9,
+        "test_name": "Stool Routine",
+        "quantity": 3,
+        "price": 250,
+        "amount": 750
+      },
+      {
+        "id": 2,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 3,
+        "price": 600,
+        "amount": 1800
+      },
+      {
+        "id": 3,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      }
+    ],
+    "subtotal": 3950,
+    "discount": 426.16,
+    "tax": 711.0,
+    "total_amount": 4234.84,
+    "paid_amount": 0,
+    "balance": 4234.84,
+    "payment_method": "Cash",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-18",
+    "due_date": "2025-06-17",
+    "created_at": "2025-05-18T17:15:25.316838",
+    "updated_at": "2025-05-18T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 2
+  },
+  {
+    "id": 15,
+    "invoice_number": "INV00015",
+    "patient_id": 31,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      },
+      {
+        "id": 2,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 3,
+        "price": 200,
+        "amount": 600
+      },
+      {
+        "id": 3,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      },
+      {
+        "id": 4,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 3,
+        "price": 350,
+        "amount": 1050
+      }
+    ],
+    "subtotal": 2800,
+    "discount": 303.39,
+    "tax": 504.0,
+    "total_amount": 3000.61,
+    "paid_amount": 0,
+    "balance": 3000.61,
+    "payment_method": "UPI",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-04",
+    "due_date": "2025-06-03",
+    "created_at": "2025-05-04T17:15:25.316838",
+    "updated_at": "2025-05-04T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 3
+  },
+  {
+    "id": 16,
+    "invoice_number": "INV00016",
+    "patient_id": 27,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      },
+      {
+        "id": 2,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      }
+    ],
+    "subtotal": 1000,
+    "discount": 176.53,
+    "tax": 180.0,
+    "total_amount": 1003.47,
+    "paid_amount": 1003.47,
+    "balance": 0,
+    "payment_method": "UPI",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-09",
+    "due_date": "2025-05-09",
+    "created_at": "2025-04-09T17:15:25.316838",
+    "updated_at": "2025-04-09T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 1
+  },
+  {
+    "id": 17,
+    "invoice_number": "INV00017",
+    "patient_id": 16,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      },
+      {
+        "id": 2,
+        "test_id": 7,
+        "test_name": "Thyroid Profile",
+        "quantity": 2,
+        "price": 850,
+        "amount": 1700
+      },
+      {
+        "id": 3,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 1,
+        "price": 800,
+        "amount": 800
+      },
+      {
+        "id": 4,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 3,
+        "price": 450,
+        "amount": 1350
+      },
+      {
+        "id": 5,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      }
+    ],
+    "subtotal": 5950,
+    "discount": 885.62,
+    "tax": 1071.0,
+    "total_amount": 6135.38,
+    "paid_amount": 6135.38,
+    "balance": 0,
+    "payment_method": "Card",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-03-30",
+    "due_date": "2025-04-29",
+    "created_at": "2025-03-30T17:15:25.316838",
+    "updated_at": "2025-03-30T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 18,
+    "invoice_number": "INV00018",
+    "patient_id": 36,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 1,
+        "price": 600,
+        "amount": 600
+      }
+    ],
+    "subtotal": 600,
+    "discount": 25.32,
+    "tax": 108.0,
+    "total_amount": 682.68,
+    "paid_amount": 0,
+    "balance": 682.68,
+    "payment_method": "Cash",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-06",
+    "due_date": "2025-06-05",
+    "created_at": "2025-05-06T17:15:25.316838",
+    "updated_at": "2025-05-06T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 2
+  },
+  {
+    "id": 19,
+    "invoice_number": "INV00019",
+    "patient_id": 37,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 1,
+        "price": 450,
+        "amount": 450
+      },
+      {
+        "id": 2,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      },
+      {
+        "id": 3,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      }
+    ],
+    "subtotal": 3250,
+    "discount": 398.74,
+    "tax": 585.0,
+    "total_amount": 3436.26,
+    "paid_amount": 1501.97,
+    "balance": 1934.2900000000002,
+    "payment_method": "UPI",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-04-29",
+    "due_date": "2025-05-29",
+    "created_at": "2025-04-29T17:15:25.316838",
+    "updated_at": "2025-04-29T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 3
+  },
+  {
+    "id": 20,
+    "invoice_number": "INV00020",
+    "patient_id": 23,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 2,
+        "price": 200,
+        "amount": 400
+      },
+      {
+        "id": 2,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 3,
+        "price": 700,
+        "amount": 2100
+      },
+      {
+        "id": 3,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 1,
+        "price": 350,
+        "amount": 350
+      },
+      {
+        "id": 4,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 1,
+        "price": 200,
+        "amount": 200
+      },
+      {
+        "id": 5,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 3,
+        "price": 600,
+        "amount": 1800
+      }
+    ],
+    "subtotal": 4850,
+    "discount": 252.63,
+    "tax": 873.0,
+    "total_amount": 5470.37,
+    "paid_amount": 5470.37,
+    "balance": 0,
+    "payment_method": "Cash",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-05",
+    "due_date": "2025-05-05",
+    "created_at": "2025-04-05T17:15:25.316838",
+    "updated_at": "2025-04-05T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 1
+  },
+  {
+    "id": 21,
+    "invoice_number": "INV00021",
+    "patient_id": 4,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 3,
+        "price": 800,
+        "amount": 2400
+      },
+      {
+        "id": 2,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 1,
+        "price": 200,
+        "amount": 200
+      }
+    ],
+    "subtotal": 2600,
+    "discount": 140.02,
+    "tax": 468.0,
+    "total_amount": 2927.98,
+    "paid_amount": 2927.98,
+    "balance": 0,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Paid",
+    "status": "Paid",
+    "invoice_date": "2025-04-05",
+    "due_date": "2025-05-05",
+    "created_at": "2025-04-05T17:15:25.316838",
+    "updated_at": "2025-04-05T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 1
+  },
+  {
+    "id": 22,
+    "invoice_number": "INV00022",
+    "patient_id": 22,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 3,
+        "price": 350,
+        "amount": 1050
+      },
+      {
+        "id": 2,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 3,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 2,
+        "price": 800,
+        "amount": 1600
+      },
+      {
+        "id": 4,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      }
+    ],
+    "subtotal": 3400,
+    "discount": 616.45,
+    "tax": 612.0,
+    "total_amount": 3395.55,
+    "paid_amount": 711.93,
+    "balance": 2683.6200000000003,
+    "payment_method": "Card",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-04-03",
+    "due_date": "2025-05-03",
+    "created_at": "2025-04-03T17:15:25.316838",
+    "updated_at": "2025-04-03T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 3
+  },
+  {
+    "id": 23,
+    "invoice_number": "INV00023",
+    "patient_id": 28,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 3,
+        "price": 350,
+        "amount": 1050
+      },
+      {
+        "id": 2,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      },
+      {
+        "id": 3,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 2,
+        "price": 200,
+        "amount": 400
+      },
+      {
+        "id": 4,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 1,
+        "price": 350,
+        "amount": 350
+      },
+      {
+        "id": 5,
+        "test_id": 8,
+        "test_name": "Urine Routine",
+        "quantity": 2,
+        "price": 200,
+        "amount": 400
+      }
+    ],
+    "subtotal": 2900,
+    "discount": 179.42,
+    "tax": 522.0,
+    "total_amount": 3242.58,
+    "paid_amount": 598.59,
+    "balance": 2643.99,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-03-27",
+    "due_date": "2025-04-26",
+    "created_at": "2025-03-27T17:15:25.316838",
+    "updated_at": "2025-03-27T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 2
+  },
+  {
+    "id": 24,
+    "invoice_number": "INV00024",
+    "patient_id": 40,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      },
+      {
+        "id": 2,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 3,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 3,
+        "price": 700,
+        "amount": 2100
+      },
+      {
+        "id": 4,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 3,
+        "price": 450,
+        "amount": 1350
+      }
+    ],
+    "subtotal": 4200,
+    "discount": 284.55,
+    "tax": 756.0,
+    "total_amount": 4671.45,
+    "paid_amount": 3954.97,
+    "balance": 716.48,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-04-03",
+    "due_date": "2025-05-03",
+    "created_at": "2025-04-03T17:15:25.316838",
+    "updated_at": "2025-04-03T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 2
+  },
+  {
+    "id": 25,
+    "invoice_number": "INV00025",
+    "patient_id": 20,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 9,
+        "test_name": "Stool Routine",
+        "quantity": 1,
+        "price": 250,
+        "amount": 250
+      }
+    ],
+    "subtotal": 250,
+    "discount": 7.14,
+    "tax": 45.0,
+    "total_amount": 287.86,
+    "paid_amount": 89.33,
+    "balance": 198.53000000000003,
+    "payment_method": "UPI",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-06-04",
+    "due_date": "2025-07-04",
+    "created_at": "2025-06-04T17:15:25.316838",
+    "updated_at": "2025-06-04T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 2
+  },
+  {
+    "id": 26,
+    "invoice_number": "INV00026",
+    "patient_id": 25,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 2,
+        "price": 450,
+        "amount": 900
+      },
+      {
+        "id": 2,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 3,
+        "price": 350,
+        "amount": 1050
+      },
+      {
+        "id": 3,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 3,
+        "price": 700,
+        "amount": 2100
+      },
+      {
+        "id": 4,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 1,
+        "price": 350,
+        "amount": 350
+      },
+      {
+        "id": 5,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 1,
+        "price": 600,
+        "amount": 600
+      }
+    ],
+    "subtotal": 5000,
+    "discount": 275.61,
+    "tax": 900.0,
+    "total_amount": 5624.39,
+    "paid_amount": 1133.07,
+    "balance": 4491.320000000001,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-05-28",
+    "due_date": "2025-06-27",
+    "created_at": "2025-05-28T17:15:25.316838",
+    "updated_at": "2025-05-28T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 1
+  },
+  {
+    "id": 27,
+    "invoice_number": "INV00027",
+    "patient_id": 31,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 6,
+        "test_name": "Kidney Function Test",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      }
+    ],
+    "subtotal": 700,
+    "discount": 60.48,
+    "tax": 126.0,
+    "total_amount": 765.52,
+    "paid_amount": 0,
+    "balance": 765.52,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-03-30",
+    "due_date": "2025-04-29",
+    "created_at": "2025-03-30T17:15:25.316838",
+    "updated_at": "2025-03-30T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 3
+  },
+  {
+    "id": 28,
+    "invoice_number": "INV00028",
+    "patient_id": 4,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 2,
+        "test_id": 3,
+        "test_name": "HbA1c",
+        "quantity": 1,
+        "price": 450,
+        "amount": 450
+      }
+    ],
+    "subtotal": 750,
+    "discount": 142.96,
+    "tax": 135.0,
+    "total_amount": 742.04,
+    "paid_amount": 0,
+    "balance": 742.04,
+    "payment_method": "UPI",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-04-03",
+    "due_date": "2025-05-03",
+    "created_at": "2025-04-03T17:15:25.316838",
+    "updated_at": "2025-04-03T17:15:25.316838",
+    "tenant_id": 1,
+    "created_by": 2
+  },
+  {
+    "id": 29,
+    "invoice_number": "INV00029",
+    "patient_id": 18,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 1,
+        "price": 700,
+        "amount": 700
+      },
+      {
+        "id": 2,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 3,
+        "price": 350,
+        "amount": 1050
+      },
+      {
+        "id": 3,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 2,
+        "price": 700,
+        "amount": 1400
+      },
+      {
+        "id": 4,
+        "test_id": 1,
+        "test_name": "Complete Blood Count (CBC)",
+        "quantity": 2,
+        "price": 350,
+        "amount": 700
+      },
+      {
+        "id": 5,
+        "test_id": 4,
+        "test_name": "Lipid Profile",
+        "quantity": 3,
+        "price": 600,
+        "amount": 1800
+      }
+    ],
+    "subtotal": 5650,
+    "discount": 476.17,
+    "tax": 1017.0,
+    "total_amount": 6190.83,
+    "paid_amount": 0,
+    "balance": 6190.83,
+    "payment_method": "Bank Transfer",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-05-04",
+    "due_date": "2025-06-03",
+    "created_at": "2025-05-04T17:15:25.316838",
+    "updated_at": "2025-05-04T17:15:25.316838",
+    "tenant_id": 3,
+    "created_by": 1
+  },
+  {
+    "id": 30,
+    "invoice_number": "INV00030",
+    "patient_id": 4,
+    "items": [
+      {
+        "id": 1,
+        "test_id": 5,
+        "test_name": "Liver Function Test",
+        "quantity": 2,
+        "price": 800,
+        "amount": 1600
+      },
+      {
+        "id": 2,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 3,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 2,
+        "price": 150,
+        "amount": 300
+      },
+      {
+        "id": 4,
+        "test_id": 10,
+        "test_name": "Dengue NS1 Antigen",
+        "quantity": 3,
+        "price": 700,
+        "amount": 2100
+      },
+      {
+        "id": 5,
+        "test_id": 2,
+        "test_name": "Blood Glucose Fasting",
+        "quantity": 3,
+        "price": 150,
+        "amount": 450
+      }
+    ],
+    "subtotal": 4750,
+    "discount": 594.54,
+    "tax": 855.0,
+    "total_amount": 5010.46,
+    "paid_amount": 542.76,
+    "balance": 4467.7,
+    "payment_method": "Card",
+    "payment_status": "Partial",
+    "status": "Partial",
+    "invoice_date": "2025-04-02",
+    "due_date": "2025-05-02",
+    "created_at": "2025-04-02T17:15:25.316838",
+    "updated_at": "2025-04-02T17:15:25.316838",
+    "tenant_id": 2,
+    "created_by": 3
+  },
+  {
+    "id": 31,
+    "invoice_number": "INV00031",
+    "sid_number": "MYD001",
+    "patient_id": 34,
+    "items": [
+      {
+        "testName": "17 - HYDROXY PROGESTERONE",
+        "test_id": 2,
+        "amount": 800,
+        "id": 1750436899987,
+        "test_name": "17 - HYDROXY PROGESTERONE",
+        "department": "IMMUNOLOGY",
+        "hmsCode": "2.0"
+      }
+    ],
+    "bill_amount": 800,
+    "other_charges": 0,
+    "discount_percent": 0,
+    "subtotal": 944,
+    "discount": 0,
+    "gst_rate": 18,
+    "gst_amount": 144,
+    "tax": 144,
+    "total_amount": 944,
+    "paid_amount": 0,
+    "balance": 944,
+    "payment_method": "",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-06-20",
+    "due_date": "2025-07-20",
+    "notes": "",
+    "branch": "1",
+    "created_at": "2025-06-20T21:58:22.614664",
+    "updated_at": "2025-06-20T21:58:22.614664",
+    "tenant_id": 1,
+    "created_by": 4
+  },
+  {
+    "id": 32,
+    "invoice_number": "INV00032",
+    "sid_number": "SKZ001",
+    "patient_id": 37,
+    "items": [
+      {
+        "testName": "17 - HYDROXY PROGESTERONE",
+        "test_id": 2,
+        "amount": 800,
+        "id": 1750490226713,
+        "test_name": "17 - HYDROXY PROGESTERONE",
+        "department": "IMMUNOLOGY",
+        "hmsCode": "2.0"
+      }
+    ],
+    "bill_amount": 800,
+    "other_charges": 0,
+    "discount_percent": 0,
+    "subtotal": 944,
+    "discount": 0,
+    "gst_rate": 18,
+    "gst_amount": 144,
+    "tax": 144,
+    "total_amount": 944,
+    "paid_amount": 0,
+    "balance": 944,
+    "payment_method": "",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-06-21",
+    "due_date": "2025-07-21",
+    "notes": "",
+    "branch": "2",
+    "created_at": "2025-06-21T12:47:09.145759",
+    "updated_at": "2025-06-21T12:47:09.145759",
+    "tenant_id": 2,
+    "created_by": 5
+  },
+  {
+    "id": 33,
+    "invoice_number": "INV00033",
+    "sid_number": "MYD002",
+    "patient_id": 34,
+    "items": [
+      {
+        "testName": "17 - HYDROXY PROGESTERONE",
+        "test_id": 2,
+        "amount": 800,
+        "id": 1750495890087,
+        "test_name": "17 - HYDROXY PROGESTERONE",
+        "department": "IMMUNOLOGY",
+        "hmsCode": "2.0"
+      }
+    ],
+    "bill_amount": 800,
+    "other_charges": 0,
+    "discount_percent": 0,
+    "subtotal": 944,
+    "discount": 0,
+    "gst_rate": 18,
+    "gst_amount": 144,
+    "tax": 144,
+    "total_amount": 944,
+    "paid_amount": 0,
+    "balance": 944,
+    "payment_method": "",
+    "payment_status": "Pending",
+    "status": "Pending",
+    "invoice_date": "2025-06-21",
+    "due_date": "2025-07-21",
+    "notes": "",
+    "branch": "1",
+    "created_at": "2025-06-21T14:21:32.518940",
+    "updated_at": "2025-06-21T14:21:32.518940",
+    "tenant_id": 1,
+    "created_by": 4
+  }
+]

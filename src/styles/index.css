@@ -16,7 +16,7 @@
   --warning-rgb: 246, 194, 62;
   --danger: #e74a3b;
   --danger-rgb: 231, 74, 59;
-  --dark: #5a5c69;
+  --dark: white;
 
   --pre-analytical: #4e73df;
   --analytical: #1cc88a;
@@ -243,3 +243,6 @@ a:hover {
 .text-xl {
   font-size: 1.5rem !important;
 }
+
+/* Import mobile responsive styles */
+@import './mobile-responsive.css';

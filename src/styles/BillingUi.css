@@ -1,0 +1,60 @@
+.compact-form .form-label,
+.compact-form .form-select,
+.compact-form .form-control {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+}
+/* Wrapper for the entire card */
+.compact-card {
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 12px;
+}
+
+/* Header title bar */
+.compact-card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Common row with horizontal layout */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Each field container */
+.form-group-compact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs and selects */
+.form-group-compact input,
+.form-group-compact select {
+  width: 100%;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
+/* Label styling */
+.form-group-compact label {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "referrerTypes": [
+    {
+      "id": "doctor",
+      "name": "Doctor",
+      "description": "Medical practitioners and physicians"
+    },
+    {
+      "id": "self",
+      "name": "Self",
+      "description": "Self-referred patients"
+    },
+    {
+      "id": "lab",
+      "name": "Lab",
+      "description": "Other laboratory facilities"
+    },
+    {
+      "id": "hospital",
+      "name": "Hospital",
+      "description": "Hospital and medical institutions"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate",
+      "description": "Corporate health programs"
+    },
+    {
+      "id": "insurance",
+      "name": "Insurance",
+      "description": "Insurance companies and health plans"
+    },
+    {
+      "id": "staff",
+      "name": "Staff",
+      "description": "Internal staff referrals"
+    },
+    {
+      "id": "consultant",
+      "name": "Consultant",
+      "description": "Medical consultants and specialists"
+    },
+    {
+      "id": "outstation",
+      "name": "Outstation",
+      "description": "Out-of-station referrals"
+    }
+  ],
+  "referrerNames": {
+    "doctor": [
+      {
+        "id": "dr_001",
+        "name": "Dr. Rajesh Kumar",
+        "specialization": "Cardiologist",
+        "hospital": "City Heart Hospital",
+        "phone": "9876543210",
+        "email": "rajesh.kumar@cityheart.com"
+      },
+      {
+        "id": "dr_002",
+        "name": "Dr. Priya Sharma",
+        "specialization": "Endocrinologist",
+        "hospital": "Metro Medical Center",
+        "phone": "9876543211",
+        "email": "priya.sharma@metro.com"
+      },
+      {
+        "id": "dr_003",
+        "name": "Dr. Amit Patel",
+        "specialization": "General Physician",
+        "hospital": "Community Health Clinic",
+        "phone": "9876543212",
+        "email": "amit.patel@community.com"
+      },
+      {
+        "id": "dr_004",
+        "name": "Dr. Sunita Reddy",
+        "specialization": "Gynecologist",
+        "hospital": "Women's Care Hospital",
+        "phone": "9876543213",
+        "email": "sunita.reddy@womenscare.com"
+      },
+      {
+        "id": "dr_005",
+        "name": "Dr. Vikram Singh",
+        "specialization": "Orthopedist",
+        "hospital": "Bone & Joint Center",
+        "phone": "9876543214",
+        "email": "vikram.singh@bonejoint.com"
+      }
+    ],
+    "hospital": [
+      {
+        "id": "hosp_001",
+        "name": "City General Hospital",
+        "type": "Multi-specialty",
+        "address": "123 Main Street, City Center",
+        "phone": "0123456789",
+        "email": "info@citygeneral.com"
+      },
+      {
+        "id": "hosp_002",
+        "name": "Metro Medical Center",
+        "type": "Super Specialty",
+        "address": "456 Health Avenue, Metro District",
+        "phone": "0123456790",
+        "email": "contact@metromedical.com"
+      },
+      {
+        "id": "hosp_003",
+        "name": "Community Health Clinic",
+        "type": "Primary Care",
+        "address": "789 Community Road, Suburb",
+        "phone": "0123456791",
+        "email": "help@communityhealth.com"
+      },
+      {
+        "id": "hosp_004",
+        "name": "Specialty Care Institute",
+        "type": "Specialty",
+        "address": "321 Medical Plaza, Downtown",
+        "phone": "0123456792",
+        "email": "info@specialtycare.com"
+      }
+    ],
+    "lab": [
+      {
+        "id": "lab_001",
+        "name": "PathLab Diagnostics",
+        "type": "Full Service Lab",
+        "address": "111 Lab Street, Medical District",
+        "phone": "0123456793",
+        "email": "info@pathlab.com"
+      },
+      {
+        "id": "lab_002",
+        "name": "QuickTest Laboratory",
+        "type": "Express Testing",
+        "address": "222 Quick Avenue, Business Park",
+        "phone": "0123456794",
+        "email": "contact@quicktest.com"
+      },
+      {
+        "id": "lab_003",
+        "name": "Precision Diagnostics",
+        "type": "Specialized Testing",
+        "address": "333 Precision Road, Tech Hub",
+        "phone": "0123456795",
+        "email": "info@precision.com"
+      }
+    ],
+    "corporate": [
+      {
+        "id": "corp_001",
+        "name": "TechCorp Health Program",
+        "company": "TechCorp Industries",
+        "contact_person": "HR Manager",
+        "phone": "0123456796",
+        "email": "health@techcorp.com"
+      },
+      {
+        "id": "corp_002",
+        "name": "Manufacturing Co. Wellness",
+        "company": "Manufacturing Co. Ltd",
+        "contact_person": "Wellness Coordinator",
+        "phone": "0123456797",
+        "email": "wellness@manufacturing.com"
+      },
+      {
+        "id": "corp_003",
+        "name": "Financial Services Health",
+        "company": "Financial Services Inc",
+        "contact_person": "Benefits Manager",
+        "phone": "0123456798",
+        "email": "benefits@financial.com"
+      }
+    ],
+    "insurance": [
+      {
+        "id": "ins_001",
+        "name": "HealthFirst Insurance",
+        "type": "Health Insurance",
+        "contact_person": "Claims Manager",
+        "phone": "0123456799",
+        "email": "claims@healthfirst.com"
+      },
+      {
+        "id": "ins_002",
+        "name": "MediCare Plus",
+        "type": "Medical Insurance",
+        "contact_person": "Provider Relations",
+        "phone": "0123456800",
+        "email": "providers@medicareplus.com"
+      },
+      {
+        "id": "ins_003",
+        "name": "Universal Health Coverage",
+        "type": "Universal Insurance",
+        "contact_person": "Network Manager",
+        "phone": "0123456801",
+        "email": "network@universal.com"
+      }
+    ],
+    "staff": [
+      {
+        "id": "staff_001",
+        "name": "Internal Medicine Department",
+        "department": "Internal Medicine",
+        "contact_person": "Department Head",
+        "extension": "101"
+      },
+      {
+        "id": "staff_002",
+        "name": "Emergency Department",
+        "department": "Emergency",
+        "contact_person": "ER Coordinator",
+        "extension": "102"
+      },
+      {
+        "id": "staff_003",
+        "name": "Outpatient Department",
+        "department": "OPD",
+        "contact_person": "OPD Manager",
+        "extension": "103"
+      }
+    ],
+    "consultant": [
+      {
+        "id": "cons_001",
+        "name": "Dr. Expert Consultant",
+        "specialization": "Radiology Consultant",
+        "affiliation": "Medical Imaging Center",
+        "phone": "0123456802",
+        "email": "expert@imaging.com"
+      },
+      {
+        "id": "cons_002",
+        "name": "Dr. Senior Advisor",
+        "specialization": "Pathology Consultant",
+        "affiliation": "Advanced Diagnostics",
+        "phone": "0123456803",
+        "email": "advisor@advanced.com"
+      }
+    ],
+    "outstation": [
+      {
+        "id": "out_001",
+        "name": "Regional Medical Center",
+        "location": "North Region",
+        "contact_person": "Regional Coordinator",
+        "phone": "0123456804",
+        "email": "north@regional.com"
+      },
+      {
+        "id": "out_002",
+        "name": "District Hospital",
+        "location": "South District",
+        "contact_person": "District Manager",
+        "phone": "0123456805",
+        "email": "south@district.com"
+      }
+    ],
+    "self": [
+      {
+        "id": "self_001",
+        "name": "Walk-in Patient",
+        "description": "Patient came directly without referral"
+      },
+      {
+        "id": "self_002",
+        "name": "Online Booking",
+        "description": "Patient booked online without referral"
+      },
+      {
+        "id": "self_003",
+        "name": "Phone Booking",
+        "description": "Patient called directly for appointment"
+      }
+    ]
+  }
+}

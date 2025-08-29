@@ -1,0 +1,114 @@
+{
+  "Laboratory Tests": [
+    {
+      "testName": "25 Hydroxy Vitamin D3",
+      "testCode": "630",
+      "department": "IMMUNOLOGY",
+      "notes": "Vitamin D deficiency marker\nBest indicator of vitamin D status\nNo fasting required\nAvoid hemolyzed samples\nStable at room temperature for 8 hours\nSeasonal variation may occur\n\nBiological Function:\nEssential for calcium and phosphate homeostasis\nRegulates bone mineralization and remodeling\nSupports immune system function\nInfluences muscle strength and function\nPlays role in cell differentiation and proliferation\n\nBone Health Effects:\nDeficiency leads to rickets in children\nCauses osteomalacia in adults\nIncreases risk of osteoporosis\nImpairs calcium absorption from intestines\nReduces bone mineral density\n\nDeficiency Symptoms:\nBone pain and muscle weakness\nIncreased susceptibility to infections\nFatigue and depression\nHair loss and delayed wound healing\nMuscle cramps and spasms\n\nSecondary Hyperparathyroidism:\nVitamin D deficiency stimulates PTH release\nElevated PTH mobilizes calcium from bones\nLeads to bone demineralization\nCan cause hypocalcemia\nResults in increased bone turnover markers\n\nClinical Assessment Guidelines:\nTest recommended for high-risk patients\nInclude elderly, pregnant women, dark-skinned individuals\nPatients with limited sun exposure\nThose with malabsorption disorders\nIndividuals on certain medications\nPatients with chronic kidney or liver disease\n\nSample Requirements:\nSerum or plasma acceptable\nNo special preparation required\nStable for 7 days at 2-8°C\nCan be frozen for long-term storage\nAvoid exposure to direct sunlight",
+      "referenceRange": "Deficiency: < 20 ng/ml\nInsufficiency: 20-29 ng/ml\nSufficiency: 30-100 ng/ml\nToxicity: > 150 ng/ml\nOptimal: 40-60 ng/ml\nSevere Deficiency: < 10 ng/ml\nPregnancy: 30-100 ng/ml\nPediatric (1-18 years): 30-100 ng/ml",
+      "resultUnit": "ng/ml",
+      "decimals": "1",
+      "criticalLow": "< 10",
+      "criticalHigh": "> 150"
+    },
+    {
+      "testName": "C-peptide, postprandial",
+      "testCode": "650",
+      "department": "IMMUNOLOGY",
+      "notes": "C-peptide postprandial measurement\nConnecting peptide of proinsulin\nReflects endogenous insulin production\nNot affected by exogenous insulin\nUseful in diabetic patients on insulin therapy\nAssesses pancreatic beta-cell function\nDifferentiates Type 1 from Type 2 diabetes\n\nClinical Significance:\nEvaluates residual beta-cell function\nMonitors progression of diabetes\nGuides insulin therapy decisions\nDiagnoses insulinoma\nAssesses hypoglycemia causes\n\nSample Requirements:\nFasting not required for postprandial\nCollect 2 hours after meal\nSerum or plasma acceptable\nStable at room temperature for 8 hours\nRefrigerate if delayed processing",
+      "referenceRange": "Fasting: 0.9-7.1 ng/ml\nPostprandial (2 hours): 1.8-14.4 ng/ml\nDiabetic (Type 1): < 0.5 ng/ml\nDiabetic (Type 2): Variable, often elevated\nInsulinoma: > 5.0 ng/ml (fasting)\nRenal Failure: Elevated due to decreased clearance",
+      "resultUnit": "ng/ml",
+      "decimals": "2",
+      "criticalLow": "< 0.2",
+      "criticalHigh": "> 20.0"
+    },
+    {
+      "testName": "17 HYDROXY CORTICO STEROID 24 HR URINE",
+      "testCode": "648",
+      "department": "IMMUNOLOGY",
+      "notes": "24-hour urine collection for 17-hydroxycorticosteroids\nMetabolites of cortisol and cortisone\nReflects adrenal cortical function\nUsed to diagnose Cushing's syndrome\nAssesses adrenal insufficiency\nMonitors steroid therapy effects\n\nCollection Instructions:\nStart collection after first morning void\nCollect all urine for exactly 24 hours\nInclude final morning void of next day\nKeep collection container refrigerated\nAdd preservative if provided\nRecord exact collection times\n\nClinical Applications:\nDiagnosis of Cushing's syndrome\nEvaluation of adrenal insufficiency\nMonitoring of steroid replacement therapy\nAssessment of stress response\nInvestigation of hirsutism\nEvaluation of precocious puberty",
+      "referenceRange": "Adult Male: 2.0-10.0 mg/24hr\nAdult Female: 2.0-8.0 mg/24hr\nChildren (1-10 years): 0.1-4.0 mg/24hr\nChildren (11-14 years): 0.5-5.0 mg/24hr\nCushing's Syndrome: > 12.0 mg/24hr\nAdrenal Insufficiency: < 2.0 mg/24hr",
+      "resultUnit": "mg/24hr",
+      "decimals": "1",
+      "criticalLow": "< 1.0",
+      "criticalHigh": "> 15.0"
+    },
+    {
+      "testName": "GAD-65 - IgG",
+      "testCode": "680",
+      "department": "IMMUNOLOGY",
+      "notes": "Glutamic Acid Decarboxylase antibodies\nAutoantibodies against GAD-65 enzyme\nMarker for Type 1 diabetes mellitus\nPresent in LADA (Latent Autoimmune Diabetes)\nAssociated with Stiff Person Syndrome\nUseful in diabetes classification\n\nClinical Significance:\nEarly marker of beta-cell destruction\nPredicts progression to insulin dependence\nDifferentiates Type 1 from Type 2 diabetes\nRisk assessment in family members\nDiagnosis of LADA in adults\nStiff Person Syndrome diagnosis\n\nSample Requirements:\nFasting not required\nSerum sample preferred\nStable at room temperature for 8 hours\nCan be stored frozen for extended periods\nAvoid hemolyzed samples",
+      "referenceRange": "Negative: < 5.0 U/ml\nBorderline: 5.0-10.0 U/ml\nPositive: > 10.0 U/ml\nStrongly Positive: > 20.0 U/ml\nStiff Person Syndrome: Often > 100.0 U/ml\nType 1 Diabetes: Usually > 20.0 U/ml",
+      "resultUnit": "U/ml",
+      "decimals": "1",
+      "criticalLow": "",
+      "criticalHigh": "> 100.0"
+    },
+    {
+      "testName": "Albumin.",
+      "testCode": "100",
+      "department": "BIOCHEMISTRY",
+      "notes": "Serum albumin measurement\nMajor protein synthesized by liver\nMaintains oncotic pressure\nTransports various substances\nNutritional status indicator\nLiver function assessment\n\nClinical Applications:\nLiver disease evaluation\nNutritional assessment\nKidney disease monitoring\nInflammatory conditions\nProtein-losing conditions\nFluid balance disorders\n\nFactors Affecting Results:\nDehydration increases levels\nOverhydration decreases levels\nPostural changes affect results\nPregnancy causes physiological decrease\nAge-related decline in elderly\nMedications can interfere",
+      "referenceRange": "Adult: 3.5-5.0 g/dl\nChildren (1-18 years): 3.8-5.4 g/dl\nInfants (0-12 months): 2.8-4.4 g/dl\nPregnancy: 2.3-4.2 g/dl\nElderly (>65 years): 3.2-4.8 g/dl\nSevere Hypoalbuminemia: < 2.5 g/dl",
+      "resultUnit": "g/dl",
+      "decimals": "1",
+      "criticalLow": "< 2.0",
+      "criticalHigh": "> 6.0"
+    },
+    {
+      "testName": "Complete Blood Count (CBC)",
+      "testCode": "001",
+      "department": "HEMATOLOGY",
+      "notes": "Comprehensive blood cell analysis\nIncludes RBC, WBC, and platelet counts\nHemoglobin and hematocrit measurement\nRBC indices (MCV, MCH, MCHC)\nWhite cell differential count\nPlatelet parameters\n\nComponents Included:\nWhite Blood Cell Count (WBC)\nRed Blood Cell Count (RBC)\nHemoglobin (Hgb)\nHematocrit (Hct)\nMean Corpuscular Volume (MCV)\nMean Corpuscular Hemoglobin (MCH)\nMean Corpuscular Hemoglobin Concentration (MCHC)\nPlatelet Count\nRed Cell Distribution Width (RDW)\n\nClinical Applications:\nAnemia evaluation\nInfection screening\nBleeding disorders\nHematologic malignancies\nMonitoring therapy effects\nRoutine health screening",
+      "referenceRange": "WBC: 4.0-11.0 x10³/μl\nRBC Male: 4.5-5.9 x10⁶/μl\nRBC Female: 4.0-5.2 x10⁶/μl\nHgb Male: 14.0-18.0 g/dl\nHgb Female: 12.0-16.0 g/dl\nHct Male: 42-52%\nHct Female: 37-47%\nMCV: 80-100 fl\nMCH: 27-32 pg\nMCHC: 32-36 g/dl\nPlatelets: 150-450 x10³/μl\nRDW: 11.5-14.5%",
+      "resultUnit": "Various",
+      "decimals": "1",
+      "criticalLow": "WBC < 2.0, Hgb < 7.0, Platelets < 50",
+      "criticalHigh": "WBC > 30.0, Hgb > 20.0, Platelets > 1000"
+    },
+    {
+      "testName": "Blood Culture",
+      "testCode": "950",
+      "department": "MICROBIOLOGY",
+      "notes": "Sterile blood collection for bacterial culture\nDetects bacteremia and septicemia\nIdentifies causative organisms\nDetermines antibiotic susceptibility\nCritical for sepsis management\nRequires sterile collection technique\n\nCollection Requirements:\nStrict aseptic technique mandatory\nClean venipuncture site thoroughly\nUse sterile collection bottles\nCollect before antibiotic therapy\nMultiple sets may be required\nDocument collection time and site\n\nClinical Indications:\nFever of unknown origin\nSuspected sepsis or bacteremia\nEndocarditis evaluation\nMeningitis workup\nImmunocompromised patients\nPost-surgical infections\n\nInterpretation Guidelines:\nPositive culture requires organism identification\nContaminants vs. true pathogens\nAntibiotic susceptibility testing\nClinical correlation essential\nRepeat cultures may be needed",
+      "referenceRange": "Normal: No growth after 5 days\nPositive: Growth of pathogenic organisms\nContaminant: Growth of skin flora\nPolymicrobial: Multiple organisms (often contamination)\nTime to Positivity: Usually 12-48 hours for pathogens\nFinal Report: Available after 5 days incubation",
+      "resultUnit": "Qualitative",
+      "decimals": "0",
+      "criticalLow": "",
+      "criticalHigh": "Positive for pathogenic organisms"
+    },
+    {
+      "testName": "Thyroid Stimulating Hormone (TSH)",
+      "testCode": "000301",
+      "department": "IMMUNOLOGY",
+      "notes": "Primary screening test for thyroid function\nProduced by anterior pituitary gland\nRegulates thyroid hormone production\nMost sensitive marker of thyroid function\nElevated in hypothyroidism\nSuppressed in hyperthyroidism\n\nClinical Applications:\nThyroid dysfunction screening\nMonitoring thyroid hormone therapy\nPregnancy thyroid assessment\nNewborn screening programs\nPituitary function evaluation\nDrug-induced thyroid changes\n\nFactors Affecting Results:\nTime of day (circadian rhythm)\nAge and gender variations\nPregnancy status\nMedications (biotin, steroids)\nSevere illness effects\nStress and fasting",
+      "referenceRange": "Adults: 0.4-4.0 mIU/L\nPregnancy 1st trimester: 0.1-2.5 mIU/L\nPregnancy 2nd trimester: 0.2-3.0 mIU/L\nPregnancy 3rd trimester: 0.3-3.0 mIU/L\nChildren (1-18 years): 0.7-6.4 mIU/L\nInfants (0-12 months): 1.3-19.0 mIU/L\nSubclinical Hypothyroidism: 4.0-10.0 mIU/L",
+      "resultUnit": "mIU/L",
+      "decimals": "2",
+      "criticalLow": "< 0.1",
+      "criticalHigh": "> 20.0"
+    },
+    {
+      "testName": "Free Thyroxine (Free T4)",
+      "testCode": "000302",
+      "department": "IMMUNOLOGY",
+      "notes": "Free fraction of thyroxine hormone\nNot bound to transport proteins\nBiologically active form of T4\nUnaffected by binding protein changes\nUsed with TSH for thyroid assessment\nElevated in hyperthyroidism\n\nClinical Applications:\nThyroid function evaluation\nMonitoring thyroid therapy\nDifferentiating thyroid disorders\nPregnancy thyroid monitoring\nCritical illness assessment\nDrug effect evaluation\n\nAdvantages over Total T4:\nNot affected by protein binding\nMore accurate in pregnancy\nBetter in critical illness\nUnaffected by medications\nReflects true thyroid status",
+      "referenceRange": "Adults: 0.8-1.8 ng/dL\nPregnancy: 0.7-1.2 ng/dL\nChildren (1-18 years): 0.8-2.0 ng/dL\nInfants (0-12 months): 0.8-2.8 ng/dL\nElderly (>65 years): 0.7-1.5 ng/dL\nSI Units: 10.3-23.2 pmol/L",
+      "resultUnit": "ng/dL",
+      "decimals": "2",
+      "criticalLow": "< 0.4",
+      "criticalHigh": "> 4.0"
+    },
+    {
+      "testName": "Hemoglobin A1c (HbA1c)",
+      "testCode": "000401",
+      "department": "BIOCHEMISTRY",
+      "notes": "Glycated hemoglobin measurement\nReflects average blood glucose over 2-3 months\nGold standard for diabetes monitoring\nNot affected by recent meals\nUsed for diagnosis and monitoring\nCorrelates with diabetic complications\n\nClinical Applications:\nDiabetes diagnosis\nGlycemic control monitoring\nTreatment effectiveness assessment\nComplications risk stratification\nPregnancy diabetes screening\nPopulation health screening\n\nAdvantages:\nNo fasting required\nStable pre-analytical sample\nStandardized methodology\nPredicts complications\nReflects long-term control\nNot affected by stress",
+      "referenceRange": "Normal: < 5.7% (< 39 mmol/mol)\nPrediabetes: 5.7-6.4% (39-47 mmol/mol)\nDiabetes: ≥ 6.5% (≥ 48 mmol/mol)\nGood Control: < 7.0% (< 53 mmol/mol)\nPoor Control: > 9.0% (> 75 mmol/mol)\nPregnancy Target: < 6.0% (< 42 mmol/mol)",
+      "resultUnit": "%",
+      "decimals": "1",
+      "criticalLow": "< 4.0",
+      "criticalHigh": "> 15.0"
+    }
+  ]
+}

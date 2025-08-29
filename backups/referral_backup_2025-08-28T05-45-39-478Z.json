@@ -1,0 +1,84 @@
+{
+  "referralMaster": {
+    "metro_cardiology": {
+      "id": "metro_cardiology",
+      "name": "Metro Cardiology Center",
+      "description": "Updated: Specialized cardiac care center with comprehensive diagnostic and preventive care services",
+      "category": "medical",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 15.0,
+      "commissionPercentage": 8.0,
+      "isActive": true,
+      "priority": 1,
+      "createdAt": "2025-08-24T19:41:55.978271",
+      "updatedAt": "2025-08-24T19:41:55.990758",
+      "createdBy": 1
+    },
+    "techcorp_health": {
+      "id": "techcorp_health",
+      "name": "TechCorp Employee Health Program",
+      "description": "Corporate health program for TechCorp employees and their families",
+      "category": "corporate",
+      "defaultPricingScheme": "corporate",
+      "discountPercentage": 20.0,
+      "commissionPercentage": 5.0,
+      "isActive": true,
+      "priority": 2,
+      "createdAt": "2025-08-24T19:41:55.981742",
+      "updatedAt": "2025-08-24T19:41:55.981746",
+      "createdBy": 1
+    },
+    "city_general": {
+      "id": "city_general",
+      "name": "City General Hospital",
+      "description": "Multi-specialty hospital with 24/7 emergency services",
+      "category": "institutional",
+      "defaultPricingScheme": "hospital",
+      "discountPercentage": 8.0,
+      "commissionPercentage": 10.0,
+      "isActive": true,
+      "priority": 3,
+      "createdAt": "2025-08-24T19:41:55.984283",
+      "updatedAt": "2025-08-24T19:41:55.984285",
+      "createdBy": 1
+    },
+    "senior_care_plus": {
+      "id": "senior_care_plus",
+      "name": "Senior Care Plus Program",
+      "description": "Specialized healthcare program for senior citizens with enhanced benefits",
+      "category": "social",
+      "defaultPricingScheme": "senior",
+      "discountPercentage": 25.0,
+      "commissionPercentage": 0.0,
+      "isActive": true,
+      "priority": 4,
+      "createdAt": "2025-08-24T19:41:55.985944",
+      "updatedAt": "2025-08-24T19:41:55.985946",
+      "createdBy": 1
+    },
+    "k2b": {
+      "id": "k2b",
+      "name": "test",
+      "description": "test",
+      "category": "corporate",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 2.0,
+      "commissionPercentage": 2.0,
+      "isActive": true,
+      "priority": 1,
+      "createdAt": "2025-08-25T11:12:26.553754",
+      "updatedAt": "2025-08-25T11:12:26.553761",
+      "createdBy": 4
+    }
+  },
+  "pricingSchemes": {},
+  "testPricingMatrix": {},
+  "discountRules": {},
+  "commissionRules": {},
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-08-25T11:12:26.553771",
+    "updatedBy": 4,
+    "description": "Comprehensive referral and pricing master configuration"
+  }
+}

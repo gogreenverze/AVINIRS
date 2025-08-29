@@ -1,0 +1,47 @@
+[
+  {
+    "Test Name": "HOMA IR (INSULIN RESISTANCE)",
+    "code": 1668,
+    "Department": "ENDOCRINOLOGY",
+    "Price": 1000,
+    "Result Type": "Pick List",
+    "Primary specimen code": 39,
+    "Primary specimen ": "SERUM",
+    "Specimen Code": 9,
+    "Specimen": "BLOOD",
+    "Container Code": 15,
+    "Container": "PLAIN",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "KARYOTYPING- COUPLES",
+    "code": 1677,
+    "Department": "ENDOCRINOLOGY",
+    "Price": 7500,
+    "Result Type": "Pick List",
+    "Primary specimen code": 9,
+    "Primary specimen ": "BLOOD",
+    "Specimen Code": 14,
+    "Specimen": "Citrate Plasma",
+    "Container Code": 8,
+    "Container": "Citrate Container",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "KARYOTYPING- SINGLE",
+    "code": 1676,
+    "Department": "ENDOCRINOLOGY",
+    "Price": 5000,
+    "Result Type": "Pick List",
+    "Primary specimen code": 9,
+    "Primary specimen ": "BLOOD",
+    "Specimen Code": 14,
+    "Specimen": "Citrate Plasma",
+    "Container Code": 8,
+    "Container": "Citrate Container",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  }
+]

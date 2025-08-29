@@ -1,0 +1,127 @@
+[
+  {
+    "Test Name": "Biopsy Large",
+    "code": 1652,
+    "Department": " HISTOPATHOLOGY",
+    "Price": 1200,
+    "Result Type": "Pick List",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "Biopsy Medium",
+    "code": 1651,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 900,
+    "Result Type": "Pick List",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "Biopsy Small",
+    "code": 1352,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 750,
+    "Result Type": "Template",
+    "Test Done On ": "all",
+    "Applicable to": "Both",
+    " Reporting Days": 5
+  },
+  {
+    "Test Name": "Biopsy Small-1",
+    "code": 1650,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 750,
+    "Result Type": "Pick List",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "CYTOLOGY",
+    "code": 1736,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 0,
+    "Result Type": "Pick List",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "FNAC",
+    "code": 1647,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 1000,
+    "Result Type": "Pick List",
+    "Specimen Code": 21,
+    "Specimen": "FLUID",
+    "Container Code": 13,
+    "Container": "Sterile Container",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "HER 2/ NEU, FISH",
+    "code": 1619,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 15000,
+    "Result Type": "Template",
+    "Test Done On ": "all",
+    "Applicable to": "Both",
+    " Reporting Days": 10
+  },
+  {
+    "Test Name": "Her-2/Neu(C-Er-B2)(ERBB2)by FISH",
+    "code": 1505,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 10000,
+    "Result Type": "Template",
+    "Test Done On ": "all",
+    "Applicable to": "Both",
+    " Reporting Days": 10
+  },
+  {
+    "Test Name": "IMMUNOHISTOCHEMISTRY",
+    "code": 1430,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 7000,
+    "Result Type": "Template",
+    "Test Done On ": "all",
+    "Applicable to": "Both",
+    " Reporting Days": 10
+  },
+  {
+    "Test Name": "LIQUID BASED CYTOLOGY",
+    "code": 1301,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 1200,
+    "Result Type": "Template",
+    "Cut-off Time": 0.5,
+    "Min. Process Time": 1,
+    "Test Done On ": "all",
+    "Applicable to": "Both",
+    " Reporting Days": 2
+  },
+  {
+    "Test Name": "MF ON QBC.",
+    "code": 449,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 0,
+    "Result Type": "No Unit / Ref. Value",
+    "Test Done On ": "all",
+    "Applicable to": "Both"
+  },
+  {
+    "Test Name": "PAP - SMEAR",
+    "code": 1299,
+    "Department": "HISTOPATHOLOGY",
+    "Price": 500,
+    "Result Type": "Template",
+    "Short Name": "PAPS",
+    "Specimen Code": 31,
+    "Specimen": "PAP SMEAR",
+    "Cut-off Time": 0.5,
+    "Min. Process Time": 1,
+    "Test Done On ": "all",
+    "Applicable to": "Female",
+    " Reporting Days": 2
+  }
+]

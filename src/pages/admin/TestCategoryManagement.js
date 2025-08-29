@@ -2,15 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Table, Button, Form, InputGroup, Badge, Row, Col, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
+import {
   faSearch, faPlus, faEye, faEdit, faTrash, faFlask,
-  faSave, faTimes
+  faSave, faTimes, faFileExcel, faFileImport
 } from '@fortawesome/free-solid-svg-icons';
 import { adminAPI } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
+import ResponsiveDataTable from '../../components/admin/ResponsiveDataTable';
+import MobilePageHeader from '../../components/common/MobilePageHeader';
+import {
+  DeleteConfirmationModal,
+  SuccessModal,
+  ErrorModal
+} from '../../components/common';
 
 const TestCategoryManagement = () => {
-  const { user } = useAuth();
+  const { currentUser } = useAuth();
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -23,6 +30,13 @@ const TestCategoryManagement = () => {
     description: '',
     is_active: true
   });
+
+  // Modal states
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [categoryToDelete, setCategoryToDelete] = useState(null);
 
   // Fetch categories on component mount
   useEffect(() => {
@@ -116,162 +130,161 @@ const TestCategoryManagement = () => {
     }
   };
 
+  // Handle delete confirmation
+  const handleDeleteConfirm = (category) => {
+    setCategoryToDelete(category);
+    setShowDeleteModal(true);
+  };
+
   // Handle delete category
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this test category?')) {
-      try {
-        await adminAPI.deleteTestCategory(id);
-        setCategories(categories.filter(category => category.id !== id));
-      } catch (err) {
-        console.error('Error deleting test category:', err);
-        setError('Failed to delete test category. Please try again.');
-      }
+  const handleDelete = async () => {
+    try {
+      await adminAPI.deleteTestCategory(categoryToDelete.id);
+      setCategories(categories.filter(category => category.id !== categoryToDelete.id));
+      setShowDeleteModal(false);
+      setShowSuccessModal(true);
+    } catch (err) {
+      console.error('Error deleting test category:', err);
+      setErrorMessage('Failed to delete test category. Please try again.');
+      setShowDeleteModal(false);
+      setShowErrorModal(true);
     }
+  };
+
+  // Table columns configuration
+  const columns = [
+    {
+      key: 'name',
+      label: 'Name',
+      render: (value, row) => (
+        <div className="d-flex align-items-center">
+          <div className="avatar avatar-sm me-3">
+            <div className="avatar-initial bg-primary rounded-circle">
+              <FontAwesomeIcon icon={faFlask} className="text-white" />
+            </div>
+          </div>
+          <div className="fw-bold">{row.name}</div>
+        </div>
+      )
+    },
+    {
+      key: 'code',
+      label: 'Code',
+      render: (value, row) => (
+        <code className="bg-light px-2 py-1 rounded text-primary">
+          {row.code}
+        </code>
+      )
+    },
+    {
+      key: 'description',
+      label: 'Description',
+      render: (value, row) => row.description || 'N/A'
+    },
+    {
+      key: 'is_active',
+      label: 'Status',
+      render: (value, row) => (
+        <Badge bg={row.is_active !== false ? 'success' : 'secondary'}>
+          {row.is_active !== false ? 'Active' : 'Inactive'}
+        </Badge>
+      )
+    }
+  ];
+
+  // Mobile card configuration
+  const mobileCardConfig = {
+    title: (category) => category.name,
+    subtitle: (category) => category.code,
+    primaryField: 'description',
+    statusField: 'is_active'
+  };
+
+  // Handle category actions
+  const handleViewCategory = (category) => {
+    handleShowModal(category);
+  };
+
+  const handleEditCategory = (category) => {
+    handleShowModal(category);
   };
 
   return (
     <div className="test-category-management-container">
-      <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">
-          <FontAwesomeIcon icon={faFlask} className="me-2" />
-          Test Categories
-        </h1>
-        {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-          <Button variant="primary" onClick={() => handleShowModal()}>
-            <FontAwesomeIcon icon={faPlus} className="me-2" />
-            Add Category
-          </Button>
-        )}
-      </div>
+      <MobilePageHeader
+        title="Test Categories"
+        subtitle="Manage test categories and classifications"
+        icon={faFlask}
+        primaryAction={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? {
+          label: "Add New Category",
+          shortLabel: "Add Category",
+          icon: faPlus,
+          onClick: () => handleShowModal(),
+          variant: "primary"
+        } : null}
+        secondaryActions={[
+          {
+            label: "Export Categories",
+            shortLabel: "Export",
+            icon: faFileExcel,
+            onClick: () => console.log("Export categories"),
+            variant: "outline-success"
+          },
+          {
+            label: "Import Categories",
+            shortLabel: "Import",
+            icon: faFileImport,
+            onClick: () => console.log("Import categories"),
+            variant: "outline-info"
+          }
+        ]}
+        breadcrumbs={[
+          { label: "Admin", shortLabel: "Admin", link: "/admin" },
+          { label: "Test Categories", shortLabel: "Categories" }
+        ]}
+      />
 
-      {/* Search Card */}
       <Card className="shadow mb-4">
         <Card.Header className="py-3">
-          <h6 className="m-0 font-weight-bold text-primary">Search Categories</h6>
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3">
+            <h6 className="m-0 font-weight-bold text-primary">
+              <FontAwesomeIcon icon={faFlask} className="me-2 d-lg-none" />
+              Test Categories ({filteredCategories.length})
+            </h6>
+            <div className="d-flex flex-column flex-sm-row gap-2 w-100 w-lg-auto">
+              <InputGroup style={{ minWidth: '200px' }}>
+                <Form.Control
+                  type="text"
+                  placeholder="Search categories..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <Button variant="outline-secondary">
+                  <FontAwesomeIcon icon={faSearch} />
+                </Button>
+              </InputGroup>
+            </div>
+          </div>
         </Card.Header>
-        <Card.Body>
-          <Form onSubmit={handleSearch}>
-            <InputGroup>
-              <Form.Control
-                type="text"
-                placeholder="Search by name, code, or description..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <Button variant="primary" type="submit">
-                <FontAwesomeIcon icon={faSearch} />
-              </Button>
-            </InputGroup>
-          </Form>
+        <Card.Body className="p-0">
+          {error ? (
+            <div className="alert alert-danger m-3" role="alert">
+              {error}
+            </div>
+          ) : (
+            <ResponsiveDataTable
+              data={filteredCategories}
+              columns={columns}
+              onEdit={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? handleEditCategory : null}
+              onDelete={(currentUser?.role === 'admin' || currentUser?.role === 'hub_admin') ? handleDeleteConfirm : null}
+              onViewDetails={handleViewCategory}
+              loading={loading}
+              emptyMessage="No test categories found. Click 'Add Category' to create a new category."
+              mobileCardConfig={mobileCardConfig}
+            />
+          )}
         </Card.Body>
       </Card>
-
-      {/* Error Message */}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error}
-        </div>
-      )}
-
-      {/* Loading Message */}
-      {loading && (
-        <div className="text-center my-4">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <p className="mt-2">Loading test categories...</p>
-        </div>
-      )}
-
-      {/* Categories Table */}
-      {!loading && !error && (
-        <Card className="shadow mb-4">
-          <Card.Header className="py-3">
-            <h6 className="m-0 font-weight-bold text-primary">
-              Test Categories
-              <span className="badge bg-primary float-end">
-                {filteredCategories.length} Records
-              </span>
-            </h6>
-          </Card.Header>
-          <Card.Body>
-            {filteredCategories.length === 0 ? (
-              <div className="text-center py-4">
-                <FontAwesomeIcon icon={faFlask} size="3x" className="text-gray-300 mb-3" />
-                <p className="text-gray-500">No test categories found.</p>
-                {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-                  <Button variant="primary" onClick={() => handleShowModal()}>
-                    <FontAwesomeIcon icon={faPlus} className="me-2" />
-                    Add First Category
-                  </Button>
-                )}
-              </div>
-            ) : (
-              <div className="table-responsive">
-                <Table className="table-hover" width="100%" cellSpacing="0">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Code</th>
-                      <th>Description</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredCategories.map(category => (
-                      <tr key={category.id}>
-                        <td>
-                          <div className="d-flex align-items-center">
-                            <div className="avatar avatar-sm me-3">
-                              <div className="avatar-initial bg-primary rounded-circle">
-                                <FontAwesomeIcon icon={faFlask} className="text-white" />
-                              </div>
-                            </div>
-                            <div className="fw-bold">{category.name}</div>
-                          </div>
-                        </td>
-                        <td>
-                          <code className="bg-light px-2 py-1 rounded">
-                            {category.code}
-                          </code>
-                        </td>
-                        <td>{category.description || 'N/A'}</td>
-                        <td>
-                          <Badge bg={category.is_active !== false ? 'success' : 'secondary'}>
-                            {category.is_active !== false ? 'Active' : 'Inactive'}
-                          </Badge>
-                        </td>
-                        <td>
-                          {(user?.role === 'admin' || user?.role === 'hub_admin') && (
-                            <>
-                              <Button 
-                                variant="warning" 
-                                size="sm" 
-                                className="me-1"
-                                onClick={() => handleShowModal(category)}
-                              >
-                                <FontAwesomeIcon icon={faEdit} />
-                              </Button>
-                              <Button 
-                                variant="danger" 
-                                size="sm"
-                                onClick={() => handleDelete(category.id)}
-                              >
-                                <FontAwesomeIcon icon={faTrash} />
-                              </Button>
-                            </>
-                          )}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              </div>
-            )}
-          </Card.Body>
-        </Card>
-      )}
 
       {/* Create/Edit Modal */}
       <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -338,6 +351,31 @@ const TestCategoryManagement = () => {
           </Modal.Footer>
         </Form>
       </Modal>
+
+      {/* Delete Confirmation Modal */}
+      <DeleteConfirmationModal
+        show={showDeleteModal}
+        onHide={() => setShowDeleteModal(false)}
+        onConfirm={handleDelete}
+        title="Delete Test Category"
+        message={`Are you sure you want to delete the category "${categoryToDelete?.name}"? This action cannot be undone.`}
+      />
+
+      {/* Success Modal */}
+      <SuccessModal
+        show={showSuccessModal}
+        onHide={() => setShowSuccessModal(false)}
+        title="Success"
+        message="Test category has been deleted successfully."
+      />
+
+      {/* Error Modal */}
+      <ErrorModal
+        show={showErrorModal}
+        onHide={() => setShowErrorModal(false)}
+        title="Error"
+        message={errorMessage}
+      />
     </div>
   );
 };

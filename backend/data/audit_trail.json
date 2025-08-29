@@ -1,0 +1,5186 @@
+[
+  {
+    "id": "AUD_20250620_094012_15832",
+    "timestamp": "2025-06-20T09:40:12.359978",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_094012_15832",
+    "timestamp": "2025-06-20T09:40:12.397156",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1,
+      "report_id": 1,
+      "sid_number": "AT001",
+      "total_tests": 5,
+      "matched_tests": 0,
+      "unmatched_tests": 5,
+      "test_match_rate": 0.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100218_13496",
+    "timestamp": "2025-06-20T10:02:18.156694",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 40
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100218_13496",
+    "timestamp": "2025-06-20T10:02:18.171018",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40,
+      "report_id": 2,
+      "sid_number": "AM005",
+      "total_tests": 1,
+      "matched_tests": 0,
+      "unmatched_tests": 1,
+      "test_match_rate": 0.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100625_18780",
+    "timestamp": "2025-06-20T10:06:25.664359",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100625_18780",
+    "timestamp": "2025-06-20T10:06:25.687046",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40,
+      "report_id": 3,
+      "sid_number": "AM006",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100922_28116",
+    "timestamp": "2025-06-20T10:09:22.744100",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_100922_28116",
+    "timestamp": "2025-06-20T10:09:22.791228",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1,
+      "report_id": 3,
+      "sid_number": "AT001",
+      "total_tests": 5,
+      "matched_tests": 2,
+      "unmatched_tests": 3,
+      "test_match_rate": 0.4
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_101408_8256",
+    "timestamp": "2025-06-20T10:14:08.734654",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_101408_8256",
+    "timestamp": "2025-06-20T10:14:08.768853",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1,
+      "report_id": 3,
+      "sid_number": "AT001",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_101408_8256",
+    "timestamp": "2025-06-20T10:14:08.768853",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_101408_8256",
+    "timestamp": "2025-06-20T10:14:08.785801",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40,
+      "report_id": 3,
+      "sid_number": "AM006",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_102150_7340",
+    "timestamp": "2025-06-20T10:21:50.524740",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 1
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_102150_7340",
+    "timestamp": "2025-06-20T10:21:50.555107",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 1,
+      "report_id": 3,
+      "sid_number": "AT001",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_104633_23384",
+    "timestamp": "2025-06-20T10:46:33.289953",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 41
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_104633_23384",
+    "timestamp": "2025-06-20T10:46:33.313062",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 41,
+      "report_id": 3,
+      "sid_number": "AM006",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_111419_5696",
+    "timestamp": "2025-06-20T11:14:19.887163",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 42
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_111419_5696",
+    "timestamp": "2025-06-20T11:14:19.905952",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 42,
+      "report_id": 4,
+      "sid_number": "AM007",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_135354_18056",
+    "timestamp": "2025-06-20T13:53:54.188986",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 43
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_135354_18056",
+    "timestamp": "2025-06-20T13:53:54.239705",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 43,
+      "report_id": 5,
+      "sid_number": "AS001",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_142726_13948",
+    "timestamp": "2025-06-20T14:27:26.050576",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 44
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_142726_13948",
+    "timestamp": "2025-06-20T14:27:26.085895",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 44,
+      "report_id": 6,
+      "sid_number": "AM008",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143457_13948",
+    "timestamp": "2025-06-20T14:34:57.272175",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 45
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143457_13948",
+    "timestamp": "2025-06-20T14:34:57.297724",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 45,
+      "report_id": 7,
+      "sid_number": "AM009",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143909_13948",
+    "timestamp": "2025-06-20T14:39:09.115327",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 46
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143909_13948",
+    "timestamp": "2025-06-20T14:39:09.147679",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 46,
+      "report_id": 8,
+      "sid_number": "AM010",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143950_13948",
+    "timestamp": "2025-06-20T14:39:50.426860",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 47
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_143950_13948",
+    "timestamp": "2025-06-20T14:39:50.460015",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 47,
+      "report_id": 9,
+      "sid_number": "AM011",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_144041_13948",
+    "timestamp": "2025-06-20T14:40:41.460647",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 48
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_144041_13948",
+    "timestamp": "2025-06-20T14:40:41.486402",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 48,
+      "report_id": 10,
+      "sid_number": "AM012",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_144429_13948",
+    "timestamp": "2025-06-20T14:44:29.528431",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 49
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_144429_13948",
+    "timestamp": "2025-06-20T14:44:29.545408",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 49,
+      "report_id": 11,
+      "sid_number": "AM013",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153108_26876",
+    "timestamp": "2025-06-20T15:31:08.370189",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 50
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153108_26876",
+    "timestamp": "2025-06-20T15:31:08.434000",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 50,
+      "report_id": 12,
+      "sid_number": "AM014",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153619_8552",
+    "timestamp": "2025-06-20T15:36:19.601703",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 51
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153619_8552",
+    "timestamp": "2025-06-20T15:36:19.617901",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 51,
+      "report_id": 13,
+      "sid_number": "AM015",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153722_25976",
+    "timestamp": "2025-06-20T15:37:22.323484",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 52
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153722_25976",
+    "timestamp": "2025-06-20T15:37:22.391376",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 52,
+      "report_id": 14,
+      "sid_number": "AM016",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153832_25976",
+    "timestamp": "2025-06-20T15:38:32.141721",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 53
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_153832_25976",
+    "timestamp": "2025-06-20T15:38:32.171896",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 53,
+      "report_id": 15,
+      "sid_number": "AM017",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.241511",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 2
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.307493",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 2,
+      "report_id": 16,
+      "sid_number": "AT001",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.326786",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 3
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.360412",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 3,
+      "report_id": 17,
+      "sid_number": "AT002",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.377569",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 4
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.391736",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 4,
+      "report_id": 18,
+      "sid_number": "AS002",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.394208",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 5
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.427326",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 5,
+      "report_id": 19,
+      "sid_number": "AT003",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.442262",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 6
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.460948",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 6,
+      "report_id": 20,
+      "sid_number": "AM018",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.476660",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 7
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.494566",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 7,
+      "report_id": 21,
+      "sid_number": "AS003",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.510630",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 8
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.544165",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 8,
+      "report_id": 22,
+      "sid_number": "AM019",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.560435",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 9
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.612077",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 9,
+      "report_id": 23,
+      "sid_number": "AT004",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.629352",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 10
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.676820",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 10,
+      "report_id": 24,
+      "sid_number": "AM020",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.694836",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 11
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.744850",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 11,
+      "report_id": 25,
+      "sid_number": "AS004",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.760126",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 12
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.806067",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 12,
+      "report_id": 26,
+      "sid_number": "AT005",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.824697",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 13
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.860157",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 13,
+      "report_id": 27,
+      "sid_number": "AS005",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.876549",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 14
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.906122",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 14,
+      "report_id": 28,
+      "sid_number": "AM021",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.924748",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 15
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.944323",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 15,
+      "report_id": 29,
+      "sid_number": "AT006",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.960517",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 16
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:24.978175",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 16,
+      "report_id": 30,
+      "sid_number": "AT007",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154624_27900",
+    "timestamp": "2025-06-20T15:46:25.006083",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 17
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.027320",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 17,
+      "report_id": 31,
+      "sid_number": "AT008",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.045055",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 18
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.061207",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 18,
+      "report_id": 32,
+      "sid_number": "AM022",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.091784",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 19
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.111747",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 19,
+      "report_id": 33,
+      "sid_number": "AM023",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.127208",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 20
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.160758",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 20,
+      "report_id": 34,
+      "sid_number": "AT009",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.176699",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 21
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.224882",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 21,
+      "report_id": 35,
+      "sid_number": "AM024",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.243913",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 22
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.274715",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 22,
+      "report_id": 36,
+      "sid_number": "AM025",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.306875",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 23
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.342630",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 23,
+      "report_id": 37,
+      "sid_number": "AS006",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.360271",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 24
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.394095",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 24,
+      "report_id": 38,
+      "sid_number": "AS007",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.428250",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 25
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.468692",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 25,
+      "report_id": 39,
+      "sid_number": "AS008",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.528333",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 26
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.556658",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 26,
+      "report_id": 40,
+      "sid_number": "AM026",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.573210",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 27
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.606670",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 27,
+      "report_id": 41,
+      "sid_number": "AT010",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.639972",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 28
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.656607",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 28,
+      "report_id": 42,
+      "sid_number": "AM027",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.690821",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 29
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.723623",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 29,
+      "report_id": 43,
+      "sid_number": "AM028",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.756405",
+    "event_type": "report_generation_started",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 30
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.773137",
+    "event_type": "report_generation_success",
+    "user_id": 3,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 30,
+      "report_id": 44,
+      "sid_number": "AS009",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.806507",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 31
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.823260",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 31,
+      "report_id": 45,
+      "sid_number": "AS010",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.855780",
+    "event_type": "report_generation_started",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 32
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.889163",
+    "event_type": "report_generation_success",
+    "user_id": 2,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 32,
+      "report_id": 46,
+      "sid_number": "AS011",
+      "total_tests": 1,
+      "matched_tests": 0,
+      "unmatched_tests": 1,
+      "test_match_rate": 0.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.906631",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 33
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.938181",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 33,
+      "report_id": 47,
+      "sid_number": "AM029",
+      "total_tests": 1,
+      "matched_tests": 0,
+      "unmatched_tests": 1,
+      "test_match_rate": 0.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.956494",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 34
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154625_27900",
+    "timestamp": "2025-06-20T15:46:25.973198",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 34,
+      "report_id": 48,
+      "sid_number": "AM030",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.006416",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 35
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.023326",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 35,
+      "report_id": 49,
+      "sid_number": "AM031",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.057659",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 36
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.073338",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 36,
+      "report_id": 50,
+      "sid_number": "AM032",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.106480",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 37
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.138320",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 37,
+      "report_id": 51,
+      "sid_number": "AM033",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.156628",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 38
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.173276",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 38,
+      "report_id": 52,
+      "sid_number": "AM034",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.206493",
+    "event_type": "report_generation_started",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 39
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154626_27900",
+    "timestamp": "2025-06-20T15:46:26.223198",
+    "event_type": "report_generation_success",
+    "user_id": 19,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 39,
+      "report_id": 53,
+      "sid_number": "AM035",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154723_28984",
+    "timestamp": "2025-06-20T15:47:23.487881",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 54
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154723_28984",
+    "timestamp": "2025-06-20T15:47:23.552438",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 54,
+      "report_id": 54,
+      "sid_number": "AT011",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154821_28984",
+    "timestamp": "2025-06-20T15:48:21.466702",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 55
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_154821_28984",
+    "timestamp": "2025-06-20T15:48:21.520241",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 55,
+      "report_id": 55,
+      "sid_number": "AM036",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163204_27392",
+    "timestamp": "2025-06-20T16:32:04.498004",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 56
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163204_27392",
+    "timestamp": "2025-06-20T16:32:04.576204",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 56,
+      "report_id": 56,
+      "sid_number": "MYD037",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163303_27392",
+    "timestamp": "2025-06-20T16:33:03.890795",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 57
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163303_27392",
+    "timestamp": "2025-06-20T16:33:03.970525",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 57,
+      "report_id": 57,
+      "sid_number": "TNJ014",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163758_27392",
+    "timestamp": "2025-06-20T16:37:58.033227",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 58
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163758_27392",
+    "timestamp": "2025-06-20T16:37:58.108584",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 58,
+      "report_id": 58,
+      "sid_number": "MYD038",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163801_23960",
+    "timestamp": "2025-06-20T16:38:01.695588",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 58
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_163801_23960",
+    "timestamp": "2025-06-20T16:38:01.737392",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 58,
+      "report_id": 59,
+      "sid_number": "MYD039",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_215822_27920",
+    "timestamp": "2025-06-20T21:58:22.614664",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 31
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250620_215822_27920",
+    "timestamp": "2025-06-20T21:58:22.666408",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 31,
+      "report_id": 60,
+      "sid_number": "MYD040",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_124709_27424",
+    "timestamp": "2025-06-21T12:47:09.145759",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 32
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_124709_27424",
+    "timestamp": "2025-06-21T12:47:09.210412",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 32,
+      "report_id": 61,
+      "sid_number": "SKZ012",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_142132_26588",
+    "timestamp": "2025-06-21T14:21:32.522938",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 33
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_142132_26588",
+    "timestamp": "2025-06-21T14:21:32.565072",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 33,
+      "report_id": 62,
+      "sid_number": "MYD041",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_143220_14212",
+    "timestamp": "2025-06-21T14:32:20.748951",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 34
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_143220_14212",
+    "timestamp": "2025-06-21T14:32:20.829936",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 34,
+      "report_id": 63,
+      "sid_number": "SKZ015",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_143323_14212",
+    "timestamp": "2025-06-21T14:33:23.894705",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 35
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_143323_14212",
+    "timestamp": "2025-06-21T14:33:23.949439",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 35,
+      "report_id": 64,
+      "sid_number": "SKZ016",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_184040_13624",
+    "timestamp": "2025-06-21T18:40:40.104302",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 36
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250621_184040_13624",
+    "timestamp": "2025-06-21T18:40:40.218632",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 36,
+      "report_id": 65,
+      "sid_number": "MYD042",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250627_174617_27140",
+    "timestamp": "2025-06-27T17:46:17.097643",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 37
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250627_174617_27140",
+    "timestamp": "2025-06-27T17:46:17.276337",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 37,
+      "report_id": 66,
+      "sid_number": "MYD043",
+      "total_tests": 6,
+      "matched_tests": 6,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250629_115927_3720",
+    "timestamp": "2025-06-29T11:59:27.336093",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 38
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250629_115927_3720",
+    "timestamp": "2025-06-29T11:59:27.932696",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 38,
+      "report_id": 67,
+      "sid_number": "MYD044",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250706_121439_61500",
+    "timestamp": "2025-07-06T12:14:39.026972",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 39
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250706_121439_61500",
+    "timestamp": "2025-07-06T12:14:39.321786",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 39,
+      "report_id": 68,
+      "sid_number": "MYD045",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250707_125300_49984",
+    "timestamp": "2025-07-07T12:53:00.911979",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250707_125301_49984",
+    "timestamp": "2025-07-07T12:53:01.012568",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 40,
+      "report_id": 69,
+      "sid_number": "MYD046",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_172211_11896",
+    "timestamp": "2025-07-08T17:22:11.449305",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 41
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_172211_11896",
+    "timestamp": "2025-07-08T17:22:11.545302",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 41,
+      "report_id": 70,
+      "sid_number": "MYD047",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173316_37408",
+    "timestamp": "2025-07-08T17:33:16.731716",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 42
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173316_37408",
+    "timestamp": "2025-07-08T17:33:16.817164",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 42,
+      "report_id": 71,
+      "sid_number": "MYD048",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173739_37408",
+    "timestamp": "2025-07-08T17:37:39.468463",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 43
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173739_37408",
+    "timestamp": "2025-07-08T17:37:39.554392",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 43,
+      "report_id": 72,
+      "sid_number": "MYD049",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173854_43400",
+    "timestamp": "2025-07-08T17:38:54.827542",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 44
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173854_43400",
+    "timestamp": "2025-07-08T17:38:54.906055",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 44,
+      "report_id": 73,
+      "sid_number": "MYD050",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173955_40756",
+    "timestamp": "2025-07-08T17:39:55.616749",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 45
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250708_173955_40756",
+    "timestamp": "2025-07-08T17:39:55.682203",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 45,
+      "report_id": 74,
+      "sid_number": "MYD051",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162523_65624",
+    "timestamp": "2025-07-09T16:25:23.907014",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 46
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162524_65624",
+    "timestamp": "2025-07-09T16:25:24.017705",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 46,
+      "report_id": 75,
+      "sid_number": "SKZ031",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162558_66928",
+    "timestamp": "2025-07-09T16:25:58.976944",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 47
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162559_66928",
+    "timestamp": "2025-07-09T16:25:59.055694",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 47,
+      "report_id": 76,
+      "sid_number": "SKZ032",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162633_66928",
+    "timestamp": "2025-07-09T16:26:33.109113",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 48
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162633_66928",
+    "timestamp": "2025-07-09T16:26:33.173825",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 48,
+      "report_id": 77,
+      "sid_number": "SKZ033",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162714_66928",
+    "timestamp": "2025-07-09T16:27:14.490883",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 49
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162714_66928",
+    "timestamp": "2025-07-09T16:27:14.572571",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 49,
+      "report_id": 78,
+      "sid_number": "SKZ034",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162716_66928",
+    "timestamp": "2025-07-09T16:27:16.765811",
+    "event_type": "report_generation_started",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 50
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_162716_66928",
+    "timestamp": "2025-07-09T16:27:16.832976",
+    "event_type": "report_generation_success",
+    "user_id": 5,
+    "tenant_id": 2,
+    "success": true,
+    "details": {
+      "billing_id": 50,
+      "report_id": 79,
+      "sid_number": "SKZ035",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_163404_66928",
+    "timestamp": "2025-07-09T16:34:04.578224",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 51
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_163404_66928",
+    "timestamp": "2025-07-09T16:34:04.698896",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 51,
+      "report_id": 80,
+      "sid_number": "MYD052",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_165524_66928",
+    "timestamp": "2025-07-09T16:55:24.635309",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 52
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_165524_66928",
+    "timestamp": "2025-07-09T16:55:24.712123",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 52,
+      "report_id": 81,
+      "sid_number": "MYD053",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_174927_66928",
+    "timestamp": "2025-07-09T17:49:27.448391",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 53
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_174927_66928",
+    "timestamp": "2025-07-09T17:49:27.527026",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 53,
+      "report_id": 82,
+      "sid_number": "MYD054",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_184810_66928",
+    "timestamp": "2025-07-09T18:48:10.878754",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 54
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250709_184810_66928",
+    "timestamp": "2025-07-09T18:48:10.970422",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 54,
+      "report_id": 83,
+      "sid_number": "MYD055",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250715_151441_27484",
+    "timestamp": "2025-07-15T15:14:41.100905",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 55
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250715_151441_27484",
+    "timestamp": "2025-07-15T15:14:41.254663",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 55,
+      "report_id": 84,
+      "sid_number": "MYD056",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250715_164606_27484",
+    "timestamp": "2025-07-15T16:46:06.528927",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 56
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250715_164606_27484",
+    "timestamp": "2025-07-15T16:46:06.625797",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 3,
+    "success": true,
+    "details": {
+      "billing_id": 56,
+      "report_id": 85,
+      "sid_number": "TNJ032",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_105145_53380",
+    "timestamp": "2025-07-16T10:51:45.341088",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 57
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_105145_53380",
+    "timestamp": "2025-07-16T10:51:45.471799",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 57,
+      "report_id": 86,
+      "sid_number": "MYD057",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_110204_53380",
+    "timestamp": "2025-07-16T11:02:04.715158",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 58
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_110204_53380",
+    "timestamp": "2025-07-16T11:02:04.829795",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 58,
+      "report_id": 87,
+      "sid_number": "MYD058",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_192803_4796",
+    "timestamp": "2025-07-16T19:28:03.638520",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 59
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250716_192803_4796",
+    "timestamp": "2025-07-16T19:28:03.754309",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 59,
+      "report_id": 88,
+      "sid_number": "MYD059",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250717_190630_74500",
+    "timestamp": "2025-07-17T19:06:30.219855",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 60
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250717_190630_74500",
+    "timestamp": "2025-07-17T19:06:30.320472",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 60,
+      "report_id": 89,
+      "sid_number": "MYD060",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250717_192750_74500",
+    "timestamp": "2025-07-17T19:27:50.397065",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 61
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250717_192750_74500",
+    "timestamp": "2025-07-17T19:27:50.619255",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 61,
+      "report_id": 90,
+      "sid_number": "MYD061",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250718_122723_67944",
+    "timestamp": "2025-07-18T12:27:23.253638",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 62
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250718_122723_67944",
+    "timestamp": "2025-07-18T12:27:23.367009",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 62,
+      "report_id": 91,
+      "sid_number": "MYD062",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250718_154623_11516",
+    "timestamp": "2025-07-18T15:46:23.677363",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 63
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250718_154623_11516",
+    "timestamp": "2025-07-18T15:46:23.794569",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 63,
+      "report_id": 92,
+      "sid_number": "MYD063",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250721_170348_33352",
+    "timestamp": "2025-07-21T17:03:48.329112",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 64
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250721_170348_33352",
+    "timestamp": "2025-07-21T17:03:48.446594",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 64,
+      "report_id": 93,
+      "sid_number": "MYD064",
+      "total_tests": 7,
+      "matched_tests": 7,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_115808_10556",
+    "timestamp": "2025-07-22T11:58:08.469772",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 65
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_115808_10556",
+    "timestamp": "2025-07-22T11:58:08.590812",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 65,
+      "report_id": 94,
+      "sid_number": "MYD065",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_124253_10556",
+    "timestamp": "2025-07-22T12:42:53.190845",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 66
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_124253_10556",
+    "timestamp": "2025-07-22T12:42:53.376784",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 66,
+      "report_id": 95,
+      "sid_number": "MYD066",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_124747_10556",
+    "timestamp": "2025-07-22T12:47:47.043091",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 67
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250722_124747_10556",
+    "timestamp": "2025-07-22T12:47:47.234594",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 67,
+      "report_id": 96,
+      "sid_number": "MYD067",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250801_180307_19048",
+    "timestamp": "2025-08-01T18:03:07.432201",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 68
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250801_180307_19048",
+    "timestamp": "2025-08-01T18:03:07.515855",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 68,
+      "report_id": 97,
+      "sid_number": "MYD068",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250801_185739_16192",
+    "timestamp": "2025-08-01T18:57:39.406382",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 69
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250801_185739_16192",
+    "timestamp": "2025-08-01T18:57:39.536513",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 69,
+      "report_id": 98,
+      "sid_number": "MYD069",
+      "total_tests": 5,
+      "matched_tests": 5,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250806_143811_25716",
+    "timestamp": "2025-08-06T14:38:11.782636",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 70
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250806_143812_25716",
+    "timestamp": "2025-08-06T14:38:12.001568",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 70,
+      "report_id": 99,
+      "sid_number": "MYD070",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_144908_29016",
+    "timestamp": "2025-08-08T14:49:08.870145",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 71
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_144909_29016",
+    "timestamp": "2025-08-08T14:49:09.005148",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 71,
+      "report_id": 100,
+      "sid_number": "MYD071",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_150138_29016",
+    "timestamp": "2025-08-08T15:01:38.468732",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 72
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_150138_29016",
+    "timestamp": "2025-08-08T15:01:38.690355",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 72,
+      "report_id": 100,
+      "sid_number": "MYD071",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_150614_29016",
+    "timestamp": "2025-08-08T15:06:14.811914",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 73
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_150614_29016",
+    "timestamp": "2025-08-08T15:06:14.967571",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 73,
+      "report_id": 100,
+      "sid_number": "MYD071",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_152955_21144",
+    "timestamp": "2025-08-08T15:29:55.879019",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 74
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_152955_21144",
+    "timestamp": "2025-08-08T15:29:55.975373",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 74,
+      "report_id": 100,
+      "sid_number": "MYD071",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_155700_60872",
+    "timestamp": "2025-08-08T15:57:00.988102",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 75
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_155701_60872",
+    "timestamp": "2025-08-08T15:57:01.092052",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 75,
+      "report_id": 101,
+      "sid_number": "MYD072",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_160822_42812",
+    "timestamp": "2025-08-08T16:08:22.737890",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 76
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_160822_42812",
+    "timestamp": "2025-08-08T16:08:22.826097",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 76,
+      "report_id": 102,
+      "sid_number": "MYD073",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_161528_10676",
+    "timestamp": "2025-08-08T16:15:28.360989",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 77
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_161528_10676",
+    "timestamp": "2025-08-08T16:15:28.464314",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 77,
+      "report_id": 103,
+      "sid_number": "MYD074",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_190557_6892",
+    "timestamp": "2025-08-08T19:05:57.767857",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 78
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_190558_6892",
+    "timestamp": "2025-08-08T19:05:58.173988",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 78,
+      "report_id": 104,
+      "sid_number": "MYD075",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_193508_22532",
+    "timestamp": "2025-08-08T19:35:08.192970",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 79
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250808_193508_22532",
+    "timestamp": "2025-08-08T19:35:08.328904",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 79,
+      "report_id": 105,
+      "sid_number": "MYD076",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250809_180627_54388",
+    "timestamp": "2025-08-09T18:06:27.164451",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 80
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250809_180627_54388",
+    "timestamp": "2025-08-09T18:06:27.425902",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 80,
+      "report_id": 106,
+      "sid_number": "MYD077",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250811_160636_51288",
+    "timestamp": "2025-08-11T16:06:36.874784",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 81
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250811_160637_51288",
+    "timestamp": "2025-08-11T16:06:37.080552",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 81,
+      "report_id": 107,
+      "sid_number": "MYD078",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250811_175853_42624",
+    "timestamp": "2025-08-11T17:58:53.260288",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 82
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250811_175854_42624",
+    "timestamp": "2025-08-11T17:58:54.786575",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 82,
+      "report_id": 108,
+      "sid_number": "MYD079",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250812_134328_58544",
+    "timestamp": "2025-08-12T13:43:28.026436",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 83
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250812_134333_58544",
+    "timestamp": "2025-08-12T13:43:33.914129",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 83,
+      "report_id": 109,
+      "sid_number": "MYD080",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250813_175958_33612",
+    "timestamp": "2025-08-13T17:59:58.649142",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 84
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250813_180021_33612",
+    "timestamp": "2025-08-13T18:00:21.818976",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 84,
+      "report_id": 110,
+      "sid_number": "MYD081",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250813_183955_2832",
+    "timestamp": "2025-08-13T18:39:55.021545",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 85
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250813_184012_2832",
+    "timestamp": "2025-08-13T18:40:12.007282",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 85,
+      "report_id": 111,
+      "sid_number": "MYD082",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_135627_25824",
+    "timestamp": "2025-08-14T13:56:27.967818",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 86
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_135652_25824",
+    "timestamp": "2025-08-14T13:56:52.808610",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 86,
+      "report_id": 112,
+      "sid_number": "MYD083",
+      "total_tests": 2,
+      "matched_tests": 1,
+      "unmatched_tests": 1,
+      "test_match_rate": 0.5
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_152444_74400",
+    "timestamp": "2025-08-14T15:24:44.097842",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 87
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_152522_74400",
+    "timestamp": "2025-08-14T15:25:22.461883",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 87,
+      "report_id": 113,
+      "sid_number": "MYD084",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_153013_74400",
+    "timestamp": "2025-08-14T15:30:13.168409",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 88
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_153049_74400",
+    "timestamp": "2025-08-14T15:30:49.999250",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 88,
+      "report_id": 114,
+      "sid_number": "MYD085",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_154553_74400",
+    "timestamp": "2025-08-14T15:45:53.076685",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 89
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_154553_74400",
+    "timestamp": "2025-08-14T15:45:53.460469",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 89,
+      "report_id": 108,
+      "sid_number": "MYD079",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_161306_39256",
+    "timestamp": "2025-08-14T16:13:06.150399",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 90
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250814_161306_39256",
+    "timestamp": "2025-08-14T16:13:06.591586",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 90,
+      "report_id": 109,
+      "sid_number": "MYD080",
+      "total_tests": 4,
+      "matched_tests": 4,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_155629_69924",
+    "timestamp": "2025-08-20T15:56:29.583325",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 91
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_155630_69924",
+    "timestamp": "2025-08-20T15:56:30.313956",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 91,
+      "report_id": 110,
+      "sid_number": "MYD081",
+      "total_tests": 2,
+      "matched_tests": 1,
+      "unmatched_tests": 1,
+      "test_match_rate": 0.5
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_170522_78192",
+    "timestamp": "2025-08-20T17:05:22.841591",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 91
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_170523_78192",
+    "timestamp": "2025-08-20T17:05:23.186678",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 91,
+      "report_id": 111,
+      "sid_number": "MYD082",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_171028_45676",
+    "timestamp": "2025-08-20T17:10:28.734385",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_171029_45676",
+    "timestamp": "2025-08-20T17:10:29.072949",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92,
+      "report_id": 111,
+      "sid_number": "MYD082",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_172541_22056",
+    "timestamp": "2025-08-20T17:25:41.440385",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_172541_22056",
+    "timestamp": "2025-08-20T17:25:41.842941",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92,
+      "report_id": 112,
+      "sid_number": "MYD083",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_173403_38760",
+    "timestamp": "2025-08-20T17:34:03.984343",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_173404_38760",
+    "timestamp": "2025-08-20T17:34:04.370512",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 92,
+      "report_id": 112,
+      "sid_number": "MYD083",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_173847_84552",
+    "timestamp": "2025-08-20T17:38:47.097895",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 93
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_173847_84552",
+    "timestamp": "2025-08-20T17:38:47.466081",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 93,
+      "report_id": 112,
+      "sid_number": "MYD083",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_175621_84552",
+    "timestamp": "2025-08-20T17:56:21.423577",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_175623_84552",
+    "timestamp": "2025-08-20T17:56:23.064305",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94,
+      "report_id": 113,
+      "sid_number": "MYD084",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_175813_84552",
+    "timestamp": "2025-08-20T17:58:13.271874",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 95
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_175813_84552",
+    "timestamp": "2025-08-20T17:58:13.919495",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 95,
+      "report_id": 114,
+      "sid_number": "MYD085",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180630_31604",
+    "timestamp": "2025-08-20T18:06:30.441221",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180631_31604",
+    "timestamp": "2025-08-20T18:06:31.134141",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94,
+      "report_id": 115,
+      "sid_number": "MYD086",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180631_31604",
+    "timestamp": "2025-08-20T18:06:31.153456",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 95
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180631_31604",
+    "timestamp": "2025-08-20T18:06:31.850688",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 95,
+      "report_id": 115,
+      "sid_number": "MYD086",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180853_62808",
+    "timestamp": "2025-08-20T18:08:53.338682",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_180854_62808",
+    "timestamp": "2025-08-20T18:08:54.062295",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 94,
+      "report_id": 115,
+      "sid_number": "MYD086",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_181112_84552",
+    "timestamp": "2025-08-20T18:11:12.651300",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 96
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_181113_84552",
+    "timestamp": "2025-08-20T18:11:13.249531",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 96,
+      "report_id": 115,
+      "sid_number": "MYD086",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_192435_84552",
+    "timestamp": "2025-08-20T19:24:35.106866",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 97
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250820_192437_84552",
+    "timestamp": "2025-08-20T19:24:37.924459",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 97,
+      "report_id": 116,
+      "sid_number": "MYD087",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_110727_64784",
+    "timestamp": "2025-08-21T11:07:27.393640",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_110729_64784",
+    "timestamp": "2025-08-21T11:07:29.553360",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98,
+      "report_id": 117,
+      "sid_number": "MYD088",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_111533_64784",
+    "timestamp": "2025-08-21T11:15:33.633802",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 99
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_111535_64784",
+    "timestamp": "2025-08-21T11:15:35.748947",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 99,
+      "report_id": 118,
+      "sid_number": "MYD089",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_111801_64784",
+    "timestamp": "2025-08-21T11:18:01.859161",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 100
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_111803_64784",
+    "timestamp": "2025-08-21T11:18:03.711099",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 100,
+      "report_id": 119,
+      "sid_number": "MYD090",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_113429_66588",
+    "timestamp": "2025-08-21T11:34:29.626506",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_113431_66588",
+    "timestamp": "2025-08-21T11:34:31.835519",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98,
+      "report_id": 120,
+      "sid_number": "MYD091",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114316_23676",
+    "timestamp": "2025-08-21T11:43:16.535707",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114318_23676",
+    "timestamp": "2025-08-21T11:43:18.996284",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98,
+      "report_id": 120,
+      "sid_number": "MYD091",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114401_81448",
+    "timestamp": "2025-08-21T11:44:01.490601",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114403_81448",
+    "timestamp": "2025-08-21T11:44:03.846885",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 98,
+      "report_id": 120,
+      "sid_number": "MYD091",
+      "total_tests": 2,
+      "matched_tests": 2,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114654_69828",
+    "timestamp": "2025-08-21T11:46:54.313149",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 101
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250821_114656_69828",
+    "timestamp": "2025-08-21T11:46:56.241404",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 101,
+      "report_id": 120,
+      "sid_number": "MYD091",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250825_120841_34408",
+    "timestamp": "2025-08-25T12:08:41.149885",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 102
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250825_120841_34408",
+    "timestamp": "2025-08-25T12:08:41.305497",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 102,
+      "report_id": 123,
+      "sid_number": "MYD094",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250825_122626_34408",
+    "timestamp": "2025-08-25T12:26:26.055310",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 103
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250825_122626_34408",
+    "timestamp": "2025-08-25T12:26:26.159450",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 103,
+      "report_id": 124,
+      "sid_number": "MYD095",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250826_112633_25808",
+    "timestamp": "2025-08-26T11:26:33.446715",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 104
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250826_112633_25808",
+    "timestamp": "2025-08-26T11:26:33.679173",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 104,
+      "report_id": 125,
+      "sid_number": "MYD096",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250826_121411_25808",
+    "timestamp": "2025-08-26T12:14:11.843727",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 105
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250826_121412_25808",
+    "timestamp": "2025-08-26T12:14:12.279042",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 105,
+      "report_id": 126,
+      "sid_number": "MYD097",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_161501_65516",
+    "timestamp": "2025-08-28T16:15:01.588917",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_161501_65516",
+    "timestamp": "2025-08-28T16:15:01.905892",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 127,
+      "sid_number": "MYD098",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_162708_65516",
+    "timestamp": "2025-08-28T16:27:08.060981",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_162708_65516",
+    "timestamp": "2025-08-28T16:27:08.313057",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 128,
+      "sid_number": "MYD099",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_162747_65516",
+    "timestamp": "2025-08-28T16:27:47.397880",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_162747_65516",
+    "timestamp": "2025-08-28T16:27:47.686159",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 129,
+      "sid_number": "MYD100",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163001_65516",
+    "timestamp": "2025-08-28T16:30:01.909875",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163002_65516",
+    "timestamp": "2025-08-28T16:30:02.228942",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 130,
+      "sid_number": "MYD101",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163219_65516",
+    "timestamp": "2025-08-28T16:32:19.063009",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163219_65516",
+    "timestamp": "2025-08-28T16:32:19.348731",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 131,
+      "sid_number": "MYD102",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163855_65516",
+    "timestamp": "2025-08-28T16:38:55.715769",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 107
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_163855_65516",
+    "timestamp": "2025-08-28T16:38:55.966288",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 107,
+      "report_id": 132,
+      "sid_number": "MYD103",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_164657_65516",
+    "timestamp": "2025-08-28T16:46:57.360509",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_164657_65516",
+    "timestamp": "2025-08-28T16:46:57.699643",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 133,
+      "sid_number": "MYD104",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_165107_65516",
+    "timestamp": "2025-08-28T16:51:07.025822",
+    "event_type": "report_generation_started",
+    "user_id": null,
+    "tenant_id": null,
+    "success": true,
+    "details": {
+      "billing_id": 106
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_165107_65516",
+    "timestamp": "2025-08-28T16:51:07.337309",
+    "event_type": "report_generation_success",
+    "user_id": null,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 106,
+      "report_id": 134,
+      "sid_number": "MYD105",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_165431_65516",
+    "timestamp": "2025-08-28T16:54:31.583270",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 108
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_165431_65516",
+    "timestamp": "2025-08-28T16:54:31.835881",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 108,
+      "report_id": 135,
+      "sid_number": "MYD106",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171623_71760",
+    "timestamp": "2025-08-28T17:16:23.964050",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171624_71760",
+    "timestamp": "2025-08-28T17:16:24.139324",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109,
+      "report_id": 136,
+      "sid_number": "MYD107",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171633_42540",
+    "timestamp": "2025-08-28T17:16:33.347856",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_171633_42540",
+    "timestamp": "2025-08-28T17:16:33.550257",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 109,
+      "report_id": 136,
+      "sid_number": "MYD107",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_172535_65516",
+    "timestamp": "2025-08-28T17:25:35.778652",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 110
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_172536_65516",
+    "timestamp": "2025-08-28T17:25:36.095145",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 110,
+      "report_id": 136,
+      "sid_number": "MYD107",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_173736_66864",
+    "timestamp": "2025-08-28T17:37:36.036278",
+    "event_type": "report_generation_started",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 110
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_173736_66864",
+    "timestamp": "2025-08-28T17:37:36.473438",
+    "event_type": "report_generation_success",
+    "user_id": 1,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 110,
+      "report_id": 137,
+      "sid_number": "MYD108",
+      "total_tests": 3,
+      "matched_tests": 3,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_183946_65516",
+    "timestamp": "2025-08-28T18:39:46.791665",
+    "event_type": "report_generation_started",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 111
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  },
+  {
+    "id": "AUD_20250828_183946_65516",
+    "timestamp": "2025-08-28T18:39:46.963758",
+    "event_type": "report_generation_success",
+    "user_id": 4,
+    "tenant_id": 1,
+    "success": true,
+    "details": {
+      "billing_id": 111,
+      "report_id": 137,
+      "sid_number": "MYD108",
+      "total_tests": 1,
+      "matched_tests": 1,
+      "unmatched_tests": 0,
+      "test_match_rate": 1.0
+    },
+    "ip_address": "127.0.0.1",
+    "user_agent": "AVINI Labs System"
+  }
+]

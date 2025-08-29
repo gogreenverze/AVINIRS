@@ -6,13 +6,14 @@ import os
 from functools import wraps
 
 # Import utilities
-from utils import token_required, read_data, write_data, paginate_results, filter_data_by_tenant, check_tenant_access
+from utils import token_required, read_data, write_data, paginate_results, filter_data_by_tenant, check_tenant_access, require_module_access
 
 inventory_bp = Blueprint('inventory', __name__)
 
 # Inventory Routes
 @inventory_bp.route('/api/inventory', methods=['GET'])
 @token_required
+@require_module_access('INVENTORY')
 def get_inventory_items():
     inventory = read_data('inventory.json')
 
@@ -43,17 +44,27 @@ def get_inventory_items():
 
 @inventory_bp.route('/api/inventory/<int:id>', methods=['GET'])
 @token_required
+@require_module_access('INVENTORY')
 def get_inventory_item(id):
     inventory = read_data('inventory.json')
+
+    # Apply tenant-based filtering first
+    inventory = filter_data_by_tenant(inventory, request.current_user)
+
     item = next((i for i in inventory if i['id'] == id), None)
 
     if not item:
         return jsonify({'message': 'Inventory item not found'}), 404
 
+    # Check tenant access for this specific item
+    if not check_tenant_access(item.get('tenant_id'), request.current_user):
+        return jsonify({'message': 'Access denied'}), 403
+
     return jsonify(item)
 
 @inventory_bp.route('/api/inventory', methods=['POST'])
 @token_required
+@require_module_access('INVENTORY')
 def create_inventory_item():
     data = request.get_json()
 
@@ -89,6 +100,7 @@ def create_inventory_item():
         'supplier': data.get('supplier', ''),
         'location': data.get('location', ''),
         'expiry_date': data.get('expiry_date'),
+        'tenant_id': request.current_user.get('tenant_id'),
         'created_at': datetime.now().isoformat(),
         'updated_at': datetime.now().isoformat(),
         'created_by': request.current_user.get('id')
@@ -110,8 +122,10 @@ def update_inventory_item(id):
     if item_index is None:
         return jsonify({'message': 'Inventory item not found'}), 404
 
-    # Update inventory item
+    # Check tenant access for this specific item
     item = inventory[item_index]
+    if not check_tenant_access(item.get('tenant_id'), request.current_user):
+        return jsonify({'message': 'Access denied'}), 403
 
     # Update fields
     updatable_fields = ['name', 'category', 'description', 'quantity', 'unit',
@@ -149,6 +163,11 @@ def delete_inventory_item(id):
     if item_index is None:
         return jsonify({'message': 'Inventory item not found'}), 404
 
+    # Check tenant access for this specific item
+    item = inventory[item_index]
+    if not check_tenant_access(item.get('tenant_id'), request.current_user):
+        return jsonify({'message': 'Access denied'}), 403
+
     deleted_item = inventory.pop(item_index)
     write_data('inventory.json', inventory)
 
@@ -163,6 +182,9 @@ def search_inventory_items():
         return jsonify({'items': [], 'total_items': 0})
 
     inventory = read_data('inventory.json')
+
+    # Apply tenant-based filtering
+    inventory = filter_data_by_tenant(inventory, request.current_user)
 
     # Search in name, sku, category, and description
     filtered_items = []
@@ -182,6 +204,9 @@ def search_inventory_items():
 @token_required
 def get_low_stock_items():
     inventory = read_data('inventory.json')
+
+    # Apply tenant-based filtering
+    inventory = filter_data_by_tenant(inventory, request.current_user)
 
     # Filter items where quantity <= reorder_level
     low_stock_items = [

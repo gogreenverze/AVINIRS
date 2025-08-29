@@ -261,16 +261,7 @@ def get_containers():
     containers = read_data('containers.json')
     return jsonify(containers)
 
-# Sample Routing Routes
-@sample_bp.route('/api/samples/routing', methods=['GET'])
-@token_required
-def get_sample_routing():
-    # In a real application, this would be a separate table
-    # For simplicity, we'll mock it here
-    return jsonify({
-        'routings': [],
-        'unread_messages': 0
-    })
+# Sample Routing Routes are handled in sample_routing_routes.py
 
 # Sample Transfer Routes
 @sample_bp.route('/api/samples/transfers', methods=['GET'])

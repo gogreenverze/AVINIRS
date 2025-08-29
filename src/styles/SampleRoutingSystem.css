@@ -1,0 +1,410 @@
+/* Sample Routing System Styles */
+
+/* Dashboard Styles */
+.sample-routing-dashboard {
+  min-height: 100vh;
+  background-color: #f8f9fc;
+}
+
+.sample-routing-dashboard h1 {
+  color: white;
+  font-weight: 600;
+}
+
+/* Statistics Cards */
+.border-left-primary {
+  border-left: 0.25rem solid #4e73df !important;
+}
+
+.border-left-warning {
+  border-left: 0.25rem solid #f6c23e !important;
+}
+
+.border-left-info {
+  border-left: 0.25rem solid #36b9cc !important;
+}
+
+.border-left-success {
+  border-left: 0.25rem solid #1cc88a !important;
+}
+
+.border-left-danger {
+  border-left: 0.25rem solid #e74a3b !important;
+}
+
+.text-xs {
+  font-size: 0.7rem;
+}
+
+.text-gray-300 {
+  color: #dddfeb !important;
+}
+
+.text-gray-800 {
+  color: white !important;
+}
+
+.fa-2x {
+  font-size: 2rem;
+}
+
+/* Enhanced Mobile Routing Cards */
+.routing-mobile-card {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3e6f0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+}
+
+.routing-mobile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: #4e73df;
+}
+
+.routing-mobile-card .mobile-card-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid #e3e6f0;
+  padding: 1rem;
+}
+
+.routing-mobile-card .mobile-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2c2c2c;
+  margin-bottom: 0.25rem;
+}
+
+.routing-mobile-card .mobile-card-title a {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.routing-mobile-card .mobile-card-title a:hover {
+  color: #2e59d9;
+  text-decoration: underline;
+}
+
+.routing-mobile-card .mobile-card-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.routing-mobile-card .mobile-card-body {
+  padding: 1rem;
+}
+
+.routing-mobile-card .mobile-card-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.routing-mobile-card .mobile-card-field:last-child {
+  border-bottom: none;
+}
+
+.routing-mobile-card .mobile-card-label {
+  font-weight: 600;
+  color: #6c757d;
+  font-size: 0.875rem;
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+}
+
+.routing-mobile-card .mobile-card-value {
+  font-size: 0.875rem;
+  color: #2c2c2c;
+  text-align: right;
+  flex: 1;
+  font-weight: 500;
+}
+
+.routing-mobile-card .mobile-card-actions {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e3e6f0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.routing-mobile-card .mobile-action-btn {
+  min-height: 44px;
+  min-width: 80px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 1px solid transparent;
+}
+
+.routing-mobile-card .mobile-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.routing-mobile-card .mobile-action-btn:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Progress Bar Enhancements */
+.progress {
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.progress-bar {
+  transition: width 0.6s ease;
+}
+
+/* Status Badge Enhancements */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+  border-radius: 0.375rem;
+}
+
+/* Tab Styles */
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 1.5rem;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  color: #6c757d;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef transparent;
+  color: #4e73df;
+}
+
+.nav-tabs .nav-link.active {
+  color: #4e73df;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  border-top: 3px solid #4e73df;
+  padding-top: calc(0.75rem - 2px);
+}
+
+/* Table Enhancements */
+.table-hover tbody tr:hover {
+  background-color: rgba(78, 115, 223, 0.05);
+}
+
+.table th {
+  border-top: none;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: black;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  vertical-align: middle;
+  border-top: 1px solid #e3e6f0;
+  font-size: 0.875rem;
+}
+
+/* Card Enhancements */
+.card {
+  border: 1px solid #e3e6f0;
+  border-radius: 0.75rem;
+}
+
+.card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+}
+
+.shadow {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+/* Button Enhancements */
+.btn {
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Alert Enhancements */
+.alert {
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Input Group Enhancements */
+.input-group-text {
+  background-color: #f8f9fc;
+  border-color: #d1d3e2;
+  color: #6c757d;
+}
+
+.form-control {
+  border-color: #d1d3e2;
+  border-radius: 0.375rem;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.form-select {
+  border-color: #d1d3e2;
+  border-radius: 0.375rem;
+}
+
+.form-select:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .sample-routing-dashboard h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .d-sm-flex {
+    display: block !important;
+  }
+
+  .d-sm-flex .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .routing-mobile-card .mobile-card-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .routing-mobile-card .mobile-action-btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .routing-mobile-card .mobile-card-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .routing-mobile-card .mobile-card-label {
+    flex: none;
+  }
+
+  .routing-mobile-card .mobile-card-value {
+    text-align: left;
+    flex: none;
+    width: 100%;
+  }
+
+  .col-xl-3,
+  .col-md-6 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Loading States */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Notification Badge */
+.position-relative .badge {
+  font-size: 0.6rem;
+  padding: 0.25em 0.4em;
+}
+
+/* Dropdown Enhancements */
+.dropdown-menu {
+  border-radius: 0.5rem;
+  border: 1px solid #e3e6f0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fc;
+  color: #4e73df;
+}
+
+/* Code Styling */
+code {
+  background-color: #f8f9fc;
+  color: #e83e8c;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}

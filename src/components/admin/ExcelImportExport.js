@@ -3,7 +3,7 @@ import { Modal, Button, Form, Alert, ProgressBar, Table } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileExcel, faUpload, faDownload, faCheck, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-const ExcelImportExport = ({ show, onHide, activeTab, onImportSuccess }) => {
+const ExcelImportExport = ({ show, onHide, activeTab = 'testCategories', onImportSuccess }) => {
   const [importFile, setImportFile] = useState(null);
   const [importing, setImporting] = useState(false);
   const [exporting, setExporting] = useState(false);
@@ -139,9 +139,25 @@ const ExcelImportExport = ({ show, onHide, activeTab, onImportSuccess }) => {
       reagents: 'Reagents',
       suppliers: 'Suppliers',
       units: 'Units',
-      testMethods: 'Test Methods'
+      testMethods: 'Test Methods',
+      patients: 'Patients',
+      profileMaster: 'Profile Master',
+      methodMaster: 'Method Master',
+      antibioticMaster: 'Antibiotic Master',
+      organismMaster: 'Organism Master',
+      unitOfMeasurement: 'Unit of Measurement',
+      specimenMaster: 'Specimen Master',
+      organismVsAntibiotic: 'Organism vs Antibiotic',
+      containerMaster: 'Container Master',
+      mainDepartmentMaster: 'Main Department Master',
+      departmentSettings: 'Department Settings',
+      authorizationSettings: 'Authorization Settings',
+      printOrder: 'Print Order',
+      testMaster: 'Test Master',
+      subTestMaster: 'Sub Test Master',
+      departmentMaster: 'Department Master'
     };
-    return names[activeTab] || activeTab;
+    return names[activeTab] || activeTab || 'Master Data';
   };
 
   return (
@@ -165,7 +181,7 @@ const ExcelImportExport = ({ show, onHide, activeTab, onImportSuccess }) => {
               </div>
               <div className="card-body">
                 <p className="text-muted">
-                  Export current {getCategoryDisplayName().toLowerCase()} data to Excel format.
+                  Export current {getCategoryDisplayName()?.toLowerCase() || 'master data'} data to Excel format.
                 </p>
                 <div className="d-grid gap-2">
                   <Button 
@@ -208,7 +224,7 @@ const ExcelImportExport = ({ show, onHide, activeTab, onImportSuccess }) => {
               </div>
               <div className="card-body">
                 <p className="text-muted">
-                  Import {getCategoryDisplayName().toLowerCase()} data from Excel file.
+                  Import {getCategoryDisplayName()?.toLowerCase() || 'master data'} data from Excel file.
                 </p>
                 <Form.Group className="mb-3">
                   <Form.Label>Select Excel File</Form.Label>

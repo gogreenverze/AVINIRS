@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ERR_20250620_100602_700",
+    "timestamp": "2025-06-20T10:06:02.234073",
+    "error_type": "billing_not_found",
+    "error_message": "Billing record not found: 40",
+    "severity": "medium",
+    "context": {
+      "billing_id": 40
+    },
+    "user_id": 1,
+    "tenant_id": 1,
+    "resolved": false,
+    "resolution_notes": null
+  },
+  {
+    "id": "ERR_20250828_171309_18684",
+    "timestamp": "2025-08-28T17:13:09.325937",
+    "error_type": "billing_not_found",
+    "error_message": "Billing record not found: 109",
+    "severity": "medium",
+    "context": {
+      "billing_id": 109
+    },
+    "user_id": 1,
+    "tenant_id": 1,
+    "resolved": false,
+    "resolution_notes": null
+  },
+  {
+    "id": "ERR_20250828_171404_53052",
+    "timestamp": "2025-08-28T17:14:04.994965",
+    "error_type": "billing_not_found",
+    "error_message": "Billing record not found: 109",
+    "severity": "medium",
+    "context": {
+      "billing_id": 109
+    },
+    "user_id": 1,
+    "tenant_id": 1,
+    "resolved": false,
+    "resolution_notes": null
+  },
+  {
+    "id": "ERR_20250828_171455_19904",
+    "timestamp": "2025-08-28T17:14:55.998016",
+    "error_type": "billing_not_found",
+    "error_message": "Billing record not found: 109",
+    "severity": "medium",
+    "context": {
+      "billing_id": 109
+    },
+    "user_id": 1,
+    "tenant_id": 1,
+    "resolved": false,
+    "resolution_notes": null
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "referralMaster": {
+    "metro_cardiology": {
+      "id": "metro_cardiology",
+      "name": "Metro Cardiology Center",
+      "description": "Updated: Specialized cardiac care center with comprehensive diagnostic and preventive care services",
+      "category": "medical",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 15,
+      "commissionPercentage": 8,
+      "isActive": true,
+      "priority": 1,
+      "referralType": "Doctor",
+      "email": "contact@example.com",
+      "phone": "+91 9999999999",
+      "address": "Address to be updated",
+      "typeSpecificFields": {
+        "specialization": "General Medicine"
+      },
+      "createdAt": "2025-08-24T19:41:55.978271",
+      "updatedAt": "2025-08-28T05:45:39.484Z",
+      "createdBy": 1,
+      "migratedAt": "2025-08-28T05:45:39.484Z"
+    },
+    "techcorp_health": {
+      "id": "techcorp_health",
+      "name": "TechCorp Employee Health Program",
+      "description": "Corporate health program for TechCorp employees and their families",
+      "category": "corporate",
+      "defaultPricingScheme": "corporate",
+      "discountPercentage": 20,
+      "commissionPercentage": 5,
+      "isActive": true,
+      "priority": 2,
+      "referralType": "Corporate",
+      "email": "contact@example.com",
+      "phone": "+91 9999999999",
+      "address": "Address to be updated",
+      "typeSpecificFields": {
+        "registrationDetails": "Registration details to be updated"
+      },
+      "createdAt": "2025-08-24T19:41:55.981742",
+      "updatedAt": "2025-08-28T05:45:39.484Z",
+      "createdBy": 1,
+      "migratedAt": "2025-08-28T05:45:39.484Z"
+    },
+    "city_general": {
+      "id": "city_general",
+      "name": "City General Hospital",
+      "description": "Multi-specialty hospital with 24/7 emergency services",
+      "category": "institutional",
+      "defaultPricingScheme": "hospital",
+      "discountPercentage": 8,
+      "commissionPercentage": 10,
+      "isActive": true,
+      "priority": 3,
+      "referralType": "Hospital",
+      "email": "contact@example.com",
+      "phone": "+91 9999999999",
+      "address": "Address to be updated",
+      "typeSpecificFields": {
+        "branch": "Main Branch"
+      },
+      "createdAt": "2025-08-24T19:41:55.984283",
+      "updatedAt": "2025-08-28T05:45:39.484Z",
+      "createdBy": 1,
+      "migratedAt": "2025-08-28T05:45:39.484Z"
+    },
+    "senior_care_plus": {
+      "id": "senior_care_plus",
+      "name": "Senior Care Plus Program",
+      "description": "Specialized healthcare program for senior citizens with enhanced benefits",
+      "category": "social",
+      "defaultPricingScheme": "senior",
+      "discountPercentage": 25,
+      "commissionPercentage": 0,
+      "isActive": true,
+      "priority": 4,
+      "referralType": "Patient",
+      "email": "contact@example.com",
+      "phone": "+91 9999999999",
+      "address": "Address to be updated",
+      "typeSpecificFields": {
+        "patientReference": ""
+      },
+      "createdAt": "2025-08-24T19:41:55.985944",
+      "updatedAt": "2025-08-28T05:45:39.484Z",
+      "createdBy": 1,
+      "migratedAt": "2025-08-28T05:45:39.484Z"
+    },
+    "k2b": {
+      "id": "k2b",
+      "name": "test",
+      "description": "test",
+      "category": "corporate",
+      "defaultPricingScheme": "standard",
+      "discountPercentage": 2,
+      "commissionPercentage": 2,
+      "isActive": true,
+      "priority": 1,
+      "referralType": "Corporate",
+      "email": "contact@example.com",
+      "phone": "+91 9999999999",
+      "address": "Address to be updated",
+      "typeSpecificFields": {
+        "registrationDetails": "Registration details to be updated"
+      },
+      "createdAt": "2025-08-25T11:12:26.553754",
+      "updatedAt": "2025-08-28T05:45:39.484Z",
+      "createdBy": 4,
+      "migratedAt": "2025-08-28T05:45:39.484Z"
+    },
+    "768": {
+      "id": "768",
+      "name": "Lab",
+      "description": "test",
+      "referralType": "Lab",
+      "category": "institutional",
+      "defaultPricingScheme": "corporate",
+      "discountPercentage": 20.0,
+      "commissionPercentage": 1.0,
+      "isActive": true,
+      "priority": 1,
+      "email": "test@gmail.com",
+      "phone": "8987987972",
+      "address": "tesrinhiuhasuiihisuhiusiqu",
+      "typeSpecificFields": {
+        "accreditation": "897"
+      },
+      "createdAt": "2025-08-28T14:22:21.197699",
+      "updatedAt": "2025-08-28T14:22:21.197706",
+      "createdBy": 4
+    }
+  },
+  "pricingSchemes": {},
+  "testPricingMatrix": {},
+  "discountRules": {},
+  "commissionRules": {},
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2025-08-28T14:22:21.197712",
+    "updatedBy": 4,
+    "description": "Enhanced referral and pricing master configuration with type-specific fields",
+    "migrationDate": "2025-08-28T05:45:39.484Z"
+  }
+}

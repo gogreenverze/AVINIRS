@@ -166,7 +166,7 @@ const PatientView = () => {
         <Col lg={4}>
           <Card className="shadow mb-4">
             <Card.Header className="py-3">
-              <h6 className="m-0 font-weight-bold">Related Information</h6>
+              <h6 className="m-0 text-black font-weight-bold">Related Information</h6>
             </Card.Header>
             <Card.Body>
               <div className="mb-3">
@@ -189,7 +189,7 @@ const PatientView = () => {
 
           <Card className="shadow mb-4">
             <Card.Header className="py-3">
-              <h6 className="m-0 font-weight-bold">Quick Actions</h6>
+              <h6 className="m-0 text-black font-weight-bold">Quick Actions</h6>
             </Card.Header>
             <Card.Body>
               <div className="mb-3">

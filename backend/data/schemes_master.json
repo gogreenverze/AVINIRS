@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "scheme_code": "@000001",
+    "scheme_name": "Default",
+    "description": "Default pricing scheme",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00",
+    "updated_at": "2025-01-01T00:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 2,
+    "scheme_code": "@000002",
+    "scheme_name": "L2L",
+    "description": "Lab to Lab pricing scheme",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00",
+    "updated_at": "2025-01-01T00:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 3,
+    "scheme_code": "@000003",
+    "scheme_name": "Corporate",
+    "description": "Corporate pricing scheme",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00",
+    "updated_at": "2025-01-01T00:00:00",
+    "created_by": 1
+  },
+  {
+    "id": 4,
+    "scheme_code": "@000004",
+    "scheme_name": "Insurance",
+    "description": "Insurance pricing scheme",
+    "is_active": true,
+    "created_at": "2025-01-01T00:00:00",
+    "updated_at": "2025-01-01T00:00:00",
+    "created_by": 1
+  }
+]

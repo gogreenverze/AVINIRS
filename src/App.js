@@ -12,6 +12,7 @@ import Register from './pages/auth/Register';
 
 // Main Pages
 import Dashboard from './pages/main/Dashboard';
+import ComprehensiveDashboard from './pages/main/ComprehensiveDashboard';
 import Modules from './pages/main/Modules';
 
 // Patient Pages
@@ -42,11 +43,24 @@ import ResultReportEmail from './pages/results/ResultReportEmail';
 import ResultReportWhatsApp from './pages/results/ResultReportWhatsApp';
 
 // Billing Pages
+import BillingDashboard from './pages/billing/BillingDashboard';
 import BillingList from './pages/billing/BillingList';
+import BillingSearch from './pages/billing/BillingSearch';
 import BillingView from './pages/billing/BillingView';
 import BillingCreate from './pages/billing/BillingCreate';
 import BillingEdit from './pages/billing/BillingEdit';
 import BillingCollect from './pages/billing/BillingCollect';
+import BillingRegistration from './pages/billing/BillingRegistration';
+import BillingReports from './pages/billing/BillingReports';
+import BillingReportsDetail from './pages/billing/BillingReportsDetail';
+import BillingReportsAuthorize from './pages/billing/BillingReportsAuthorize';
+import ReportAuthorization from './pages/billing/ReportAuthorization';
+import InvoiceManagement from './pages/billing/InvoiceManagement';
+import AIAnalytics from './pages/billing/AIAnalytics';
+import DueAmountManagement from './pages/billing/DueAmountManagement';
+import RefundManagement from './pages/billing/RefundManagement';
+import BillCancel from './pages/billing/BillCancel';
+import Collection from './pages/billing/Collection';
 
 // Lab Pages
 import LabDashboard from './pages/lab/LabDashboard';
@@ -68,7 +82,9 @@ import UserCreate from './pages/admin/UserCreate';
 import UserEdit from './pages/admin/UserEdit';
 import Settings from './pages/admin/Settings';
 import MasterData from './pages/admin/MasterData';
+import MasterDataNew from './pages/admin/MasterDataNew';
 import TechnicalMasterData from './pages/admin/TechnicalMasterData';
+import UnifiedTestResultMasterPage from './pages/admin/UnifiedTestResultMasterPage';
 import Analytics from './pages/admin/Analytics';
 import WhatsAppConfig from './pages/admin/WhatsAppConfig';
 import WhatsAppMessages from './pages/admin/WhatsAppMessages';
@@ -83,15 +99,28 @@ import RoleManagement from './pages/admin/RoleManagement';
 import PermissionManagement from './pages/admin/PermissionManagement';
 import SampleTypeManagement from './pages/admin/SampleTypeManagement';
 import TestManagement from './pages/admin/TestManagement';
+import MobileTestPage from './pages/admin/MobileTestPage';
+import GSTConfigMaster from './pages/admin/GSTConfigMaster';
+import AccessManagement from './pages/admin/AccessManagement';
+import SignatureManagement from './pages/admin/SignatureManagement';
+import ProtectedRoute from './components/common/ProtectedRoute';
+
+// Sample Routing Pages
+import SampleRoutingDashboard from './pages/samples/routing/SampleRoutingDashboard';
+import RoutingWorkflow from './pages/samples/routing/RoutingWorkflow';
+import RoutingChat from './pages/samples/routing/RoutingChat';
+import RoutingHistory from './pages/samples/routing/RoutingHistory';
 
 // Not Found Page
 import NotFound from './pages/NotFound';
 import SampleEdit from './pages/sample/SampleEdit';
 import FranchiseView from './pages/admin/FranchiseView';
 import FranchiseEdit from './pages/admin/FranchiseEdit';
+import ProfileMaster from './pages/ProfileMaster';
 
-// Protected Route Component
-const ProtectedRoute = ({ children }) => {
+
+// Simple Protected Route Component for basic authentication
+const SimpleProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
@@ -112,12 +141,13 @@ function App() {
 
       {/* Protected Routes */}
       <Route element={
-        <ProtectedRoute>
+        <SimpleProtectedRoute>
           <MainLayout />
-        </ProtectedRoute>
+        </SimpleProtectedRoute>
       }>
         <Route path="/" element={<Navigate to="/dashboard" />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<ComprehensiveDashboard />} />
+        <Route path="/dashboard/legacy" element={<Dashboard />} />
         <Route path="/modules" element={<Modules />} />
 
         {/* Patient Routes */}
@@ -129,9 +159,11 @@ function App() {
         {/* Sample Routes */}
         <Route path="/samples" element={<SampleList />} />
         <Route path="/samples/create" element={<SampleCreate />} />
-        <Route path="/samples/routing" element={<SampleRouting />} />
+        <Route path="/samples/routing" element={<SampleRoutingDashboard />} />
         <Route path="/samples/routing/create" element={<SampleTransferCreate />} />
-        <Route path="/samples/routing/:id" element={<SampleTransferView />} />
+        <Route path="/samples/routing/:id" element={<RoutingWorkflow />} />
+        <Route path="/samples/routing/:id/chat" element={<RoutingChat />} />
+        <Route path="/samples/routing/:id/history" element={<RoutingHistory />} />
         <Route path="/samples/routing/:id/dispatch" element={<SampleDispatch />} />
         <Route path="/samples/:id" element={<SampleView />} />
         <Route path="/samples/:id/edit" element={<SampleEdit />} />
@@ -149,11 +181,24 @@ function App() {
         <Route path="/results/:id/edit" element={<ResultEdit />} />
 
         {/* Billing Routes */}
-        <Route path="/billing" element={<BillingList />} />
+        <Route path="/billing" element={<BillingDashboard />} />
+        <Route path="/billing/list" element={<BillingList />} />
+        <Route path="/billing/search" element={<BillingSearch />} />
+        <Route path="/billing/management" element={<InvoiceManagement />} />
         <Route path="/billing/create" element={<BillingCreate />} />
+        <Route path="/billing/registration" element={<BillingRegistration />} />
+        <Route path="/billing/reports" element={<BillingReports />} />
+        <Route path="/billing/reports/authorize" element={<ReportAuthorization />} />
+        <Route path="/billing/reports/:reportId/authorize" element={<BillingReportsAuthorize />} />
+        <Route path="/billing/reports/:sid" element={<BillingReportsDetail />} />
+        <Route path="/billing/analytics" element={<AIAnalytics />} />
         <Route path="/billing/:id" element={<BillingView />} />
         <Route path="/billing/:id/edit" element={<BillingEdit />} />
         <Route path="/billing/:id/collect" element={<BillingCollect />} />
+        <Route path="/billing/due-close" element={<DueAmountManagement />} />
+        <Route path="/billing/refund" element={<RefundManagement />} />
+        <Route path="/billing/cancel" element={<BillCancel />} />
+        <Route path="/billing/collection" element={<Collection />} />
 
         {/* Lab Routes */}
         <Route path="/lab" element={<LabDashboard />} />
@@ -161,22 +206,88 @@ function App() {
         <Route path="/lab/quality-control" element={<QualityControl />} />
 
         {/* Inventory Routes */}
-        <Route path="/inventory" element={<InventoryList />} />
-        <Route path="/inventory/create" element={<InventoryCreate />} />
-        <Route path="/inventory/:id" element={<InventoryView />} />
-        <Route path="/inventory/:id/edit" element={<InventoryEdit />} />
-        <Route path="/inventory/:id/transactions" element={<InventoryTransactions />} />
+        <Route path="/inventory" element={
+          <ProtectedRoute requiredModule="INVENTORY">
+            <InventoryList />
+          </ProtectedRoute>
+        } />
+        <Route path="/inventory/create" element={
+          <ProtectedRoute requiredModule="INVENTORY">
+            <InventoryCreate />
+          </ProtectedRoute>
+        } />
+        <Route path="/inventory/:id" element={
+          <ProtectedRoute requiredModule="INVENTORY">
+            <InventoryView />
+          </ProtectedRoute>
+        } />
+        <Route path="/inventory/:id/edit" element={
+          <ProtectedRoute requiredModule="INVENTORY">
+            <InventoryEdit />
+          </ProtectedRoute>
+        } />
+        <Route path="/inventory/:id/transactions" element={
+          <ProtectedRoute requiredModule="INVENTORY">
+            <InventoryTransactions />
+          </ProtectedRoute>
+        } />
 
         {/* Admin Routes */}
-        <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/admin/analytics" element={<Analytics />} />
-        <Route path="/admin/users" element={<UserManagement />} />
-        <Route path="/admin/users/create" element={<UserCreate />} />
-        <Route path="/admin/users/:id" element={<UserView />} />
-        <Route path="/admin/users/:id/edit" element={<UserEdit />} />
-        <Route path="/admin/settings" element={<Settings />} />
-        <Route path="/admin/master-data" element={<MasterData />} />
-        <Route path="/admin/technical-master-data" element={<TechnicalMasterData />} />
+        <Route path="/admin" element={
+          <ProtectedRoute requiredModule="ADMIN">
+            <AdminDashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/analytics" element={
+          <ProtectedRoute requiredModule="ADMIN">
+            <Analytics />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/users" element={
+          <ProtectedRoute requiredModule="USER_MANAGEMENT">
+            <UserManagement />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/users/create" element={
+          <ProtectedRoute requiredModule="USER_MANAGEMENT">
+            <UserCreate />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/users/:id" element={
+          <ProtectedRoute requiredModule="USER_MANAGEMENT">
+            <UserView />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/users/:id/edit" element={
+          <ProtectedRoute requiredModule="USER_MANAGEMENT">
+            <UserEdit />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/settings" element={
+          <ProtectedRoute requiredModule="SETTINGS">
+            <Settings />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/master-data" element={
+          <ProtectedRoute requiredModule="MASTER_DATA">
+            <MasterData />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/master-data-new" element={
+          <ProtectedRoute requiredModule="MASTER_DATA">
+            <MasterDataNew />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/technical-master-data" element={
+          <ProtectedRoute requiredModule="MASTER_DATA">
+            <TechnicalMasterData />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/unified-test-result-master" element={
+          <ProtectedRoute requiredModule="MASTER_DATA">
+            <UnifiedTestResultMasterPage />
+          </ProtectedRoute>
+        } />
         <Route path="/admin/whatsapp/config" element={<WhatsAppConfig />} />
         <Route path="/admin/whatsapp/messages" element={<WhatsAppMessages />} />
         <Route path="/admin/doctors" element={<DoctorManagement />} />
@@ -192,8 +303,24 @@ function App() {
         <Route path="/admin/permissions" element={<PermissionManagement />} />
         <Route path="/admin/sample-types" element={<SampleTypeManagement />} />
         <Route path="/admin/tests" element={<TestManagement />} />
+        <Route path="/admin/mobile-test" element={<MobileTestPage />} />
+        <Route path="/admin/gst-config" element={<GSTConfigMaster />} />
+        <Route path="/admin/access-management" element={
+          <ProtectedRoute requiredRole="hub_admin">
+            <AccessManagement />
+          </ProtectedRoute>
+        } />
+        <Route path="/admin/signature-management" element={
+          <ProtectedRoute requiredModule="ADMIN">
+            <SignatureManagement />
+          </ProtectedRoute>
+        } />
+
       </Route>
 
+
+      <Route path="/profile" element={<ProfileMaster />} />
+     
       {/* Not Found Route */}
       <Route path="*" element={<NotFound />} />
     </Routes>

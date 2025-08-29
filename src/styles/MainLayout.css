@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-/* User Info Header */
+/* User Info Header - Enhanced for Mobile */
 .user-info-header {
   position: fixed;
   top: 0;
@@ -18,16 +18,37 @@
   z-index: 1030;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.75rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .user-info-content {
-  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.user-info-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.user-info-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.9rem;
+  flex: 1;
+}
+
+.user-info-header .btn {
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
 }
 
 /* Sidebar */
@@ -50,6 +71,42 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--primary) transparent;
+}
+
+/* Desktop Auto-Hide Hover Trigger Zone */
+.sidebar-hover-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 100vh;
+  z-index: 1019; /* Just below sidebar */
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-hover-trigger:hover {
+  background: linear-gradient(to right, rgba(212, 0, 110, 0.1) 0%, transparent 100%);
+}
+
+/* Desktop Auto-Hide States */
+.sidebar.desktop-hidden {
+  transform: translateX(-100%);
+  box-shadow: none;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.sidebar.desktop-visible {
+  transform: translateX(0);
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  pointer-events: auto; /* Re-enable interaction when visible */
+}
+
+/* Ensure smooth transitions for all sidebar states */
+.sidebar.desktop-hidden,
+.sidebar.desktop-visible {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -133,6 +190,16 @@
   padding: 1.5rem;
   margin-top: 40px; /* Add margin to account for the fixed header */
   margin-left: 250px; /* Add margin to account for the sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+/* Content Area Auto-Hide States */
+.content.content-sidebar-hidden {
+  margin-left: 0; /* Full width when sidebar is hidden */
+}
+
+.content.content-sidebar-visible {
+  margin-left: 250px; /* Normal margin when sidebar is visible */
 }
 
 /* Mobile Menu Button */
@@ -204,6 +271,19 @@
     transition: all 0.3s ease;
     transform: translateX(-100%);
     margin-top: 0; /* Reset margin for mobile */
+    pointer-events: auto; /* Override desktop auto-hide pointer-events */
+  }
+
+  /* Override desktop auto-hide classes on mobile */
+  .sidebar.desktop-hidden,
+  .sidebar.desktop-visible {
+    transform: translateX(-100%); /* Use mobile transform */
+    pointer-events: auto;
+  }
+
+  /* Hide hover trigger zone on mobile */
+  .sidebar-hover-trigger {
+    display: none;
   }
 
   .sidebar.mobile-visible {
@@ -257,7 +337,7 @@
   }
 }
 
-/* Mobile Bottom Navigation */
+/* Mobile Bottom Navigation - Enhanced */
 .mobile-nav {
   display: none;
   position: fixed;
@@ -273,6 +353,8 @@
   /* Ensure it stays at bottom on mobile */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  /* Support for iPhone notch */
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .mobile-nav-content {

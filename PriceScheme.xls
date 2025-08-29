@@ -1,0 +1,1997 @@
+<table cellspacing="0" rules="all" border="1" style="border-collapse:collapse;">
+	<tr>
+		<td>Dept_Code</td><td>Dept_Name</td><td>Scheme_Code</td><td>Scheme_Name</td><td>Test_Type</td><td>Test_Code</td><td>Test_Name</td><td>Test_Amount</td><td>Old_Amount</td><td>Spl_Amount</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000003</td><td>17 HYDROXY CORTICO STEROID 24 HR URINE</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000009</td><td>24 hrs URINE PROTEIN CREATININE RATIO</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000011</td><td>Protein  Urine 24Hr</td><td>350</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000012</td><td>Microalbumin  Urine 24Hr</td><td>500</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000015</td><td>Acetylcholine Receptor (AChR) Antibody</td><td>3000</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000016</td><td>ACID PHOSPHATASE -PROSTATIC</td><td>300</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000018</td><td>ADA</td><td>800</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000025</td><td>Albumin.</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000026</td><td>ALCOHOL IN SERUM (Ethanol)</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000027</td><td>Alkaline phosphatase</td><td>100</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000028</td><td>AMMONIA</td><td>600</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000029</td><td>Amylase</td><td>450</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000030</td><td>APOLIPOPROTEIN A1</td><td>700</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000031</td><td>APOLIPOPROTEIN B</td><td>700</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000033</td><td>AMYLASE  (Body Fluid)</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000038</td><td>Bicarbonate.</td><td>150</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000040</td><td>Calcium  Urine 24Hr</td><td>200</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000041</td><td>Ceruloplasmin</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000043</td><td>Chloride  CSF</td><td>250</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000044</td><td>Chloride  Urine 24 Hrs</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000045</td><td>CHLORIDE - PLEURAL  FLUID</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000048</td><td>CHLORIDE SYNOVIAL FLUID</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000049</td><td>Cholinesterase</td><td>700</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000050</td><td>Cholesterol  Total</td><td>80</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000052</td><td>COMPLEMENT C3</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000053</td><td>COMPLEMENT C4</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000054</td><td>CPK</td><td>450</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000057</td><td>Creatinine.</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000058</td><td>CREATININE CLEARENCE- 24 HR URINE</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000061</td><td>D-Dimer (Quantitative)</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000072</td><td>Electrophoresis - HB</td><td>1200</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000073</td><td>ELECTROPHORESIS OF CSF</td><td>550</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000074</td><td>ELECTROPHORESIS- 24 HRS URINE</td><td>1350</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000075</td><td>Glucose  Fasting</td><td>30</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000079</td><td>Gamma Glutamyl-Transferase (GGT)</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000080</td><td>GCT (100 GMS)</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000081</td><td>Globulin.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000084</td><td>GCT (50 gms)</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000086</td><td>HbA1c</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000087</td><td>Cholesterol  HDL</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000090</td><td>IRON</td><td>350</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000092</td><td>Lactate  CSF</td><td>1000</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000093</td><td>Lactate</td><td>1000</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000094</td><td>Lactate Dehydrogenase (LDH)</td><td>350</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000095</td><td>LDH - CSF</td><td>350</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000096</td><td>Lactate Dehydrogenase (LDH)  Ascitic Fluid</td><td>355</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000097</td><td>LDH -Peritoneal Fluid</td><td>350</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000098</td><td>Lactate Dehydrogenase (LDH)  Pleural fluid</td><td>350</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000100</td><td>Cholesterol  LDL</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000101</td><td>Lipase</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000103</td><td>LIPOPROTEIN (a)</td><td>700</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000105</td><td>Lithium</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000106</td><td>Magnesium</td><td>350</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000107</td><td>Microalbumin</td><td>500</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000120</td><td>PLEURAL FLUID AMYLASE</td><td>450</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000121</td><td>Potassium  Urine</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000122</td><td>Potassium  Urine 24Hr</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000123</td><td>Glucose  Post-prandial</td><td>30</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000125</td><td>Protein   Pericardial fluid</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000126</td><td>Protein  Ascitic Fluid</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000128</td><td>Protein  Body fluids</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000130</td><td>Protein  Pleural Fluid</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000136</td><td>Protein  CSF</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000139</td><td>Protein  Peritoneal Fluid</td><td>200</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000147</td><td>PLASMA ACETONE</td><td>100</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000148</td><td>Aspartate aminotransferase (AST/SGOT)</td><td>100</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000149</td><td>Alanine aminotransferase (ALT/SGPT)</td><td>100</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000150</td><td>Sodium  Urine 24Hr</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000151</td><td>Sodium  Urine</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000152</td><td>Glucose  Ascitic Fluid</td><td>100</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000158</td><td>Glucose  Pleural Fluid</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000162</td><td>Glucose  CSF</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000164</td><td>Glucose  Body fluids</td><td>100</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000166</td><td>Total Iron Binding Capacity</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000167</td><td>Total Protein.</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000168</td><td>Transferrin Saturation</td><td>400</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000169</td><td>Triglycerides</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000170</td><td>Troponin I</td><td>700</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000171</td><td>Troponin T</td><td>800</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000172</td><td>Urea  Urine 24Hr</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000173</td><td>Urea  Urine</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000174</td><td>UREA CLEARANCE 24 HOUR URINE</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000175</td><td>Uric Acid.</td><td>100</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000177</td><td>Microalbumin/Creatinine   Urine</td><td>500</td><td>260</td><td>260</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000179</td><td>Calcium -  Urine</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000180</td><td>URINE CALCIUM CREATININE RATIO</td><td>500</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000182</td><td>Creatinine  Urine</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000187</td><td>Opiates (Morphine)</td><td>800</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000194</td><td>MUCOPOLYSACCHARIDES (Glycosaminoglycan (GAG))</td><td>2700</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000195</td><td>Urine Organic Acid  Complete Panel</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000198</td><td>URINE PHOSPHOROUS</td><td>300</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000199</td><td>Protein  Urine</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000200</td><td>Protein Creatinine Ratio  Urine</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000201</td><td>URINE URIC ACID</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000202</td><td>URINE  ALKAPTANURIA (Homogentisic Acid)</td><td>1000</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000203</td><td>Cholesterol  VLDL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000204</td><td>VMA -24 Hrs Urine</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000205</td><td>Sodium.</td><td>250</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000206</td><td>Potassium.</td><td>250</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000207</td><td>Chloride.</td><td>250</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000208</td><td>Calcium</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000209</td><td>Phosphorous</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000210</td><td>ACID PHOSPHATASE -TOTAL</td><td>300</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000211</td><td>PROSTATIC ACID PHOSPHATASE</td><td>300</td><td>140</td><td>140</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000214</td><td>Urea</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000215</td><td>BUN</td><td>100</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000216</td><td>Bilirubin  Total</td><td>150</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000217</td><td>Bilirubin  Direct</td><td>150</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000219</td><td>ELECTROPHORESIS-PROTEIN</td><td>400</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000221</td><td>Uric Acid  Urine 24Hr</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000225</td><td>Creatinine  Urine 24Hr</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000227</td><td>URINE ALCOHOL</td><td>1100</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000228</td><td>17- KETOSTEROIDS 24 hr.Urine</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000230</td><td>Chloride  Urine</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000231</td><td>Bilirubin  Indirect</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000235</td><td>Glucose  30 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000236</td><td>Glucose  60 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000237</td><td>Glucose  90 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000238</td><td>Glucose  120 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000239</td><td>Glucose  150 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000240</td><td>Glucose  180 min</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000241</td><td>Glucose  Random</td><td>30</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000242</td><td>Cholesterol  LDL (Direct)</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000243</td><td>SUCROSE LYSIS TEST(PNH SCREENING TEST)</td><td>450</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000244</td><td>WATER ANALYSIS (CHEMISTRY)</td><td>3000</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000245</td><td>Amino leveulinic acid (ALA)</td><td>1300</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000247</td><td>BENZODIAZAPINE</td><td>600</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000248</td><td>CYSTATIN-C</td><td>1500</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000249</td><td>Metanephrine  24 Hrs</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000250</td><td>Aldolase</td><td>900</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000251</td><td>URINE CHROMATOGRAPHY</td><td>500</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000252</td><td>URINE-CALCIUM</td><td>200</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000253</td><td>URICACID / CREATININE</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000255</td><td>DRUGS OF ABUSE - 9 Drugs</td><td>4300</td><td>3800</td><td>3800</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000256</td><td>Glomerular Filtration Rate (eGFR)</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000259</td><td>Uricacid  Synovial fluid</td><td>350</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000260</td><td>Cyclosporin (CO)</td><td>3100</td><td>2600</td><td>2600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000263</td><td>HAPTOGLOBIN</td><td>1500</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000264</td><td>Nicotine Metabolite</td><td>1900</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000265</td><td>INHIBIN B</td><td>1700</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000266</td><td>Glucose  Ascitic Fluid.</td><td>100</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000267</td><td>Glucose Synovial Fluid</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000268</td><td>Protein Synovial Fluid</td><td>250</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000269</td><td>VMA (SPOT)</td><td>2500</td><td>2100</td><td>2100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000270</td><td>METANEPHRINE (SPOT)</td><td>2000</td><td>1800</td><td>1800</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000271</td><td>Bile acids - Total</td><td>2000</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000274</td><td>Cyclosporin (C2)</td><td>3100</td><td>2600</td><td>2600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000275</td><td>Cannabis (Marijuana).</td><td>800</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000276</td><td>PhenylAlanine Screen</td><td>1600</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000279</td><td>Myoglobin  Urine</td><td>700</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000281</td><td>Biotinidase</td><td>3500</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000282</td><td>Calculus Study</td><td>650</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000283</td><td>Ketone (D3 Hydroxybutyrate)</td><td>2500</td><td>2400</td><td>2400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000284</td><td>GCT (75 gms)</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000285</td><td>Chylomicron  Qualitative</td><td>500</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000287</td><td>Troponin- T (high sensitive)  Quantitative</td><td>1700</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000289</td><td>Metanephrine-free  plasma</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000290</td><td>Citrate  Urine 24 Hrs</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000291</td><td>STONE ANALYSIS</td><td>1000</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000294</td><td>Hemosiderin</td><td>600</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000295</td><td>Angiotensin Converting enzyme (ACE)</td><td>1200</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000296</td><td>OSMOLALITY (SERUM)</td><td>700</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000297</td><td>Albumin/Globulin</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000298</td><td>Cholesterol/HDL Ratio</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000356</td><td>G6PD LEVEL</td><td>900</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000419</td><td>Blood Urea Nitrogen (BUN)</td><td>80</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000570</td><td>Homocysteine</td><td>1100</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000588</td><td>OSMOLALITY (Urine)</td><td>500</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000940</td><td>Determination of  Arsenic</td><td>3000</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001103</td><td>CRP</td><td>400</td><td>175</td><td>175</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001134</td><td>hs- CRP</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001300</td><td>ADA (Adenosine Deaminase)</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001316</td><td>Magnesium  Urine</td><td>700</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001321</td><td>Methyl Malonic Acid</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001329</td><td>Anion gap</td><td>420</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001332</td><td>Nor-Metanephrine  Urine 24 Hrs</td><td>2400</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001333</td><td>Nickel</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001355</td><td>Oligoclonal band CSF</td><td>5000</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001364</td><td>Bun/Creatinine</td><td>1</td><td>1</td><td>1</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001407</td><td>DRUGS OF ABUSE - 12 Drugs</td><td>6400</td><td>5900</td><td>5900</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001409</td><td>LDL-Direct/HDL  Ratio</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001410</td><td>Non - HDL Cholesterol</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001411</td><td>Est. Glomerular Filtration Rate</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001412</td><td>Porphophyrins  Urine 24 Hrs </td><td>5000</td><td>4400</td><td>4400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001413</td><td>LP-PLA2 (LIPOPROTEIN ASSOCIATED PHOSPHOLIPASE A2)</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001431</td><td>TPMT ENZYME ACTIVITY (Thiopurine Methyl Transferase)</td><td>4500</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001432</td><td>CLOZAPINE WITH NOR-CLOZAPINE</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001434</td><td>Tricyclic Antidepressants (TCA)</td><td>1150</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001436</td><td>LDL/HDL Ratio</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001501</td><td>CSF Index</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001510</td><td>DRUGS OF ABUSE - 5 Drugs</td><td>1800</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001512</td><td>DRUGS OF ABUSE - 10 Drugs</td><td>4000</td><td>3800</td><td>3800</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001513</td><td>Toxic Elements - 22</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001522</td><td>PYRUVATE</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001523</td><td>IA2 –INSULIN</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001525</td><td>METHYLMALONIC ACID –QUANTITATIVE</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001533</td><td>HDL/LDL-Direct Ratio</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001547</td><td>Nicotine (Cotinine) Metabolite  Card</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001574</td><td>EVEROLIMUS</td><td>5400</td><td>4900</td><td>4900</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001584</td><td>Troponin- I (high sensitive)  Quantitative</td><td>1700</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001594</td><td>Amyloid A</td><td>4150</td><td>3650</td><td>3650</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001645</td><td>CK-MB</td><td>600</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001663</td><td>Non-Invasive Prenatal Testing (NIPT)</td><td>10000</td><td>7000</td><td>7000</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001664</td><td>Glucose  Post-Lunch</td><td>30</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001665</td><td>Glucose  Post-Dinner</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001666</td><td>Glucose  Pre Dinner</td><td>30</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001674</td><td>Whole Blood Clotting Test (WBCT)</td><td>100</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001675</td><td>Glucose  Pre-Lunch</td><td>30</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001678</td><td>URINE METABOLIC SCREENING</td><td>6100</td><td>5300</td><td>5300</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001703</td><td>BUN - URINE</td><td>200</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001730</td><td>Urine Cotinine (Nicotine) Card</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001737</td><td>ANTI CELL ANTIBODY</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00001</td><td>Lipid Profile</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00002</td><td>Liver Function test</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00006</td><td>ELECTROLYTES</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00008</td><td>BILIRUBIN PROFILE</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00022</td><td>THYRO 5</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00025</td><td>Renal Function Profile</td><td>400</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00026</td><td>Iron Profile</td><td>1200</td><td>950</td><td>950</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00027</td><td>Glucose Tolerance Test - Regular (75 gms)</td><td>300</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00029</td><td>Glucose Tolerance Test  (100 gms)</td><td>300</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00030</td><td>Glucose Tolerance Test (75 gms)</td><td>300</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00035</td><td>Mini Health Checkup</td><td>500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00036</td><td>Basic Master Health Checkup</td><td>1000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00037</td><td>Regular Master Health Checkup - Male</td><td>1500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00038</td><td>Regular Master Health Checkup - Female</td><td>1500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00042</td><td>CIVIL ENGINEERS PACKAGE (1+1)</td><td>750</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00044</td><td>KGK- HEALTH PACKAGE</td><td>1000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00045</td><td>SURGICAL PACKAGE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00046</td><td>RENAL FUNCTION TESTS</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00047</td><td>TDH 200 PACKAGE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00048</td><td>TDH- ADOPTION 1000 PACKAGE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00049</td><td>RMR- MASTER HEALTH CHECK UP</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00050</td><td>RMR-CHILDREN HEALTH SCREENING</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00051</td><td>RMR- WELL WOMEN HEALTH PACKAGE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00052</td><td>RMR- DIABETIC HEALTH SCREENING</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00053</td><td>RMR- EXECUTIVE HEALTH CHECK UP-MALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00054</td><td>RMR- EXECUTIVE HEALTH CHECK UPE-FEMALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00055</td><td>RMR- SENIOR CITIZEN COMPLETE HEALTH CHECK UP-MALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00056</td><td>RMR- SENIOR CITIZEN COMPLETE HEALTH CHECK UP-FEMALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00057</td><td>RMR- SENIOR CITIZEN HEALTH SCREENING.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00058</td><td>CBI-MASTER HEALTH CHECK UP (<40)</td><td>2500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00059</td><td>CBI-MASTER HEALTH CHECK UP (40 +)</td><td>5250</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00060</td><td>RMR-- TDH CORA TRUST (RMRH)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00061</td><td>KGK- HEALTH PACKAGE-1</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00062</td><td>RMR-ALC CARAMEL CHURCH</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00063</td><td>DIABETIC PROFILE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00064</td><td>DE ADDICTION PACKAGE</td><td>400</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00065</td><td>KGK-COMPREHENSIVE DIABETIC CHECKUP CAMP</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00066</td><td>KIDNEY PROTECTION PROFILE-SUMMER OFFER</td><td>400</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00067</td><td>ANNIVERSARY PACKAGE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00069</td><td>INAUGURAL OFFER</td><td>300</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00071</td><td>PRE PROCEDURE TEST FOR ADVANCED GEL PRP</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00072</td><td>PRE PROCEDURE TEST FOR ADVANCED GEL PRP  STEM X27  REGEN PRO9</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00073</td><td>DIWALI SPECIAL OFFER -DIABETIC PROFILE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00074</td><td>PRE PROCEDURE TEST FOR ADVANCED GEL PRP  STEM X27  REGEN PRO 9- FEMALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00075</td><td>MAXI VISION CATARACT PROFILE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00076</td><td>FITNESS HEALTH PROFILE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00077</td><td>PRE PROCEDURE TEST FOR PERCUTANEOUS FUE- TITANIUM HAIR TRANSPLANTATION</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00078</td><td>AROGYAM B PROFLE-THYROCARE</td><td>2000</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00079</td><td>AROGYAM C PROFLE-THYROCARE</td><td>2400</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@BC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00080</td><td>FERTILITY PACKAGE- FEMALE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000145</td><td>SEMEN FRUCTOSE</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000301</td><td>URINE SUGAR (F)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000302</td><td>URINE SUGAR (PP)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000303</td><td>URINE SUGAR</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000304</td><td>URINE SUGAR (30 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000305</td><td>URINE SUGAR (60 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000306</td><td>URINE SUGAR (90 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000307</td><td>URINE SUGAR (120 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000308</td><td>URINE SUGAR (180 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000309</td><td>URINE SUGAR (150 mins)</td><td>10</td><td>10</td><td>10</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000311</td><td>Chyluria</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000313</td><td>Cell count (CSF)</td><td>300</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000315</td><td>ACETONE (URINE)</td><td>100</td><td>25</td><td>25</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000316</td><td>BENCE JONES PROTEIN-URINE</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000317</td><td>Cell Count (Body Fluids)</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000318</td><td>FAT GLOBULES (STOOL)</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000319</td><td>Stool complete examination</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000320</td><td>OCCULT BLOOD.</td><td>100</td><td>120</td><td>120</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000321</td><td>PREGNANCY TEST-URINE (CARD)</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000322</td><td>REDUCING SUBSTANCE.</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000323</td><td>SEMEN ANALYSIS</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000324</td><td>Urine Complete Examination</td><td>100</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000325</td><td>URINE ALBUMIN</td><td>30</td><td>15</td><td>15</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000408</td><td>URINE ACETONE</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000413</td><td>URINE OCCULT BLOOD</td><td>100</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000414</td><td>Urine Routine Analysis</td><td>1</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001521</td><td>Urine Chemical Analysis.</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001611</td><td>Urine Dysmorphic RBC</td><td>800</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001634</td><td>Bile Salt</td><td>30</td><td>30</td><td>30</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001635</td><td>Bile Pigment</td><td>30</td><td>30</td><td>30</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001636</td><td>Color & Transparency</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001646</td><td>SPERM MOTILITY ANALYSIS-SEMEN</td><td>550</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001648</td><td>DNA FRAGMENTATION INDEX</td><td>5000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001654</td><td>Stool Ova & Cysts</td><td>150</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001704</td><td>INTRAUTERINE INSEMINATION -SPERM WASH</td><td>2500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@CP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00039</td><td>Bile Salt & Bile Pigment</td><td>50</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@EC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001668</td><td>HOMA IR (INSULIN RESISTANCE)</td><td>1000</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@EC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001676</td><td>KARYOTYPING- SINGLE</td><td>5000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@EC</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001677</td><td>KARYOTYPING- COUPLES</td><td>7500</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@      </td><td>&nbsp;</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000076</td><td>FDP</td><td>1000</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000181</td><td>URINE CHYLURIA</td><td>250</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000280</td><td>Haemoglobin  Urine</td><td>300</td><td>220</td><td>220</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000326</td><td>Lupus Anticoagulant (dRVVT)</td><td>1500</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000327</td><td>FIBRINOGEN</td><td>700</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000328</td><td>PARTIAL THROMBOPLASTIN TIME (APTT)</td><td>300</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000329</td><td>PROTHROMBIN TIME</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000330</td><td>ABSOLUTE EOSINOPHIL COUNT</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000331</td><td>ABSOLUTE LYMPHOCYTE COUNT</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000332</td><td>ABSOLUTE NEUTROPHIL COUNT</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000333</td><td>Anti Platelet Antibody</td><td>7500</td><td>6800</td><td>6800</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000342</td><td>BLEEDING TIME</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000347</td><td>CLOTTING TIME</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000348</td><td>COLD AGGLUTININ</td><td>600</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000350</td><td>DIFFERENTIAL COUNT-5 Part</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000351</td><td>DIRECT COOMBS TEST</td><td>350</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000353</td><td>ESR</td><td>80</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000361</td><td>Haemoglobin</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000364</td><td>INDIRECT COOMBS TEST</td><td>350</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000366</td><td>MALARIAL  PARASITE (SLIDE)</td><td>300</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000368</td><td>Tuberculin skin (Mantoux) Test</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000369</td><td>MCH</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000370</td><td>MCHC</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000371</td><td>MCV</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000372</td><td>Meth-haemoglobin  Blood</td><td>1000</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000374</td><td>MICROFILARIA (MF)</td><td>300</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000375</td><td>FILARIAL ANTIGEN</td><td>700</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000385</td><td>PCV</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000387</td><td>PH ( BLOOD)</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000390</td><td>PORPHOBILINOGEN -QUANTITAITVE</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000391</td><td>Platelet count</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000396</td><td>Red Blood Cell (RBC) Count</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000398</td><td>RETICULOCYTE COUNT</td><td>200</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000400</td><td>RH ANTIBODY TITRE</td><td>170</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000402</td><td>SICKLING TEST</td><td>100</td><td>75</td><td>75</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000405</td><td>SPECIFIC GRAVITY URINE</td><td>50</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000407</td><td>Total WBC count</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000410</td><td>URINE FAT GLOBULIN</td><td>100</td><td>30</td><td>30</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000412</td><td>URINE MYOGLOBIN</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000423</td><td>GIEMSA STAINING</td><td>100</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000424</td><td>MALARIAL  PARASITE (CARD)</td><td>300</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000425</td><td>NASAL SMEAR FOR EOSINOPHILS</td><td>100</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000426</td><td>MYOGLOBIN-SERUM</td><td>1200</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000427</td><td>Malarial Parasite (QBC)</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000428</td><td>BLOOD GROUP&RH-GEL METHOD</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000429</td><td>RVVT - Russell viper venom time</td><td>700</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000430</td><td>MALARIAL ANTIGEN (Vivax & Falciparum)</td><td>600</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000431</td><td>MICROFILARIA (MF)  by QBC</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000432</td><td>RDW - CV</td><td>100</td><td>30</td><td>30</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000436</td><td>Thrombin Time</td><td>650</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000442</td><td>PERIPHERAL BLOOD SMEAR</td><td>400</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000677</td><td>vW (Von Willebrand) Factor  Plasma</td><td>8500</td><td>7500</td><td>7500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000922</td><td>Chromosome Analysis - Product of Conception</td><td>6100</td><td>5500</td><td>5500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001265</td><td>PLATELET COUNT.</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001276</td><td>FILARIAL ANTIBODY</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001298</td><td>Peripheral Smear</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001348</td><td>Factor X Functional</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001537</td><td>Immature Platelet Fraction (IPF)</td><td>1000</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001599</td><td>DCP- Decarboxy Prothrombin PIVKA II</td><td>3600</td><td>3100</td><td>3100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001637</td><td>RDW - SD</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001638</td><td>Differential Count...</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001639</td><td>HCT</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001640</td><td>MPV.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001641</td><td>PDW</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001642</td><td>PCT</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001643</td><td>P-LCR</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001679</td><td>Haemoglobin.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001680</td><td>Total WBCs count.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001681</td><td>Large Immature Cells.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001682</td><td>Large Immature Cells#.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001683</td><td>Abs.Neutrophils in #.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001684</td><td>Abs.Lymphocyte in #.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001685</td><td>Abs.Eosinophils in #.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001686</td><td>Abs.Monocyte in #.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001687</td><td>Abs.Basophils in #.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001688</td><td>Red Blood Cell (RBC) Count.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001689</td><td>HCT (P.C.V).</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001690</td><td>MCV.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001691</td><td>MCH.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001692</td><td>MCHC.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001693</td><td>RDW-CV.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001694</td><td>RDW-SD.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001695</td><td>Platelets Count.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001696</td><td>PDW-SD.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001697</td><td>PDW-CV.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001698</td><td>P-LCR.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001699</td><td>PCT.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001700</td><td>RED BLOOD CELL COUNT-5P</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001701</td><td>PLATELET COUNT-5P</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00003</td><td>Complete Blood count- 5P</td><td>400</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00020</td><td>CBC+ESR</td><td>380</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00040</td><td>Complete Blood Count-3P</td><td>300</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00068</td><td>Complete Blood Count-3P-T</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00070</td><td>COMPLETE BLOOD COUNT-5 Part.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000345</td><td>BLOOD GROUPING & Rh</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@HE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000447</td><td>BONE  MARROW ASPIRATION.</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000449</td><td>MF ON QBC.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001299</td><td>PAP - SMEAR</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001301</td><td>PAP Smear- LIQUID BASED CYTOLOGY (LBC)</td><td>1200</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001352</td><td>Biopsy Small</td><td>750</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001430</td><td>IMMUNOHISTOCHEMISTRY</td><td>7000</td><td>7000</td><td>7000</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001505</td><td>Her-2/Neu(C-Er-B2)(ERBB2)by FISH</td><td>10000</td><td>9500</td><td>9500</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001619</td><td>HER 2/ NEU  FISH</td><td>15000</td><td>12500</td><td>12500</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001647</td><td>FNAC</td><td>1000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001650</td><td>Biopsy Small-1</td><td>750</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001651</td><td>Biopsy Medium</td><td>900</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001652</td><td>Biopsy Large</td><td>1200</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@HP</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001736</td><td>CYTOLOGY</td><td>0</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000002</td><td>17 - HYDROXY PROGESTERONE</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000007</td><td>Catecholamines  Urine 24 Hrs</td><td>5000</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000013</td><td>5-HIAA (Hydroxy Indole Acetic Acid)  Urine</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000017</td><td>ACTH (Adreno Corticotropic Hormone)</td><td>1200</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000085</td><td>Protein Electrophoresis</td><td>850</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000501</td><td>VITAMIN D PROFILE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000505</td><td>Alpha Fetoprotein (AFP)</td><td>950</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000507</td><td>ALDOSTERONE</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000508</td><td>ALPHA 1. ANTITRIPSIN</td><td>1500</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000511</td><td>AMINOGRAM  SERUM</td><td>1700</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000512</td><td>ANDROSTENEDIONE (A4)</td><td>900</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000514</td><td>Thyroid peroxidase Antibody (Anti-TPO/ATMA)</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000516</td><td>ANTI THROMBIN III activity</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000519</td><td>ANTI TPO</td><td>0</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000520</td><td>Thyroglobulin Antibody (Anti-Tg)</td><td>800</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000522</td><td>BETA hCG</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000523</td><td>C-peptide  Fasting</td><td>1100</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000524</td><td>C-peptide  postprandial</td><td>1100</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000525</td><td>CA 15.3</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000526</td><td>CA 19 .9</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000527</td><td>CALCITONIN</td><td>1800</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000528</td><td>CARBAMAZEPINE</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000530</td><td>Catecholamines</td><td>6000</td><td>5800</td><td>5800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000531</td><td>CD19</td><td>2500</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000532</td><td>CD4: CD8 RATIO</td><td>1400</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000533</td><td>CEA (Carcinoembryonic Antigen)</td><td>700</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000535</td><td>CHROMOSOME ANALYSIS</td><td>2750</td><td>2250</td><td>2250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000536</td><td>COPPER</td><td>400</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000537</td><td>Copper  24 Hrs Urine</td><td>1500</td><td>1350</td><td>1350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000538</td><td>Cortisol   Urine -24 Hrs</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000539</td><td>Cortisol  Total</td><td>800</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000540</td><td>CORTISOL (AM)</td><td>800</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000541</td><td>CRYOGLOBULIN SERUM</td><td>300</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000546</td><td>CYSTICERCOSIS IgG</td><td>2200</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000548</td><td>DHEA-DehydroepiAndrostenedione</td><td>2800</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000549</td><td>Dehydroepiandrosterone Sulfate (DHEA-S)</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000550</td><td>DIGOXIN</td><td>700</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000553</td><td>ESTRADIOL</td><td>700</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000554</td><td>ESTRIOL - E3</td><td>800</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000555</td><td>FACTOR V LEIDEN  Mutant Analysis (Real Time PCR)</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000556</td><td>FERRITIN</td><td>700</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000557</td><td>FOLIC ACID</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000559</td><td>IONISED CALCIUM</td><td>300</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000560</td><td>FREE PSA</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000561</td><td>FREE T3</td><td>200</td><td>110</td><td>110</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000562</td><td>FREE T4</td><td>200</td><td>110</td><td>110</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000563</td><td>Free Testosterone</td><td>800</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000565</td><td>FRUCTOSAMINE</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000566</td><td>FSH</td><td>500</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000567</td><td>GAD-65 - IgG</td><td>4500</td><td>4300</td><td>4300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000568</td><td>HBDH</td><td>1200</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000569</td><td>HLA - B 27</td><td>1900</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000571</td><td>GROWTH HORMONE</td><td>600</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000572</td><td>IgG</td><td>900</td><td>275</td><td>275</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000573</td><td>Immunoglobulin D</td><td>3000</td><td>2800</td><td>2800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000574</td><td>IgA</td><td>900</td><td>275</td><td>275</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000576</td><td>IgM</td><td>900</td><td>275</td><td>275</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000578</td><td>INHIBIN - B</td><td>1700</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000579</td><td>INSULIN (F)</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000580</td><td>INSULIN (PP)</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000582</td><td>INSULIN LIKE GROWTH  FACTOR (IGF-1)</td><td>2200</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000583</td><td>IGF BP3</td><td>2500</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000584</td><td>LEAD</td><td>1300</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000585</td><td>LH</td><td>500</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000587</td><td>Nor-Adrenaline (Nor-epinephrine)</td><td>4200</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000592</td><td>PARACETAMOL</td><td>1200</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000593</td><td>PHENOBARBITONE</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000594</td><td>PHENYTOIN</td><td>700</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000596</td><td>PROGESTERONE</td><td>900</td><td>470</td><td>470</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000597</td><td>PROLACTIN</td><td>500</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000598</td><td>PROTEIN-C Antigen</td><td>4500</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000599</td><td>PROTEIN-S Free Antigen</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000600</td><td>PSA</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000601</td><td>Parathyroid Hormone  Intact (iPTH)</td><td>1000</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000609</td><td>SERUM METANEPHRINES</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000611</td><td>SEX HORMONE BINDING GLOBULIN</td><td>600</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000613</td><td>URINARY STONE ANALYSIS</td><td>1000</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000614</td><td>Tri-Iodothyronine Total (TT3)</td><td>150</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000615</td><td>Thyroxine Total (TT4)</td><td>150</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000616</td><td>Testosterone  Total</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000619</td><td>THYROGLOBULIN</td><td>800</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000622</td><td>Transferrin</td><td>1100</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000623</td><td>Thyroid Stimulating Hormone (TSH)</td><td>200</td><td>80</td><td>80</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000626</td><td>VALPROIC ACID</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000627</td><td>VALPROIC ACID (F)</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000628</td><td>VITAMIN  A (Retinol)</td><td>2500</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000629</td><td>VITAMIN B 12</td><td>1200</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000630</td><td>25 Hydroxy Vitamin D3</td><td>1200</td><td>950</td><td>950</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000631</td><td>VITAMIN E (Tocopherol)</td><td>2900</td><td>2600</td><td>2600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000632</td><td>ZINC</td><td>450</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000633</td><td>Cancer Antigen 125 (CA-125)</td><td>900</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000637</td><td>IgE</td><td>900</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000638</td><td>Prenatal Screening - 2nd TRIMESTER</td><td>2200</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000639</td><td>FACTOR IX ACTIVITY</td><td>1900</td><td>1450</td><td>1450</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000640</td><td>FACTOR VIII FUNCTIONAL</td><td>2500</td><td>2100</td><td>2100</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000641</td><td>Beta-2-microglobulin</td><td>1500</td><td>1150</td><td>1150</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000642</td><td>GASTRIN</td><td>1200</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000643</td><td>INSULIN (R)</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000644</td><td>Prenatal Screening - 1st TRIMESTER</td><td>0</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000646</td><td>PROTEIN-C Activity</td><td>2600</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000647</td><td>PROTEIN-S Activity</td><td>2600</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000648</td><td>1 25 Dihydroxyvitamin D</td><td>3500</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000650</td><td>NT pro B-type natriuretic peptide</td><td>2100</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000651</td><td>IMMUNOFIXATION QUALITATIVE</td><td>5000</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000653</td><td>5 Alpha  DHT - Di hydro testosterone</td><td>1700</td><td>1550</td><td>1550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000655</td><td>Free Androgen Index (FAI)</td><td>2800</td><td>2400</td><td>2400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000656</td><td>Insulin Antibody (Free)</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000657</td><td>Mullerian Inhibiting Substance - AMH</td><td>1700</td><td>1400</td><td>1400</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000658</td><td>C1 Esterase Inhibitor</td><td>2300</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000659</td><td>Procalcitonin</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000660</td><td>TSH Receptor antibody</td><td>3000</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000661</td><td>PAPPa.</td><td>1500</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000662</td><td>Erythropoietin</td><td>1500</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000663</td><td>Islet cell anibody (ICA-512)</td><td>2500</td><td>2100</td><td>2100</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000664</td><td>JAK - 2 Mutation</td><td>6000</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000665</td><td>CA 72.4 ( TAG-72)</td><td>1700</td><td>1350</td><td>1350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000666</td><td>Leptin (Human Leptin)</td><td>5000</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000667</td><td>Bcr-Abl (PHILADELPHIA) t(9 22)</td><td>5500</td><td>4800</td><td>4800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000669</td><td>NEWBORN SCREENING - BASIC</td><td>1700</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000670</td><td>Free Beta HCG.</td><td>900</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000671</td><td>CORTISOL (PM)</td><td>800</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000672</td><td>Renin Activity (PRA)</td><td>3500</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000673</td><td>RENIN DIRECT PLASMA</td><td>3000</td><td>2600</td><td>2600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000674</td><td>Macro Prolactin</td><td>900</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000675</td><td>TESTOSTERONE BINDING GLOBULIN</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000676</td><td>FOLICACID (RED CELLS)</td><td>2500</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000678</td><td>Tacrolimus - Blood</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000679</td><td>Islet Cell Antobody</td><td>2500</td><td>2100</td><td>2100</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000680</td><td>VITAMIN C (ASCORBIC ACID)</td><td>2500</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000681</td><td>INHIBIN - A</td><td>1400</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000682</td><td>5-HIAA (Hydroxy Indole Acetic Acid)  Urine 24H</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000683</td><td>FACTOR XIII  ACTIVITY</td><td>1500</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000686</td><td>CD4  CD8 - RATIO</td><td>1400</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000687</td><td>Vitamin B6   (Pyridoxine)</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000688</td><td>NMO with MOG Antibody</td><td>4500</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000689</td><td>VITAMIN  B1  (THIAMINE)</td><td>2900</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000690</td><td>Prenatal Screening - Quadruple Markers.</td><td>2500</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000692</td><td>Dopamine</td><td>3000</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000693</td><td>Insulin - 30 mts</td><td>900</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000694</td><td>Insulin - 120mts</td><td>900</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000695</td><td>ST-II  cardiac marker</td><td>2000</td><td>1800</td><td>1800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000696</td><td>FACTOR V  FUNCTIONAL</td><td>2200</td><td>1800</td><td>1800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000697</td><td>C-peptide  Random</td><td>1100</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000698</td><td>Homocysteine  Urine - Qualitative</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000700</td><td>Ornithine Quantitative</td><td>8000</td><td>7500</td><td>7500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000701</td><td>Serotonin (5-Hydroxy Tryptamine)</td><td>5000</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001305</td><td>Anti Mullerian Hormone (AMH)</td><td>1500</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001306</td><td>COPPER- SPOT URINE</td><td>1500</td><td>1350</td><td>1350</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001313</td><td>IgG4 Sub Class</td><td>4600</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001317</td><td>Mercury  Blood</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001319</td><td>PLA2 receptor antibody</td><td>5500</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001320</td><td>Determination of  Chromium - Urine</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001324</td><td>Aminogram  Plasma(Quantitative)</td><td>6600</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001330</td><td>Thyroxine Binding Globulin (TBG)</td><td>6000</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001331</td><td>Chromogranin A</td><td>7000</td><td>6200</td><td>6200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001353</td><td>Leishmania (KALA AZAR) Ab IgG</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001357</td><td>Interleukin 6 (IL-6)</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001360</td><td>TNF (Tumour Necrosis Factor) Alpha</td><td>4400</td><td>3900</td><td>3900</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001362</td><td>Vitamin B2 (Riboflavin)</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001366</td><td>PLACENTAL GROWTH FACTOR (PIGF)</td><td>4300</td><td>3800</td><td>3800</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001429</td><td>Activated Protein C Resisitance</td><td>3900</td><td>3300</td><td>3300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001499</td><td>Estrone</td><td>6500</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001504</td><td>LDH- ISOENZYMES</td><td>4500</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001507</td><td>Vancomycin.</td><td>7000</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001514</td><td>ALDOSTERONE  PLASMA RENIN (DIRECT) RATIO</td><td>7200</td><td>6700</td><td>6700</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001515</td><td>Vitamin B Profile</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001548</td><td>NMO (Aquaporin 4) Neuromylitis Optica Ab</td><td>4800</td><td>4300</td><td>4300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001564</td><td>PHENOBARBITONE  Animal</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001572</td><td>DESMOGLEIN  I Antibody</td><td>3200</td><td>2650</td><td>2650</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001573</td><td>DESMOGLEIN  III Antibody</td><td>3200</td><td>2650</td><td>2650</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001587</td><td>VITAMIN  K</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001589</td><td>HLA Typing by PCR</td><td>6000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001612</td><td>CD20</td><td>2500</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001620</td><td>Holotranscobalamin (Active Vitamin B12)</td><td>1600</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001621</td><td>HLA-DR4 (DRB1*04)  DISEASE ASSOCIATION</td><td>5000</td><td>4300</td><td>4300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001629</td><td>HLA- DR2 (DRB1*15/16)  DISEASE ASSOCIATION</td><td>5000</td><td>4300</td><td>4300</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001630</td><td>PIIINP (PROCOLLAGEN TYPE III AMINO TERMINAL PROPEPTIDE)</td><td>5000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001632</td><td>Levetiracetam</td><td>6000</td><td>5150</td><td>5150</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001726</td><td>Double Marker Test</td><td>2200</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00005</td><td>Thyroid function tests</td><td>400</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00007</td><td>FREE TFT</td><td>500</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00013</td><td>THYRO COMBO</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00019</td><td>FSH-LH-PRL-TSH</td><td>1500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@IM</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00031</td><td>Prenatal Screening - Quadruple Markers</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000702</td><td>PROJECT SAMPLE.</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000706</td><td>ACID FAST STAINING (AFB)</td><td>75</td><td>75</td><td>75</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000709</td><td>AFB - SYNOVIAL FLUID</td><td>75</td><td>75</td><td>75</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000723</td><td>Albert's stain</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000731</td><td>C/S AFB</td><td>350</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000733</td><td>C/S AFB (SPUTUM)</td><td>300</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000734</td><td>AFB Culture (Rapid Isolation)</td><td>900</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000735</td><td>C/S AFB ASCETIC FLUID</td><td>350</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000736</td><td>C/S AFB- URINE</td><td>300</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000743</td><td>C/S ACANTHAMOEBA</td><td>250</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000744</td><td>C/S OTHERS.</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000758</td><td>C/S CSF</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000759</td><td>C/S CERVICAL SWAB</td><td>130</td><td>130</td><td>130</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000777</td><td>C/S SUCTION TUBE</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000778</td><td>Culture for Fungus</td><td>300</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000782</td><td>C/S LABOUR ROOM</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000786</td><td>C/S Stool</td><td>450</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000791</td><td>C/S OT SWAB</td><td>0</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000798</td><td>Culture & Sensitivity - Pus</td><td>450</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000804</td><td>C/S SEMEN</td><td>450</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000806</td><td>C/S SPUTUM</td><td>450</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000810</td><td>C/S SWAB</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000811</td><td>C/S SYNOVIAL FLUID</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000813</td><td>THEATRE SWAB</td><td>1800</td><td>1800</td><td>1800</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000816</td><td>C/S THROAT SWAB</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000818</td><td>C/S TISSUE</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000821</td><td>URINE Culture & Sensitivity</td><td>450</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000822</td><td>C/S VAGINAL SWAB</td><td>170</td><td>180</td><td>180</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000826</td><td>WATER CULTURE - AUTOMATED</td><td>500</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000828</td><td>FLUID BACT AFB CULTURE</td><td>800</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000829</td><td>FUNGAL - SMEAR</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000831</td><td>GONOCOCCI</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000832</td><td>GRAM STAIN - PUS</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000833</td><td>GRAM STAIN - URINE</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000834</td><td>GRAM STAIN ASPIRATION FLUID</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000835</td><td>GRAM STAINING</td><td>60</td><td>60</td><td>60</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000836</td><td>GRAM STAINING - PLEURAL FLUID</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000837</td><td>Gram Staining - Vaginal Swab</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000838</td><td>GRAMSTAIN - PERICARDIAL FLUID</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000839</td><td>GRAMSTAIN - SYNOVIAL</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000840</td><td>GRAMSTAIN CORNEAL ULCER</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000841</td><td>GRAMSTAIN SPUTUM</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000842</td><td>GRAMSTAIN- CSF</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000843</td><td>GRAMSTAIN- THROAT SWAB</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000844</td><td>GRAM STAIN</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000845</td><td>HANGING DROP</td><td>300</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000846</td><td>INDIA INK PREPRATION</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000854</td><td>NAIL CLIPPING FOR FUNGUS</td><td>75</td><td>75</td><td>75</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000857</td><td>SCRAPING FOR FUNGUS</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000867</td><td>SPUTUM PCR</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000869</td><td>SYNOVIAL FLUID AFB</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000870</td><td>SYNOVIAL FLUID GRAM STAIN</td><td>50</td><td>50</td><td>50</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000880</td><td>URINE AFB (24 HR)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000881</td><td>URINE- AFB</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000890</td><td>Enumeration of Aerobic Bacteria</td><td>1900</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000891</td><td>Enumeration of Propini Bacterium</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000892</td><td>Enumeration of Cellulolytic Bacteria (Aerobic)</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000893</td><td>BLOOD CULTURE & SENSITIVITY</td><td>1000</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000894</td><td>BLOOD CULTURE (FINAL)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000895</td><td>WATER ANALYSIS (MPN) FOR FAECAL CONTAMINATION</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000896</td><td>WATER ANALYSIS (MEMBRANE FILTER METHOD)</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000897</td><td>C/S WATER BORN PATHOGENS (POULTARY)</td><td>225</td><td>225</td><td>225</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000898</td><td>Bacteria Identification (Aerobes)</td><td>750</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000899</td><td>Bacteria Identification (Aerobes).</td><td>1000</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000900</td><td>GEIMSA STAINING</td><td>40</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000901</td><td>C/S OPEN-END SPECIMEN</td><td>2000</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000903</td><td>Enumeration of Photosynthetic Bacteria</td><td>500</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000904</td><td>Enumeration of Lactic Acid Bacteria</td><td>250</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000905</td><td>Enumeration of Fermentative Yeast Fungi</td><td>250</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000906</td><td>Enumeration of Actinomycetes</td><td>250</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000907</td><td>GIEMSA STAINING</td><td>40</td><td>40</td><td>40</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000909</td><td>Microbiology Surveillance Test</td><td>1</td><td>1</td><td>1</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000911</td><td>ACID FAST STAINING (AFB)  Sputum</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000912</td><td>Vaginal swab - wetmount</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000913</td><td>PCP STAINING</td><td>100</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000920</td><td>Culture for AFB(MYCOBACTERIA) - Rapid</td><td>900</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000921</td><td>AFB -DRUG SENSITIVITY 4 Drugs</td><td>3000</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001361</td><td>ODC PACKAGE</td><td>900</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001416</td><td>ROTA/ADENOVIRUS</td><td>650</td><td>650</td><td>650</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001667</td><td>STOOL CALPROTECTIN</td><td>3500</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001669</td><td>WOUND SWAB CULTURE & SENSITIVITY</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001672</td><td>MAJOR OT SWAB</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001673</td><td>MINOR OT SWAB</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001727</td><td>HAIR ROOT FUNGUS</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001731</td><td>HAIR STUDY FOR KERATIN</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00011</td><td>C/S BLOOD-Enteric & Non enteric (Manual)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MB</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00018</td><td>C/S BLOOD-Enteric & Non Enteric (Automated)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000923</td><td>CMV - Cytomegalovirus  PCR (Quantitative)</td><td>6500</td><td>5900</td><td>5900</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000924</td><td>THALASSEMIA - BETA (5 COMMON MUTATION) BLOOD</td><td>8000</td><td>8000</td><td>8000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000925</td><td>Epstein-Barr Virus (EBV) DNA</td><td>7000</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000926</td><td>CMV-DNA PCR (Qualitative)</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000927</td><td>Hepatitis B Genotyping (HBV)</td><td>6500</td><td>5500</td><td>5500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000928</td><td>MTHFR Mutations</td><td>7500</td><td>7000</td><td>7000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000929</td><td>HIV-1 Proviral DNA (Qualitative)</td><td>3900</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000930</td><td>Y Chromosome Microdeletion</td><td>8500</td><td>7800</td><td>7800</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000931</td><td>HBV - DNA Qualitative</td><td>3500</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000932</td><td>HBV DNA - Quantitative</td><td>5500</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000933</td><td>HIV  RNA (Quantitative)</td><td>3900</td><td>3700</td><td>3700</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000934</td><td>HIV-RNA QUALITATIVE</td><td>2200</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000935</td><td>TB PCR (M.tuberculosis by GeneXpert)</td><td>2200</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001098</td><td>CHIKUNGUNYA   Qualitative PCR</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001132</td><td>HCV- RNA PCR (Qualitative)</td><td>3500</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001133</td><td>HCV- RNA PCR (Quantitative)</td><td>6000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001144</td><td>JAPANESE ENCEPHALITIS VIRUS DETECTION  PCR</td><td>5000</td><td>4300</td><td>4300</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001184</td><td>TB PCR (BLOOD)</td><td>2200</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001228</td><td>TOXOPLASMA DNA PCR</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001230</td><td>HSV DNA (1 & 2) QUALITATIVE PCR</td><td>3200</td><td>2900</td><td>2900</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001235</td><td>Human Papillomavirus  DNA - PCR</td><td>2500</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001241</td><td>HCV-GENOTYPING</td><td>7000</td><td>6700</td><td>6700</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001322</td><td>Parvovirus B19  DNA PCR</td><td>3200</td><td>2700</td><td>2700</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001356</td><td>HLA B27 (PCR)</td><td>4000</td><td>3100</td><td>3100</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001511</td><td>CMV-DNA PCR (Qualitative)  Urine</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001527</td><td>Malaria Parasite   PCR</td><td>3300</td><td>2800</td><td>2800</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001534</td><td>Neurotropic Virus panel  PCR</td><td>6300</td><td>5800</td><td>5800</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001535</td><td>HIV-1 Drug Resistance – Extended (PI  NRTI  NNRTI  INSTI)</td><td>18000</td><td>17000</td><td>17000</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001566</td><td>SARS-CoV-2 (COVID-19)</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001623</td><td>CHLAMYDIA TRACHOMATIS - PCR Qualitative</td><td>4000</td><td>3500</td><td>3500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001626</td><td>PML-RARA GENE REARRANGEMENT  QUALITATIVE</td><td>5700</td><td>5200</td><td>5200</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001653</td><td>Cystic Fibrosis Genetic Screening</td><td>13000</td><td>11500</td><td>11500</td>
+	</tr><tr>
+		<td>@MO</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001735</td><td>NEISSERIA GONORRHOEA QUALITATIVE BY REAL TIME PCR</td><td>5500</td><td>3000</td><td>3000</td>
+	</tr><tr>
+		<td>@MS</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000738</td><td>Microbiology Surveillance Test (Anaerobic)</td><td>400</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@MS</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001346</td><td>Water Culture (Direct & Enrichment)</td><td>500</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@MS</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001347</td><td>Microbiology Surveillance Test (1 Swab)</td><td>175</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@MS</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001363</td><td>Open End Specimen</td><td>175</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@MS</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001555</td><td>C/S - OTHERS.</td><td>450</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000946</td><td>Fusarium Oxysporum Culture filtrate preparation</td><td>1000</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000947</td><td>Syringe & Needle</td><td>5</td><td>4</td><td>4</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000948</td><td>Vaccutainer</td><td>5</td><td>6</td><td>6</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000949</td><td>Urine Container</td><td>5</td><td>5</td><td>5</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000951</td><td>Paediatric Phlebotomy charge</td><td>8300</td><td>8300</td><td>8300</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000955</td><td>Screening for Anthrax bacilli</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000956</td><td>Screening for clostridial spores</td><td>500</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000957</td><td>Formaldehyde Analysis</td><td>4000</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000958</td><td>Isolation of microorganisms from 2 soil sample</td><td>1500</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001349</td><td>Weight</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001417</td><td>Consumables for Franchisee</td><td>850</td><td>3518</td><td>3518</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001437</td><td>Height</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001439</td><td>Body Mass Index</td><td>20</td><td>20</td><td>20</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001569</td><td>Sample Collection  Charges</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001633</td><td>Blood Pressure</td><td>20</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001644</td><td>MEDICAL FITNESS</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@OH</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00041</td><td>FREEDOM HEALTH PACKAGE</td><td>1000</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000975</td><td>ECG</td><td>250</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@000976</td><td>ECG WITH RYTHM STRIP</td><td>90</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001027</td><td>TMT</td><td>850</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001028</td><td>Ultrasound Abdomen</td><td>400</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001029</td><td>P N S</td><td>300</td><td>120</td><td>120</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001030</td><td>PNS</td><td>300</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001031</td><td>KNEE A.P AND LATERAL - Left</td><td>450</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001307</td><td>BOTH ANKLE AP/LAT</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001308</td><td>BOTH HAND AP VIEW</td><td>450</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001309</td><td>COCCYX</td><td>450</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001310</td><td>LUMBAR & THORACIC SPINE AP/LAT</td><td>450</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001311</td><td>NASOPHARYNX FOR ADENOID</td><td>300</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001312</td><td>SKULL AP/LAT</td><td>300</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001545</td><td>Audiogram</td><td>200</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001561</td><td>Pulmonary Function Test</td><td>200</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001671</td><td>X-RAY- Chest</td><td>500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001705</td><td>HAND AP / OBLIQUE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001706</td><td>WRIST AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001707</td><td>FOREARM AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001708</td><td>ELBOW AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001709</td><td>HUMERUS AP/ LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001710</td><td>SHOULDER AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001711</td><td>CLAVICLE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001712</td><td>SKULL AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001713</td><td>C-SPINE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001714</td><td>D.L SPINE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001715</td><td>L.S. SPINE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001716</td><td>BOTH HAND AP / OBLIQUE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001717</td><td>FOOT - AP/ OBLIQUE</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001718</td><td>LEG AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001719</td><td>KNEE JOINT AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001720</td><td>FEMUR AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001721</td><td>PELVIS WITH BOTH HIP</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001722</td><td>ANKLE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001723</td><td>BOTH ANKLE AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001724</td><td>PNS VIEW</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001725</td><td>BOTH KNEE STANDING AP / LATERAL</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001728</td><td>ABDOMEN ERACT X RAY</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001729</td><td>X-RAY SPECIAL VIEW</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@RA</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001732</td><td>SHOULDER AP VIEW</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001035</td><td>ANCA</td><td>1800</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001037</td><td>P-ANCA (MPO)</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001038</td><td>C-ANCA (PR3)</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001039</td><td>ASO - Antistreptolysin O</td><td>500</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001040</td><td>Allergen - Aspergillus Fumigatus (Fungus)</td><td>1200</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001041</td><td>AMOEBIC ANTIBODY- IgG</td><td>1800</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001042</td><td>ANA</td><td>800</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001044</td><td>ANA INDEX</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001045</td><td>Anti Nuclear Antibody (IF)</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001046</td><td>Anti dsDNA</td><td>900</td><td>550</td><td>550</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001047</td><td>ANTI  HBe</td><td>800</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001048</td><td>ANTI  LEPTOSPIRAL ANTIBODY IgM</td><td>700</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001050</td><td>Anti-La/SSB Antibody</td><td>1200</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001052</td><td>ANTI CARDIO LIPIN ANTIBODY IgA</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001053</td><td>ANTI CARDIOLIPIN ANTIBODY IgG</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001054</td><td>ANTI CARDIOLIPIN ANTIBODY IgM</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001055</td><td>ANTI CCP</td><td>1400</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001057</td><td>Anti SS DNA</td><td>2900</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001058</td><td>ANTI HAV - IgG</td><td>1500</td><td>1100</td><td>1100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001059</td><td>ANTI HAV -TOTAL</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001060</td><td>ANTI HAV IgM</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001062</td><td>ANTI HBc Total</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001063</td><td>ANTI HBc IgM</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001064</td><td>ANTI HBs</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001065</td><td>ANTI HCV</td><td>900</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001067</td><td>ANTI HCV IgM</td><td>1700</td><td>1100</td><td>1100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001068</td><td>ANTI HEV IgG</td><td>1500</td><td>1100</td><td>1100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001069</td><td>ANTI HEV IgM</td><td>850</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001070</td><td>ANTI HIV Ag/Ab Combo</td><td>900</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001071</td><td>ANTI HIV 1&2 (CARD)</td><td>400</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001072</td><td>HIV p24 ANTIGEN</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001075</td><td>ANTI MALARIAL ANTIBODY IgG</td><td>700</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001076</td><td>MITOCHONDRIAL ANTIBODIES (AMA)</td><td>1200</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001077</td><td>ANTI PHOSPHOLIPID ANTIBODY IgG</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001078</td><td>ANTI PHOSPHOLIPID ANTIBODY IgM</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001079</td><td>ANTI SCL 70</td><td>1400</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001081</td><td>SMOOTH MUSCLE ANTIBODY (ASMA)</td><td>1400</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001083</td><td>ANTI SPERM ANTIBODY</td><td>750</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001088</td><td>Aspergillosis Antibody - IgG</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001089</td><td>Aspergillosis Antibody - IgM</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001090</td><td>BRUCELLA  ANTIBODY - IGM</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001092</td><td>BRUCELLA ANTIBODY - IGG</td><td>900</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001097</td><td>CHIKUNGUNYA IgM (CARD)</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001099</td><td>CHLAMYDIAL ANTIBODY  IgM</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001100</td><td>CHLAMYDIAL ANTIBODY IgG</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001101</td><td>CMV IgG</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001102</td><td>CMV IgM</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001104</td><td>CRYPTOCOCCUS ANTIGEN</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001114</td><td>DENGUE ANTIBODY IgG</td><td>500</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001115</td><td>DENGUE ANTIBODY IgM</td><td>500</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001118</td><td>FTA-Abs IgG</td><td>1500</td><td>1100</td><td>1100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001120</td><td>GERMAN MEASLES (RUBELLA IGG)</td><td>1300</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001121</td><td>Helicobacter Pylori -IgM antibodies</td><td>1700</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001122</td><td>Helicobacter Pylori-IgG antibodies</td><td>1300</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001125</td><td>HAV IGM-Antibody</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001126</td><td>Anti-HBc Total (Ab to Hep-B Core Ag)</td><td>1200</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001127</td><td>Hbe Ag</td><td>900</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001128</td><td>HBsAg (CARD)</td><td>200</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001129</td><td>HBsAg</td><td>350</td><td>170</td><td>170</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001130</td><td>HBsAg Confirmation</td><td>800</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001135</td><td>HSV  I (IgG)</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001136</td><td>HSV 1 & 2 IgG</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001137</td><td>HSV 1 & 2 IgM</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001138</td><td>HSV II (IgG)</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001140</td><td>HSV I (IgM)</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001145</td><td>LYMES ANTIBODY</td><td>3000</td><td>2400</td><td>2400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001146</td><td>Measles IgG  Serum</td><td>1200</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001147</td><td>MEASLES (Rubeola) - ANTIBODY IgM</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001148</td><td>Mumps IgG</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001149</td><td>MUMPS IgM</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001151</td><td>Mycoplasma pneumoniae - IgM</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001153</td><td>P C R  - Hepatitis B</td><td>3800</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001154</td><td>PAUL BUNNEL TEST (IM - SCREENING)</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001158</td><td>RA (ELISA)</td><td>1</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001159</td><td>RA FACTOR-LATEX</td><td>400</td><td>175</td><td>175</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001162</td><td>RA - FACTOR</td><td>400</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001166</td><td>Ricketssia by PCR</td><td>5500</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001167</td><td>RPR (Rapid Plasma Reagin)</td><td>350</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001168</td><td>RUBELLA IgG</td><td>800</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001169</td><td>RUBELLA IGM</td><td>800</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001170</td><td>MEASLES (Rubeola) IgG</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001171</td><td>S S A ANTI R-O ANTIBODY</td><td>1800</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001172</td><td>S S B-La ANTIBODY</td><td>1800</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001174</td><td>SMITH ANTIBODY (SM)</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001191</td><td>Interferon Gamma Release Assay - TB</td><td>2800</td><td>2300</td><td>2300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001193</td><td>TORCH IgG</td><td>1500</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001194</td><td>TORCH IgM</td><td>1500</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001195</td><td>TOXOPLASMA IgG</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001196</td><td>TOXOPLASMA IgM</td><td>600</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001197</td><td>Treponema Pallidum Hemagglutination (TPHA)</td><td>350</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001198</td><td>U1RNP Antibody</td><td>1500</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001199</td><td>Varicella Zoster -IgM antibodies</td><td>900</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001200</td><td>Varicella - Zoster IgG</td><td>1400</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001201</td><td>Syphilis (VDRL)</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001202</td><td>WEIL FELIX TEST</td><td>400</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001203</td><td>WESTERN BLOT</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001204</td><td>WIDAL - Tube Dilution</td><td>150</td><td>100</td><td>100</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001206</td><td>BRUCELLA AGGLUTINATION TEST</td><td>500</td><td>220</td><td>220</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001207</td><td>LEPTOSPIRA IgM</td><td>700</td><td>375</td><td>375</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001208</td><td>Anti DNase B</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001209</td><td>ANTI HBe</td><td>800</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001210</td><td>ANTI HIV I & 2 (ELISA)</td><td>1100</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001211</td><td>ANTI HCV (CARD)</td><td>200</td><td>200</td><td>200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001212</td><td>WIDAL-SLIDE METHOD</td><td>150</td><td>75</td><td>75</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001213</td><td>Rabies antibody</td><td>4000</td><td>3600</td><td>3600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001214</td><td>ANTI GLIADIN IgA</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001215</td><td>ANTI GLIADIN IgG</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001216</td><td>DIPHTHERIA IgG-Antibodies</td><td>2900</td><td>2400</td><td>2400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001217</td><td>Antibody to Sm Antigen</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001218</td><td>RNP-Sm Antibody</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001219</td><td>Jo-1 Antibody</td><td>1400</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001220</td><td>Scl-70 Antibody IgG (DNA Topoisomerase-1)</td><td>1400</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001221</td><td>Febrile Agglutination Test</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001223</td><td>ANTI HDV IgM</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001224</td><td>ASCA - IgA</td><td>1700</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001225</td><td>ASCA - IgG</td><td>1700</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001226</td><td>CRP-LATEX</td><td>400</td><td>150</td><td>150</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001227</td><td>ANA PROFILE (Blot)</td><td>3000</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001229</td><td>Influenza A & B</td><td>800</td><td>450</td><td>450</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001231</td><td>LEPTOSPIRA IgG</td><td>900</td><td>750</td><td>750</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001232</td><td>HISTONE ANTIBODY.</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001233</td><td>ANTI DIURETIC HORMONE-ADH</td><td>3500</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001234</td><td>FTA-Abs IgM</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001236</td><td>LEPTOSPIRA BY MAT TEST</td><td>600</td><td>350</td><td>350</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001237</td><td>LKM1-Antibodies</td><td>2000</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001238</td><td>GBM - Glomerular Basement Membrane  Antibody</td><td>1200</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001239</td><td>TREPONEMA ANTIBODIES</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001240</td><td>Tissue Transglutaminase (tTG) Ab-IgA</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001242</td><td>HAMS TEST</td><td>1100</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001243</td><td>Echinococcus(Hydatid Cyst) IgG</td><td>1500</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001244</td><td>DENGUE Ns1 ANTIGEN - Card</td><td>600</td><td>500</td><td>500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001245</td><td>Endomysial Antibody - IgA</td><td>1800</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001246</td><td>DENGUE IgM (CARD)</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001247</td><td>DENGUE IgG (CARD)</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001248</td><td>Cryptococcus Antigen  CSF</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001249</td><td>LEPTOSPIRA By (DFM)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001251</td><td>HSV II (IgM)</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001252</td><td>WESTERN BLOT (HIV-1)</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001253</td><td>DENGUE Ab/Ag - Card</td><td>800</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001254</td><td>Treponema  Antibodies</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001255</td><td>Ovarian Antibody (AOA)</td><td>2400</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001259</td><td>Parvovirus  (B19) IgG</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001260</td><td>Parvovirus (B19) IgM</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001261</td><td>EBV (NA) IgG</td><td>1750</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001262</td><td>EBV (NA) IgM</td><td>1750</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001263</td><td>EBV (VCA) IgG</td><td>1750</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001264</td><td>EBV (VCA) IgM</td><td>1750</td><td>1250</td><td>1250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001266</td><td>EBV  - MONOSPOT</td><td>700</td><td>600</td><td>600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001269</td><td>LEPTOSPIRAL IgG & IgM (Card)</td><td>600</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001270</td><td>Salmonella Typhi Dot - IgM</td><td>400</td><td>360</td><td>360</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001271</td><td>Toxoplasma  Avidity test</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001272</td><td>CMV - Avidity test</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001273</td><td>Rubella - Avidity test</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001274</td><td>Centromere Antibody IgG</td><td>1700</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001275</td><td>Parietal Cell Antibody (GPCA)</td><td>2200</td><td>1800</td><td>1800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001277</td><td>Mycoplasma pneumoniae - IgG</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001278</td><td>SCRUB TYPHUS IGM</td><td>1200</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001279</td><td>DENGUE Ns1 ANTIGEN - CLIA</td><td>500</td><td>400</td><td>400</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001280</td><td>HBsAg (ELISA)</td><td>1200</td><td>725</td><td>725</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001281</td><td>Beta-2-glycoprotein I-IgG</td><td>1200</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001282</td><td>Beta-2-glycoprotein I-IgM</td><td>1200</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001283</td><td>Anti MAG (Myelin associated Glycoprotein)</td><td>3500</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001284</td><td>Ganglioside antibody IgG (Anti GM1)</td><td>4500</td><td>4000</td><td>4000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001285</td><td>Allergy Profile (Drugs)</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001286</td><td>Antibodies to Soluble Liver Antigen (SLA)</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001287</td><td>Allergen - Milk</td><td>1000</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001288</td><td>Allergens Food - Nuts</td><td>6500</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001289</td><td>Allergen EGG Yolk</td><td>1000</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001290</td><td>Allergen EGG White</td><td>1000</td><td>900</td><td>900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001291</td><td>Intrinsic factor antibody</td><td>2000</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001292</td><td>Borrelia Burgdorferi(Lyme) - IgG Ab</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001293</td><td>Borrelia Burgdorferi(Lyme)- IgM Ab</td><td>2000</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001294</td><td>Clostridium Difficile Toxin (A&B)</td><td>2200</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001295</td><td>HTLV (I & II) Antibody</td><td>5700</td><td>4900</td><td>4900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001296</td><td>MUSK Antibody  Myasthenia gravis</td><td>6000</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001297</td><td>Histoplasma Antibody</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001303</td><td>ANTI HCV (ELISA)</td><td>1000</td><td>725</td><td>725</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001304</td><td>Allergy Screening - Tryptase</td><td>2500</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001325</td><td>Neuronal Antibody Profile</td><td>10000</td><td>9000</td><td>9000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001335</td><td>Lyme Borrelia Burgdorferi IgM Antibodies</td><td>2000</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001350</td><td>Allergen - Gluten</td><td>1600</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001351</td><td>NMDA Receptor Antibody (NR1)</td><td>7000</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001354</td><td>VGKC (Lgi1 & CASPR2) Antibody</td><td>8500</td><td>8000</td><td>8000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001368</td><td>Bacterial Meningitis Panel</td><td>4500</td><td>4200</td><td>4200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001498</td><td>ANTI PHOSPHOLIPID ANTIBODY IgA</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001506</td><td>Beta-2-glycoprotein I-IgA</td><td>1800</td><td>1300</td><td>1300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001509</td><td>ENDOMYCIAL ANTIBODY IGG</td><td>1800</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001516</td><td>Helicobacter Pylori -IgA antibodies</td><td>2400</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001517</td><td>DPT Antibodies (Diphtheria Pertussis Tetanus)-IgG</td><td>6500</td><td>6000</td><td>6000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001519</td><td>Myositis Profile</td><td>11000</td><td>9900</td><td>9900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001544</td><td>ANTI HIV Ag/Ab Combo.</td><td>500</td><td>250</td><td>250</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001554</td><td>H.Pylori Ag  Stool</td><td>1700</td><td>1600</td><td>1600</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001557</td><td>Tissue Transglutaminase (tTG) Ab-IgG</td><td>1500</td><td>1000</td><td>1000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001558</td><td>Anti dsDNA  IFA</td><td>2200</td><td>1700</td><td>1700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001568</td><td>SARS-CoV-2 IgG</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001570</td><td>BK Virus Quantitative  Urine</td><td>5000</td><td>4500</td><td>4500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001571</td><td>Anti-SARS-CoV-2</td><td>1000</td><td>630</td><td>630</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001575</td><td>Clostridium Difficile GDH</td><td>2600</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001576</td><td>SARS-COV-2 IgM</td><td>1000</td><td>800</td><td>800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001577</td><td>ECHINOCOCCUS (HYDATID CYST) DETECTION</td><td>1200</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001598</td><td>CHIKUNGUNYA-IGM (ELISA)</td><td>1000</td><td>700</td><td>700</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001618</td><td>Aspergillus fumigatus  Specific IgG</td><td>2000</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001627</td><td>Bordetella Pertussis IgG</td><td>3500</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001628</td><td>Legionella Pneumophila antigen</td><td>3000</td><td>2500</td><td>2500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001631</td><td>RNA Polymerase III Antibodies  IgG</td><td>4000</td><td>3300</td><td>3300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001649</td><td>HBsAg- CLIA</td><td>600</td><td>300</td><td>300</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001655</td><td>ALLERGY PROFILE- VEG FOOD ONLY (83 Approx.Test)</td><td>2300</td><td>1900</td><td>1900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001656</td><td>ALLERGY PROFILE- NON-VEG FOOD ONLY (14 Approx. Test)</td><td>1500</td><td>1200</td><td>1200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001657</td><td>ALLERGY PROFILE- INHALANT WITH CONTACTS (100 Approx. Test)</td><td>1900</td><td>1500</td><td>1500</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001658</td><td>ALLERGY PROFILE- DRUG ALLERGY (22 Approx. Test)</td><td>2600</td><td>2000</td><td>2000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001659</td><td>ALLERGY PROFILE- VEG FOOD+ INHALANTS + CONTACTS (183 Approx. Test)</td><td>2800</td><td>2200</td><td>2200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001660</td><td>ALLERGY PROFILE- VEG FOOD+ INHALANTS WITH CONTACTS+ DRUGS (205 Approx. Test)</td><td>4800</td><td>3900</td><td>3900</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001661</td><td>ALLERGY PROFILE- VEG FOOD+ INHALANTS WITH CONTACTS+ NON-VEG (197 Approx. Test)</td><td>4100</td><td>3200</td><td>3200</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001662</td><td>COMPLETE ALLERGY PROFILE- VEG FOOD+ INHALANTS WITH CONTACTS + NON-VEG + DRUGS (222 Approx. Test)</td><td>5750</td><td>5000</td><td>5000</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001670</td><td>HIV I & 2 (CLIA)</td><td>1100</td><td>850</td><td>850</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001702</td><td>Anti HCV IGG</td><td>0</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001733</td><td>SYPHILIS TOTAL ANTIBODY</td><td>1350</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>T</td><td>@001734</td><td>CHIKUNGUNYA IgG (CARD)</td><td>1100</td><td>0</td><td>0</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00014</td><td>ENA PROFILE</td><td>3600</td><td>2800</td><td>2800</td>
+	</tr><tr>
+		<td>@SE</td><td>LAB</td><td>@000002</td><td>L2L</td><td>P</td><td>@P00043</td><td>DENGUE PROFILE</td><td>1700</td><td>1300</td><td>1300</td>
+	</tr>
+</table>
